@@ -84,16 +84,37 @@
 
     <section class="table-section">
       <header class="card-head">
-        <div><h3>Qualifier table</h3><p class="card-sub">Click any symbol to open on TradingView</p></div>
+        <div>
+          <h3 id="scannerTitle">All qualifiers</h3>
+          <p class="card-sub" id="scannerSub">Above 200&#8209;day SMA · ≥&nbsp;₹2&nbsp;cr daily turnover · ranked by RS</p>
+        </div>
         <div class="controls">
           <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
           <label class="ctl"><span>Min RS</span><input type="range" id="rsSlider" min="0" max="100" value="0" /><span id="rsValue" class="ctl-val mono">0</span></label>
           <label class="ctl"><span>Min ₹cr</span><input type="number" id="liqInput" value="0" min="0" step="0.5" /></label>
-          <label class="ctl chk"><input type="checkbox" id="ttOnly" /> TT only</label>
-          <label class="ctl chk"><input type="checkbox" id="near52w" /> ≤10% off 52w high</label>
           <button id="exportCsv" class="btn-ghost">Export CSV</button>
         </div>
       </header>
+
+      <nav class="subtabs" id="scannerSubtabs" role="tablist" aria-label="Scanner type">
+        <button class="subtab is-active" data-scanner="momentum" role="tab">
+          <span class="subtab-name">Momentum</span>
+          <span class="subtab-count mono" data-count="momentum">—</span>
+        </button>
+        <button class="subtab" data-scanner="trend_template" role="tab">
+          <span class="subtab-name">Trend Template</span>
+          <span class="subtab-count mono" data-count="trend_template">—</span>
+        </button>
+        <button class="subtab" data-scanner="breakout52w" role="tab">
+          <span class="subtab-name">52w High Breakout</span>
+          <span class="subtab-count mono" data-count="breakout52w">—</span>
+        </button>
+        <button class="subtab" data-scanner="vol_shocker" role="tab">
+          <span class="subtab-name">Volume Shocker</span>
+          <span class="subtab-count mono" data-count="vol_shocker">—</span>
+        </button>
+      </nav>
+
       <div class="table-wrap">
         <table id="resultsTable">
           <thead><tr>

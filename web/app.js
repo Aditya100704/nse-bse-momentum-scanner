@@ -25,8 +25,39 @@
     meta: null,
     sortKey: "rs_rating",
     sortDir: "desc",
-    filters: { q: "", minRs: 0, minLiq: 0, ttOnly: false, near52w: false, sector: "" },
+    filters: { q: "", minRs: 0, minLiq: 0, sector: "" },
     activeTab: "scanner",
+    activeScanner: "momentum",
+  };
+
+  /* ============================================================ Scanners
+     Each scanner applies a filter on top of the base qualifier set
+     (close > SMA200 AND turnover >= 2 cr — already enforced by scan.py). */
+  const SCANNERS = {
+    momentum: {
+      label: "Momentum",
+      title: "All qualifiers",
+      sub: "Above 200‑day SMA · ≥ ₹2 cr daily turnover · ranked by RS",
+      filter: (r) => true,
+    },
+    trend_template: {
+      label: "Trend Template",
+      title: "Minervini Trend Template",
+      sub: "Strict 8/8: above all SMAs, SMA cascade, rising 200‑SMA, within 25% of 52w high, 30%+ above 52w low",
+      filter: (r) => r.trend_template === true,
+    },
+    breakout52w: {
+      label: "52w High Breakout",
+      title: "52‑Week High Breakout",
+      sub: "Within 2% of 52‑week high with a positive 1‑month return — fresh leadership",
+      filter: (r) => r.pct_off_high != null && r.pct_off_high <= 2 && (r.r1m ?? 0) > 0,
+    },
+    vol_shocker: {
+      label: "Volume Shocker",
+      title: "Volume Shocker",
+      sub: "Today's volume ≥ 2.5× the 50‑day average with a positive 1‑month return — likely institutional accumulation",
+      filter: (r) => (r.vol_surge ?? 0) >= 2.5 && (r.r1m ?? 0) > 0,
+    },
   };
 
   const $ = (id) => document.getElementById(id);
@@ -77,17 +108,34 @@
     });
   }
 
+  /* ============================================================ subtabs */
+  function renderSubtabCounts() {
+    Object.keys(SCANNERS).forEach((key) => {
+      const n = state.rows.filter(SCANNERS[key].filter).length;
+      const el = document.querySelector(`.subtab-count[data-count="${key}"]`);
+      if (el) el.textContent = n.toLocaleString("en-IN");
+    });
+  }
+  function renderScannerHeader() {
+    const s = SCANNERS[state.activeScanner];
+    if (!s) return;
+    $("scannerTitle").textContent = s.title;
+    $("scannerSub").textContent = s.sub;
+    document.querySelectorAll(".subtab").forEach((el) =>
+      el.classList.toggle("is-active", el.dataset.scanner === state.activeScanner)
+    );
+  }
+
   /* ============================================================ table */
   function renderTable() {
     const tbody = $("resultsBody");
     const f = state.filters;
     const q = f.q.trim().toLowerCase();
+    const scannerFilter = SCANNERS[state.activeScanner]?.filter || (() => true);
 
-    let rows = state.rows.filter((r) => {
+    let rows = state.rows.filter(scannerFilter).filter((r) => {
       if (r.rs_rating < f.minRs) return false;
       if (r.turnover_cr < f.minLiq) return false;
-      if (f.ttOnly && !r.trend_template) return false;
-      if (f.near52w && (r.pct_off_high == null || r.pct_off_high > 10)) return false;
       if (f.sector && r.sector !== f.sector) return false;
       if (q) {
         const hay = (r.symbol + " " + (r.name || "") + " " + (r.sector || "")).toLowerCase();
@@ -615,6 +663,8 @@
 
   function renderAll() {
     renderScannerKpis();
+    renderSubtabCounts();
+    renderScannerHeader();
     renderTop();
     renderDist();
     renderScatter();
@@ -641,8 +691,14 @@
       renderTable();
     });
     $("liqInput").addEventListener("input", (e) => { state.filters.minLiq = +e.target.value || 0; renderTable(); });
-    $("ttOnly").addEventListener("change", (e) => { state.filters.ttOnly = e.target.checked; renderTable(); });
-    $("near52w").addEventListener("change", (e) => { state.filters.near52w = e.target.checked; renderTable(); });
+
+    document.querySelectorAll(".subtab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.activeScanner = btn.dataset.scanner;
+        renderScannerHeader();
+        renderTable();
+      });
+    });
 
     document.querySelectorAll("th[data-key]").forEach((th) => {
       th.addEventListener("click", () => {
