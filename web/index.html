@@ -3,94 +3,192 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>NSE + BSE Momentum Scanner</title>
+<title>Phenom Trading — Momentum Command Center</title>
+<meta name="description" content="Real-time momentum scanner for the Indian equity market. Filters by 200&#8209;day SMA, liquidity, and Minervini-style trend criteria." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="top">
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
+
+<header class="topbar">
   <div class="brand">
-    <span class="logo">::</span>
-    <div>
-      <h1>NSE + BSE Momentum Scanner</h1>
-      <p class="sub">Stocks above 200&#8209;day SMA with real liquidity, ranked by momentum.</p>
+    <span class="brand-mark">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+        <path d="M2 18 L7 8 L11 13 L20 4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <circle cx="20" cy="4" r="2" fill="currentColor"/>
+      </svg>
+    </span>
+    <div class="brand-text">
+      <h1>Phenom Trading</h1>
+      <p class="sub">Momentum Command Center · NSE</p>
     </div>
   </div>
-  <div class="stamp">
-    <span class="dot" id="freshDot"></span>
-    <div>
-      <div class="stamp-label">Last scan</div>
-      <div class="stamp-time" id="lastScan">—</div>
-    </div>
-  </div>
+  <nav class="topbar-meta">
+    <span class="badge live" id="freshBadge">
+      <span class="dot"></span>
+      <span id="lastScan">—</span>
+    </span>
+    <a class="badge ghost" href="https://github.com/Aditya100704/nse-bse-momentum-scanner" target="_blank" rel="noopener">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.37c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.22.83 1.22.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.66 7.66 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.83 1.28.83 2.15 0 3.08-1.87 3.75-3.65 3.95.29.25.54.74.54 1.5v2.22c0 .21.15.46.55.38A8 8 0 0 0 8 0z"/></svg>
+      Source
+    </a>
+  </nav>
 </header>
 
-<section class="cards">
-  <div class="card"><div class="card-label">Universe</div><div class="card-value" id="statUniverse">—</div></div>
-  <div class="card"><div class="card-label">Got data</div><div class="card-value" id="statWithData">—</div></div>
-  <div class="card"><div class="card-label">Qualifiers</div><div class="card-value accent" id="statQualifiers">—</div></div>
-  <div class="card"><div class="card-label">Min liquidity</div><div class="card-value" id="statLiq">—</div></div>
-  <div class="card"><div class="card-label">Trend Template Pass</div><div class="card-value" id="statTT">—</div></div>
-</section>
+<main class="content">
 
-<section class="controls">
-  <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
-  <label class="ctl">
-    Min RS
-    <input type="range" id="rsSlider" min="0" max="100" value="0" />
-    <span id="rsValue" class="ctl-val">0</span>
-  </label>
-  <label class="ctl">
-    Min liquidity (₹cr)
-    <input type="number" id="liqInput" value="0" min="0" step="0.5" />
-  </label>
-  <label class="ctl chk">
-    <input type="checkbox" id="ttOnly" /> Trend Template only
-  </label>
-  <label class="ctl chk">
-    <input type="checkbox" id="near52w" /> Within 10% of 52w high
-  </label>
-  <select id="exchSelect" class="ctl-select">
-    <option value="">All exchanges</option>
-    <option value="NSE">NSE</option>
-    <option value="BSE">BSE</option>
-  </select>
-  <button id="exportCsv" class="btn-ghost">Export CSV</button>
-</section>
+  <section class="hero">
+    <h2 class="hero-title">Stocks moving with conviction.</h2>
+    <p class="hero-sub">Filtered to those above their 200&#8209;day SMA with real liquidity. Ranked by a Minervini-weighted momentum composite. Re&#8209;scanned every weekday close.</p>
+  </section>
 
-<section class="grid">
-  <table id="resultsTable">
-    <thead>
-      <tr>
-        <th data-key="rs_rating" class="num sort-active">RS</th>
-        <th data-key="symbol">Symbol</th>
-        <th data-key="name">Name</th>
-        <th data-key="exchange" class="center">Exch</th>
-        <th data-key="close" class="num">Close</th>
-        <th data-key="r1m" class="num">1M %</th>
-        <th data-key="r3m" class="num">3M %</th>
-        <th data-key="r6m" class="num">6M %</th>
-        <th data-key="r12m" class="num">12M %</th>
-        <th data-key="pct_off_high" class="num">Off 52w high</th>
-        <th data-key="turnover_cr" class="num">Turnover ₹cr</th>
-        <th data-key="vol_surge" class="num">Vol surge</th>
-        <th data-key="trend_template" class="center">TT</th>
-      </tr>
-    </thead>
-    <tbody id="resultsBody"></tbody>
-  </table>
-  <div id="emptyState" class="empty hidden">
-    <p>No matches. Loosen the filters.</p>
-  </div>
-  <div id="loadState" class="empty">
-    <p>Loading scan results…</p>
-  </div>
-</section>
+  <section class="kpis">
+    <article class="kpi">
+      <div class="kpi-label">Universe</div>
+      <div class="kpi-value mono" id="statUniverse">—</div>
+      <div class="kpi-foot">stocks scanned</div>
+    </article>
+    <article class="kpi">
+      <div class="kpi-label">Qualifiers</div>
+      <div class="kpi-value mono accent" id="statQualifiers">—</div>
+      <div class="kpi-foot">passed both gates</div>
+    </article>
+    <article class="kpi">
+      <div class="kpi-label">Above 200&#8209;SMA</div>
+      <div class="kpi-value mono" id="statBreadth">—</div>
+      <div class="kpi-foot"><span id="statBreadthPct">—</span> of those with data</div>
+    </article>
+    <article class="kpi">
+      <div class="kpi-label">Trend Template</div>
+      <div class="kpi-value mono" id="statTT">—</div>
+      <div class="kpi-foot">strict 8/8 setups</div>
+    </article>
+    <article class="kpi">
+      <div class="kpi-label">Median momentum</div>
+      <div class="kpi-value mono" id="statMedMom">—</div>
+      <div class="kpi-foot">composite, qualifiers</div>
+    </article>
+    <article class="kpi">
+      <div class="kpi-label">Market temp</div>
+      <div class="kpi-value" id="statTemp">—</div>
+      <div class="kpi-foot" id="statTempLabel">—</div>
+    </article>
+  </section>
 
-<footer class="foot">
-  <span>Data via Yahoo Finance · NSE + BSE listing CSV. Educational use, not investment advice.</span>
-  <span id="duration"></span>
-</footer>
+  <section class="charts">
+    <article class="chart-card span-2">
+      <header class="card-head">
+        <div>
+          <h3>Top 15 by RS rating</h3>
+          <p class="card-sub">Highest momentum composite among qualifiers</p>
+        </div>
+      </header>
+      <div class="chart-wrap chart-wrap-tall">
+        <canvas id="chartTop"></canvas>
+      </div>
+    </article>
 
+    <article class="chart-card">
+      <header class="card-head">
+        <div>
+          <h3>1&#8209;month return distribution</h3>
+          <p class="card-sub">All qualifiers</p>
+        </div>
+      </header>
+      <div class="chart-wrap">
+        <canvas id="chartDist"></canvas>
+      </div>
+    </article>
+
+    <article class="chart-card">
+      <header class="card-head">
+        <div>
+          <h3>Liquidity × Momentum</h3>
+          <p class="card-sub">Where the high-conviction setups cluster</p>
+        </div>
+      </header>
+      <div class="chart-wrap">
+        <canvas id="chartScatter"></canvas>
+      </div>
+    </article>
+
+    <article class="chart-card">
+      <header class="card-head">
+        <div>
+          <h3>Return horizon profile</h3>
+          <p class="card-sub">Median qualifier return by lookback</p>
+        </div>
+      </header>
+      <div class="chart-wrap">
+        <canvas id="chartHorizon"></canvas>
+      </div>
+    </article>
+  </section>
+
+  <section class="table-section">
+    <header class="card-head">
+      <div>
+        <h3>Qualifier table</h3>
+        <p class="card-sub">Click any symbol to open on TradingView</p>
+      </div>
+      <div class="controls">
+        <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
+        <label class="ctl">
+          <span>Min RS</span>
+          <input type="range" id="rsSlider" min="0" max="100" value="0" />
+          <span id="rsValue" class="ctl-val mono">0</span>
+        </label>
+        <label class="ctl">
+          <span>Min ₹cr</span>
+          <input type="number" id="liqInput" value="0" min="0" step="0.5" />
+        </label>
+        <label class="ctl chk">
+          <input type="checkbox" id="ttOnly" /> TT only
+        </label>
+        <label class="ctl chk">
+          <input type="checkbox" id="near52w" /> ≤10% off 52w high
+        </label>
+        <button id="exportCsv" class="btn-ghost">Export CSV</button>
+      </div>
+    </header>
+
+    <div class="table-wrap">
+      <table id="resultsTable">
+        <thead>
+          <tr>
+            <th data-key="rs_rating" class="num sort-active">RS</th>
+            <th data-key="symbol">Symbol</th>
+            <th data-key="name">Name</th>
+            <th data-key="close" class="num">Close</th>
+            <th data-key="r1m" class="num">1M</th>
+            <th data-key="r3m" class="num">3M</th>
+            <th data-key="r6m" class="num">6M</th>
+            <th data-key="r12m" class="num">12M</th>
+            <th data-key="pct_off_high" class="num">Off high</th>
+            <th data-key="turnover_cr" class="num">Liquidity</th>
+            <th data-key="vol_surge" class="num">Vol×</th>
+            <th data-key="trend_template" class="center">TT</th>
+          </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+      </table>
+      <div id="emptyState" class="empty hidden">No matches. Loosen the filters.</div>
+      <div id="loadState" class="empty">Loading…</div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Data via Yahoo Finance · NSE listing CSV. Educational use only — not investment advice.</span>
+    <span id="duration" class="mono"></span>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

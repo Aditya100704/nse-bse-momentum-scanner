@@ -1,6 +1,6 @@
-# NSE + BSE Momentum Scanner
+# Phenom Trading — Momentum Command Center
 
-A daily momentum scanner over the Indian equity universe, ranked Minervini-style.
+Daily momentum scanner over the Indian equity universe, ranked Minervini-style, with a Midnight Command Center dark dashboard.
 
 **Default universe:** NSE Nifty 500 (~500 stocks — covers all liquid Indian equity by construction).
 **Opt-in:** Set `SCAN_INCLUDE_BSE=1` to also scan ~4,800 BSE-only listings. Yahoo will rate-limit hard at that scale, so the GitHub Action default keeps it off. The liquidity filter would cull most BSE-only names anyway.

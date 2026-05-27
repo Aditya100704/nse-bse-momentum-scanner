@@ -24,16 +24,16 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r scanner/requirements.txt
+          pip install -r requirements.txt
 
       - name: Run scanner
-        run: python scanner/scan.py
+        run: python scan.py
 
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scanner/data/
+          git add data/
           if git diff --cached --quiet; then
             echo "No data changes"
           else
@@ -53,15 +53,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: main
       - uses: actions/configure-pages@v5
       - name: Stage site
         run: |
-          mkdir -p _site
-          cp -r scanner/web/* _site/
-          mkdir -p _site/data
-          cp scanner/data/scanner_output.json _site/data/ 2>/dev/null || true
-          # Point web app at sibling data dir on Pages
+          mkdir -p _site _site/data
+          cp -r web/* _site/
+          cp data/scanner_output.json _site/data/ 2>/dev/null || true
+          # Dashboard's relative path `../data/` -> `data/` on Pages
           sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
       - uses: actions/upload-pages-artifact@v3
         with:
