@@ -145,8 +145,17 @@ def build_universe() -> pd.DataFrame:
     return universe
 
 
-def _download_one_batch(batch: list[str], period: str) -> tuple[dict[str, pd.DataFrame], list[str]]:
-    """Download a batch; return (ok dict, failed list to retry)."""
+def _download_one_batch(
+    batch: list[str], period: str, threads: bool = True
+) -> tuple[dict[str, pd.DataFrame], list[str]]:
+    """Download a batch; return (ok dict, retry list).
+
+    A ticker goes into `retry` whenever bulk fetch returned nothing usable —
+    either because it raised KeyError/TypeError in the result frame, or because
+    Yahoo silently came back with NaN columns (typical rate-limit symptom).
+    The retry pass downloads these individually with throttling and that
+    almost always succeeds.
+    """
     out: dict[str, pd.DataFrame] = {}
     try:
         data = yf.download(
@@ -155,7 +164,7 @@ def _download_one_batch(batch: list[str], period: str) -> tuple[dict[str, pd.Dat
             interval="1d",
             group_by="ticker",
             auto_adjust=True,
-            threads=True,
+            threads=threads,
             progress=False,
         )
     except Exception as exc:
@@ -168,6 +177,11 @@ def _download_one_batch(batch: list[str], period: str) -> tuple[dict[str, pd.Dat
             df = df.dropna(subset=["Close"])
             if len(df) >= 200:
                 out[t] = df
+            elif len(df) == 0:
+                # Bulk fetch silently dropped this ticker; worth a single retry.
+                failed.append(t)
+            # Else: ticker has price history but <200 bars (recent IPO etc.) —
+            # not a fetch failure, just genuinely insufficient data. Don't retry.
         except (KeyError, TypeError):
             failed.append(t)
     return out, failed
@@ -192,17 +206,25 @@ def download_prices(tickers: list[str], period: str = "2y") -> dict[str, pd.Data
         out.update(ok)
         retry_pool.extend(failed)
         time.sleep(SLEEP_BETWEEN_BATCHES)
-    # Single retry pass for failed tickers (often Yahoo rate-limit casualties)
+    # Retry pass for failed tickers. Sequential (no threads) + small chunks +
+    # longer cooldown so we don't trigger another rate-limit wave.
     if retry_pool:
-        # Dedupe + retry in larger chunks with extra cooldown
-        retry_pool = list(set(retry_pool) - set(out))
-        print(f"[prices] retry pass on {len(retry_pool)} failed tickers", flush=True)
-        time.sleep(5)
-        for i in range(0, len(retry_pool), BATCH_SIZE):
-            batch = retry_pool[i : i + BATCH_SIZE]
-            ok, _ = _download_one_batch(batch, period)
+        retry_pool = sorted(set(retry_pool) - set(out))
+        print(f"[prices] retry pass on {len(retry_pool)} failed tickers (sequential)",
+              flush=True)
+        time.sleep(8)
+        RETRY_BATCH = 15
+        recovered = 0
+        for i in range(0, len(retry_pool), RETRY_BATCH):
+            batch = retry_pool[i : i + RETRY_BATCH]
+            ok, still_bad = _download_one_batch(batch, period, threads=False)
             out.update(ok)
-            time.sleep(SLEEP_BETWEEN_BATCHES + 1)
+            recovered += len(ok)
+            if i % (RETRY_BATCH * 4) == 0:
+                print(f"[prices] retry {i + len(batch)}/{len(retry_pool)} recovered={recovered}",
+                      flush=True)
+            time.sleep(3)
+        print(f"[prices] retry recovered {recovered} of {len(retry_pool)}", flush=True)
     return out
 
 
