@@ -488,7 +488,21 @@ def main() -> int:
         "sectors": sectors,
         "results": df_out.to_dict(orient="records") if len(df_out) else [],
     }
-    (DATA / "scanner_output.json").write_text(json.dumps(payload, indent=2))
+    # Pandas DataFrame coerces None -> NaN on numeric columns. json.dumps
+    # writes NaN as the literal "NaN", which JavaScript JSON.parse rejects.
+    # Walk the payload and replace NaN/Inf with None before serializing.
+    import math
+    def _clean(v):
+        if isinstance(v, float) and (math.isnan(v) or math.isinf(v)):
+            return None
+        if isinstance(v, dict):
+            return {k: _clean(x) for k, x in v.items()}
+        if isinstance(v, list):
+            return [_clean(x) for x in v]
+        return v
+    (DATA / "scanner_output.json").write_text(
+        json.dumps(_clean(payload), indent=2, allow_nan=False)
+    )
     if len(df_out):
         df_out.to_csv(DATA / "scanner_output.csv", index=False)
     print(
