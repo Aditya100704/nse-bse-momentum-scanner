@@ -175,13 +175,14 @@ def _download_one_batch(
         try:
             df = data if len(batch) == 1 else data[t]
             df = df.dropna(subset=["Close"])
-            if len(df) >= 200:
+            if len(df) >= 30:
+                # Keep anything with at least ~6 weeks of data.
+                # Full analyze() needs 200 bars; analyze_ipo() handles 30-199.
                 out[t] = df
             elif len(df) == 0:
                 # Bulk fetch silently dropped this ticker; worth a single retry.
                 failed.append(t)
-            # Else: ticker has price history but <200 bars (recent IPO etc.) —
-            # not a fetch failure, just genuinely insufficient data. Don't retry.
+            # Else: ticker has < 30 bars — too new to do anything meaningful.
         except (KeyError, TypeError):
             failed.append(t)
     return out, failed
@@ -322,6 +323,73 @@ def analyze(df: pd.DataFrame) -> dict | None:
     }
 
 
+def analyze_ipo(df: pd.DataFrame) -> dict | None:
+    """For recent listings — between 30 and 199 trading bars (~6 weeks to ~10
+    months). Returns IPO-friendly metrics: all-time-high proximity, returns
+    over whatever windows fit, liquidity, and a 'momentum since listing' read.
+    Returns None when the stock has full history (>= 200 bars) or too little
+    history (< 30 bars)."""
+    n = len(df)
+    if n < 30 or n >= 200:
+        return None
+    close = df["Close"].astype(float)
+    vol = df["Volume"].astype(float)
+
+    last = close.iloc[-1]
+    high_all = float(close.max())
+    low_all = float(close.min())
+    pct_off_high = (1 - last / high_all) * 100 if high_all > 0 else None
+    pct_from_low = (last / low_all - 1) * 100 if low_all > 0 else None
+
+    # SMAs only where there's enough data
+    smas = {}
+    for w in (10, 20, 50, 100):
+        if n >= w:
+            smas[f"sma{w}"] = _safe_float(close.rolling(w).mean().iloc[-1])
+        else:
+            smas[f"sma{w}"] = None
+
+    def ret(days: int) -> float | None:
+        if n < days + 1:
+            return None
+        return round((close.iloc[-1] / close.iloc[-days - 1] - 1) * 100, 2)
+
+    r1w  = ret(5)
+    r1m  = ret(21)
+    r3m  = ret(63) if n >= 64 else None
+    # "Since listing" return — first close vs current
+    since_listing = round((close.iloc[-1] / close.iloc[0] - 1) * 100, 2) if close.iloc[0] > 0 else None
+
+    # Liquidity over the last 20 bars (or whatever's available)
+    w = min(20, n)
+    turnover_cr = float((close * vol).iloc[-w:].mean() / 1e7)
+    avg_vol = float(vol.iloc[-w:].mean()) if w > 0 else 0.0
+    vol_surge = (float(vol.iloc[-1]) / avg_vol) if avg_vol > 0 else None
+
+    # Trend conditions (relaxed for IPOs — no SMA200 yet)
+    price_gt_sma20 = (smas["sma20"] is not None and last > smas["sma20"])
+    price_gt_sma50 = (smas["sma50"] is not None and last > smas["sma50"])
+
+    return {
+        "is_ipo": True,
+        "bars": int(n),
+        "close": _safe_float(last),
+        "high_since_listing": _safe_float(high_all),
+        "low_since_listing": _safe_float(low_all),
+        "pct_off_high": _safe_float(pct_off_high),
+        "pct_from_low": _safe_float(pct_from_low),
+        "r1w": r1w,
+        "r1m": r1m,
+        "r3m": r3m,
+        "since_listing_pct": since_listing,
+        "turnover_cr": _safe_float(turnover_cr),
+        "vol_surge": _safe_float(vol_surge),
+        "price_gt_sma20": bool(price_gt_sma20),
+        "price_gt_sma50": bool(price_gt_sma50),
+        **smas,
+    }
+
+
 def _load_sector_map() -> dict[str, str]:
     """Flatten the static sector_map.json (sector -> [symbols]) into a
     symbol -> sector lookup."""
@@ -454,29 +522,58 @@ def main() -> int:
     print(f"[prices] got {len(prices)} of {len(universe)} symbols")
 
     sector_map = _load_sector_map()
-    all_results: list[dict] = []        # everything the analyzer produced
+    all_results: list[dict] = []        # everything analyze() produced (breadth)
     rows: list[dict] = []               # passed both gates (qualifiers)
+    ipo_rows: list[dict] = []           # recent listings, 30-199 bars
+
+    # IPO gates (separate from main-scanner gates):
+    #   bars 30-199, turnover >= 1 cr, within 25% of all-time high since listing
+    MIN_IPO_LIQ_CR = float(os.getenv("SCAN_IPO_MIN_LIQ_CR", "1.0"))
+    MAX_IPO_OFF_HIGH = float(os.getenv("SCAN_IPO_MAX_OFF_HIGH", "25.0"))
 
     for _, row in universe.iterrows():
         t = row["yf_ticker"]
         if t not in prices:
             continue
-        res = analyze(prices[t])
-        if res is None:
-            continue
-        all_results.append(res)  # for breadth
-        if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
-            continue
-        if not res["price_gt_sma200"]:
-            continue
         sym = row["symbol"]
-        rows.append({
+        df = prices[t]
+
+        # Mature stock?
+        res = analyze(df)
+        if res is not None:
+            all_results.append(res)
+            if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
+                continue
+            if not res["price_gt_sma200"]:
+                continue
+            rows.append({
+                "symbol": sym,
+                "name": row["name"],
+                "exchange": row["exchange"],
+                "yf_ticker": t,
+                "sector": sector_map.get(sym.upper(), "Other"),
+                **res,
+            })
+            continue
+
+        # Recent IPO?
+        ipo = analyze_ipo(df)
+        if ipo is None:
+            continue
+        if ipo["turnover_cr"] is None or ipo["turnover_cr"] < MIN_IPO_LIQ_CR:
+            continue
+        if ipo["pct_off_high"] is None or ipo["pct_off_high"] > MAX_IPO_OFF_HIGH:
+            continue
+        # Must be in a real uptrend — above 20-bar SMA at minimum
+        if not ipo["price_gt_sma20"]:
+            continue
+        ipo_rows.append({
             "symbol": sym,
             "name": row["name"],
             "exchange": row["exchange"],
             "yf_ticker": t,
             "sector": sector_map.get(sym.upper(), "Other"),
-            **res,
+            **ipo,
         })
 
     df_out = pd.DataFrame(rows)
@@ -485,6 +582,13 @@ def main() -> int:
             df_out["momentum"].rank(pct=True).mul(100).round(0).astype(int)
         )
         df_out = df_out.sort_values("rs_rating", ascending=False).reset_index(drop=True)
+
+    # IPO list: rank by since-listing return (i.e. how much they've run since IPO)
+    df_ipos = pd.DataFrame(ipo_rows)
+    if len(df_ipos):
+        df_ipos = df_ipos.sort_values(
+            ["since_listing_pct", "r1m"], ascending=[False, False], na_position="last"
+        ).reset_index(drop=True)
 
     breadth = _compute_breadth(all_results)
     sectors = _compute_sectors(df_out.to_dict(orient="records") if len(df_out) else [])
@@ -497,10 +601,13 @@ def main() -> int:
         "with_data": int(len(prices)),
         "analyzed": int(len(all_results)),
         "qualifiers": int(len(df_out)),
+        "ipos": int(len(df_ipos)),
         "filters": {
             "min_liquidity_cr": MIN_LIQUIDITY_CR,
             "max_pct_below_52w_high": WITHIN_PCT_OF_52W_HIGH,
             "above_sma200": True,
+            "ipo_min_liquidity_cr": MIN_IPO_LIQ_CR,
+            "ipo_max_off_high": MAX_IPO_OFF_HIGH,
         },
     }
 
@@ -509,6 +616,7 @@ def main() -> int:
         "breadth": breadth,
         "sectors": sectors,
         "results": df_out.to_dict(orient="records") if len(df_out) else [],
+        "ipos": df_ipos.to_dict(orient="records") if len(df_ipos) else [],
     }
     # Pandas DataFrame coerces None -> NaN on numeric columns. json.dumps
     # writes NaN as the literal "NaN", which JavaScript JSON.parse rejects.
@@ -528,7 +636,7 @@ def main() -> int:
     if len(df_out):
         df_out.to_csv(DATA / "scanner_output.csv", index=False)
     print(
-        f"[done] {meta['qualifiers']} qualifiers · regime "
+        f"[done] {meta['qualifiers']} qualifiers · {meta['ipos']} IPOs · regime "
         f"{breadth.get('regime_score', '?')} ({breadth.get('regime_label', '?')}) "
         f"in {meta['duration_s']}s"
     )

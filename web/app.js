@@ -20,6 +20,7 @@
 
   const state = {
     rows: [],
+    ipos: [],
     breadth: {},
     sectors: [],
     meta: null,
@@ -57,6 +58,13 @@
       title: "Volume Shocker",
       sub: "Today's volume ≥ 2.5× the 50‑day average with a positive 1‑month return — likely institutional accumulation",
       filter: (r) => (r.vol_surge ?? 0) >= 2.5 && (r.r1m ?? 0) > 0,
+    },
+    ipo: {
+      label: "IPO Momentum",
+      title: "Fresh IPOs near their highs",
+      sub: "Recent listings (30 to 199 trading bars, ~6 weeks to ~10 months old) within 25% of their all‑time high, liquid, and trading above the 20‑bar SMA",
+      filter: (r) => true,            // applied via state.ipos source instead
+      source: "ipos",                 // marker: use state.ipos not state.rows
     },
   };
 
@@ -126,7 +134,9 @@
   /* ============================================================ subtabs */
   function renderSubtabCounts() {
     Object.keys(SCANNERS).forEach((key) => {
-      const n = state.rows.filter(SCANNERS[key].filter).length;
+      const def = SCANNERS[key];
+      const src = def.source === "ipos" ? state.ipos : state.rows;
+      const n = src.filter(def.filter).length;
       const el = document.querySelector(`.subtab-count[data-count="${key}"]`);
       if (el) el.textContent = n.toLocaleString("en-IN");
     });
@@ -139,6 +149,20 @@
     document.querySelectorAll(".subtab").forEach((el) =>
       el.classList.toggle("is-active", el.dataset.scanner === state.activeScanner)
     );
+    // IPO mode renames a few columns: RS -> Bars, 1M stays, 6M -> 1W, 12M -> Since IPO
+    const isIpo = s.source === "ipos";
+    const headerMap = {
+      rs_rating:    isIpo ? "Bars"      : "RS",
+      r1m:          isIpo ? "1M"        : "1M",
+      r3m:          isIpo ? "3M"        : "3M",
+      r6m:          isIpo ? "1W"        : "6M",
+      r12m:         isIpo ? "Since IPO" : "12M",
+      trend_template: isIpo ? "—"       : "TT",
+    };
+    document.querySelectorAll("th[data-key]").forEach((th) => {
+      const k = th.dataset.key;
+      if (headerMap[k] !== undefined) th.firstChild.textContent = headerMap[k];
+    });
   }
 
   /* ============================================================ table */
@@ -146,10 +170,13 @@
     const tbody = $("resultsBody");
     const f = state.filters;
     const q = f.q.trim().toLowerCase();
-    const scannerFilter = SCANNERS[state.activeScanner]?.filter || (() => true);
+    const def = SCANNERS[state.activeScanner];
+    const scannerFilter = def?.filter || (() => true);
+    const isIpo = def?.source === "ipos";
+    const sourceRows = isIpo ? state.ipos : state.rows;
 
-    let rows = state.rows.filter(scannerFilter).filter((r) => {
-      if (r.rs_rating < f.minRs) return false;
+    let rows = sourceRows.filter(scannerFilter).filter((r) => {
+      if (!isIpo && r.rs_rating != null && r.rs_rating < f.minRs) return false;
       if (r.turnover_cr < f.minLiq) return false;
       if (f.sector && r.sector !== f.sector) return false;
       if (q) {
@@ -159,8 +186,13 @@
       return true;
     });
 
+    // In IPO mode, several normal column data-keys map to IPO-only fields:
+    //   rs_rating header is relabeled "Bars" -> sort by `bars`
+    //   r6m header is relabeled "1W"         -> sort by `r1w`
+    //   r12m header is relabeled "Since IPO" -> sort by `since_listing_pct`
+    const IPO_KEY_MAP = { rs_rating: "bars", r6m: "r1w", r12m: "since_listing_pct" };
     const dir = state.sortDir === "desc" ? -1 : 1;
-    const key = state.sortKey;
+    const key = isIpo ? (IPO_KEY_MAP[state.sortKey] || state.sortKey) : state.sortKey;
     rows.sort((a, b) => {
       const av = a[key], bv = b[key];
       if (av == null) return 1;
@@ -175,22 +207,43 @@
     } else {
       $("emptyState").classList.add("hidden");
       const view = rows.slice(0, 800);
-      tbody.innerHTML = view.map((r) => `
-        <tr>
-          <td class="num">${rsBadge(r.rs_rating)}</td>
-          <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
-          <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
-          <td><span class="muted">${r.sector || "—"}</span></td>
-          <td class="num">${fmtNum(r.close, 2)}</td>
-          <td class="num">${fmtPct(r.r1m)}</td>
-          <td class="num">${fmtPct(r.r3m)}</td>
-          <td class="num">${fmtPct(r.r6m)}</td>
-          <td class="num">${fmtPct(r.r12m)}</td>
-          <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
-          <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
-          <td class="num">${fmtX(r.vol_surge)}</td>
-          <td class="center">${r.trend_template ? '<span class="tt-yes">✓</span>' : '<span class="tt-no">·</span>'}</td>
-        </tr>`).join("");
+      if (isIpo) {
+        // IPO row: bars-since-listing badge in the "RS" column, since-listing
+        // return in the "12M" column, no Trend Template flag.
+        tbody.innerHTML = view.map((r) => `
+          <tr>
+            <td class="num"><span class="rs rs-md" title="trading bars since listing">${r.bars}d</span></td>
+            <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
+            <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
+            <td><span class="muted">${r.sector || "—"}</span></td>
+            <td class="num">${fmtNum(r.close, 2)}</td>
+            <td class="num">${fmtPct(r.r1w)}</td>
+            <td class="num">${fmtPct(r.r1m)}</td>
+            <td class="num">${fmtPct(r.r3m)}</td>
+            <td class="num">${fmtPct(r.since_listing_pct)}</td>
+            <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
+            <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
+            <td class="num">${fmtX(r.vol_surge)}</td>
+            <td class="center"><span class="tt-no" title="not applicable for IPOs">·</span></td>
+          </tr>`).join("");
+      } else {
+        tbody.innerHTML = view.map((r) => `
+          <tr>
+            <td class="num">${rsBadge(r.rs_rating)}</td>
+            <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
+            <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
+            <td><span class="muted">${r.sector || "—"}</span></td>
+            <td class="num">${fmtNum(r.close, 2)}</td>
+            <td class="num">${fmtPct(r.r1m)}</td>
+            <td class="num">${fmtPct(r.r3m)}</td>
+            <td class="num">${fmtPct(r.r6m)}</td>
+            <td class="num">${fmtPct(r.r12m)}</td>
+            <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
+            <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
+            <td class="num">${fmtX(r.vol_surge)}</td>
+            <td class="center">${r.trend_template ? '<span class="tt-yes">✓</span>' : '<span class="tt-no">·</span>'}</td>
+          </tr>`).join("");
+      }
       if (rows.length > 800) {
         tbody.insertAdjacentHTML("beforeend",
           `<tr><td colspan="13" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
@@ -709,7 +762,18 @@
 
     document.querySelectorAll(".subtab").forEach((btn) => {
       btn.addEventListener("click", () => {
+        const prev = state.activeScanner;
         state.activeScanner = btn.dataset.scanner;
+        // Default sort when switching INTO IPO mode = since_listing_pct desc
+        const enteringIpo  = SCANNERS[state.activeScanner]?.source === "ipos";
+        const leavingIpo   = SCANNERS[prev]?.source === "ipos";
+        if (enteringIpo && !leavingIpo) {
+          state.sortKey = "r12m";     // mapped to since_listing_pct in IPO mode
+          state.sortDir = "desc";
+        } else if (leavingIpo && !enteringIpo) {
+          state.sortKey = "rs_rating";
+          state.sortDir = "desc";
+        }
         renderScannerHeader();
         renderTable();
       });
@@ -751,6 +815,7 @@
       const data = await r.json();
       state.meta = data.meta;
       state.rows = data.results || [];
+      state.ipos = data.ipos || [];
       state.breadth = data.breadth || {};
       state.sectors = data.sectors || [];
       $("loadState").classList.add("hidden");
