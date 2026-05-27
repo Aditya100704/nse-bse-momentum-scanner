@@ -73,6 +73,10 @@ jobs:
           cp data/scanner_output.json _site/data/ 2>/dev/null || true
           # Dashboard's relative path `../data/` -> `data/` on Pages
           sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
+          # Cache-bust CSS + JS per deploy
+          SHA="${GITHUB_SHA:0:7}"
+          sed -i "s|href=\"style.css\"|href=\"style.css?v=${SHA}\"|g" _site/index.html
+          sed -i "s|src=\"app.js\"|src=\"app.js?v=${SHA}\"|g" _site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
