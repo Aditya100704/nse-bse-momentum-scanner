@@ -82,8 +82,23 @@
     const k = v >= 80 ? "rs-hi" : v >= 50 ? "rs-md" : "rs-lo";
     return `<span class="rs ${k}">${v}</span>`;
   };
-  const tvLink = (sym, exch) =>
-    `https://www.tradingview.com/chart/?symbol=${encodeURIComponent((exch === "NSE" ? "NSE:" : "BSE:") + sym)}`;
+  // Mobile detection — used to choose between TV chart (desktop, new tab)
+  // and the TV symbol page (mobile, universal link that opens the TV app).
+  const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+  const tvLink = (sym, exch) => {
+    const e = exch === "NSE" ? "NSE" : "BSE";
+    if (IS_MOBILE) {
+      // Universal link: iOS/Android route this to the TradingView app if
+      // installed, otherwise it opens the mobile-friendly symbol page.
+      return `https://www.tradingview.com/symbols/${e}-${encodeURIComponent(sym)}/`;
+    }
+    return `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(e + ":" + sym)}`;
+  };
+
+  const tvAnchorAttrs = IS_MOBILE
+    ? `rel="noopener"`
+    : `target="_blank" rel="noopener"`;
 
   const median = (arr) => {
     const xs = arr.filter((v) => v != null && !Number.isNaN(v)).sort((a, b) => a - b);
@@ -163,7 +178,7 @@
       tbody.innerHTML = view.map((r) => `
         <tr>
           <td class="num">${rsBadge(r.rs_rating)}</td>
-          <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" target="_blank" rel="noopener">${r.symbol}</a></td>
+          <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
           <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
           <td><span class="muted">${r.sector || "—"}</span></td>
           <td class="num">${fmtNum(r.close, 2)}</td>
