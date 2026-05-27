@@ -490,6 +490,143 @@ def _compute_breadth(all_results: list[dict]) -> dict:
     }
 
 
+def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 504) -> dict:
+    """Daily count of stocks matching each scanner over the last ~2 years, plus
+    daily % of stocks above SMA10/20/50/200. Used by the dashboard to show
+    breadth and per-scanner participation trends. ~500 trading days.
+
+    Returns:
+      {
+        "dates": ["YYYY-MM-DD", ...],
+        "scanners": { name: [count_per_day, ...] },
+        "breadth_pct": { "above_sma10": [pct, ...], ..., "above_sma200": [pct, ...] }
+      }
+    """
+    import collections
+    if not prices:
+        return {}
+
+    # Take the union of all ticker date indexes
+    all_dates_set = set()
+    for df in prices.values():
+        all_dates_set.update(df.index.tolist())
+    all_dates = sorted(all_dates_set)
+    if not all_dates:
+        return {}
+    start_idx = max(0, len(all_dates) - lookback)
+    keep_dates = all_dates[start_idx:]
+    keep_set = set(keep_dates)
+
+    # Per-scanner daily count (sparse — we'll sum into a series)
+    scanner_keys = ["momentum", "trend_template", "breakout52w", "vol_shocker", "ipo"]
+    scanner_sums = {k: pd.Series(0, index=keep_dates, dtype="int64") for k in scanner_keys}
+
+    # Per-MA daily numerator (count above) and denominator (count having that MA)
+    ma_windows = [10, 20, 50, 200]
+    above_sums = {w: pd.Series(0, index=keep_dates, dtype="int64") for w in ma_windows}
+    have_sums  = {w: pd.Series(0, index=keep_dates, dtype="int64") for w in ma_windows}
+
+    processed = 0
+    for t, df in prices.items():
+        n = len(df)
+        if n < 30:
+            continue
+        try:
+            close = df["Close"].astype(float)
+            vol = df["Volume"].astype(float)
+
+            # Pre-compute everything we need
+            smas = {w: close.rolling(w).mean() for w in ma_windows}
+            sma150 = close.rolling(150).mean()
+            sma200_22d = smas[200].shift(22)
+            high_252 = close.rolling(252).max()
+            low_252  = close.rolling(252).min()
+            pct_off  = (1 - close / high_252) * 100
+            r1m = close.pct_change(21) * 100
+            turnover_cr = (close * vol).rolling(20).mean() / 1e7
+            avg_vol50 = vol.rolling(50).mean()
+            vol_surge = vol / avg_vol50
+
+            cond_liquid = (turnover_cr >= MIN_LIQUIDITY_CR).fillna(False)
+
+            # ----- Scanner conditions per day -----
+            # Momentum (new rule: > SMA50 AND > SMA200)
+            mom = (close > smas[50]) & (close > smas[200]) & cond_liquid
+            # Trend Template (strict 8/8)
+            tt = (
+                (close > smas[50]) & (close > sma150) & (close > smas[200]) &
+                (smas[50] > sma150) & (sma150 > smas[200]) &
+                (smas[200] > sma200_22d) &
+                (pct_off <= 25) &
+                (close > low_252 * 1.30)
+            ) & cond_liquid
+            brk = (pct_off <= 2) & (r1m > 0) & cond_liquid
+            vsh = (vol_surge >= 2.5) & (r1m > 0) & cond_liquid
+
+            for key, s in (("momentum", mom), ("trend_template", tt),
+                           ("breakout52w", brk), ("vol_shocker", vsh)):
+                s = s.fillna(False).astype(int)
+                # Restrict to lookback window
+                s = s.loc[s.index.isin(keep_set)]
+                scanner_sums[key] = scanner_sums[key].add(s, fill_value=0)
+
+            # ----- Breadth per MA: numerator + denominator -----
+            for w in ma_windows:
+                sma_w = smas[w]
+                have = sma_w.notna()
+                above = (close > sma_w) & have
+                have = have.astype(int).loc[have.index.isin(keep_set)]
+                above = above.fillna(False).astype(int).loc[above.index.isin(keep_set)]
+                have_sums[w]  = have_sums[w].add(have,  fill_value=0)
+                above_sums[w] = above_sums[w].add(above, fill_value=0)
+
+            # ----- IPO scanner per day -----
+            # A ticker is "IPO" between bar index 30 and 199 (0-indexed: 29..198)
+            ipo_start = 29
+            ipo_end = min(198, n - 1)
+            if ipo_start <= ipo_end:
+                ipo_dates = close.index[ipo_start:ipo_end + 1]
+                ath = close.expanding().max()
+                pct_off_ath = (1 - close / ath) * 100
+                # Use 20-bar SMA where it exists
+                sma20_local = smas[20]
+                # Liquidity for IPOs uses a lower threshold
+                turnover_ipo = (close * vol).rolling(min(20, n)).mean() / 1e7
+                ipo_cond = (
+                    (close > sma20_local) &
+                    (pct_off_ath <= 25) &
+                    (turnover_ipo >= 1.0)
+                ).fillna(False).astype(int)
+                ipo_cond = ipo_cond.reindex(ipo_dates, fill_value=0)
+                ipo_cond = ipo_cond.loc[ipo_cond.index.isin(keep_set)]
+                scanner_sums["ipo"] = scanner_sums["ipo"].add(ipo_cond, fill_value=0)
+
+            processed += 1
+        except Exception as exc:
+            print(f"[history] skip {t}: {exc}", flush=True)
+            continue
+
+    # Compute breadth %
+    breadth_pct = {}
+    for w in ma_windows:
+        denom = have_sums[w].replace(0, pd.NA)
+        pct = (above_sums[w] / denom * 100).round(1)
+        breadth_pct[f"above_sma{w}"] = [None if pd.isna(v) else float(v) for v in pct.reindex(keep_dates).tolist()]
+
+    scanners_out = {
+        k: [int(scanner_sums[k].reindex(keep_dates).fillna(0).iloc[i]) for i in range(len(keep_dates))]
+        for k in scanner_keys
+    }
+
+    print(f"[history] processed {processed} tickers; {len(keep_dates)} dates", flush=True)
+    return {
+        "dates": [d.strftime("%Y-%m-%d") for d in keep_dates],
+        "scanners": scanners_out,
+        "breadth_pct": breadth_pct,
+        "tickers_processed": processed,
+    }
+
+
 def _compute_sectors(qualifiers: list[dict]) -> list[dict]:
     """Group qualifiers by sector, return aggregate momentum/return stats."""
     if not qualifiers:
@@ -592,6 +729,8 @@ def main() -> int:
 
     breadth = _compute_breadth(all_results)
     sectors = _compute_sectors(df_out.to_dict(orient="records") if len(df_out) else [])
+    print("[history] computing 2-year scanner + breadth history...", flush=True)
+    history = _compute_history(prices)
 
     finished = datetime.now(timezone.utc)
     meta = {
@@ -617,6 +756,7 @@ def main() -> int:
         "sectors": sectors,
         "results": df_out.to_dict(orient="records") if len(df_out) else [],
         "ipos": df_ipos.to_dict(orient="records") if len(df_ipos) else [],
+        "history": history,
     }
     # Pandas DataFrame coerces None -> NaN on numeric columns. json.dumps
     # writes NaN as the literal "NaN", which JavaScript JSON.parse rejects.

@@ -23,6 +23,7 @@
     ipos: [],
     breadth: {},
     sectors: [],
+    history: null,
     meta: null,
     sortKey: "rs_rating",
     sortDir: "desc",
@@ -38,8 +39,8 @@
     momentum: {
       label: "Momentum",
       title: "All qualifiers",
-      sub: "Above 200‑day SMA · ≥ ₹2 cr daily turnover · ranked by RS",
-      filter: (r) => true,
+      sub: "Above the 50‑day AND 200‑day SMA · ≥ ₹2 cr daily turnover · ranked by RS",
+      filter: (r) => r.price_gt_sma50 === true && r.price_gt_sma200 === true,
     },
     trend_template: {
       label: "Trend Template",
@@ -729,6 +730,155 @@
     });
   }
 
+  /* ============================================================ scanner history (per-subtab line chart) */
+  function renderScannerHistory() {
+    if (!state.history?.dates) return;
+    const def = SCANNERS[state.activeScanner];
+    const data = state.history.scanners?.[state.activeScanner] || [];
+    if (!data.length) return;
+    const labels = state.history.dates;
+    const ctx = $("chartScannerHistory").getContext("2d");
+    charts.scannerHistory?.destroy();
+    charts.scannerHistory = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [{
+          label: def?.label || state.activeScanner,
+          data,
+          borderColor: COLOR.celestial,
+          backgroundColor: gradient(ctx, "rgba(182, 217, 252, 0.32)", "rgba(182, 217, 252, 0.02)"),
+          fill: true,
+          tension: 0.3,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+        }],
+      },
+      options: {
+        ...baseOpts(),
+        scales: {
+          x: {
+            grid: { color: COLOR.grid, drawBorder: false },
+            ticks: {
+              color: COLOR.whisper, font: { size: 10 },
+              maxTicksLimit: 12, autoSkip: true,
+              callback: function (v) { const l = this.getLabelForValue(v); return l ? l.slice(0, 7) : ""; },
+            },
+          },
+          y: {
+            beginAtZero: true,
+            grid: { color: COLOR.grid, drawBorder: false },
+            ticks: { color: COLOR.whisper, font: { size: 11 } },
+            title: { display: true, text: "Matching stocks", color: COLOR.whisper, font: { size: 11 } },
+          },
+        },
+        plugins: {
+          ...baseOpts().plugins,
+          tooltip: {
+            ...baseOpts().plugins.tooltip,
+            callbacks: {
+              title: (items) => items[0]?.label || "",
+              label: (c) => ` ${c.parsed.y.toLocaleString("en-IN")} matches`,
+            },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+    $("historyTitle").textContent = `2‑year scanner history: ${def?.label || state.activeScanner}`;
+  }
+
+  /* ============================================================ breadth history (4 MAs on Breadth tab) */
+  function renderBreadthHistory() {
+    if (!state.history?.dates || !state.history.breadth_pct) return;
+    const labels = state.history.dates;
+    const bp = state.history.breadth_pct;
+    const MA_DEFS = [
+      { key: "above_sma10",  label: "% > 10‑day SMA",  color: "rgba(251, 191, 36, 0.85)" },
+      { key: "above_sma20",  label: "% > 20‑day SMA",  color: "rgba(255, 158, 105, 0.85)" },
+      { key: "above_sma50",  label: "% > 50‑day SMA",  color: "rgba(182, 217, 252, 0.85)" },
+      { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(102, 58, 243, 0.95)" },
+    ];
+    const ctx = $("chartBreadthHistory").getContext("2d");
+    const sma200 = bp.above_sma200 || [];
+
+    charts.breadthHistory?.destroy();
+    charts.breadthHistory = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          // Greenish gradient FILL from the SMA200 line down to the 50% baseline,
+          // visible only where the SMA200 % > 50% (Chart.js fill: { target: { value: 50 }, above: ... })
+          {
+            label: "Bullish zone",
+            data: sma200,
+            borderColor: "transparent",
+            backgroundColor: "transparent",
+            fill: {
+              target: { value: 50 },
+              above: gradient(ctx, "rgba(111, 231, 179, 0.30)", "rgba(111, 231, 179, 0.02)"),
+              below: "rgba(255, 122, 138, 0.05)",
+            },
+            tension: 0.3,
+            pointRadius: 0,
+            borderWidth: 0,
+            order: 99,
+          },
+          ...MA_DEFS.map((m) => ({
+            label: m.label,
+            data: bp[m.key] || [],
+            borderColor: m.color,
+            backgroundColor: "transparent",
+            fill: false,
+            tension: 0.25,
+            borderWidth: m.key === "above_sma200" ? 2.5 : 1.6,
+            pointRadius: 0,
+            pointHoverRadius: 4,
+          })),
+        ],
+      },
+      options: {
+        ...baseOpts(),
+        scales: {
+          x: {
+            grid: { color: COLOR.grid, drawBorder: false },
+            ticks: {
+              color: COLOR.whisper, font: { size: 10 },
+              maxTicksLimit: 12, autoSkip: true,
+              callback: function (v) { const l = this.getLabelForValue(v); return l ? l.slice(0, 7) : ""; },
+            },
+          },
+          y: {
+            min: 0, max: 100,
+            grid: { color: COLOR.grid, drawBorder: false },
+            ticks: { color: COLOR.whisper, font: { size: 11 }, callback: (v) => `${v}%` },
+          },
+        },
+        plugins: {
+          ...baseOpts().plugins,
+          legend: {
+            display: true, position: "top", align: "end",
+            labels: {
+              color: COLOR.whisper, font: { size: 11 }, boxWidth: 10, boxHeight: 2, padding: 12,
+              filter: (item) => item.text !== "Bullish zone",
+            },
+          },
+          tooltip: {
+            ...baseOpts().plugins.tooltip,
+            filter: (item) => item.dataset.label !== "Bullish zone",
+            callbacks: {
+              title: (items) => items[0]?.label || "",
+              label: (c) => ` ${c.dataset.label}: ${c.parsed.y == null ? "—" : c.parsed.y.toFixed(1) + "%"}`,
+            },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   function renderAll() {
     renderScannerKpis();
     renderSubtabCounts();
@@ -737,6 +887,7 @@
     renderDist();
     renderScatter();
     renderHorizon();
+    renderScannerHistory();
     renderTable();
 
     renderRegimeGauge();
@@ -744,6 +895,7 @@
     renderRegimeComponents();
     renderMedRet();
     renderBreadthSignals();
+    renderBreadthHistory();
 
     renderSectorMom();
     renderSectorHorizons();
@@ -775,6 +927,7 @@
           state.sortDir = "desc";
         }
         renderScannerHeader();
+        renderScannerHistory();
         renderTable();
       });
     });
@@ -818,6 +971,7 @@
       state.ipos = data.ipos || [];
       state.breadth = data.breadth || {};
       state.sectors = data.sectors || [];
+      state.history = data.history || null;
       $("loadState").classList.add("hidden");
       renderAll();
     } catch (e) {

@@ -96,6 +96,16 @@
         </div>
       </header>
 
+      <article class="chart-card scanner-history-card" style="margin-top: 8px;">
+        <header class="card-head">
+          <div>
+            <h3 id="historyTitle">2‑year scanner history</h3>
+            <p class="card-sub" id="historySub">Daily count of stocks matching this scanner — how breadth and participation have evolved over the last 2 years</p>
+          </div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartScannerHistory"></canvas></div>
+      </article>
+
       <nav class="subtabs" id="scannerSubtabs" role="tablist" aria-label="Scanner type">
         <button class="subtab is-active" data-scanner="momentum" role="tab">
           <span class="subtab-name">Momentum</span>
@@ -171,6 +181,16 @@
         <div class="chart-wrap chart-wrap-tall"><canvas id="chartBreadth"></canvas></div>
       </article>
     </section>
+
+    <article class="chart-card span-2" style="margin-top: 4px;">
+      <header class="card-head">
+        <div>
+          <h3>2‑year breadth history</h3>
+          <p class="card-sub">% of stocks above their 10 / 20 / 50 / 200 day moving averages, every trading day for the past ~2 years. The 50% line marks neutral — above is bullish breadth, below is bearish</p>
+        </div>
+      </header>
+      <div class="chart-wrap chart-wrap-tall"><canvas id="chartBreadthHistory"></canvas></div>
+    </article>
 
     <section class="charts">
       <article class="chart-card">
