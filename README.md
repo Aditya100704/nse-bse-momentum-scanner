@@ -1,6 +1,9 @@
 # NSE + BSE Momentum Scanner
 
-A daily momentum scanner over the full NSE + BSE equity universe (~7,000 stocks), ranked Minervini-style.
+A daily momentum scanner over the Indian equity universe, ranked Minervini-style.
+
+**Default universe:** NSE Nifty 500 (~500 stocks — covers all liquid Indian equity by construction).
+**Opt-in:** Set `SCAN_INCLUDE_BSE=1` to also scan ~4,800 BSE-only listings. Yahoo will rate-limit hard at that scale, so the GitHub Action default keeps it off. The liquidity filter would cull most BSE-only names anyway.
 
 **Live dashboard:** see GitHub Pages once enabled · dark-themed, sortable, filterable.
 

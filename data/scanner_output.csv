@@ -1,0 +1,188 @@
+symbol,name,exchange,yf_ticker,close,sma50,sma200,high_52w,pct_off_high,r1m,r3m,r6m,r12m,turnover_cr,vol_surge,momentum,trend_template,price_gt_sma50,price_gt_sma150,price_gt_sma200,sma50_gt_sma150,sma150_gt_sma200,sma200_rising,within_25_of_high,above_30_of_low,rs_rating
+BLISSGVS,Bliss GVS Pharma Ltd.,NSE,BLISSGVS.NS,396.85,260.51,192.13,396.85,0.0,47.39,77.75,148.9,216.23,110.76,3.71,151.45,True,True,True,True,True,True,True,True,True,100
+BAJAJCON,Bajaj Consumer Care Ltd.,NSE,BAJAJCON.NS,560.75,449.55,322.9,571.75,1.92,20.35,46.41,110.97,227.87,65.61,0.27,135.75,True,True,True,True,True,True,True,True,True,99
+HFCL,Himachal Fut Com Ltd.,NSE,HFCL.NS,173.92,106.92,79.93,173.92,0.0,62.18,143.89,142.74,106.12,1273.02,1.43,120.26,True,True,True,True,True,True,True,True,True,99
+NATIONALUM,National Aluminium Co. Ltd.,NSE,NATIONALUM.NS,433.05,404.06,303.72,439.31,1.43,-1.43,27.55,75.78,144.72,331.65,1.34,85.99,True,True,True,True,True,True,True,True,True,98
+ADANIPOWER,Adani Power Ltd.,NSE,ADANIPOWER.NS,248.91,195.89,155.48,248.91,0.0,11.44,74.43,66.92,124.77,1034.04,1.66,86.01,True,True,True,True,True,True,True,True,True,98
+HINDCOPPER,Hindustan Copper Ltd.,NSE,HINDCOPPER.NS,555.35,533.33,434.79,758.83,26.82,-0.19,-2.41,77.06,146.89,406.21,0.46,81.37,False,True,True,True,True,True,True,False,True,97
+LAURUSLABS,Laurus Labs Ltd.,NSE,LAURUSLABS.NS,1381.7,1141.24,1011.51,1381.7,0.0,26.84,35.73,41.39,134.35,301.17,0.63,75.99,True,True,True,True,True,True,True,True,True,97
+KIRLOSENG,Kirloskar Oil Eng Ltd.,NSE,KIRLOSENG.NS,1830.0,1572.86,1212.19,1830.0,0.0,6.12,29.01,55.17,114.2,70.79,1.49,68.64,True,True,True,True,True,True,True,True,True,96
+IDEA,Vodafone Idea Ltd.,NSE,IDEA.NS,14.18,10.51,9.83,14.18,0.0,42.51,27.06,42.23,110.07,736.44,1.08,66.36,False,True,True,True,False,True,True,True,True,96
+CUMMINSIND,Cummins India Ltd.,NSE,CUMMINSIND.NS,6027.5,5062.21,4420.75,6027.5,0.0,14.63,27.33,39.71,105.27,236.57,2.49,60.95,True,True,True,True,True,True,True,True,True,95
+WELCORP,Welspun Corp Ltd.,NSE,WELCORP.NS,1372.9,1097.07,902.54,1372.9,0.0,11.95,75.23,58.19,80.02,108.23,1.36,65.7,True,True,True,True,True,True,True,True,True,95
+GMDCLTD,Gujarat Mineral Development Corporation Ltd.,NSE,GMDCLTD.NS,699.1,643.13,567.66,746.75,6.38,-2.14,23.17,42.99,105.31,191.12,0.63,59.44,True,True,True,True,True,True,True,True,True,94
+BSE,BSE Ltd.,NSE,BSE.NS,4248.4,3488.28,2809.72,4403.3,3.52,17.16,55.08,48.63,82.17,1670.37,1.0,60.19,True,True,True,True,True,True,True,True,True,94
+BHEL,Bharat Heavy Electricals Ltd.,NSE,BHEL.NS,422.35,330.13,273.98,422.35,0.0,19.07,64.15,49.5,70.96,801.66,0.59,57.97,True,True,True,True,True,True,True,True,True,93
+SPARC,Sun Pharma Advanced Research Company Ltd.,NSE,SPARC.NS,221.35,149.29,139.13,235.57,6.04,50.73,71.31,62.75,36.21,262.66,1.67,52.64,False,True,True,True,True,False,True,True,True,93
+HINDALCO,Hindalco Industries Ltd.,NSE,HINDALCO.NS,1149.7,1004.69,874.73,1149.7,0.0,7.02,22.87,47.83,78.3,536.31,1.24,50.94,True,True,True,True,True,True,True,True,True,92
+SAIL,Steel Authority of India Ltd.,NSE,SAIL.NS,206.06,174.73,147.88,206.06,0.0,11.01,29.8,53.68,65.93,640.01,1.23,49.54,True,True,True,True,True,True,True,True,True,91
+ADANIGREEN,Adani Green Energy Ltd.,NSE,ADANIGREEN.NS,1489.9,1147.37,1028.89,1489.9,0.0,19.2,53.88,44.58,51.13,596.98,1.32,46.52,True,True,True,True,True,True,True,True,True,91
+SUVEN,Suven Life Sciences Ltd.,NSE,SUVEN.NS,267.15,196.3,186.88,296.6,9.93,22.21,76.83,51.64,24.02,60.76,0.58,42.69,False,True,True,True,True,False,False,True,True,90
+GESHIP,Great Eastern Shipping Co. Ltd.,NSE,GESHIP.NS,1511.3,1480.46,1187.9,1719.6,12.11,3.21,18.22,39.79,70.5,408.81,1.34,44.1,True,True,True,True,True,True,True,True,True,90
+GRANULES,Granules India Ltd.,NSE,GRANULES.NS,782.6,676.76,583.12,782.6,0.0,10.98,30.64,42.08,51.57,122.69,8.28,40.48,True,True,True,True,True,True,True,True,True,89
+NLCINDIA,NLC India Ltd.,NSE,NLCINDIA.NS,349.9,302.48,263.7,370.9,5.66,9.98,32.06,44.56,48.78,318.4,0.88,40.29,True,True,True,True,True,True,True,True,True,89
+STAR,Strides Pharma Science Ltd.,NSE,STAR.NS,1154.4,1036.42,916.82,1188.1,2.84,9.74,32.74,28.98,58.78,44.67,0.53,39.73,True,True,True,True,True,True,True,True,True,88
+MAHABANK,Bank of Maharashtra.,NSE,MAHABANK.NS,80.08,73.76,62.93,85.31,6.13,3.01,16.41,38.54,61.14,123.62,0.33,39.6,True,True,True,True,True,True,True,True,True,88
+THERMAX,Thermax Ltd.,NSE,THERMAX.NS,4590.6,3913.06,3301.28,4677.5,1.86,14.33,45.65,54.66,30.1,194.31,1.9,39.0,True,True,True,True,True,True,True,True,True,87
+GLENMARK,Glenmark Pharmaceuticals Ltd.,NSE,GLENMARK.NS,2384.9,2261.98,2051.22,2417.9,1.36,-0.78,16.72,29.32,67.02,167.75,0.79,38.87,True,True,True,True,True,True,True,True,True,87
+J&KBANK,Jammu & Kashmir Bank Ltd.,NSE,J&KBANK.NS,143.88,127.68,110.45,143.88,0.0,11.95,38.92,36.96,46.04,61.14,0.81,38.49,True,True,True,True,True,True,True,True,True,86
+SHILPAMED,Shilpa Medicare Ltd.,NSE,SHILPAMED.NS,491.8,409.54,369.34,512.15,3.97,20.6,51.42,40.27,33.88,58.44,1.05,37.98,False,True,True,True,True,False,True,True,True,86
+FINCABLES,Finolex Cables Ltd.,NSE,FINCABLES.NS,1177.25,952.67,837.62,1177.25,0.0,17.21,48.66,55.29,23.86,78.12,3.46,37.58,True,True,True,True,True,True,True,True,True,85
+SCI,Shipping Corporation of India Ltd.,NSE,SCI.NS,303.45,282.15,240.35,344.7,11.97,0.12,19.02,27.07,63.49,391.76,0.41,37.33,True,True,True,True,True,True,True,True,True,84
+NAVINFLUOR,Navin Fluorine International Ltd.,NSE,NAVINFLUOR.NS,7244.5,6548.53,5815.34,7445.5,2.7,9.32,11.01,21.17,70.17,208.04,0.52,37.55,True,True,True,True,True,True,True,True,True,84
+HINDZINC,Hindustan Zinc Ltd.,NSE,HINDZINC.NS,648.85,579.87,535.01,714.15,9.14,7.24,12.11,44.16,52.32,383.15,0.68,37.32,True,True,True,True,True,True,True,True,True,83
+KTKBANK,Karnataka Bank Ltd.,NSE,KTKBANK.NS,271.85,246.43,202.4,274.4,0.93,3.12,34.07,44.02,41.99,82.71,0.6,37.13,True,True,True,True,True,True,True,True,True,83
+KEI,KEI Industries Ltd.,NSE,KEI.NS,5446.2,4712.28,4337.47,5446.2,0.0,9.69,14.51,33.63,57.67,256.71,0.73,37.03,True,True,True,True,True,True,True,True,True,82
+BHARATFORG,Bharat Forge Ltd.,NSE,BHARATFORG.NS,1938.6,1830.42,1503.12,1992.9,2.72,2.31,8.91,35.21,58.65,268.41,0.42,36.04,True,True,True,True,True,True,True,True,True,82
+AVANTIFEED,Avanti Feeds Ltd.,NSE,AVANTIFEED.NS,1297.4,1323.32,953.16,1503.4,13.7,-8.29,-3.95,53.0,50.5,63.39,0.38,34.48,False,False,True,True,True,True,True,True,True,81
+RAIN,Rain Industries Ltd,NSE,RAIN.NS,176.49,131.81,134.59,178.98,1.39,34.13,21.27,57.17,22.56,167.01,0.7,33.84,False,True,True,True,False,False,False,True,True,81
+THYROCARE,Thyrocare Technologies Ltd.,NSE,THYROCARE.NS,512.15,413.92,428.4,530.63,3.48,25.96,28.21,0.08,63.12,45.66,1.47,33.51,False,True,True,True,False,True,True,True,True,80
+OFSS,Oracle Financial Services Software Ltd.,NSE,OFSS.NS,10299.5,8113.75,7878.81,10299.5,0.0,10.71,59.5,29.68,29.72,234.06,1.46,33.76,False,True,True,True,True,False,True,True,True,80
+RBLBANK,RBL Bank Ltd.,NSE,RBLBANK.NS,348.25,319.68,302.86,348.25,0.0,8.57,5.85,11.46,68.13,141.56,0.79,32.72,True,True,True,True,True,True,True,True,True,79
+SOLARINDS,Solar Industries India Ltd.,NSE,SOLARINDS.NS,18653.0,15161.64,14014.29,18653.0,0.0,21.88,40.29,33.7,31.51,320.4,0.6,32.96,False,True,True,True,True,False,True,True,True,79
+TRITURBINE,Triveni Turbine Ltd.,NSE,TRITURBINE.NS,719.15,540.92,522.37,719.15,0.0,23.64,46.71,33.94,26.7,261.66,0.68,32.57,False,True,True,True,True,True,False,True,True,78
+WOCKPHARMA,Wockhardt Ltd.,NSE,WOCKPHARMA.NS,1771.0,1412.65,1403.79,1831.1,3.28,24.96,28.18,35.06,34.15,517.88,1.15,32.31,False,True,True,True,True,False,False,True,True,78
+NATCOPHARM,NATCO Pharma Ltd.,NSE,NATCOPHARM.NS,1175.8,1084.7,924.1,1206.0,2.5,7.47,31.86,36.19,34.8,65.79,0.43,31.9,True,True,True,True,True,True,True,True,True,77
+JINDALSAW,Jindal Saw Ltd.,NSE,JINDALSAW.NS,246.07,215.67,190.67,248.55,1.0,3.35,36.99,51.61,19.88,45.96,1.56,31.17,False,True,True,True,True,False,True,True,True,76
+ABCAPITAL,Aditya Birla Capital Ltd.,NSE,ABCAPITAL.NS,364.9,337.1,327.16,369.3,1.19,7.86,5.81,12.05,64.78,183.84,0.49,31.48,False,True,True,True,False,True,True,True,True,76
+CGPOWER,CG Power and Industrial Solutions Ltd.,NSE,CGPOWER.NS,934.8,779.07,714.02,934.8,0.0,12.46,31.26,31.92,34.52,351.79,2.61,30.88,False,True,True,True,True,False,True,True,True,75
+GRAPHITE,Graphite India Ltd.,NSE,GRAPHITE.NS,746.8,688.24,612.62,774.45,3.57,1.38,8.1,34.56,43.62,126.48,0.41,29.57,True,True,True,True,True,True,True,True,True,75
+KARURVYSYA,Karur Vysya Bank Ltd.,NSE,KARURVYSYA.NS,294.05,287.22,261.87,336.85,12.71,0.14,-8.85,19.01,60.62,91.58,0.7,28.2,True,True,True,True,True,True,True,True,True,74
+KIOCL,KIOCL Ltd.,NSE,KIOCL.NS,416.1,373.9,385.91,627.6,33.7,-0.9,22.08,17.79,49.03,8.52,1.13,29.28,False,True,True,True,True,False,True,False,True,74
+IFCI,IFCI Ltd.,NSE,IFCI.NS,68.38,58.57,55.83,71.76,4.71,13.97,14.02,30.2,36.98,168.8,3.54,28.05,True,True,True,True,True,True,True,True,True,73
+HSCL,Himadri Speciality Chemical Ltd.,NSE,HSCL.NS,607.2,529.23,479.12,636.79,4.65,6.41,24.16,38.01,28.25,654.78,1.01,28.18,True,True,True,True,True,True,True,True,True,73
+BANDHANBNK,Bandhan Bank Ltd.,NSE,BANDHANBNK.NS,205.83,178.45,164.11,208.88,1.46,15.21,20.12,38.04,25.43,244.09,0.92,27.13,False,True,True,True,True,False,True,True,True,72
+CHENNPETRO,Chennai Petroleum Corporation Ltd.,NSE,CHENNPETRO.NS,1053.1,1022.55,879.87,1139.5,7.58,-1.79,20.12,3.54,56.28,109.61,0.5,27.42,True,True,True,True,True,True,True,True,True,72
+TORNTPHARM,Torrent Pharmaceuticals Ltd.,NSE,TORNTPHARM.NS,4537.8,4264.33,3904.88,4572.6,0.76,8.48,6.98,23.94,42.52,136.86,0.6,26.43,True,True,True,True,True,True,True,True,True,71
+NMDC,NMDC Ltd.,NSE,NMDC.NS,92.28,85.72,77.84,93.21,1.0,1.52,15.16,29.35,35.43,165.21,1.02,26.16,True,True,True,True,True,True,True,True,True,71
+MANAPPURAM,Manappuram Finance Ltd.,NSE,MANAPPURAM.NS,328.75,285.2,284.85,330.25,0.45,12.48,7.43,19.03,44.16,140.8,0.35,26.11,False,True,True,True,False,True,True,True,True,70
+ABB,ABB India Ltd.,NSE,ABB.NS,7219.0,6685.57,5617.48,7556.1,4.46,-0.54,21.07,42.35,22.59,322.42,1.38,25.9,True,True,True,True,True,True,True,True,True,70
+ADANIPORTS,Adani Ports and Special Economic Zone Ltd.,NSE,ADANIPORTS.NS,1824.5,1578.22,1477.95,1824.5,0.0,11.41,20.71,23.29,33.69,554.17,0.64,25.75,True,True,True,True,True,True,True,True,True,69
+JBCHEPHARM,J.B. Chemicals & Pharmaceuticals Ltd.,NSE,JBCHEPHARM.NS,2204.2,2075.53,1863.78,2228.4,1.09,7.86,10.19,28.29,32.21,63.55,0.52,24.2,True,True,True,True,True,True,True,True,True,68
+TATASTEEL,Tata Steel Ltd.,NSE,TATASTEEL.NS,214.7,206.03,185.03,221.13,2.91,-0.16,3.04,27.8,36.22,617.23,1.27,23.42,True,True,True,True,True,True,True,True,True,68
+AIAENG,AIA Engineering Ltd.,NSE,AIAENG.NS,4428.1,3830.81,3617.22,4428.1,0.0,9.96,11.82,18.61,35.78,38.52,13.35,23.25,True,True,True,True,True,True,True,True,True,67
+FEDERALBNK,Federal Bank Ltd.,NSE,FEDERALBNK.NS,288.9,282.16,251.63,299.85,3.65,-0.59,-1.26,17.89,44.48,223.72,0.45,22.85,True,True,True,True,True,True,True,True,True,67
+RADICO,Radico Khaitan Ltd,NSE,RADICO.NS,3439.3,3125.71,3025.0,3599.9,4.46,1.18,27.09,2.12,41.19,138.23,0.98,22.65,True,True,True,True,True,True,True,True,True,66
+GUJALKALI,Gujarat Alkalies & Chemicals Ltd.,NSE,GUJALKALI.NS,687.35,660.87,558.36,801.6,14.25,-2.87,47.98,23.84,15.09,20.21,0.01,22.49,False,True,True,True,True,False,True,True,True,66
+SOUTHBANK,South Indian Bank Ltd.,NSE,SOUTHBANK.NS,41.15,38.65,37.06,45.96,10.47,4.07,2.39,7.75,46.3,62.57,0.65,21.73,False,True,True,True,False,True,True,True,True,65
+SIS,Security and Intelligence Services (India) Ltd.,NSE,SIS.NS,394.9,336.04,331.76,404.25,2.31,15.42,30.87,24.71,16.78,10.36,0.28,21.84,False,True,True,True,True,False,True,True,True,65
+ASTERDM,Aster DM Healthcare Ltd.,NSE,ASTERDM.NS,741.25,698.43,646.71,764.85,3.09,5.1,18.02,14.5,30.88,90.56,0.34,20.82,True,True,True,True,True,True,True,True,True,64
+ADVENZYMES,Advanced Enzyme Tech Ltd.,NSE,ADVENZYMES.NS,371.75,321.09,312.49,390.4,4.78,8.7,18.79,17.2,29.22,25.33,0.44,21.48,False,True,True,True,True,False,True,True,True,64
+AUBANK,AU Small Finance Bank Ltd.,NSE,AUBANK.NS,1005.0,969.28,904.55,1065.65,5.69,-1.74,-2.39,9.79,46.01,149.09,0.36,20.69,True,True,True,True,True,True,True,True,True,63
+BAJAJ-AUTO,Bajaj Auto Ltd.,NSE,BAJAJ-AUTO.NS,10808.5,9743.21,9293.12,10808.5,0.0,13.83,10.21,21.55,26.9,474.33,0.79,20.65,True,True,True,True,True,True,True,True,True,63
+JSWENERGY,JSW Energy Ltd.,NSE,JSWENERGY.NS,602.05,529.88,510.49,602.05,0.0,3.64,21.88,24.25,20.9,223.0,2.57,20.38,False,True,True,True,True,False,True,True,True,62
+BIOCON,Biocon Ltd.,NSE,BIOCON.NS,432.2,378.98,376.04,436.15,0.91,19.13,12.57,8.91,29.92,217.58,0.58,19.07,False,True,True,True,False,True,True,True,True,61
+VTL,Vardhman Textiles Ltd.,NSE,VTL.NS,595.5,574.29,475.19,636.05,6.38,-2.24,11.01,31.76,19.27,26.05,0.21,19.21,True,True,True,True,True,True,True,True,True,61
+PGHL,Procter & Gamble Health Ltd.,NSE,PGHL.NS,6247.5,5110.74,5530.78,6389.44,2.22,20.71,24.51,9.21,22.65,23.92,17.47,18.8,False,True,True,True,False,False,False,True,True,60
+JAMNAAUTO,Jamna Auto Industries Ltd.,NSE,JAMNAAUTO.NS,123.92,120.8,115.43,148.25,16.41,0.57,-13.9,17.38,40.61,23.92,0.73,18.73,True,True,True,True,True,True,True,True,True,60
+COALINDIA,Coal India Ltd.,NSE,COALINDIA.NS,463.05,456.57,407.23,481.45,3.82,-0.85,9.33,24.05,24.26,693.28,7.97,18.7,True,True,True,True,True,True,True,True,True,59
+AUROPHARMA,Aurobindo Pharma Ltd.,NSE,AUROPHARMA.NS,1435.9,1394.03,1209.69,1546.7,7.16,0.93,23.91,18.9,19.7,191.12,0.54,18.42,True,True,True,True,True,True,True,True,True,59
+JSWSTEEL,JSW Steel Ltd.,NSE,JSWSTEEL.NS,1309.3,1227.43,1171.21,1309.3,0.0,2.16,5.95,14.82,30.55,228.87,0.97,18.07,True,True,True,True,True,True,True,True,True,58
+SIEMENS,Siemens Ltd.,NSE,SIEMENS.NS,3878.7,3500.09,3238.3,3878.7,0.0,1.34,20.97,20.6,17.86,191.15,3.41,17.65,True,True,True,True,True,True,True,True,True,58
+TIMKEN,Timken India Ltd.,NSE,TIMKEN.NS,3636.9,3462.36,3158.25,3750.2,3.02,2.87,15.27,17.81,22.2,33.82,0.24,17.56,False,True,True,True,True,True,True,True,False,57
+CCL,CCL Products (I) Ltd.,NSE,CCL.NS,1071.0,1096.52,978.82,1207.8,11.33,-2.92,7.75,7.56,33.2,30.43,0.66,16.81,False,False,True,True,True,True,True,True,True,57
+ELGIEQUIP,Elgi Equipments Ltd.,NSE,ELGIEQUIP.NS,577.9,523.97,496.13,593.55,2.64,4.57,8.58,17.28,22.81,19.41,2.78,16.48,False,True,True,True,True,True,False,True,True,56
+EICHERMOT,Eicher Motors Ltd.,NSE,EICHERMOT.NS,7419.0,7044.91,7025.83,8190.0,9.41,4.91,-6.52,3.99,39.51,333.24,0.48,16.19,False,True,True,True,False,True,True,True,True,56
+GRASIM,Grasim Industries Ltd.,NSE,GRASIM.NS,3170.0,2799.54,2804.21,3171.6,0.05,13.91,11.9,15.91,18.95,302.48,0.3,16.13,False,True,True,True,False,True,True,True,False,55
+GRINDWELL,Grindwell Norton Ltd.,NSE,GRINDWELL.NS,1912.3,1609.02,1597.1,1962.5,2.56,17.74,15.71,25.08,8.88,25.59,0.26,15.99,True,True,True,True,True,True,True,True,True,55
+JINDALSTEL,Jindal Steel & Power Ltd.,NSE,JINDALSTEL.NS,1220.6,1209.88,1100.52,1288.8,5.29,-3.55,0.29,17.52,27.4,141.42,0.86,15.92,True,True,True,True,True,True,True,True,True,54
+NTPC,NTPC Ltd.,NSE,NTPC.NS,398.15,388.43,350.31,410.2,2.94,-2.14,6.76,22.81,19.7,333.8,1.25,15.86,False,True,True,True,True,True,True,True,False,53
+ZYDUSWELL,Zydus Wellness Ltd.,NSE,ZYDUSWELL.NS,481.45,482.32,449.24,524.26,8.17,-1.64,20.59,9.12,22.92,24.54,0.06,15.86,False,False,True,True,True,False,True,True,False,53
+FORTIS,Fortis Healthcare Ltd.,NSE,FORTIS.NS,960.9,896.78,925.9,1097.9,12.48,0.98,4.33,4.33,32.91,114.56,0.38,15.43,False,True,True,True,False,False,True,True,True,52
+VBL,Varun Beverages Ltd.,NSE,VBL.NS,534.5,465.91,468.98,539.45,0.92,3.17,18.03,19.66,14.19,269.86,0.58,15.5,False,True,True,True,False,False,True,True,True,52
+ENGINERSIN,Engineers India Ltd.,NSE,ENGINERSIN.NS,234.4,226.05,203.47,262.35,10.65,-8.63,9.88,21.23,19.44,123.41,0.9,15.25,True,True,True,True,True,True,True,True,True,51
+ASHOKLEY,Ashok Leyland Ltd.,NSE,ASHOKLEY.NS,163.62,164.73,161.55,211.92,22.79,-2.33,-21.66,13.08,37.96,340.02,0.86,14.55,False,False,False,True,False,True,True,True,True,51
+MINDACORP,Minda Corporation Ltd.,NSE,MINDACORP.NS,623.85,523.1,550.16,623.85,0.0,18.42,8.9,3.74,23.84,38.76,4.47,14.28,False,True,True,True,False,True,True,True,True,50
+DEEPAKFERT,Deepak Fertilisers & Petrochemicals Corp. Ltd.,NSE,DEEPAKFERT.NS,1448.3,1171.76,1272.04,1731.1,16.34,18.82,44.76,2.1,7.14,66.97,0.31,14.32,False,True,True,True,False,False,False,True,True,50
+LUXIND,Lux Industries Ltd.,NSE,LUXIND.NS,1438.0,1288.12,1185.4,1747.05,17.69,-4.77,54.12,22.94,-8.12,11.17,0.22,13.98,False,True,True,True,True,False,False,True,True,49
+INDIANB,Indian Bank,NSE,INDIANB.NS,833.35,875.63,825.04,991.55,15.95,-7.0,-11.97,-2.17,44.27,209.64,0.44,13.96,False,False,False,True,True,True,True,True,True,49
+AJANTPHARM,Ajanta Pharmaceuticals Ltd.,NSE,AJANTPHARM.NS,3020.8,2930.62,2713.87,3259.2,7.31,9.61,2.77,20.32,15.8,46.2,1.32,13.93,False,True,True,True,True,True,True,True,False,48
+MARICO,Marico Ltd.,NSE,MARICO.NS,833.8,782.55,748.87,842.55,1.04,6.78,5.79,12.69,20.6,152.0,0.53,13.88,False,True,True,True,True,True,True,True,False,48
+CARBORUNIV,Carborundum Universal Ltd.,NSE,CARBORUNIV.NS,1035.0,922.17,885.03,1102.4,6.11,6.9,22.7,24.35,2.93,33.6,0.49,13.71,False,True,True,True,True,False,True,True,True,47
+APOLLOHOSP,Apollo Hospitals Enterprise Ltd.,NSE,APOLLOHOSP.NS,8272.5,7724.87,7529.98,8404.0,1.56,6.7,8.63,12.08,19.26,356.95,0.68,13.72,False,True,True,True,True,False,True,True,False,47
+PNBHOUSING,PNB Housing Finance Ltd.,NSE,PNBHOUSING.NS,1077.9,944.67,888.0,1120.49,3.8,3.29,26.98,21.5,3.74,95.45,0.35,13.67,True,True,True,True,True,True,True,True,True,46
+OIL,Oil India Ltd.,NSE,OIL.NS,488.0,479.11,436.67,518.3,5.85,-1.85,2.62,16.57,19.84,290.14,0.21,13.24,False,True,True,True,True,True,True,True,False,45
+HEG,H.E.G. Ltd.,NSE,HEG.NS,579.75,581.71,545.69,668.4,13.26,-12.05,4.19,15.16,21.16,93.74,0.37,12.64,False,False,True,True,True,True,True,True,False,45
+ENDURANCE,Endurance Technologies Ltd.,NSE,ENDURANCE.NS,2749.5,2416.51,2618.99,3041.2,9.59,16.83,11.53,1.52,18.99,48.35,0.47,12.04,False,True,True,True,False,False,False,True,False,44
+TIINDIA,Tube Investments of India Ltd.,NSE,TIINDIA.NS,3210.5,2807.39,2821.11,3401.52,5.62,6.98,24.16,11.4,7.7,104.33,1.73,12.03,False,True,True,True,True,False,True,True,True,44
+CESC,CESC Ltd.,NSE,CESC.NS,185.87,171.52,164.39,198.72,6.47,-2.82,19.58,8.06,14.21,90.61,1.3,11.74,True,True,True,True,True,True,True,True,True,43
+LALPATHLAB,Dr. Lal Path Labs Ltd.,NSE,LALPATHLAB.NS,1617.2,1459.95,1500.47,1728.53,6.44,14.56,15.32,3.19,15.69,131.57,0.39,11.75,False,True,True,True,False,False,True,True,False,43
+PTC,PTC India Ltd.,NSE,PTC.NS,189.69,186.32,170.67,227.38,16.58,-7.79,12.45,18.62,10.7,41.21,0.65,11.58,False,True,True,True,True,False,True,True,False,42
+INDUSINDBK,IndusInd Bank Ltd.,NSE,INDUSINDBK.NS,932.3,862.57,840.17,964.6,3.35,5.28,0.67,10.13,18.76,161.21,0.36,11.21,False,True,True,True,False,True,True,True,True,42
+PFC,Power Finance Corporation Ltd.,NSE,PFC.NS,433.5,435.78,393.38,481.4,9.95,-9.95,6.54,20.57,11.16,249.4,0.4,10.95,False,False,True,True,True,True,True,True,True,41
+UNIONBANK,Union Bank of India,NSE,UNIONBANK.NS,168.72,172.81,159.28,202.27,16.59,-1.03,-13.02,11.82,24.65,185.58,0.45,10.7,False,False,True,True,True,True,True,True,True,41
+LUPIN,Lupin Ltd.,NSE,LUPIN.NS,2276.4,2306.88,2127.94,2460.1,7.47,-1.14,2.57,12.17,16.35,334.07,0.47,10.59,False,False,True,True,True,True,True,True,False,40
+ONGC,Oil & Natural Gas Corporation Ltd.,NSE,ONGC.NS,274.05,284.76,251.15,301.4,9.07,-9.04,-1.65,13.59,19.54,468.16,1.49,10.66,False,False,True,True,True,True,True,True,False,40
+BANKINDIA,Bank of India,NSE,BANKINDIA.NS,147.0,144.4,141.2,177.2,17.04,1.91,-14.39,1.06,30.81,161.59,1.08,9.96,False,True,False,True,False,True,True,True,True,39
+SUPRAJIT,Suprajit Engineering Ltd.,NSE,SUPRAJIT.NS,474.45,420.04,441.96,492.34,3.63,11.83,14.31,1.84,14.02,15.11,1.99,10.21,False,True,True,True,False,False,False,True,False,39
+DCBBANK,DCB Bank Ltd.,NSE,DCBBANK.NS,179.52,180.5,165.8,201.39,10.86,-5.33,-6.03,-3.52,30.74,25.12,0.28,9.5,False,False,True,True,True,True,True,True,True,38
+CUB,City Union Bank Ltd.,NSE,CUB.NS,253.85,254.17,251.69,301.75,15.87,-7.91,-9.89,-3.38,31.2,49.43,0.28,8.7,False,False,False,True,False,True,True,True,True,37
+MOTILALOFS,Motilal Oswal Financial Services Ltd.,NSE,MOTILALOFS.NS,894.1,778.98,852.83,1082.56,17.41,14.23,16.23,-4.9,14.22,106.31,1.41,8.89,False,True,True,True,False,False,False,True,True,37
+TATAPOWER,Tata Power Co. Ltd.,NSE,TATAPOWER.NS,425.8,414.77,390.81,461.8,7.8,-7.8,12.65,10.03,8.27,252.36,0.71,8.06,False,True,True,True,True,True,True,True,False,36
+WABAG,Va Tech Wabag Ltd.,NSE,WABAG.NS,1547.0,1374.94,1363.65,1644.47,5.93,2.4,21.53,10.96,1.62,46.06,1.54,8.48,False,True,True,True,True,False,False,True,True,36
+LINDEINDIA,Linde India Ltd.,NSE,LINDEINDIA.NS,7259.0,7262.78,6467.23,7847.5,7.5,0.42,6.84,18.5,1.76,36.54,0.53,7.67,False,False,True,True,True,True,True,True,False,35
+ASIANPAINT,Asian Paints Ltd.,NSE,ASIANPAINT.NS,2671.9,2420.45,2539.17,2968.5,9.99,8.5,10.04,-7.12,17.47,267.56,0.71,7.71,False,True,True,True,False,True,True,True,False,35
+JKPAPER,JK Paper Ltd.,NSE,JKPAPER.NS,382.45,360.05,364.83,426.25,10.28,2.22,12.06,3.42,9.79,20.51,0.58,7.58,False,True,True,True,True,False,True,True,False,34
+TITAN,Titan Company Ltd.,NSE,TITAN.NS,4137.9,4243.8,3945.59,4525.9,8.57,-6.32,-2.33,5.99,17.21,609.83,0.37,7.58,False,False,True,True,True,True,True,True,False,34
+BALRAMCHIN,Balrampur Chini Mills Ltd.,NSE,BALRAMCHIN.NS,530.2,509.2,480.68,618.12,14.22,4.23,16.17,17.86,-3.68,44.69,0.6,7.54,False,True,True,True,True,False,False,True,True,33
+IPCALAB,Ipca Laboratories Ltd.,NSE,IPCALAB.NS,1572.4,1536.67,1438.92,1656.2,5.06,2.3,8.46,9.33,7.02,47.41,0.27,7.53,False,True,True,True,True,True,True,True,False,33
+EXIDEIND,Exide Industries Ltd.,NSE,EXIDEIND.NS,394.15,332.27,361.15,427.35,7.77,10.64,17.15,5.01,3.61,170.14,6.82,7.44,False,True,True,True,False,False,False,True,True,32
+ASTRAL,Astral Poly Technik Ltd.,NSE,ASTRAL.NS,1598.6,1570.78,1491.63,1746.3,8.46,3.21,-2.32,10.05,11.13,90.39,0.65,7.32,False,True,True,True,True,True,True,True,False,32
+YESBANK,Yes Bank Ltd.,NSE,YESBANK.NS,22.76,20.09,21.12,24.03,5.29,13.97,8.17,1.47,8.54,276.96,0.71,6.89,False,True,True,True,False,True,True,True,True,31
+MFSL,Max Financial Services Ltd.,NSE,MFSL.NS,1682.3,1620.54,1643.7,1870.0,10.04,4.44,-9.03,1.25,18.97,104.67,0.88,6.6,False,True,True,True,False,True,True,True,False,30
+SUNPHARMA,Sun Pharmaceutical Industries Ltd.,NSE,SUNPHARMA.NS,1844.3,1774.94,1708.16,1905.8,3.23,5.55,6.95,4.3,8.36,483.24,0.35,6.58,False,True,True,True,True,True,True,True,False,30
+GNFC,Gujarat Narmada Valley Fertilizers and Chemicals Ltd.,NSE,GNFC.NS,516.15,460.16,481.05,549.85,6.13,8.61,11.19,4.84,4.88,46.51,1.21,6.5,False,True,True,True,False,False,False,True,True,29
+DELTACORP,Delta Corp Ltd.,NSE,DELTACORP.NS,81.05,65.14,71.53,95.22,14.88,10.51,23.85,17.28,-11.23,43.36,5.47,6.51,False,True,True,True,False,False,False,True,True,29
+PHOENIXLTD,Phoenix Mills Ltd.,NSE,PHOENIXLTD.NS,1771.8,1702.66,1685.67,1950.8,9.18,-1.55,1.68,3.31,12.36,67.15,0.75,6.12,False,True,True,True,False,True,True,True,False,28
+HDFCAMC,HDFC Asset Management Company Ltd.,NSE,HDFCAMC.NS,2716.3,2606.14,2688.42,2946.0,7.8,-1.59,0.02,0.72,15.67,210.6,0.46,6.33,False,True,True,True,False,False,True,True,False,28
+MMTC,MMTC Ltd.,NSE,MMTC.NS,65.99,61.97,63.41,85.77,23.06,-0.03,6.32,5.72,7.81,16.38,0.38,6.1,False,True,True,True,False,False,False,True,False,27
+SBIN,State Bank of India,NSE,SBIN.NS,967.8,1021.01,965.78,1206.06,19.76,-9.72,-18.98,1.3,25.47,1725.47,0.46,5.81,False,False,False,True,True,True,True,True,False,27
+ATUL,Atul Ltd.,NSE,ATUL.NS,7002.5,6647.35,6281.23,7670.36,8.71,2.15,6.4,17.28,-2.38,18.76,0.32,5.73,False,True,True,True,True,False,False,True,False,26
+LT,Larsen & Toubro Ltd.,NSE,LT.NS,4047.5,3829.0,3851.95,4375.36,7.49,1.22,-6.7,1.54,16.16,959.44,0.46,5.71,False,True,True,True,False,True,True,True,False,26
+DRREDDY,Dr. Reddy's Laboratories Ltd.,NSE,DRREDDY.NS,1319.0,1279.2,1261.76,1354.6,2.63,-2.63,3.01,6.04,8.6,311.86,0.37,5.59,False,True,True,True,True,False,True,True,False,25
+DIVISLAB,Divi's Laboratories Ltd.,NSE,DIVISLAB.NS,6797.5,6366.55,6308.49,6951.85,2.22,4.95,7.94,5.18,4.22,241.77,0.49,5.33,False,True,True,True,False,True,True,True,False,25
+HONAUT,Honeywell Automation India Ltd.,NSE,HONAUT.NS,36180.0,30140.5,33628.78,41200.0,12.18,13.59,16.33,3.98,-1.95,64.55,1.02,5.04,False,True,True,True,False,False,False,True,True,24
+SUZLON,Suzlon Energy Ltd.,NSE,SUZLON.NS,57.53,49.42,52.17,71.48,19.52,0.37,29.4,4.41,-5.7,481.35,2.26,4.96,False,True,True,True,False,False,False,True,True,24
+POWERGRID,Power Grid Corporation of India Ltd.,NSE,POWERGRID.NS,300.15,305.35,282.55,320.9,6.47,-5.91,0.4,9.34,6.55,293.0,0.75,4.91,False,False,True,True,True,True,True,True,False,23
+NH,Narayana Hrudayalaya Ltd.,NSE,NH.NS,1920.2,1770.32,1808.92,2257.88,14.96,9.29,5.1,-6.02,11.73,78.07,0.83,4.83,False,True,True,True,False,True,False,True,False,22
+ITI,ITI Ltd.,NSE,ITI.NS,301.4,283.79,298.74,364.85,17.39,-1.35,7.41,1.4,7.59,19.31,0.09,4.8,False,True,True,True,False,False,False,True,False,22
+GODREJIND,Godrej Industries Ltd.,NSE,GODREJIND.NS,1134.1,966.5,1047.74,1359.5,16.58,14.66,9.64,8.07,-2.89,80.52,0.08,4.66,False,True,True,True,False,False,False,True,True,21
+VARROC,Varroc Engineering Ltd.,NSE,VARROC.NS,587.3,525.21,575.94,669.95,12.34,12.65,5.51,-12.19,14.81,5.55,1.96,4.63,False,True,True,True,False,False,True,True,False,21
+SCHAEFFLER,Schaeffler India Ltd.,NSE,SCHAEFFLER.NS,4157.7,4032.61,3943.44,4355.0,4.53,-2.93,7.79,5.58,2.76,33.76,0.26,4.04,False,True,True,True,True,False,True,True,False,20
+FINPIPE,Finolex Industries Ltd.,NSE,FINPIPE.NS,191.93,171.06,183.5,228.69,16.07,9.45,2.43,4.63,3.29,36.02,26.22,4.14,False,True,True,True,False,False,False,True,False,20
+MAHSEAMLES,Maharashtra Seamless Ltd.,NSE,MAHSEAMLES.NS,635.2,618.23,587.88,751.77,15.51,-2.23,19.28,11.04,-7.5,7.73,0.53,3.94,False,True,True,True,True,False,False,True,False,19
+CARERATING,CARE Ratings Ltd.,NSE,CARERATING.NS,1658.8,1606.86,1588.41,1917.01,13.47,3.92,3.06,9.77,0.13,14.83,0.47,3.99,False,True,True,True,True,True,False,True,False,19
+AXISBANK,Axis Bank Ltd.,NSE,AXISBANK.NS,1304.1,1274.26,1239.2,1403.0,7.05,1.17,-4.69,2.22,9.82,856.89,0.98,3.77,False,True,True,True,False,True,True,True,False,18
+SFL,Sheela Foam Ltd.,NSE,SFL.NS,626.05,541.11,604.59,758.95,17.51,21.8,11.21,2.73,-4.49,36.32,0.52,3.44,False,True,True,True,False,False,False,True,True,18
+FDC,FDC Ltd.,NSE,FDC.NS,429.55,357.53,403.65,503.28,14.65,17.03,14.08,5.09,-6.92,13.61,13.72,3.28,False,True,True,True,False,False,False,True,True,17
+BEL,Bharat Electronics Ltd.,NSE,BEL.NS,419.1,431.25,414.52,468.45,10.53,-3.82,-4.59,1.09,10.03,513.13,0.77,3.04,False,False,False,True,True,True,True,True,False,17
+CAPLIPOINT,Caplin Point Laboratories Ltd.,NSE,CAPLIPOINT.NS,2023.3,1761.69,1901.15,2343.0,13.64,14.89,18.72,5.35,-9.93,46.52,0.49,2.87,False,True,True,True,False,False,False,True,True,16
+MASFIN,MAS Financial Services Ltd.,NSE,MASFIN.NS,315.4,314.44,313.08,347.4,9.21,-1.02,-5.11,-0.13,9.91,6.66,0.9,2.8,False,True,True,True,False,True,True,True,False,16
+TORNTPOWER,Torrent Power Ltd.,NSE,TORNTPOWER.NS,1440.5,1531.28,1372.45,1772.5,18.73,-17.92,-5.76,12.7,4.73,73.63,0.81,2.76,False,False,True,True,True,True,True,True,False,15
+FINEORG,Fine Organic Industries Ltd.,NSE,FINEORG.NS,4677.3,4554.3,4513.56,5445.36,14.1,-1.43,4.63,3.07,2.14,5.08,0.72,2.56,False,True,True,True,True,False,False,True,False,14
+EDELWEISS,Edelweiss Financial Services Ltd.,NSE,EDELWEISS.NS,112.33,113.4,110.88,127.6,11.97,-9.4,-7.24,0.57,12.22,59.79,0.32,2.67,False,False,True,True,True,True,True,True,False,14
+RAYMOND,Raymond Ltd.,NSE,RAYMOND.NS,532.0,434.55,485.79,758.0,29.82,12.75,33.48,7.26,-19.92,79.06,1.2,2.18,False,True,True,True,False,False,False,False,True,13
+VENKEYS,Venky's (India) Ltd.,NSE,VENKEYS.NS,1500.4,1467.98,1455.27,1709.6,12.24,-4.3,8.91,11.3,-6.33,21.62,0.33,2.21,False,True,True,True,True,False,True,True,False,13
+3MINDIA,3M India Ltd.,NSE,3MINDIA.NS,33225.0,31961.4,32832.2,37635.0,11.72,-1.2,-9.95,-7.63,15.19,19.71,0.46,1.68,False,True,False,True,False,True,True,True,False,12
+CENTURYPLY,Century Plyboards (India) Ltd.,NSE,CENTURYPLY.NS,770.35,746.3,768.18,844.0,8.73,-1.85,2.32,-0.03,3.33,11.21,0.33,1.6,False,True,True,True,False,False,True,True,False,12
+OBEROIRLTY,Oberoi Realty Ltd.,NSE,OBEROIRLTY.NS,1692.6,1606.18,1617.74,1979.26,14.48,-1.66,12.78,-0.67,-1.79,60.93,0.56,1.47,False,True,True,True,False,True,False,True,False,11
+CERA,Cera Sanitaryware Ltd,NSE,CERA.NS,5797.5,5245.36,5553.55,7052.5,17.8,10.9,13.78,2.03,-8.7,13.83,0.22,0.98,False,True,True,True,False,False,False,True,False,11
+PIDILITIND,Pidilite Industries Ltd.,NSE,PIDILITIND.NS,1480.7,1387.22,1463.13,1563.5,5.3,6.33,1.08,0.58,-0.43,157.8,0.34,0.85,False,True,True,True,False,False,False,True,False,10
+PRAJIND,Praj Industries Ltd.,NSE,PRAJIND.NS,383.8,362.86,347.08,525.79,27.0,-2.86,23.23,14.7,-20.42,54.01,0.22,0.6,False,True,True,True,True,False,False,False,True,10
+LICHSGFIN,LIC Housing Finance Ltd.,NSE,LICHSGFIN.NS,556.45,535.37,544.93,627.2,11.28,1.17,6.08,1.93,-4.56,98.56,0.64,0.09,False,True,True,True,False,False,False,True,False,9
+NHPC,NHPC Ltd.,NSE,NHPC.NS,80.68,79.13,79.19,88.78,9.13,-5.5,8.34,4.21,-5.56,99.14,1.23,0.15,False,True,True,True,True,False,False,True,False,9
+VSTIND,VST Industries Ltd.,NSE,VSTIND.NS,258.15,241.97,250.41,305.7,15.55,-0.89,8.13,2.32,-7.08,6.06,0.21,-0.6,False,True,True,True,False,False,False,True,False,8
+TNPL,Tamil Nadu Newsprint & Papers Ltd.,NSE,TNPL.NS,149.78,142.14,146.2,182.42,17.89,1.38,8.45,2.23,-7.79,2.09,0.21,-0.62,False,True,True,True,False,False,False,True,False,7
+BERGEPAINT,Berger Paints India Ltd.,NSE,BERGEPAINT.NS,526.95,464.3,508.51,596.15,11.61,14.59,15.7,-9.08,-6.34,52.12,0.42,-0.66,False,True,True,True,False,False,False,True,True,7
+RKFORGE,Ramkrishna Forgings Ltd.,NSE,RKFORGE.NS,566.1,551.78,545.3,682.15,17.01,-5.86,3.1,5.98,-7.71,39.81,0.34,-1.25,False,True,True,True,True,False,False,True,False,6
+GICRE,General Insurance Corporation of India,NSE,GICRE.NS,390.6,386.21,378.6,419.92,6.98,-2.24,2.57,2.79,-4.56,14.7,0.95,-0.7,False,True,True,True,True,True,True,True,False,6
+CROMPTON,Crompton Greaves Consumer Electricals Ltd.,NSE,CROMPTON.NS,288.25,263.06,273.47,356.13,19.06,6.91,8.6,7.82,-15.95,147.43,0.18,-1.62,False,True,True,True,True,False,False,True,True,5
+ORIENTELEC,Orient Electric Ltd.,NSE,ORIENTELEC.NS,193.16,176.89,187.31,233.51,17.28,2.58,9.09,6.55,-16.53,8.79,0.9,-2.57,False,True,True,True,False,False,False,True,False,5
+PAGEIND,Page Industries Ltd.,NSE,PAGEIND.NS,38145.0,35459.2,37715.16,48745.79,21.75,1.56,17.49,-0.97,-17.97,102.8,0.51,-3.83,False,True,True,True,False,False,False,True,False,4
+GREAVESCOT,Greaves Cotton Ltd.,NSE,GREAVESCOT.NS,183.96,155.02,183.72,232.75,20.96,10.13,13.82,-10.15,-11.59,21.76,1.9,-3.91,False,True,True,True,False,False,False,True,True,4
+HAL,Hindustan Aeronautics Ltd.,NSE,HAL.NS,4413.0,4202.46,4385.33,5052.96,12.67,1.65,5.83,-3.16,-11.42,635.02,0.37,-4.18,False,True,True,True,False,False,False,True,False,3
+CHAMBLFERT,Chambal Fertilizers & Chemicals Ltd.,NSE,CHAMBLFERT.NS,478.15,444.62,469.8,582.44,17.91,6.61,5.23,4.14,-17.46,59.25,1.46,-4.04,False,True,True,True,False,False,False,True,False,3
+GAIL,GAIL (India) Ltd.,NSE,GAIL.NS,169.0,155.9,164.93,192.93,12.4,2.0,0.31,-4.77,-9.0,172.9,0.44,-4.77,False,True,True,True,False,False,False,True,False,2
+IRB,IRB Infrastructure Developers Ltd.,NSE,IRB.NS,21.69,21.25,21.21,26.39,17.81,-0.55,6.88,-0.27,-14.75,80.41,0.38,-4.66,False,True,True,True,True,False,False,True,False,2
+DEEPAKNTR,Deepak Nitrite Ltd.,NSE,DEEPAKNTR.NS,1714.8,1600.07,1669.29,2091.74,18.02,1.77,4.57,0.62,-17.62,41.81,0.6,-5.77,False,True,True,True,False,False,False,True,True,1
+PETRONET,Petronet LNG Ltd.,NSE,PETRONET.NS,278.8,270.55,276.63,323.4,13.79,0.39,-9.08,1.33,-9.8,77.34,0.31,-5.3,False,True,False,True,False,True,False,True,False,1

@@ -36,11 +36,15 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
 
-MIN_LIQUIDITY_CR = 2.0
+import os
+
+MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "2.0"))
 WITHIN_PCT_OF_52W_HIGH = 25.0
-BATCH_SIZE = 60
-SLEEP_BETWEEN_BATCHES = 0.5
-INCLUDE_BSE = True
+BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "40"))
+SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "1.5"))
+# BSE-only stocks are mostly illiquid and trigger Yahoo rate limits at scale.
+# Enable with SCAN_INCLUDE_BSE=1 if you want the full 4800+ universe scanned.
+INCLUDE_BSE = os.getenv("SCAN_INCLUDE_BSE", "0") == "1"
 
 UA = {
     "User-Agent": (
