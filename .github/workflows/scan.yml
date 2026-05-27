@@ -36,10 +36,21 @@ jobs:
           git add data/
           if git diff --cached --quiet; then
             echo "No data changes"
-          else
-            git commit -m "chore: refresh scan $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh scan $(date -u +%Y-%m-%dT%H:%MZ)"
+          # Main may have moved during the ~10 min scan; rebase-and-retry.
+          for i in 1 2 3 4; do
+            git pull --rebase origin main || true
+            if git push; then
+              echo "Pushed on attempt $i"
+              exit 0
+            fi
+            echo "Push attempt $i rejected; retrying..."
+            sleep $((i * 5))
+          done
+          echo "Push failed after 4 attempts"
+          exit 1
 
   deploy:
     needs: scan
