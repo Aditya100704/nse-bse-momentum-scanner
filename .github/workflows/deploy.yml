@@ -1,0 +1,48 @@
+name: Deploy site
+
+# Fast deploys: skip the scan, only push the dashboard.
+# - Auto-runs on every push that touches web/ or the scanner_output JSON
+# - Also runnable manually for an emergency redeploy
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - 'data/scanner_output.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/configure-pages@v5
+
+      - name: Stage site
+        run: |
+          mkdir -p _site _site/data
+          cp -r web/* _site/
+          cp data/scanner_output.json _site/data/ 2>/dev/null || true
+          # Dashboard's dev path '../data/' -> 'data/' on Pages
+          sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
