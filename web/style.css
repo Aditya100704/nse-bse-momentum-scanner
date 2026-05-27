@@ -766,9 +766,20 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 
 /* ============================================================ Phone (≤ 420px) */
 @media (max-width: 420px) {
-  .kpis { grid-template-columns: 1fr; }
-  .signal-grid { grid-template-columns: 1fr; }
-  .gauge-wrap { width: 100%; max-width: 280px; height: 150px; }
+  /* Keep 2 cards per row on phone — user prefers density over single-column */
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .kpi { padding: 12px 12px; }
+  .kpi-label { font-size: 9px; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .kpi-value { font-size: 18px; line-height: 1.1; }
+  .kpi-foot { font-size: 9px; margin-top: 4px; }
+  .temp-pill { font-size: 11px; padding: 2px 7px; }
+  .signal-card { padding: 12px 12px; }
+  .signal-label { font-size: 9px; }
+  .signal-value { font-size: 16px; }
+  .signal-foot { font-size: 9px; }
+
+  .gauge-wrap { max-width: 260px; }
   .gauge-score { font-size: 28px; }
   .hero-title { font-size: 24px; }
   .badge { font-size: 10px; }
