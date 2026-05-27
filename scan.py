@@ -220,12 +220,16 @@ def analyze(df: pd.DataFrame) -> dict | None:
     close = df["Close"].astype(float)
     vol = df["Volume"].astype(float)
 
+    sma10 = close.rolling(10).mean()
+    sma20 = close.rolling(20).mean()
     sma50 = close.rolling(50).mean()
     sma150 = close.rolling(150).mean()
     sma200 = close.rolling(200).mean()
     sma200_prev = sma200.shift(22)
 
     last = close.iloc[-1]
+    last10 = sma10.iloc[-1]
+    last20 = sma20.iloc[-1]
     last50 = sma50.iloc[-1]
     last150 = sma150.iloc[-1]
     last200 = sma200.iloc[-1]
@@ -258,6 +262,8 @@ def analyze(df: pd.DataFrame) -> dict | None:
     ]) * 4
 
     crit = {
+        "price_gt_sma10": bool(not pd.isna(last10) and last > last10),
+        "price_gt_sma20": bool(not pd.isna(last20) and last > last20),
         "price_gt_sma50": bool(last > last50),
         "price_gt_sma150": bool(last > last150),
         "price_gt_sma200": bool(last > last200),
@@ -267,7 +273,14 @@ def analyze(df: pd.DataFrame) -> dict | None:
         "within_25_of_high": bool(pct_off_high <= 25),
         "above_30_of_low": bool(low_52w > 0 and (last / low_52w - 1) >= 0.30),
     }
-    trend_template = all(crit.values())
+    # Minervini's Trend Template is the strict 8-criteria subset
+    trend_template = all(
+        crit[k] for k in (
+            "price_gt_sma50", "price_gt_sma150", "price_gt_sma200",
+            "sma50_gt_sma150", "sma150_gt_sma200", "sma200_rising",
+            "within_25_of_high", "above_30_of_low",
+        )
+    )
 
     return {
         "close": _safe_float(last),
@@ -287,6 +300,129 @@ def analyze(df: pd.DataFrame) -> dict | None:
     }
 
 
+def _load_sector_map() -> dict[str, str]:
+    """Flatten the static sector_map.json (sector -> [symbols]) into a
+    symbol -> sector lookup."""
+    p = Path(__file__).resolve().parent / "sector_map.json"
+    if not p.exists():
+        return {}
+    raw = json.loads(p.read_text(encoding="utf-8"))
+    out: dict[str, str] = {}
+    for sector, syms in raw.items():
+        if sector.startswith("_"):
+            continue
+        for s in syms:
+            out[s.upper()] = sector
+    return out
+
+
+def _compute_breadth(all_results: list[dict]) -> dict:
+    """Breadth across every stock the analyzer produced output for (NOT just
+    qualifiers). This is the real 'market participation' signal."""
+    n = len(all_results)
+    if n == 0:
+        return {}
+    def pct(flag: str) -> float:
+        return round(sum(1 for r in all_results if r.get(flag)) / n * 100, 1)
+    pct10 = pct("price_gt_sma10")
+    pct20 = pct("price_gt_sma20")
+    pct50 = pct("price_gt_sma50")
+    pct200 = pct("price_gt_sma200")
+    near_high = round(
+        sum(1 for r in all_results if (r.get("pct_off_high") or 100) <= 10) / n * 100, 1
+    )
+    tt_pass = sum(1 for r in all_results if r.get("trend_template"))
+
+    # Median returns across the broad market
+    def med(key: str) -> float | None:
+        xs = sorted([r[key] for r in all_results if r.get(key) is not None])
+        if not xs: return None
+        m = len(xs) // 2
+        return round((xs[m] if len(xs) % 2 else (xs[m - 1] + xs[m]) / 2), 2)
+
+    med_r1m = med("r1m")
+    med_r3m = med("r3m")
+    med_r6m = med("r6m")
+
+    # 1-10 regime score: blend breadth + median returns. Each signal -> 0..10
+    def band(v: float, bear_lo: float, bear_hi: float, bull_lo: float, bull_hi: float) -> float:
+        # Linear scale: <=bear_lo -> 0, >=bull_hi -> 10, bear_hi=4, bull_lo=6
+        if v <= bear_lo: return 0.0
+        if v >= bull_hi: return 10.0
+        if v <= bear_hi: return (v - bear_lo) / (bear_hi - bear_lo) * 4
+        if v >= bull_lo: return 6 + (v - bull_lo) / (bull_hi - bull_lo) * 4
+        return 4 + (v - bear_hi) / (bull_lo - bear_hi) * 2  # the 4-6 sideways band
+
+    score_200 = band(pct200, 20, 40, 55, 75)   # long-term trend participation
+    score_50  = band(pct50, 25, 45, 55, 75)
+    score_20  = band(pct20, 30, 45, 55, 70)
+    score_r1m = band((med_r1m or 0), -5, -1, 1, 5)
+    score_r3m = band((med_r3m or 0), -10, -2, 2, 10)
+    score_high = band(near_high, 5, 12, 18, 30)
+
+    regime = round(
+        score_200 * 0.30
+        + score_50 * 0.22
+        + score_20 * 0.13
+        + score_r1m * 0.08
+        + score_r3m * 0.17
+        + score_high * 0.10,
+        2,
+    )
+    if regime >= 7:
+        regime_label = "Bullish"
+    elif regime >= 4:
+        regime_label = "Sideways"
+    else:
+        regime_label = "Bearish"
+
+    return {
+        "universe_with_data": n,
+        "pct_above_sma10": pct10,
+        "pct_above_sma20": pct20,
+        "pct_above_sma50": pct50,
+        "pct_above_sma200": pct200,
+        "pct_within_10_of_high": near_high,
+        "trend_template_pass": tt_pass,
+        "median_r1m": med_r1m,
+        "median_r3m": med_r3m,
+        "median_r6m": med_r6m,
+        "regime_score": regime,
+        "regime_label": regime_label,
+        "component_scores": {
+            "pct200": round(score_200, 2),
+            "pct50":  round(score_50, 2),
+            "pct20":  round(score_20, 2),
+            "median_r1m": round(score_r1m, 2),
+            "median_r3m": round(score_r3m, 2),
+            "near_high": round(score_high, 2),
+        },
+    }
+
+
+def _compute_sectors(qualifiers: list[dict]) -> list[dict]:
+    """Group qualifiers by sector, return aggregate momentum/return stats."""
+    if not qualifiers:
+        return []
+    df = pd.DataFrame(qualifiers)
+    by = df.groupby("sector", dropna=False)
+    rows: list[dict] = []
+    for sector, sub in by:
+        rows.append({
+            "sector": sector,
+            "count": int(len(sub)),
+            "avg_r1m":  round(float(sub["r1m"].mean()), 2)  if sub["r1m"].notna().any() else None,
+            "avg_r3m":  round(float(sub["r3m"].mean()), 2)  if sub["r3m"].notna().any() else None,
+            "avg_r6m":  round(float(sub["r6m"].mean()), 2)  if sub["r6m"].notna().any() else None,
+            "avg_r12m": round(float(sub["r12m"].mean()), 2) if sub["r12m"].notna().any() else None,
+            "avg_momentum": round(float(sub["momentum"].mean()), 2) if sub["momentum"].notna().any() else None,
+            "tt_pass": int(sub["trend_template"].sum()),
+            "top_symbols": sub.nlargest(5, "rs_rating")[["symbol", "rs_rating"]].to_dict(orient="records"),
+        })
+    rows.sort(key=lambda r: r["avg_momentum"] or -1e9, reverse=True)
+    return rows
+
+
 def main() -> int:
     started = datetime.now(timezone.utc)
     universe = build_universe()
@@ -295,7 +431,10 @@ def main() -> int:
     prices = download_prices(universe["yf_ticker"].tolist())
     print(f"[prices] got {len(prices)} of {len(universe)} symbols")
 
-    rows: list[dict] = []
+    sector_map = _load_sector_map()
+    all_results: list[dict] = []        # everything the analyzer produced
+    rows: list[dict] = []               # passed both gates (qualifiers)
+
     for _, row in universe.iterrows():
         t = row["yf_ticker"]
         if t not in prices:
@@ -303,15 +442,18 @@ def main() -> int:
         res = analyze(prices[t])
         if res is None:
             continue
+        all_results.append(res)  # for breadth
         if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
             continue
         if not res["price_gt_sma200"]:
             continue
+        sym = row["symbol"]
         rows.append({
-            "symbol": row["symbol"],
+            "symbol": sym,
             "name": row["name"],
             "exchange": row["exchange"],
             "yf_ticker": t,
+            "sector": sector_map.get(sym.upper(), "Other"),
             **res,
         })
 
@@ -322,12 +464,16 @@ def main() -> int:
         )
         df_out = df_out.sort_values("rs_rating", ascending=False).reset_index(drop=True)
 
+    breadth = _compute_breadth(all_results)
+    sectors = _compute_sectors(df_out.to_dict(orient="records") if len(df_out) else [])
+
     finished = datetime.now(timezone.utc)
     meta = {
         "generated_at": finished.isoformat(),
         "duration_s": round((finished - started).total_seconds(), 1),
         "universe_size": int(len(universe)),
         "with_data": int(len(prices)),
+        "analyzed": int(len(all_results)),
         "qualifiers": int(len(df_out)),
         "filters": {
             "min_liquidity_cr": MIN_LIQUIDITY_CR,
@@ -336,11 +482,20 @@ def main() -> int:
         },
     }
 
-    payload = {"meta": meta, "results": df_out.to_dict(orient="records") if len(df_out) else []}
+    payload = {
+        "meta": meta,
+        "breadth": breadth,
+        "sectors": sectors,
+        "results": df_out.to_dict(orient="records") if len(df_out) else [],
+    }
     (DATA / "scanner_output.json").write_text(json.dumps(payload, indent=2))
     if len(df_out):
         df_out.to_csv(DATA / "scanner_output.csv", index=False)
-    print(f"[done] {meta['qualifiers']} qualifiers in {meta['duration_s']}s")
+    print(
+        f"[done] {meta['qualifiers']} qualifiers · regime "
+        f"{breadth.get('regime_score', '?')} ({breadth.get('regime_label', '?')}) "
+        f"in {meta['duration_s']}s"
+    )
     return 0
 
 

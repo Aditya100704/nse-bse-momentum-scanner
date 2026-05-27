@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phenom Trading — Momentum Command Center</title>
-<meta name="description" content="Real-time momentum scanner for the Indian equity market. Filters by 200&#8209;day SMA, liquidity, and Minervini-style trend criteria." />
+<meta name="description" content="Daily momentum scanner over the entire NSE + BSE equity universe. Market breadth, sector heat, and Minervini-style filters." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,145 +24,83 @@
     </span>
     <div class="brand-text">
       <h1>Phenom Trading</h1>
-      <p class="sub">Momentum Command Center · NSE</p>
+      <p class="sub">Momentum Command Center · NSE + BSE</p>
     </div>
   </div>
-  <nav class="topbar-meta">
+  <nav class="tabs" role="tablist">
+    <button class="tab is-active" data-tab="scanner" role="tab">Scanner</button>
+    <button class="tab" data-tab="breadth" role="tab">Breadth</button>
+    <button class="tab" data-tab="sectors" role="tab">Sectors</button>
+  </nav>
+  <div class="topbar-meta">
     <span class="badge live" id="freshBadge">
       <span class="dot"></span>
       <span id="lastScan">—</span>
     </span>
-    <a class="badge ghost" href="https://github.com/Aditya100704/nse-bse-momentum-scanner" target="_blank" rel="noopener">
+    <a class="badge ghost" href="https://github.com/Aditya100704/nse-bse-momentum-scanner" target="_blank" rel="noopener" aria-label="GitHub repository">
       <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.37c-2.22.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.22.83 1.22.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.83-2.15-.08-.2-.36-1.02.08-2.13 0 0 .67-.22 2.2.82a7.66 7.66 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.11.16 1.93.08 2.13.51.56.83 1.28.83 2.15 0 3.08-1.87 3.75-3.65 3.95.29.25.54.74.54 1.5v2.22c0 .21.15.46.55.38A8 8 0 0 0 8 0z"/></svg>
-      Source
     </a>
-  </nav>
+  </div>
 </header>
 
 <main class="content">
 
-  <section class="hero">
-    <h2 class="hero-title">Stocks moving with conviction.</h2>
-    <p class="hero-sub">Filtered to those above their 200&#8209;day SMA with real liquidity. Ranked by a Minervini-weighted momentum composite. Re&#8209;scanned every weekday close.</p>
-  </section>
+  <!-- ============================================================ Scanner page -->
+  <section class="page is-active" data-page="scanner">
+    <div class="hero">
+      <h2 class="hero-title">Stocks moving with conviction.</h2>
+      <p class="hero-sub">Every NSE + BSE listing above its 200&#8209;day SMA with real liquidity, ranked Minervini&#8209;style.</p>
+    </div>
 
-  <section class="kpis">
-    <article class="kpi">
-      <div class="kpi-label">Universe</div>
-      <div class="kpi-value mono" id="statUniverse">—</div>
-      <div class="kpi-foot">stocks scanned</div>
-    </article>
-    <article class="kpi">
-      <div class="kpi-label">Qualifiers</div>
-      <div class="kpi-value mono accent" id="statQualifiers">—</div>
-      <div class="kpi-foot">passed both gates</div>
-    </article>
-    <article class="kpi">
-      <div class="kpi-label">Above 200&#8209;SMA</div>
-      <div class="kpi-value mono" id="statBreadth">—</div>
-      <div class="kpi-foot"><span id="statBreadthPct">—</span> of those with data</div>
-    </article>
-    <article class="kpi">
-      <div class="kpi-label">Trend Template</div>
-      <div class="kpi-value mono" id="statTT">—</div>
-      <div class="kpi-foot">strict 8/8 setups</div>
-    </article>
-    <article class="kpi">
-      <div class="kpi-label">Median momentum</div>
-      <div class="kpi-value mono" id="statMedMom">—</div>
-      <div class="kpi-foot">composite, qualifiers</div>
-    </article>
-    <article class="kpi">
-      <div class="kpi-label">Market temp</div>
-      <div class="kpi-value" id="statTemp">—</div>
-      <div class="kpi-foot" id="statTempLabel">—</div>
-    </article>
-  </section>
+    <section class="kpis">
+      <article class="kpi"><div class="kpi-label">Universe</div><div class="kpi-value mono" id="statUniverse">—</div><div class="kpi-foot">stocks scanned</div></article>
+      <article class="kpi"><div class="kpi-label">Got data</div><div class="kpi-value mono" id="statWithData">—</div><div class="kpi-foot">via Yahoo Finance</div></article>
+      <article class="kpi"><div class="kpi-label">Qualifiers</div><div class="kpi-value mono accent" id="statQualifiers">—</div><div class="kpi-foot">passed both gates</div></article>
+      <article class="kpi"><div class="kpi-label">Trend Template</div><div class="kpi-value mono" id="statTT">—</div><div class="kpi-foot">strict 8/8 setups</div></article>
+      <article class="kpi"><div class="kpi-label">Median momentum</div><div class="kpi-value mono" id="statMedMom">—</div><div class="kpi-foot">composite, qualifiers</div></article>
+      <article class="kpi"><div class="kpi-label">Market</div><div class="kpi-value" id="statTemp">—</div><div class="kpi-foot" id="statTempLabel">—</div></article>
+    </section>
 
-  <section class="charts">
-    <article class="chart-card span-2">
+    <section class="charts">
+      <article class="chart-card span-2">
+        <header class="card-head">
+          <div><h3>Top 15 by RS rating</h3><p class="card-sub">Highest momentum composite among qualifiers</p></div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartTop"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <header class="card-head"><div><h3>1&#8209;month return distribution</h3><p class="card-sub">All qualifiers</p></div></header>
+        <div class="chart-wrap"><canvas id="chartDist"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <header class="card-head"><div><h3>Liquidity × Momentum</h3><p class="card-sub">High-conviction setups cluster top-right</p></div></header>
+        <div class="chart-wrap"><canvas id="chartScatter"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <header class="card-head"><div><h3>Return horizon profile</h3><p class="card-sub">Median qualifier return by lookback</p></div></header>
+        <div class="chart-wrap"><canvas id="chartHorizon"></canvas></div>
+      </article>
+    </section>
+
+    <section class="table-section">
       <header class="card-head">
-        <div>
-          <h3>Top 15 by RS rating</h3>
-          <p class="card-sub">Highest momentum composite among qualifiers</p>
+        <div><h3>Qualifier table</h3><p class="card-sub">Click any symbol to open on TradingView</p></div>
+        <div class="controls">
+          <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
+          <label class="ctl"><span>Min RS</span><input type="range" id="rsSlider" min="0" max="100" value="0" /><span id="rsValue" class="ctl-val mono">0</span></label>
+          <label class="ctl"><span>Min ₹cr</span><input type="number" id="liqInput" value="0" min="0" step="0.5" /></label>
+          <label class="ctl chk"><input type="checkbox" id="ttOnly" /> TT only</label>
+          <label class="ctl chk"><input type="checkbox" id="near52w" /> ≤10% off 52w high</label>
+          <button id="exportCsv" class="btn-ghost">Export CSV</button>
         </div>
       </header>
-      <div class="chart-wrap chart-wrap-tall">
-        <canvas id="chartTop"></canvas>
-      </div>
-    </article>
-
-    <article class="chart-card">
-      <header class="card-head">
-        <div>
-          <h3>1&#8209;month return distribution</h3>
-          <p class="card-sub">All qualifiers</p>
-        </div>
-      </header>
-      <div class="chart-wrap">
-        <canvas id="chartDist"></canvas>
-      </div>
-    </article>
-
-    <article class="chart-card">
-      <header class="card-head">
-        <div>
-          <h3>Liquidity × Momentum</h3>
-          <p class="card-sub">Where the high-conviction setups cluster</p>
-        </div>
-      </header>
-      <div class="chart-wrap">
-        <canvas id="chartScatter"></canvas>
-      </div>
-    </article>
-
-    <article class="chart-card">
-      <header class="card-head">
-        <div>
-          <h3>Return horizon profile</h3>
-          <p class="card-sub">Median qualifier return by lookback</p>
-        </div>
-      </header>
-      <div class="chart-wrap">
-        <canvas id="chartHorizon"></canvas>
-      </div>
-    </article>
-  </section>
-
-  <section class="table-section">
-    <header class="card-head">
-      <div>
-        <h3>Qualifier table</h3>
-        <p class="card-sub">Click any symbol to open on TradingView</p>
-      </div>
-      <div class="controls">
-        <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
-        <label class="ctl">
-          <span>Min RS</span>
-          <input type="range" id="rsSlider" min="0" max="100" value="0" />
-          <span id="rsValue" class="ctl-val mono">0</span>
-        </label>
-        <label class="ctl">
-          <span>Min ₹cr</span>
-          <input type="number" id="liqInput" value="0" min="0" step="0.5" />
-        </label>
-        <label class="ctl chk">
-          <input type="checkbox" id="ttOnly" /> TT only
-        </label>
-        <label class="ctl chk">
-          <input type="checkbox" id="near52w" /> ≤10% off 52w high
-        </label>
-        <button id="exportCsv" class="btn-ghost">Export CSV</button>
-      </div>
-    </header>
-
-    <div class="table-wrap">
-      <table id="resultsTable">
-        <thead>
-          <tr>
+      <div class="table-wrap">
+        <table id="resultsTable">
+          <thead><tr>
             <th data-key="rs_rating" class="num sort-active">RS</th>
             <th data-key="symbol">Symbol</th>
             <th data-key="name">Name</th>
+            <th data-key="sector">Sector</th>
             <th data-key="close" class="num">Close</th>
             <th data-key="r1m" class="num">1M</th>
             <th data-key="r3m" class="num">3M</th>
@@ -172,17 +110,105 @@
             <th data-key="turnover_cr" class="num">Liquidity</th>
             <th data-key="vol_surge" class="num">Vol×</th>
             <th data-key="trend_template" class="center">TT</th>
-          </tr>
-        </thead>
-        <tbody id="resultsBody"></tbody>
-      </table>
-      <div id="emptyState" class="empty hidden">No matches. Loosen the filters.</div>
-      <div id="loadState" class="empty">Loading…</div>
+          </tr></thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+        <div id="emptyState" class="empty hidden">No matches. Loosen the filters.</div>
+        <div id="loadState" class="empty">Loading…</div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ============================================================ Breadth page -->
+  <section class="page" data-page="breadth">
+    <div class="hero">
+      <h2 class="hero-title">Market breadth.</h2>
+      <p class="hero-sub">How many stocks are actually participating — across short, medium, and long timeframes — and what that says about the regime.</p>
     </div>
+
+    <section class="regime-grid">
+      <article class="regime-card">
+        <div class="regime-label">Market regime</div>
+        <div class="gauge-wrap">
+          <canvas id="gaugeRegime" width="320" height="180"></canvas>
+          <div class="gauge-readout">
+            <div class="gauge-score mono" id="regimeScore">—</div>
+            <div class="gauge-state" id="regimeLabel">—</div>
+          </div>
+        </div>
+        <p class="card-sub center">Weighted blend of breadth, median returns, and proximity to 52w highs · scale 0–10</p>
+      </article>
+
+      <article class="breadth-bars">
+        <header class="card-head">
+          <div><h3>Stocks above their moving averages</h3><p class="card-sub">% of universe with price data above each SMA — the canonical breadth signal</p></div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartBreadth"></canvas></div>
+      </article>
+    </section>
+
+    <section class="charts">
+      <article class="chart-card">
+        <header class="card-head"><div><h3>Regime component scores</h3><p class="card-sub">What's driving the overall reading</p></div></header>
+        <div class="chart-wrap"><canvas id="chartRegimeComponents"></canvas></div>
+      </article>
+      <article class="chart-card">
+        <header class="card-head"><div><h3>Median return profile</h3><p class="card-sub">Across all analyzed stocks</p></div></header>
+        <div class="chart-wrap"><canvas id="chartMedRet"></canvas></div>
+      </article>
+    </section>
+
+    <section class="signal-grid" id="signalGrid">
+      <!-- populated by JS -->
+    </section>
+  </section>
+
+  <!-- ============================================================ Sectors page -->
+  <section class="page" data-page="sectors">
+    <div class="hero">
+      <h2 class="hero-title">Sector heat.</h2>
+      <p class="hero-sub">Where the momentum is concentrated. Each sector's average qualifier performance across timeframes, ranked.</p>
+    </div>
+
+    <section class="charts">
+      <article class="chart-card span-2">
+        <header class="card-head">
+          <div><h3>Sector momentum</h3><p class="card-sub">Average momentum composite of qualifiers, by sector</p></div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartSectorMom"></canvas></div>
+      </article>
+
+      <article class="chart-card span-2">
+        <header class="card-head">
+          <div><h3>Multi-horizon sector returns</h3><p class="card-sub">Average 1M / 3M / 6M / 12M return of qualifiers, by sector</p></div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartSectorHorizons"></canvas></div>
+      </article>
+    </section>
+
+    <section class="sector-table-section">
+      <header class="card-head"><div><h3>Sector breakdown</h3><p class="card-sub">Click a sector to filter the Scanner page</p></div></header>
+      <div class="table-wrap">
+        <table id="sectorTable">
+          <thead><tr>
+            <th>Sector</th>
+            <th class="num">Qualifiers</th>
+            <th class="num">TT pass</th>
+            <th class="num">Avg 1M</th>
+            <th class="num">Avg 3M</th>
+            <th class="num">Avg 6M</th>
+            <th class="num">Avg 12M</th>
+            <th class="num">Avg momentum</th>
+            <th>Top names</th>
+          </tr></thead>
+          <tbody id="sectorBody"></tbody>
+        </table>
+      </div>
+    </section>
   </section>
 
   <footer class="foot">
-    <span>Data via Yahoo Finance · NSE listing CSV. Educational use only — not investment advice.</span>
+    <span>Data via Yahoo Finance · NSE + BSE universe from Zerodha public dump. Educational, not investment advice.</span>
     <span id="duration" class="mono"></span>
   </footer>
 
