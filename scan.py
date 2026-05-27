@@ -37,14 +37,13 @@ DATA = ROOT / "data"
 DATA.mkdir(exist_ok=True)
 
 import os
+import re
 
 MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "2.0"))
 WITHIN_PCT_OF_52W_HIGH = 25.0
-BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "40"))
-SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "1.5"))
-# BSE-only stocks are mostly illiquid and trigger Yahoo rate limits at scale.
-# Enable with SCAN_INCLUDE_BSE=1 if you want the full 4800+ universe scanned.
-INCLUDE_BSE = os.getenv("SCAN_INCLUDE_BSE", "0") == "1"
+BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "80"))
+SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "2.5"))
+INCLUDE_BSE = os.getenv("SCAN_INCLUDE_BSE", "1") == "1"
 
 UA = {
     "User-Agent": (
@@ -54,108 +53,87 @@ UA = {
 }
 
 
-NSE_SOURCES = [
-    # Official archive (cookie-gated; preferred — has the full ~2000 EQ universe)
-    "https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv",
-    "https://archives.nseindia.com/content/equities/EQUITY_L.csv",
-    # Mirrors (smaller / older but unauthenticated)
-    "https://raw.githubusercontent.com/kprohith/nse-stock-analysis/master/ind_nifty500list.csv",
-]
+# Zerodha publishes a public, no-auth, daily-refreshed instruments CSV covering
+# every NSE + BSE listing. ~10 MB, 128k rows. We cache it locally for the day.
+KITE_URL = "https://api.kite.trade/instruments"
+KITE_CACHE = "data/kite_instruments.csv"
+
+# NSE/BSE label "EQ" includes bonds, SGBs, T-bills and SDLs. Drop those by suffix.
+# Real equity series (EQ, BE, BZ, SM, ST, MM) either have no suffix or one of these.
+_BAD_SUFFIX = re.compile(
+    r"-(SG|GS|TB|GB|SF|GL|GF|IV|ND|NC|NA|NE|FB|UT|SS|RE|RR|RT|IL|NCD|NV|D|N\d*|G\d+|PD|PP)$"
+)
 
 
-def _fetch_nse_csv() -> str:
-    """Hit NSE with a properly primed browser session; fall back to mirrors."""
-    sess = requests.Session()
-    sess.headers.update({
-        "User-Agent": UA["User-Agent"],
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Connection": "keep-alive",
-        "Sec-Fetch-Dest": "document",
-        "Sec-Fetch-Mode": "navigate",
-        "Sec-Fetch-Site": "none",
-        "Upgrade-Insecure-Requests": "1",
-    })
-    # NSE issues anti-bot cookies on home page + one inner page
-    for warmup in ("https://www.nseindia.com/",
-                   "https://www.nseindia.com/market-data/securities-available-for-trading"):
-        try:
-            sess.get(warmup, timeout=15)
-        except Exception as e:
-            print(f"[universe] NSE warmup soft-fail {warmup}: {e}")
-    sess.headers.update({
-        "Accept": "text/csv,application/csv,*/*",
-        "Referer": "https://www.nseindia.com/market-data/securities-available-for-trading",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-site",
-    })
-    last_exc: Exception | None = None
-    for url in NSE_SOURCES:
-        try:
-            r = sess.get(url, timeout=30)
-            if r.status_code == 200 and "," in r.text and "ymbol" in r.text:
-                print(f"[universe] NSE source OK: {url} ({len(r.text)} bytes)")
-                return r.text
-            last_exc = RuntimeError(f"{url} -> HTTP {r.status_code}")
-            print(f"[universe] NSE source returned {r.status_code}: {url}")
-        except Exception as e:
-            last_exc = e
-            print(f"[universe] NSE source failed ({url}): {e}")
-    raise RuntimeError(f"all NSE sources failed; last: {last_exc}")
+def _fetch_kite_instruments() -> pd.DataFrame:
+    """Get Zerodha's public instruments dump (cached for the day)."""
+    cache = Path(KITE_CACHE)
+    fresh = False
+    if cache.exists():
+        # Refresh once per UTC day
+        age_h = (datetime.now(timezone.utc).timestamp() - cache.stat().st_mtime) / 3600
+        fresh = age_h < 18
+    if not fresh:
+        print(f"[universe] fetching Zerodha instruments: {KITE_URL}")
+        r = requests.get(KITE_URL, headers=UA, timeout=60)
+        r.raise_for_status()
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        cache.write_bytes(r.content)
+        print(f"[universe] cached -> {cache} ({len(r.content)/1e6:.1f} MB)")
+    else:
+        print(f"[universe] using cached {cache} ({cache.stat().st_size/1e6:.1f} MB)")
+    return pd.read_csv(cache)
+
+
+def _is_equity(sym) -> bool:
+    """Heuristic: drop bonds / SGBs / SDLs / T-bills that share the 'EQ' label."""
+    if not isinstance(sym, str) or not sym:
+        return False
+    if sym[0].isdigit():
+        return False
+    if _BAD_SUFFIX.search(sym):
+        return False
+    return True
 
 
 def fetch_nse_universe() -> pd.DataFrame:
-    text = _fetch_nse_csv()
-    df = pd.read_csv(io.StringIO(text))
-    df.columns = [c.strip() for c in df.columns]
-    # Tolerate both schemas: official ('SYMBOL', 'NAME OF COMPANY', 'SERIES')
-    # and the kprohith mirror ('Symbol', 'Company Name', 'Series')
-    sym_col = next((c for c in df.columns if c.upper() == "SYMBOL"), None)
-    name_col = next((c for c in df.columns
-                     if "NAME" in c.upper() or "COMPANY" in c.upper()), None)
-    series_col = next((c for c in df.columns if c.upper() == "SERIES"), None)
-    if not (sym_col and name_col):
-        raise RuntimeError(f"unexpected NSE columns: {df.columns.tolist()}")
-    if series_col:
-        df = df[df[series_col].astype(str).str.strip().isin(["EQ", "BE", "BZ"])].copy()
-    df["symbol"] = df[sym_col].astype(str).str.strip()
-    df["yf_ticker"] = df["symbol"] + ".NS"
-    df["name"] = df[name_col].astype(str).str.strip()
-    df["exchange"] = "NSE"
-    return df[["symbol", "yf_ticker", "name", "exchange"]].drop_duplicates("symbol").reset_index(drop=True)
+    df = _fetch_kite_instruments()
+    nse = df[
+        (df["exchange"] == "NSE")
+        & (df["segment"] == "NSE")
+        & (df["instrument_type"] == "EQ")
+    ].copy()
+    nse = nse[nse["tradingsymbol"].apply(_is_equity)]
+    nse["symbol"] = nse["tradingsymbol"].astype(str).str.strip()
+    nse["yf_ticker"] = nse["symbol"] + ".NS"
+    nse["name"] = nse["name"].astype(str).str.strip()
+    nse["exchange"] = "NSE"
+    return (
+        nse[["symbol", "yf_ticker", "name", "exchange"]]
+        .drop_duplicates("symbol")
+        .reset_index(drop=True)
+    )
 
 
 def fetch_bse_universe() -> pd.DataFrame:
-    url = "https://api.bseindia.com/BseIndiaAPI/api/ListofScripData/w"
-    print(f"[universe] BSE -> {url}")
-    try:
-        r = requests.get(
-            url,
-            headers={**UA, "Referer": "https://www.bseindia.com/"},
-            params={"Group": "", "Scripcode": "", "industry": "", "segment": "Equity", "status": "Active"},
-            timeout=30,
-        )
-        r.raise_for_status()
-        payload = r.json()
-        df = pd.DataFrame(payload if isinstance(payload, list) else payload.get("Table", []))
-        if df.empty:
-            raise RuntimeError("empty response")
-        df.columns = [c.strip() for c in df.columns]
-        sc_id = next((c for c in df.columns if c.lower() in ("scrip_id", "scripid", "scrip id")), None)
-        sc_cd = next((c for c in df.columns if c.lower() in ("scrip_cd", "scripcd", "scripcode", "scrip code")), None)
-        sc_nm = next((c for c in df.columns if c.lower() in ("scrip_name", "scripname", "scrip name", "issuer_name")), None)
-        if not (sc_id and sc_cd and sc_nm):
-            raise RuntimeError(f"unexpected columns: {df.columns.tolist()}")
-        df["symbol"] = df[sc_id].astype(str).str.strip()
-        df["yf_ticker"] = df[sc_cd].astype(str).str.strip() + ".BO"
-        df["name"] = df[sc_nm].astype(str).str.strip()
-        df["exchange"] = "BSE"
-        return df[["symbol", "yf_ticker", "name", "exchange"]].reset_index(drop=True)
-    except Exception as exc:
-        print(f"[universe] BSE fetch failed ({exc}); continuing NSE-only")
-        return pd.DataFrame(columns=["symbol", "yf_ticker", "name", "exchange"])
+    """Pull BSE-listed equities from the Zerodha dump too. exchange_token is
+    the BSE scrip code, which is what yfinance expects as `<code>.BO`."""
+    df = _fetch_kite_instruments()
+    bse = df[
+        (df["exchange"] == "BSE")
+        & (df["segment"] == "BSE")
+        & (df["instrument_type"] == "EQ")
+    ].copy()
+    bse = bse[bse["tradingsymbol"].apply(_is_equity)]
+    bse["symbol"] = bse["tradingsymbol"].astype(str).str.strip()
+    bse["yf_ticker"] = bse["exchange_token"].astype(str).str.strip() + ".BO"
+    bse["name"] = bse["name"].astype(str).str.strip()
+    bse["exchange"] = "BSE"
+    return (
+        bse[["symbol", "yf_ticker", "name", "exchange"]]
+        .drop_duplicates("symbol")
+        .reset_index(drop=True)
+    )
 
 
 def build_universe() -> pd.DataFrame:
@@ -167,37 +145,64 @@ def build_universe() -> pd.DataFrame:
     return universe
 
 
+def _download_one_batch(batch: list[str], period: str) -> tuple[dict[str, pd.DataFrame], list[str]]:
+    """Download a batch; return (ok dict, failed list to retry)."""
+    out: dict[str, pd.DataFrame] = {}
+    try:
+        data = yf.download(
+            batch,
+            period=period,
+            interval="1d",
+            group_by="ticker",
+            auto_adjust=True,
+            threads=True,
+            progress=False,
+        )
+    except Exception as exc:
+        print(f"[prices] batch error: {exc}; will retry")
+        return {}, batch
+    failed: list[str] = []
+    for t in batch:
+        try:
+            df = data if len(batch) == 1 else data[t]
+            df = df.dropna(subset=["Close"])
+            if len(df) >= 200:
+                out[t] = df
+        except (KeyError, TypeError):
+            failed.append(t)
+    return out, failed
+
+
 def download_prices(tickers: list[str], period: str = "2y") -> dict[str, pd.DataFrame]:
     out: dict[str, pd.DataFrame] = {}
     total = len(tickers)
     batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
+    retry_pool: list[str] = []
+    t_start = time.time()
     for i in range(0, total, BATCH_SIZE):
         batch = tickers[i : i + BATCH_SIZE]
+        elapsed = time.time() - t_start
+        rate = (i + 1) / max(elapsed, 1)
+        eta = max(0, (total - i) / max(rate, 0.1))
         print(f"[prices] batch {i // BATCH_SIZE + 1}/{batches} "
-              f"({i + 1}-{min(i + BATCH_SIZE, total)}/{total})")
-        try:
-            data = yf.download(
-                batch,
-                period=period,
-                interval="1d",
-                group_by="ticker",
-                auto_adjust=True,
-                threads=True,
-                progress=False,
-            )
-        except Exception as exc:
-            print(f"[prices] batch failed: {exc}")
-            time.sleep(2)
-            continue
-        for t in batch:
-            try:
-                df = data if len(batch) == 1 else data[t]
-                df = df.dropna(subset=["Close"])
-                if len(df) >= 200:
-                    out[t] = df
-            except (KeyError, TypeError):
-                continue
+              f"({i + 1}-{min(i + BATCH_SIZE, total)}/{total}) "
+              f"got={len(out)} eta={int(eta)}s",
+              flush=True)
+        ok, failed = _download_one_batch(batch, period)
+        out.update(ok)
+        retry_pool.extend(failed)
         time.sleep(SLEEP_BETWEEN_BATCHES)
+    # Single retry pass for failed tickers (often Yahoo rate-limit casualties)
+    if retry_pool:
+        # Dedupe + retry in larger chunks with extra cooldown
+        retry_pool = list(set(retry_pool) - set(out))
+        print(f"[prices] retry pass on {len(retry_pool)} failed tickers", flush=True)
+        time.sleep(5)
+        for i in range(0, len(retry_pool), BATCH_SIZE):
+            batch = retry_pool[i : i + BATCH_SIZE]
+            ok, _ = _download_one_batch(batch, period)
+            out.update(ok)
+            time.sleep(SLEEP_BETWEEN_BATCHES + 1)
     return out
 
 
