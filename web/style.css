@@ -160,8 +160,10 @@ body {
   box-shadow: inset 0 0 0 1px var(--border-strong);
 }
 
-@media (max-width: 760px) {
+@media (max-width: 880px) {
+  .topbar { flex-wrap: wrap; gap: 10px 14px; padding: 14px clamp(14px, 4vw, 24px); }
   .tabs { order: 3; width: 100%; justify-content: center; }
+  .topbar-meta { gap: 8px; }
 }
 
 /* Page switching */
@@ -526,10 +528,11 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 }
 .gauge-wrap {
   position: relative;
-  width: 320px;
-  max-width: 100%;
-  height: 180px;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 320 / 180;
 }
+#gaugeRegime { width: 100%; height: 100%; display: block; }
 .gauge-readout {
   position: absolute;
   bottom: 0;
@@ -609,6 +612,112 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--azure);
+}
+
+/* ============================================================ Mobile (≤ 640px) */
+@media (max-width: 640px) {
+  body { padding: 0; }
+
+  /* Glows: dim and pull off-screen so they don't tint dense UI */
+  .glow-a { width: 360px; height: 360px; top: -180px; right: -160px; opacity: 0.7; }
+  .glow-b { width: 360px; height: 360px; bottom: -180px; left: -160px; opacity: 0.7; }
+
+  /* Top bar */
+  .topbar {
+    padding: 12px 14px;
+    gap: 8px 10px;
+  }
+  .brand { gap: 10px; }
+  .brand-mark { width: 32px; height: 32px; }
+  .brand-mark svg { width: 18px; height: 18px; }
+  .brand-text h1 { font-size: 15px; }
+  .brand-text .sub { font-size: 10px; letter-spacing: 0.03em; }
+  .tabs { padding: 3px; gap: 2px; }
+  .tab { font-size: 12px; padding: 7px 14px; }
+  .badge { padding: 6px 10px; font-size: 11px; }
+  .badge.ghost svg { display: none; }
+  .badge.ghost { padding: 6px 8px; }
+  #lastScan { max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* Content padding */
+  .content { padding: 24px 14px 40px; gap: 28px; }
+  .page { gap: 24px; }
+
+  /* Hero */
+  .hero-title { font-size: 26px; line-height: 1.15; }
+  .hero-sub { font-size: 13px; line-height: 1.5; }
+
+  /* KPIs: tighter cards, 2 columns at this size */
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .kpi { padding: 14px 14px; }
+  .kpi-label { font-size: 10px; margin-bottom: 4px; }
+  .kpi-value { font-size: 20px; }
+  .kpi-foot { font-size: 10px; margin-top: 6px; }
+  .temp-pill { font-size: 12px; padding: 3px 9px; }
+
+  /* Charts */
+  .charts { gap: 12px; }
+  .chart-card { padding: 16px 14px 12px; }
+  .chart-card.span-2 { grid-column: span 1; }   /* already-stacked breakpoint earlier */
+  .chart-wrap { height: 220px; }
+  .chart-wrap-tall { height: 300px; }
+  .card-head h3 { font-size: 14px; }
+  .card-head .card-sub { font-size: 11px; }
+
+  /* Breadth page: gauge sizing */
+  .regime-grid { gap: 12px; }
+  .regime-card { padding: 18px 14px; }
+  .gauge-wrap { max-width: 280px; }
+  .gauge-score { font-size: 32px; }
+  .gauge-state { font-size: 11px; }
+  .breadth-bars { padding: 16px 14px; }
+  .signal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .signal-card { padding: 14px 14px; }
+  .signal-label { font-size: 10px; }
+  .signal-value { font-size: 18px; }
+  .signal-foot { font-size: 10px; }
+
+  /* Scanner table section */
+  .table-section { padding: 16px 14px; }
+  .card-head { gap: 12px; margin-bottom: 12px; }
+  .controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .controls input[type="search"] { width: 100%; min-width: 0; }
+  .controls input[type="number"] { width: 80px; }
+  .controls .ctl { justify-content: space-between; }
+  .controls input[type="range"] { flex: 1; }
+  .btn-ghost { width: 100%; text-align: center; }
+
+  /* Tables — keep readable, allow horizontal scroll */
+  .table-wrap { max-height: 540px; -webkit-overflow-scrolling: touch; }
+  table { font-size: 12px; }
+  th { padding: 9px 10px; font-size: 9px; }
+  td { padding: 9px 10px; }
+  td.num { font-size: 11px; }
+  .name { max-width: 140px; }
+
+  /* Sector page */
+  .sector-table-section { padding: 16px 14px; }
+  #sectorTable .top-syms { font-size: 10px; }
+
+  /* Footer */
+  .foot { font-size: 11px; padding-top: 12px; }
+}
+
+/* ============================================================ Phone (≤ 420px) */
+@media (max-width: 420px) {
+  .kpis { grid-template-columns: 1fr; }
+  .signal-grid { grid-template-columns: 1fr; }
+  .gauge-wrap { width: 100%; max-width: 280px; height: 150px; }
+  .gauge-score { font-size: 28px; }
+  .hero-title { font-size: 24px; }
+  .badge { font-size: 10px; }
+  #lastScan { max-width: 110px; font-size: 10px; }
+  .brand-text .sub { display: none; }
 }
 
 /* Scrollbars */
