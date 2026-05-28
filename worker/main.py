@@ -193,8 +193,10 @@ def monitor_tick() -> None:
         sign = -1 if t["direction"] == "short" else 1
 
         if t["state"] == "WATCHING":
-            buf = t["level"] * 0.0015  # small "strong break" buffer (0.15%)
-            broke = (sign == 1 and mark >= t["level"] + buf) or (sign == -1 and mark <= t["level"] - buf)
+            # Trigger only on a STRONG break: price must reach the entry price,
+            # which is the level pushed by the user's buffer (default +1%). So the
+            # order fills only once price has cleared the level by that margin.
+            broke = (sign == 1 and mark >= t["entry"]) or (sign == -1 and mark <= t["entry"])
             if broke:
                 t["state"] = "TRIGGERED"
                 t["triggeredAt"] = now_iso()

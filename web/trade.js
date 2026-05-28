@@ -383,12 +383,17 @@
   }
 
   /* ----------------------------------------------------------- renderers */
-  function render() { renderStats(); renderOpen(); renderClosed(); notify(); }
+  function render() { renderStats(); renderPending(); renderOpen(); renderClosed(); notify(); }
 
   function renderStats() {
-    const open = state.open, closed = state.closed;
-    $("sOpen").textContent = open.length;
+    const live = state.open.filter((t) => t.state === "TRIGGERED");
+    const pending = state.open.filter((t) => t.state !== "TRIGGERED");
+    const closed = state.closed;
+    $("sOpen").textContent = live.length;
     $("sClosed").textContent = closed.length;
+    const pc = $("pendingCount"), oc = $("openCount");
+    if (pc) pc.textContent = pending.length ? `(${pending.length})` : "";
+    if (oc) oc.textContent = live.length ? `(${live.length})` : "";
 
     const wins = closed.filter((t) => (t.pnlRs ?? 0) > 0).length;
     $("sWin").textContent = closed.length ? `${Math.round(wins / closed.length * 100)}%` : "—";
@@ -400,48 +405,69 @@
     const avgR = rs.length ? rs.reduce((a, b) => a + b, 0) / rs.length : null;
     $("sAvgR").innerHTML = avgR == null ? "—" : pnlSpan(avgR, `${avgR.toFixed(2)}R`);
 
-    const openRisk = open.reduce((s, t) => s + (t.state === "TRIGGERED" ? (t.riskRs ?? 0) : 0), 0);
-    $("sExposure").textContent = open.length ? rupee(openRisk) : "—";
+    const openRisk = live.reduce((s, t) => s + (t.riskRs ?? 0), 0);
+    $("sExposure").textContent = live.length ? rupee(openRisk) : "—";
   }
 
-  function actionBtns(t) {
-    const worker = usingWorker();
-    const parts = [];
-    if (t.state === "WATCHING" && !worker)
-      parts.push(`<button class="mini-btn go" data-act="trigger" data-id="${t.id}" title="Mark as triggered">▶ Trigger</button>`);
-    parts.push(`<button class="mini-btn" data-act="close" data-id="${t.id}" title="Close at a price">✕ Close</button>`);
-    parts.push(`<button class="mini-btn danger" data-act="delete" data-id="${t.id}" title="Remove">🗑</button>`);
-    return parts.join("");
+  const markCell = (t) => usingWorker()
+    ? `<span class="mono">${t.mark != null ? price(t.mark) : "—"}</span>`
+    : `<input class="mark-input mono" type="number" step="0.05" value="${t.mark != null ? t.mark : ""}" data-id="${t.id}" placeholder="mark" />`;
+  const symCell = (t) => `<td class="sym"><a href="${tvLink(t.ticker, t.exchange)}" ${tvAttrs}>${esc(t.ticker)}</a>${t.note ? `<span class="row-note" title="${esc(t.note)}">●</span>` : ""}</td>`;
+  const dirCell = (t) => `<td><span class="dir ${t.direction}">${t.direction === "short" ? "Short" : "Long"}</span></td>`;
+
+  // PENDING orders (placed, waiting for a strong break of the level)
+  function renderPending() {
+    const body = $("pendingBody");
+    const rows = state.open.filter((t) => t.state !== "TRIGGERED");
+    $("pendingEmpty").classList.toggle("hidden", rows.length > 0);
+    body.innerHTML = rows.map((t) => {
+      const sign = t.direction === "short" ? -1 : 1;
+      let toGo = '<span class="muted">—</span>';
+      if (t.mark != null) {
+        const d = (t.entry - t.mark) * sign;             // >0 = still needs to move to entry
+        toGo = d <= 0 ? '<span class="pos">● ready</span>'
+                      : `${price(Math.abs(d))} <span class="muted">(${(Math.abs(d) / t.mark * 100).toFixed(1)}%)</span>`;
+      }
+      const acts = usingWorker()
+        ? `<button class="mini-btn danger" data-act="delete" data-id="${t.id}" title="Cancel order">✕ Cancel</button>`
+        : `<button class="mini-btn go" data-act="trigger" data-id="${t.id}" title="Trigger now (manual fill)">▶ Trigger</button>`
+          + `<button class="mini-btn danger" data-act="delete" data-id="${t.id}" title="Cancel order">✕ Cancel</button>`;
+      return `<tr>
+        ${symCell(t)}${dirCell(t)}
+        <td class="num mono">${price(t.level)}</td>
+        <td class="num mono entry-col">${price(t.entry)}</td>
+        <td class="num mono">${price(t.stop)}</td>
+        <td class="num mono">${price(t.target)}</td>
+        <td class="num mono">${(t.qty ?? 0).toLocaleString("en-IN")}</td>
+        <td class="num mono">${rupee(t.riskRs)}</td>
+        <td class="num">${markCell(t)}</td>
+        <td class="num mono">${toGo}</td>
+        <td class="muted">${shortTime(t.added)}</td>
+        <td class="center actions-cell">${acts}</td>
+      </tr>`;
+    }).join("");
   }
 
+  // OPEN trades (triggered / live positions)
   function renderOpen() {
     const body = $("openBody");
-    if (!state.open.length) {
-      body.innerHTML = "";
-      $("openEmpty").classList.remove("hidden");
-      return;
-    }
-    $("openEmpty").classList.add("hidden");
-    const worker = usingWorker();
-    body.innerHTML = state.open.map((t) => {
-      const stCls = t.state === "TRIGGERED" ? "st-live" : "st-watch";
+    const rows = state.open.filter((t) => t.state === "TRIGGERED");
+    $("openEmpty").classList.toggle("hidden", rows.length > 0);
+    body.innerHTML = rows.map((t) => {
       const pnl = openPnl(t, t.mark);
-      const markCell = worker
-        ? `<span class="mono">${t.mark != null ? price(t.mark) : "—"}</span>`
-        : `<input class="mark-input mono" type="number" step="0.05" value="${t.mark != null ? t.mark : ""}" data-id="${t.id}" placeholder="mark" />`;
+      const acts = `<button class="mini-btn" data-act="close" data-id="${t.id}" title="Close at a price">✕ Close</button>`
+        + `<button class="mini-btn danger" data-act="delete" data-id="${t.id}" title="Remove">🗑</button>`;
       return `<tr>
-        <td class="sym"><a href="${tvLink(t.ticker, t.exchange)}" ${tvAttrs}>${esc(t.ticker)}</a>${t.note ? `<span class="row-note" title="${esc(t.note)}">●</span>` : ""}</td>
-        <td><span class="dir ${t.direction}">${t.direction === "short" ? "Short" : "Long"}</span></td>
-        <td><span class="trade-state ${stCls}">${t.state}</span></td>
+        ${symCell(t)}${dirCell(t)}
         <td class="num mono">${price(t.entry)}</td>
         <td class="num mono">${price(t.stop)}</td>
         <td class="num mono">${price(t.target)}</td>
         <td class="num mono">${(t.qty ?? 0).toLocaleString("en-IN")}</td>
         <td class="num mono">${rupee(t.riskRs)}</td>
-        <td class="num">${markCell}</td>
+        <td class="num">${markCell(t)}</td>
         <td class="num">${pnl == null ? '<span class="muted">—</span>' : pnlSpan(pnl, rupee(Math.abs(pnl)).replace("₹","₹"))}</td>
-        <td class="muted">${shortTime(t.added)}</td>
-        <td class="center actions-cell">${actionBtns(t)}</td>
+        <td class="muted">${shortTime(t.triggeredAt)}</td>
+        <td class="center actions-cell">${acts}</td>
       </tr>`;
     }).join("");
   }
@@ -524,13 +550,13 @@
       finally { btn.disabled = false; }
     });
 
-    // table action delegation (open trades)
-    $("openBody").addEventListener("click", async (e) => {
+    // table action delegation — shared by Pending + Open tables
+    const onTableClick = async (e) => {
       const b = e.target.closest("button[data-act]");
       if (!b) return;
       const id = b.dataset.id, act = b.dataset.act;
       if (act === "trigger") return triggerTrade(id);
-      if (act === "delete") { if (confirm("Remove this watching/open trade?")) return deleteTrade(id); return; }
+      if (act === "delete") { if (confirm("Cancel / remove this order?")) return deleteTrade(id); return; }
       if (act === "close") {
         const t = state.open.find((x) => x.id === id);
         const def = t && (t.mark != null ? t.mark : t.entry);
@@ -538,17 +564,19 @@
         if (v == null) return;
         const exit = parseFloat(v);
         if (!exit || exit <= 0) return alert("Enter a valid exit price.");
-        // a WATCHING trade closed manually = never triggered; treat as MANUAL scratch
         if (t && t.state === "WATCHING") { t.state = "TRIGGERED"; t.triggeredAt = new Date().toISOString(); }
         return closeTrade(id, exit);
       }
-    });
-    // inline mark edits
-    $("openBody").addEventListener("change", (e) => {
+    };
+    const onMarkChange = (e) => {
       const inp = e.target.closest("input.mark-input");
       if (!inp) return;
       const v = parseFloat(inp.value);
       setMark(inp.dataset.id, Number.isNaN(v) ? null : v);
+    };
+    ["pendingBody", "openBody"].forEach((id) => {
+      $(id).addEventListener("click", onTableClick);
+      $(id).addEventListener("change", onMarkChange);
     });
 
     // export closed trades

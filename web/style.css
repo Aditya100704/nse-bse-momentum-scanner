@@ -994,6 +994,8 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
 .res-win  { background: rgba(111, 231, 179, 0.10); color: var(--pos); border: 1px solid rgba(111, 231, 179, 0.28); }
 .res-loss { background: rgba(255, 122, 138, 0.10); color: var(--neg); border: 1px solid rgba(255, 122, 138, 0.28); }
 .res-flat { background: rgba(108, 119, 135, 0.12); color: var(--interstellar); border: 1px solid var(--border-subtle); }
+.card-head h3 .cnt { color: var(--whisper); font-weight: 500; font-size: 13px; margin-left: 6px; }
+td.entry-col { color: var(--celestial); }
 
 @media (max-width: 920px) {
   .trade-layout { grid-template-columns: 1fr; }

@@ -381,23 +381,43 @@
       </section>
     </div>
 
-    <!-- open trades -->
+    <!-- pending orders (placed, not yet triggered) -->
     <section class="table-section">
       <header class="card-head">
-        <div><h3>Open trades</h3><p class="card-sub" id="openSub">Watching for the level, or already triggered and live</p></div>
+        <div><h3>Pending orders <span class="cnt mono" id="pendingCount"></span></h3><p class="card-sub">Placed and waiting — fills only on a <strong>strong break</strong> of the level (price reaches the entry)</p></div>
+      </header>
+      <div class="table-wrap">
+        <table id="pendingTable">
+          <thead><tr>
+            <th>Ticker</th><th>Dir</th>
+            <th class="num">Level</th><th class="num">Entry&nbsp;▸</th><th class="num">Stop</th><th class="num">Target</th>
+            <th class="num">Qty</th><th class="num">Risk ₹</th>
+            <th class="num">Mark</th><th class="num">To trigger</th>
+            <th>Placed</th><th class="center">Actions</th>
+          </tr></thead>
+          <tbody id="pendingBody"></tbody>
+        </table>
+        <div id="pendingEmpty" class="empty">No pending orders. Add one above — it waits here until price breaks the level.</div>
+      </div>
+    </section>
+
+    <!-- open trades (triggered / live) -->
+    <section class="table-section">
+      <header class="card-head">
+        <div><h3>Open trades <span class="cnt mono" id="openCount"></span></h3><p class="card-sub">Triggered — live positions, running toward target or stop</p></div>
       </header>
       <div class="table-wrap">
         <table id="openTable">
           <thead><tr>
-            <th>Ticker</th><th>Dir</th><th>State</th>
+            <th>Ticker</th><th>Dir</th>
             <th class="num">Entry</th><th class="num">Stop</th><th class="num">Target</th>
             <th class="num">Qty</th><th class="num">Risk ₹</th>
             <th class="num">Mark</th><th class="num">Open P&amp;L</th>
-            <th>Added</th><th class="center">Actions</th>
+            <th>Triggered</th><th class="center">Actions</th>
           </tr></thead>
           <tbody id="openBody"></tbody>
         </table>
-        <div id="openEmpty" class="empty">No open trades. Add one above.</div>
+        <div id="openEmpty" class="empty">No live trades yet. Orders move here automatically when they trigger.</div>
       </div>
     </section>
 
