@@ -126,8 +126,18 @@
         document.querySelectorAll(".page").forEach((p) =>
           p.classList.toggle("is-active", p.dataset.page === name)
         );
-        // Charts need a resize nudge when first revealed
-        Object.values(charts).forEach((c) => c && c.resize && c.resize());
+        // Charts created while their tab was display:none have a 0-size canvas.
+        // Re-render the now-visible tab's charts so they pick up real dimensions.
+        requestAnimationFrame(() => {
+          if (name === "scanner") {
+            renderTop(); renderDist(); renderScatter(); renderHorizon(); renderScannerHistory();
+          } else if (name === "breadth") {
+            renderRegimeGauge(); renderBreadthBars(); renderRegimeComponents();
+            renderMedRet(); renderBreadthHistory();
+          } else if (name === "sectors") {
+            renderSectorMom(); renderSectorHorizons();
+          }
+        });
       });
     });
   }

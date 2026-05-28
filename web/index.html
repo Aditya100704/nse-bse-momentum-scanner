@@ -96,16 +96,6 @@
         </div>
       </header>
 
-      <article class="chart-card scanner-history-card" style="margin-top: 8px;">
-        <header class="card-head">
-          <div>
-            <h3 id="historyTitle">2‑year scanner history</h3>
-            <p class="card-sub" id="historySub">Daily count of stocks matching this scanner — how breadth and participation have evolved over the last 2 years</p>
-          </div>
-        </header>
-        <div class="chart-wrap chart-wrap-tall"><canvas id="chartScannerHistory"></canvas></div>
-      </article>
-
       <nav class="subtabs" id="scannerSubtabs" role="tablist" aria-label="Scanner type">
         <button class="subtab is-active" data-scanner="momentum" role="tab">
           <span class="subtab-name">Momentum</span>
@@ -151,6 +141,16 @@
         <div id="emptyState" class="empty hidden">No matches. Loosen the filters.</div>
         <div id="loadState" class="empty">Loading…</div>
       </div>
+
+      <article class="chart-card scanner-history-card" style="margin-top: 20px;">
+        <header class="card-head">
+          <div>
+            <h3 id="historyTitle">2‑year scanner history</h3>
+            <p class="card-sub" id="historySub">Daily count of stocks matching this scanner — how breadth and participation have evolved over the last 2 years</p>
+          </div>
+        </header>
+        <div class="chart-wrap chart-wrap-tall"><canvas id="chartScannerHistory"></canvas></div>
+      </article>
     </section>
   </section>
 
