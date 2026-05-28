@@ -267,7 +267,6 @@
     const rows = state.rows;
     if (!m) return;
 
-    $("statUniverse").textContent = (m.universe_size ?? 0).toLocaleString("en-IN");
     $("statWithData").textContent = (m.with_data ?? 0).toLocaleString("en-IN");
     $("statQualifiers").textContent = (m.qualifiers ?? 0).toLocaleString("en-IN");
     $("statTT").textContent = rows.filter((r) => r.trend_template).length.toLocaleString("en-IN");
