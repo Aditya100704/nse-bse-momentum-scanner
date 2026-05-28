@@ -44,6 +44,7 @@ jobs:
           SHA="${GITHUB_SHA:0:7}"
           sed -i "s|href=\"style.css\"|href=\"style.css?v=${SHA}\"|g" _site/index.html
           sed -i "s|src=\"app.js\"|src=\"app.js?v=${SHA}\"|g" _site/index.html
+          sed -i "s|src=\"trade.js\"|src=\"trade.js?v=${SHA}\"|g" _site/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:

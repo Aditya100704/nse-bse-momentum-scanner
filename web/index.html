@@ -31,6 +31,7 @@
     <button class="tab is-active" data-tab="scanner" role="tab">Scanner</button>
     <button class="tab" data-tab="breadth" role="tab">Breadth</button>
     <button class="tab" data-tab="sectors" role="tab">Sectors</button>
+    <button class="tab" data-tab="trade" role="tab">Trade</button>
   </nav>
   <div class="topbar-meta">
     <span class="badge live" id="freshBadge">
@@ -251,6 +252,176 @@
     </section>
   </section>
 
+  <!-- ============================================================ Trade page -->
+  <section class="page" data-page="trade">
+    <div class="hero">
+      <h2 class="hero-title">Trade desk.</h2>
+      <p class="hero-sub">Plan a trade, size it by risk, and track it from watching → triggered → closed. Paper today; routes to your Railway worker (and later a real broker) when connected.</p>
+    </div>
+
+    <!-- connection + mode bar -->
+    <section class="trade-statusbar">
+      <div class="trade-mode">
+        <span class="mode-pill" id="tradeModePill">Local · paper</span>
+        <span class="mode-detail mono" id="tradeModeDetail">Trades saved in this browser</span>
+      </div>
+      <div class="trade-status-actions">
+        <span class="badge ghost" id="tradeSafetyBadge" title="No real orders are ever placed without an explicit broker connection + confirmation">PAPER — no real orders</span>
+        <button id="tradeSettingsBtn" class="btn-ghost">Connect worker</button>
+      </div>
+    </section>
+
+    <!-- settings drawer (hidden by default) -->
+    <section class="trade-settings hidden" id="tradeSettings">
+      <header class="card-head"><div><h3>Worker connection</h3><p class="card-sub">Leave blank to keep everything in this browser (paper). Paste your Railway worker URL to make trades always-on and server-side.</p></div></header>
+      <div class="settings-row">
+        <label class="field">
+          <span class="field-label">Railway worker URL</span>
+          <input type="url" id="apiUrlInput" placeholder="https://your-worker.up.railway.app" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span class="field-label">Default capital (₹)</span>
+          <input type="number" id="capitalInput" min="0" step="1000" value="100000" />
+        </label>
+      </div>
+      <div class="settings-actions">
+        <button id="apiSaveBtn" class="btn-solid">Save</button>
+        <button id="apiTestBtn" class="btn-ghost">Test connection</button>
+        <button id="apiClearBtn" class="btn-ghost">Disconnect (local only)</button>
+        <span id="apiStatus" class="mono settings-status"></span>
+      </div>
+    </section>
+
+    <div class="trade-layout">
+      <!-- entry form -->
+      <section class="trade-form-card">
+        <header class="card-head"><div><h3>New trade</h3><p class="card-sub">Enter a ticker and a level. Entry, stop, size and target are calculated for you.</p></div></header>
+
+        <form id="tradeForm" autocomplete="off">
+          <div class="form-grid">
+            <label class="field span2">
+              <span class="field-label">Ticker</span>
+              <input type="text" id="fTicker" placeholder="RELIANCE" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Exchange</span>
+              <select id="fExchange"><option value="NSE">NSE</option><option value="BSE">BSE</option></select>
+            </label>
+            <label class="field">
+              <span class="field-label">Direction</span>
+              <select id="fDirection"><option value="long">Long</option><option value="short">Short</option></select>
+            </label>
+
+            <label class="field">
+              <span class="field-label">Level <span class="hint">trigger price</span></span>
+              <input type="number" id="fLevel" step="0.05" min="0" placeholder="0.00" required />
+            </label>
+            <label class="field">
+              <span class="field-label">Entry buffer % <span class="hint">above level</span></span>
+              <input type="number" id="fBuffer" step="0.1" value="1" />
+            </label>
+            <label class="field">
+              <span class="field-label">Stop loss <span class="hint">blank = 4%</span></span>
+              <input type="number" id="fSL" step="0.05" min="0" placeholder="auto 4%" />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Capital (₹)</span>
+              <input type="number" id="fCapital" step="1000" min="0" value="100000" />
+            </label>
+            <label class="field">
+              <span class="field-label">Risk % <span class="hint">of capital</span></span>
+              <input type="number" id="fRisk" step="0.1" value="1" />
+            </label>
+            <label class="field">
+              <span class="field-label">Target R:R</span>
+              <input type="number" id="fRR" step="0.5" value="3" />
+            </label>
+
+            <label class="field span3">
+              <span class="field-label">Note <span class="hint">optional</span></span>
+              <input type="text" id="fNote" placeholder="setup, reason, source…" />
+            </label>
+          </div>
+
+          <!-- live calculated summary -->
+          <div class="calc-strip" id="calcStrip">
+            <div class="calc"><span class="calc-l">Entry</span><span class="calc-v mono" id="cEntry">—</span></div>
+            <div class="calc"><span class="calc-l">Stop</span><span class="calc-v mono" id="cStop">—</span></div>
+            <div class="calc"><span class="calc-l">Risk / share</span><span class="calc-v mono" id="cRiskShare">—</span></div>
+            <div class="calc"><span class="calc-l">Qty</span><span class="calc-v mono" id="cQty">—</span></div>
+            <div class="calc"><span class="calc-l">Position</span><span class="calc-v mono" id="cValue">—</span></div>
+            <div class="calc"><span class="calc-l">Risk ₹</span><span class="calc-v mono" id="cRiskRs">—</span></div>
+            <div class="calc"><span class="calc-l">Target</span><span class="calc-v mono" id="cTarget">—</span></div>
+            <div class="calc"><span class="calc-l">Reward ₹</span><span class="calc-v mono pos" id="cReward">—</span></div>
+          </div>
+          <div class="calc-warn hidden" id="calcWarn"></div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-solid" id="addTradeBtn">Add trade</button>
+            <button type="reset" class="btn-ghost">Clear</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- summary stats -->
+      <section class="trade-stats-card">
+        <header class="card-head"><div><h3>Performance</h3><p class="card-sub">Across closed trades</p></div></header>
+        <div class="trade-stats">
+          <div class="tstat"><div class="tstat-v mono" id="sOpen">0</div><div class="tstat-l">Open</div></div>
+          <div class="tstat"><div class="tstat-v mono" id="sClosed">0</div><div class="tstat-l">Closed</div></div>
+          <div class="tstat"><div class="tstat-v mono" id="sWin">—</div><div class="tstat-l">Win rate</div></div>
+          <div class="tstat"><div class="tstat-v mono" id="sPnl">—</div><div class="tstat-l">Net P&amp;L</div></div>
+          <div class="tstat"><div class="tstat-v mono" id="sAvgR">—</div><div class="tstat-l">Avg R</div></div>
+          <div class="tstat"><div class="tstat-v mono" id="sExposure">—</div><div class="tstat-l">Open risk</div></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- open trades -->
+    <section class="table-section">
+      <header class="card-head">
+        <div><h3>Open trades</h3><p class="card-sub" id="openSub">Watching for the level, or already triggered and live</p></div>
+      </header>
+      <div class="table-wrap">
+        <table id="openTable">
+          <thead><tr>
+            <th>Ticker</th><th>Dir</th><th>State</th>
+            <th class="num">Entry</th><th class="num">Stop</th><th class="num">Target</th>
+            <th class="num">Qty</th><th class="num">Risk ₹</th>
+            <th class="num">Mark</th><th class="num">Open P&amp;L</th>
+            <th>Added</th><th class="center">Actions</th>
+          </tr></thead>
+          <tbody id="openBody"></tbody>
+        </table>
+        <div id="openEmpty" class="empty">No open trades. Add one above.</div>
+      </div>
+    </section>
+
+    <!-- closed trades -->
+    <section class="table-section">
+      <header class="card-head">
+        <div><h3>Closed trades</h3><p class="card-sub">Trade history with realized P&amp;L and R multiple</p></div>
+        <div class="controls">
+          <button id="exportTrades" class="btn-ghost">Export CSV</button>
+          <button id="clearClosed" class="btn-ghost">Clear history</button>
+        </div>
+      </header>
+      <div class="table-wrap">
+        <table id="closedTable">
+          <thead><tr>
+            <th>Ticker</th><th>Dir</th>
+            <th class="num">Entry</th><th class="num">Exit</th><th class="num">Qty</th>
+            <th class="num">P&amp;L ₹</th><th class="num">P&amp;L %</th><th class="num">R</th>
+            <th>Result</th><th>Opened</th><th>Closed</th>
+          </tr></thead>
+          <tbody id="closedBody"></tbody>
+        </table>
+        <div id="closedEmpty" class="empty">No closed trades yet.</div>
+      </div>
+    </section>
+  </section>
+
   <footer class="foot">
     <span>Data via Yahoo Finance · NSE + BSE universe from Zerodha public dump. Educational, not investment advice.</span>
     <span id="duration" class="mono"></span>
@@ -260,5 +431,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
+<script src="trade.js"></script>
 </body>
 </html>
