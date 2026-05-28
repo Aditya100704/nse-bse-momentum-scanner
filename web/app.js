@@ -741,19 +741,18 @@
     const ctx = $("chartScannerHistory").getContext("2d");
     charts.scannerHistory?.destroy();
     charts.scannerHistory = new Chart(ctx, {
-      type: "line",
+      type: "bar",
       data: {
         labels,
         datasets: [{
           label: def?.label || state.activeScanner,
           data,
-          borderColor: COLOR.celestial,
-          backgroundColor: gradient(ctx, "rgba(182, 217, 252, 0.32)", "rgba(182, 217, 252, 0.02)"),
-          fill: true,
-          tension: 0.3,
-          borderWidth: 2,
-          pointRadius: 0,
-          pointHoverRadius: 4,
+          backgroundColor: gradient(ctx, "rgba(182, 217, 252, 0.95)", "rgba(182, 217, 252, 0.30)"),
+          hoverBackgroundColor: COLOR.ghost,
+          borderWidth: 0,
+          borderRadius: 1,
+          barPercentage: 1.0,
+          categoryPercentage: 1.0,
         }],
       },
       options: {
@@ -787,7 +786,7 @@
         interaction: { mode: "index", intersect: false },
       },
     });
-    $("historyTitle").textContent = `2‑year scanner history: ${def?.label || state.activeScanner}`;
+    $("historyTitle").textContent = `1‑year scanner history: ${def?.label || state.activeScanner}`;
   }
 
   /* ============================================================ breadth history (4 MAs on Breadth tab) */

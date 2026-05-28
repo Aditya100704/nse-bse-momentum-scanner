@@ -493,7 +493,7 @@ def _compute_breadth(all_results: list[dict]) -> dict:
     }
 
 
-def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 504) -> dict:
+def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> dict:
     """Daily count of stocks matching each scanner over the last ~2 years, plus
     daily % of stocks above SMA10/20/50/200. Used by the dashboard to show
     breadth and per-scanner participation trends. ~500 trading days.
