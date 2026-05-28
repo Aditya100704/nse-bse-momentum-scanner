@@ -656,7 +656,45 @@ def main() -> int:
     universe.to_csv(DATA / "universe.csv", index=False)
 
     prices = download_prices(universe["yf_ticker"].tolist())
-    print(f"[prices] got {len(prices)} of {len(universe)} symbols")
+    print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
+
+    # Backfill NSE tickers Yahoo missed, using the NSE bhavcopy mirror.
+    # Yahoo prices are split-adjusted (preferred); bhavcopy is raw, so we only
+    # use it to FILL gaps — never to override an existing Yahoo series.
+    if os.getenv("SCAN_USE_BHAVCOPY", "1") == "1":
+        # NSE backfill (GitHub mirror — works from any IP)
+        try:
+            from bhavcopy import fetch_nse_history
+            nse_needed = {t for t in universe["yf_ticker"]
+                          if t.endswith(".NS") and t not in prices}
+            print(f"[bhavcopy] {len(nse_needed)} NSE tickers missing from Yahoo; "
+                  f"fetching mirror...", flush=True)
+            bhav = fetch_nse_history(days_back=504)
+            filled = 0
+            for t, df in bhav.items():
+                if t in nse_needed and t not in prices:
+                    prices[t] = df
+                    filled += 1
+            print(f"[bhavcopy] NSE backfilled {filled} (total now {len(prices)})", flush=True)
+        except Exception as exc:
+            print(f"[bhavcopy] NSE backfill skipped: {exc}", flush=True)
+
+        # BSE backfill (BSE servers direct — may be geo-restricted on some CI IPs)
+        try:
+            from bhavcopy import fetch_bse_history
+            bse_needed = {t for t in universe["yf_ticker"]
+                          if t.endswith(".BO") and t not in prices}
+            print(f"[bhavcopy] {len(bse_needed)} BSE tickers missing from Yahoo; "
+                  f"fetching BSE bhavcopy...", flush=True)
+            bbse = fetch_bse_history(days_back=460)
+            filled = 0
+            for t, df in bbse.items():
+                if t in bse_needed and t not in prices:
+                    prices[t] = df
+                    filled += 1
+            print(f"[bhavcopy] BSE backfilled {filled} (total now {len(prices)})", flush=True)
+        except Exception as exc:
+            print(f"[bhavcopy] BSE backfill skipped: {exc}", flush=True)
 
     sector_map = _load_sector_map()
     all_results: list[dict] = []        # everything analyze() produced (breadth)
