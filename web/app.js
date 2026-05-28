@@ -126,18 +126,9 @@
         document.querySelectorAll(".page").forEach((p) =>
           p.classList.toggle("is-active", p.dataset.page === name)
         );
-        // Charts created while their tab was display:none have a 0-size canvas.
-        // Re-render the now-visible tab's charts so they pick up real dimensions.
-        requestAnimationFrame(() => {
-          if (name === "scanner") {
-            renderTop(); renderDist(); renderScatter(); renderHorizon(); renderScannerHistory();
-          } else if (name === "breadth") {
-            renderRegimeGauge(); renderBreadthBars(); renderRegimeComponents();
-            renderMedRet(); renderBreadthHistory();
-          } else if (name === "sectors") {
-            renderSectorMom(); renderSectorHorizons();
-          }
-        });
+        // Build this tab's charts now that it's visible (lazy + correct sizing).
+        // force=true the first time so a 0-size hidden build can't stick.
+        requestAnimationFrame(() => renderTabCharts(name, !_rendered[name]));
       });
     });
   }
@@ -889,27 +880,35 @@
     });
   }
 
+  // Render only the charts for one tab. Lazy: keeps the main thread from
+  // choking on 12 charts at once, and guarantees each chart is built while
+  // its tab is visible (so the canvas has real dimensions, not 0).
+  const _rendered = { scanner: false, breadth: false, sectors: false };
+  function renderTabCharts(name, force) {
+    if (_rendered[name] && !force) {
+      // Already built once — a light resize is enough on re-entry.
+      Object.values(charts).forEach((c) => c && c.resize && c.resize());
+      return;
+    }
+    if (name === "scanner") {
+      renderTop(); renderDist(); renderScatter(); renderHorizon(); renderScannerHistory();
+    } else if (name === "breadth") {
+      renderRegimeGauge(); renderBreadthBars(); renderRegimeComponents();
+      renderMedRet(); renderBreadthSignals(); renderBreadthHistory();
+    } else if (name === "sectors") {
+      renderSectorMom(); renderSectorHorizons(); renderSectorTable();
+    }
+    _rendered[name] = true;
+  }
+
   function renderAll() {
+    // Always-cheap parts
     renderScannerKpis();
     renderSubtabCounts();
     renderScannerHeader();
-    renderTop();
-    renderDist();
-    renderScatter();
-    renderHorizon();
-    renderScannerHistory();
     renderTable();
-
-    renderRegimeGauge();
-    renderBreadthBars();
-    renderRegimeComponents();
-    renderMedRet();
-    renderBreadthSignals();
-    renderBreadthHistory();
-
-    renderSectorMom();
-    renderSectorHorizons();
-    renderSectorTable();
+    // Only the visible tab's charts up front; others render on first switch.
+    renderTabCharts(state.activeTab, true);
   }
 
   /* ============================================================ bindings */
