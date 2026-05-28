@@ -188,7 +188,8 @@ def _download_one_batch(
     return out, failed
 
 
-def download_prices(tickers: list[str], period: str = "2y") -> dict[str, pd.DataFrame]:
+def download_prices(tickers: list[str], period: str = "2y",
+                    retry_failed: bool = True) -> dict[str, pd.DataFrame]:
     out: dict[str, pd.DataFrame] = {}
     total = len(tickers)
     batches = (total + BATCH_SIZE - 1) // BATCH_SIZE
@@ -209,7 +210,9 @@ def download_prices(tickers: list[str], period: str = "2y") -> dict[str, pd.Data
         time.sleep(SLEEP_BETWEEN_BATCHES)
     # Retry pass for failed tickers. Sequential (no threads) + small chunks +
     # longer cooldown so we don't trigger another rate-limit wave.
-    if retry_pool:
+    # Skipped when bhavcopy backfill is on — bhavcopy fills the gaps far faster
+    # and more completely than retrying thousands of mostly-dead tickers.
+    if retry_pool and retry_failed:
         retry_pool = sorted(set(retry_pool) - set(out))
         print(f"[prices] retry pass on {len(retry_pool)} failed tickers (sequential)",
               flush=True)
@@ -655,7 +658,10 @@ def main() -> int:
     universe = build_universe()
     universe.to_csv(DATA / "universe.csv", index=False)
 
-    prices = download_prices(universe["yf_ticker"].tolist())
+    # When bhavcopy backfill is on, skip the slow yfinance retry pass —
+    # bhavcopy recovers the gaps faster and more completely.
+    use_bhavcopy = os.getenv("SCAN_USE_BHAVCOPY", "1") == "1"
+    prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
     print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
 
     # Backfill NSE tickers Yahoo missed, using the NSE bhavcopy mirror.
