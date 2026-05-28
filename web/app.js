@@ -1026,6 +1026,35 @@
       a.click();
       URL.revokeObjectURL(a.href);
     });
+
+    // Copy every stock across ALL scanners (qualifiers + IPOs), deduped, in
+    // TradingView import format: NSE:SYM,BSE:SYM,...  Paste into a TV watchlist.
+    $("copyTV").addEventListener("click", async () => {
+      const seen = new Set();
+      const syms = [];
+      for (const r of [...state.rows, ...state.ipos]) {
+        if (!r.symbol) continue;
+        const tv = `${r.exchange === "NSE" ? "NSE" : "BSE"}:${r.symbol}`;
+        if (seen.has(tv)) continue;
+        seen.add(tv);
+        syms.push(tv);
+      }
+      const text = syms.join(",");
+      const btn = $("copyTV");
+      const orig = btn.textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        btn.textContent = `Copied ${syms.length} ✓`;
+      } catch (e) {
+        // Fallback for older browsers / permission issues
+        const ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); btn.textContent = `Copied ${syms.length} ✓`; }
+        catch (_) { btn.textContent = "Copy failed"; }
+        document.body.removeChild(ta);
+      }
+      setTimeout(() => { btn.textContent = orig; }, 2000);
+    });
   }
 
   /* ============================================================ load */
