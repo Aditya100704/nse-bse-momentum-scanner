@@ -883,6 +883,30 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
 .form-grid .span2 { grid-column: span 2; }
 .form-grid .span3 { grid-column: 1 / -1; }
 
+/* ticker autocomplete dropdown — drops right below the field */
+.ac-field { position: relative; }
+.ac-dd {
+  position: absolute;
+  top: 100%; left: 0; right: 0;
+  margin-top: 4px;
+  max-height: 300px; overflow-y: auto;
+  background: var(--midnight-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-input);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.65);
+  z-index: 60;
+}
+.ac-item {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 9px 12px; cursor: pointer;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.ac-item:last-child { border-bottom: none; }
+.ac-item:hover, .ac-item.active { background: rgba(225, 29, 42, 0.12); }
+.ac-sym { color: var(--ghost); font-weight: 600; font-size: 13px; font-family: var(--font-mono); white-space: nowrap; }
+.ac-exch { color: var(--interstellar); font-size: 10px; font-weight: 500; margin-left: 4px; }
+.ac-name { color: var(--whisper); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+
 .calc-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

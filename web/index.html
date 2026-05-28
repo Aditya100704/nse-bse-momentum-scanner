@@ -300,10 +300,10 @@
 
         <form id="tradeForm" autocomplete="off">
           <div class="form-grid">
-            <label class="field span2">
+            <label class="field span2 ac-field">
               <span class="field-label">Ticker</span>
-              <input type="text" id="fTicker" placeholder="Type to search — RELIANCE, CGPOWER…" list="tickerList" autocomplete="off" required />
-              <datalist id="tickerList"></datalist>
+              <input type="text" id="fTicker" placeholder="Type to search — RELIANCE, CG POWER…" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" required />
+              <div id="tickerDD" class="ac-dd hidden"></div>
             </label>
             <label class="field">
               <span class="field-label">Exchange</span>

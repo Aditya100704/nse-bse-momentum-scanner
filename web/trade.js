@@ -28,6 +28,8 @@
     closed:  [],
     ann:     {},          // { tradeId: {setup, grade, emotion, wentRight, wentWrong, lesson, tags, notes:[{ts,text}]} }
     tickers: {},          // { SYMBOL: "NSE"|"BSE" } — full active universe, NSE-preferred
+    tnames: {},           // { SYMBOL: "Company Name" }
+    tickerList: [],       // [[symbol, exchange, name], ...] for the autocomplete
     pollTimer: null,
   };
   const usingWorker = () => !!state.apiUrl;
@@ -168,29 +170,70 @@
     subscribe(fn) { if (typeof fn === "function") subs.push(fn); },
   };
 
-  /* ----------------------------------------------------------- ticker autocomplete */
+  /* ----------------------------------------------------------- ticker autocomplete
+     Custom dropdown (drops right below the field, shows SYMBOL + company name).
+     Native <datalist> positioned itself off to the side and showed no names. */
   async function loadTickers() {
     try {
       const r = await fetch("../data/tickers.json", { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
       const d = await r.json();
-      state.tickers = d.map || {};
-      const dl = $("tickerList");
-      if (dl) {
-        // datalist filters natively as you type; one big innerHTML write is fast
-        dl.innerHTML = Object.keys(state.tickers)
-          .map((s) => `<option value="${s}">`).join("");
-      }
-    } catch (e) {
-      // tickers.json may not exist yet — autocomplete just stays empty, manual entry still works
-    }
+      state.tickerList = d.tickers || [];
+      state.tickers = {}; state.tnames = {};
+      for (const [s, e, n] of state.tickerList) { state.tickers[s] = e; state.tnames[s] = n; }
+    } catch (e) { /* file may not exist yet — manual entry still works */ }
   }
-  // When the typed/picked ticker is a known symbol, default the exchange to where
-  // it's listed (NSE if available, else BSE). User can still override manually.
+  // default the exchange to where the symbol is listed (NSE if available, else BSE)
   function autoExchange() {
-    const sym = ($("fTicker").value || "").trim().toUpperCase();
-    const exch = state.tickers[sym];
-    if (exch && (exch === "NSE" || exch === "BSE")) $("fExchange").value = exch;
+    const exch = state.tickers[($("fTicker").value || "").trim().toUpperCase()];
+    if (exch === "NSE" || exch === "BSE") $("fExchange").value = exch;
+  }
+
+  const AC = { items: [], idx: -1 };
+  function acFilter(q) {
+    q = q.trim().toUpperCase();
+    if (!q) return [];
+    const starts = [], contains = [];
+    for (const row of state.tickerList) {
+      const [s, , n] = row;
+      if (s.startsWith(q)) starts.push(row);
+      else if (s.includes(q) || (n && n.toUpperCase().includes(q))) contains.push(row);
+      if (starts.length >= 60) break;
+    }
+    return starts.concat(contains).slice(0, 60);
+  }
+  function acRender() {
+    const dd = $("tickerDD");
+    const items = acFilter($("fTicker").value);
+    AC.items = items; AC.idx = -1;
+    if (!items.length) { dd.classList.add("hidden"); dd.innerHTML = ""; $("fTicker").setAttribute("aria-expanded", "false"); return; }
+    dd.innerHTML = items.map((r, i) => {
+      const [s, e, n] = r;
+      return `<div class="ac-item" data-i="${i}" data-sym="${s}">
+        <span class="ac-sym">${esc(s)} <span class="ac-exch">${e}</span></span>
+        <span class="ac-name">${esc(n || "")}</span></div>`;
+    }).join("");
+    dd.classList.remove("hidden");
+    $("fTicker").setAttribute("aria-expanded", "true");
+  }
+  function acClose() { $("tickerDD").classList.add("hidden"); AC.idx = -1; $("fTicker").setAttribute("aria-expanded", "false"); }
+  function acHighlight() {
+    const dd = $("tickerDD");
+    [...dd.children].forEach((c, i) => c.classList.toggle("active", i === AC.idx));
+    if (AC.idx >= 0 && dd.children[AC.idx]) dd.children[AC.idx].scrollIntoView({ block: "nearest" });
+  }
+  function acPick(sym) {
+    $("fTicker").value = sym;
+    autoExchange(); acClose(); renderCalc();
+    $("fLevel").focus();
+  }
+  function acKeys(e) {
+    const dd = $("tickerDD");
+    if (dd.classList.contains("hidden")) return;
+    if (e.key === "ArrowDown") { e.preventDefault(); AC.idx = Math.min(AC.idx + 1, AC.items.length - 1); acHighlight(); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); AC.idx = Math.max(AC.idx - 1, 0); acHighlight(); }
+    else if (e.key === "Enter") { if (AC.idx >= 0) { e.preventDefault(); acPick(AC.items[AC.idx][0]); } }
+    else if (e.key === "Escape") { acClose(); }
   }
 
   /* ----------------------------------------------------------- worker calls */
@@ -456,9 +499,15 @@
     // live calc on any form input
     ["fTicker","fExchange","fDirection","fLevel","fBuffer","fSL","fCapital","fRisk","fRR","fNote"]
       .forEach((id) => { const el = $(id); if (el) el.addEventListener("input", renderCalc); });
-    // ticker -> auto-pick its exchange (NSE if listed there)
-    $("fTicker").addEventListener("input", autoExchange);
-    $("fTicker").addEventListener("change", autoExchange);
+    // ticker -> custom autocomplete dropdown + auto-pick exchange
+    $("fTicker").addEventListener("input", () => { acRender(); autoExchange(); });
+    $("fTicker").addEventListener("keydown", acKeys);
+    $("fTicker").addEventListener("focus", () => { if ($("fTicker").value) acRender(); });
+    $("fTicker").addEventListener("blur", () => setTimeout(acClose, 150));
+    $("tickerDD").addEventListener("mousedown", (e) => {
+      const it = e.target.closest(".ac-item");
+      if (it) { e.preventDefault(); acPick(it.dataset.sym); }
+    });
 
     // submit
     $("tradeForm").addEventListener("submit", async (e) => {

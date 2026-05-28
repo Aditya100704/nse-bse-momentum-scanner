@@ -1,10 +1,14 @@
 """
 Build data/tickers.json — every active NSE + BSE symbol with its preferred
-exchange (NSE if the symbol trades there, else BSE). Powers the Trade tab's
-ticker autocomplete (type-to-narrow dropdown, exchange auto-defaults to NSE).
+exchange (NSE if it trades there, else BSE) AND its company name. Powers the
+Trade tab's ticker autocomplete (type-to-narrow dropdown showing SYMBOL + name;
+exchange auto-defaults to NSE).
 
-Pulls the latest NSE + BSE bhavcopy day (one file each, ~5s). Run standalone to
-seed, and as a step in the daily scan workflow to keep it fresh.
+Symbols + exchange come from the latest NSE + BSE bhavcopy day (what actually
+trades). Names come from the cached Zerodha/Kite instruments dump
+(data/kite_instruments.csv) with BSE bhavcopy names as a fallback.
+
+Run standalone to seed; also a step in the daily scan workflow.
 """
 from __future__ import annotations
 import io, json, sys
@@ -48,7 +52,8 @@ def nse_symbols():
     return []
 
 
-def bse_symbols():
+def bse_rows():
+    """Return {SYMBOL: name} for active BSE securities."""
     for d in _days():
         try:
             r = S.get(BSE.format(d.strftime("%Y%m%d")), timeout=25)
@@ -56,27 +61,64 @@ def bse_symbols():
                 df = pd.read_csv(io.StringIO(r.text)); df.columns = [c.strip() for c in df.columns]
                 if "SctySrs" in df.columns:
                     df = df[df["SctySrs"].astype(str).str.strip().isin(BSE_SERIES)]
-                col = "TckrSymb" if "TckrSymb" in df.columns else "FinInstrmId"
-                return sorted({s.strip().upper() for s in df[col].astype(str) if s.strip()})
+                sym_col = "TckrSymb" if "TckrSymb" in df.columns else "FinInstrmId"
+                nm_col = "FinInstrmNm" if "FinInstrmNm" in df.columns else sym_col
+                out = {}
+                for s, n in zip(df[sym_col].astype(str), df[nm_col].astype(str)):
+                    s = s.strip().upper()
+                    if s and s[0].isalpha():
+                        out[s] = n.strip()
+                return out
         except Exception:
             pass
-    return []
+    return {}
+
+
+def kite_names():
+    """{SYMBOL: company name} from the cached Kite instruments dump (EQ only)."""
+    p = DATA / "kite_instruments.csv"
+    names = {}
+    if not p.exists():
+        return names
+    try:
+        df = pd.read_csv(p, usecols=["tradingsymbol", "name", "instrument_type", "exchange"])
+    except Exception:
+        return names
+    df = df[df["instrument_type"].astype(str) == "EQ"]
+    # BSE first then NSE so NSE (cleaner) names win on collision
+    for ex in ["BSE", "NSE"]:
+        sub = df[df["exchange"].astype(str) == ex]
+        for ts, nm in zip(sub["tradingsymbol"].astype(str), sub["name"].astype(str)):
+            ts = str(ts).strip().upper(); nm = str(nm).strip()
+            if not nm or nm.lower() == "nan":
+                continue
+            names[ts] = nm
+            names.setdefault(ts.split("-")[0], nm)  # strip SME/series suffix
+    return names
 
 
 def main():
     nse = nse_symbols()
-    bse = bse_symbols()
+    bse = bse_rows()
+    kite = kite_names()
+
     mp = {}
     for s in bse:
-        if s and s[0].isalpha():        # skip pure scrip-code rows
-            mp[s] = "BSE"
-    for s in nse:                        # NSE wins (overwrites BSE)
+        mp[s] = "BSE"
+    for s in nse:                 # NSE wins
         mp[s] = "NSE"
+
+    tickers = []
+    for s in sorted(mp):
+        nm = kite.get(s) or kite.get(s.split("-")[0]) or bse.get(s) or ""
+        tickers.append([s, mp[s], nm])
+
+    named = sum(1 for t in tickers if t[2])
     out = {"updated": datetime.now(timezone.utc).isoformat(),
-           "counts": {"nse": len(nse), "bse": len([s for s in mp if mp[s] == 'BSE']), "total": len(mp)},
-           "map": dict(sorted(mp.items()))}
-    OUT.write_text(json.dumps(out, separators=(",", ":")), encoding="utf-8")
-    print(f"[tickers] NSE={len(nse)} BSE-only={out['counts']['bse']} total={len(mp)} -> {OUT}", flush=True)
+           "count": len(tickers), "named": named,
+           "tickers": tickers}
+    OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"[tickers] {len(tickers)} symbols ({named} with names) -> {OUT}", flush=True)
 
 
 if __name__ == "__main__":
