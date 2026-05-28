@@ -892,6 +892,58 @@
     });
   }
 
+  /* ============================================================ net new highs (diverging bars) */
+  function renderNetNewHighs() {
+    const nnh = state.history?.net_new_highs;
+    const labels = state.history?.dates;
+    if (!nnh || !labels || !nnh.length) return;
+    const ctx = $("chartNetNewHighs").getContext("2d");
+    charts.netNewHighs?.destroy();
+    charts.netNewHighs = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [{
+          label: "Net new highs",
+          data: nnh,
+          backgroundColor: nnh.map((v) => v >= 0 ? "rgba(111, 231, 179, 0.85)" : "rgba(255, 122, 138, 0.85)"),
+          borderWidth: 0,
+          barPercentage: 1.0,
+          categoryPercentage: 1.0,
+        }],
+      },
+      options: {
+        ...baseOpts(),
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: {
+              color: COLOR.whisper, font: { size: 10 },
+              maxTicksLimit: 12, autoSkip: true,
+              callback: function (v) { const l = this.getLabelForValue(v); return l ? l.slice(0, 7) : ""; },
+            },
+          },
+          y: {
+            grid: { color: COLOR.grid, drawBorder: false },
+            ticks: { color: COLOR.whisper, font: { size: 11 } },
+            title: { display: true, text: "New highs − new lows", color: COLOR.whisper, font: { size: 11 } },
+          },
+        },
+        plugins: {
+          ...baseOpts().plugins,
+          tooltip: {
+            ...baseOpts().plugins.tooltip,
+            callbacks: {
+              title: (items) => items[0]?.label || "",
+              label: (c) => { const v = c.parsed.y; return ` ${v >= 0 ? "+" : ""}${v} net new ${v >= 0 ? "highs" : "lows"}`; },
+            },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+  }
+
   // Render the charts for one tab. Only ~5 at a time (per tab), so no freeze.
   // Each chart is isolated in try/catch so one failure can't blank the rest.
   // Always re-renders on switch — guarantees correct canvas dimensions.
@@ -899,7 +951,7 @@
     const fns = {
       scanner: [renderTop, renderDist, renderScatter, renderHorizon, renderScannerHistory],
       breadth: [renderRegimeGauge, renderBreadthBars, renderRegimeComponents,
-                renderMedRet, renderBreadthSignals, renderBreadthHistory],
+                renderMedRet, renderBreadthSignals, renderBreadthHistory, renderNetNewHighs],
       sectors: [renderSectorMom, renderSectorHorizons, renderSectorTable],
     }[name] || [];
     for (const fn of fns) {

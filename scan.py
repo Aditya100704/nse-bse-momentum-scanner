@@ -529,6 +529,10 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
     above_sums = {w: pd.Series(0, index=keep_dates, dtype="int64") for w in ma_windows}
     have_sums  = {w: pd.Series(0, index=keep_dates, dtype="int64") for w in ma_windows}
 
+    # Net new highs: daily (#stocks at a new 52w high) - (#at a new 52w low)
+    nh_sum = pd.Series(0, index=keep_dates, dtype="int64")
+    nl_sum = pd.Series(0, index=keep_dates, dtype="int64")
+
     processed = 0
     for t, df in prices.items():
         n = len(df)
@@ -583,6 +587,17 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
                 have_sums[w]  = have_sums[w].add(have,  fill_value=0)
                 above_sums[w] = above_sums[w].add(above, fill_value=0)
 
+            # ----- Net new highs: new 52w high vs new 52w low (need >=252 bars) -----
+            if n >= 252:
+                roll_max = close.rolling(252).max()
+                roll_min = close.rolling(252).min()
+                is_nh = (close >= roll_max).fillna(False).astype(int)
+                is_nl = (close <= roll_min).fillna(False).astype(int)
+                is_nh = is_nh.loc[is_nh.index.isin(keep_set)]
+                is_nl = is_nl.loc[is_nl.index.isin(keep_set)]
+                nh_sum = nh_sum.add(is_nh, fill_value=0)
+                nl_sum = nl_sum.add(is_nl, fill_value=0)
+
             # ----- IPO scanner per day -----
             # A ticker is "IPO" between bar index 30 and 199 (0-indexed: 29..198)
             ipo_start = 29
@@ -621,11 +636,17 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
         for k in scanner_keys
     }
 
+    net_new_highs = [
+        int(nh_sum.reindex(keep_dates).fillna(0).iloc[i] - nl_sum.reindex(keep_dates).fillna(0).iloc[i])
+        for i in range(len(keep_dates))
+    ]
+
     print(f"[history] processed {processed} tickers; {len(keep_dates)} dates", flush=True)
     return {
         "dates": [d.strftime("%Y-%m-%d") for d in keep_dates],
         "scanners": scanners_out,
         "breadth_pct": breadth_pct,
+        "net_new_highs": net_new_highs,
         "tickers_processed": processed,
     }
 
@@ -664,43 +685,61 @@ def main() -> int:
     prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
     print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
 
-    # Backfill NSE tickers Yahoo missed, using the NSE bhavcopy mirror.
-    # Yahoo prices are split-adjusted (preferred); bhavcopy is raw, so we only
-    # use it to FILL gaps — never to override an existing Yahoo series.
+    # Bhavcopy: (1) FILL universe tickers Yahoo missed, and (2) ADD tradeable
+    # stocks the Zerodha master list doesn't even include (maximizes coverage —
+    # ~3k extra NSE+BSE names + recent IPOs). Yahoo prices stay primary (split-
+    # adjusted); bhavcopy is raw, used only where Yahoo had nothing.
+    extra_rows: list[dict] = []
     if os.getenv("SCAN_USE_BHAVCOPY", "1") == "1":
-        # NSE backfill (GitHub mirror — works from any IP)
+        existing = set(universe["yf_ticker"])
+        # NSE (GitHub mirror — works from any IP)
         try:
             from bhavcopy import fetch_nse_history
-            nse_needed = {t for t in universe["yf_ticker"]
-                          if t.endswith(".NS") and t not in prices}
-            print(f"[bhavcopy] {len(nse_needed)} NSE tickers missing from Yahoo; "
-                  f"fetching mirror...", flush=True)
-            bhav = fetch_nse_history(days_back=504)
-            filled = 0
+            bhav, meta = fetch_nse_history(days_back=504)
+            filled = added = 0
             for t, df in bhav.items():
-                if t in nse_needed and t not in prices:
-                    prices[t] = df
+                if t in prices:
+                    continue
+                prices[t] = df
+                if t in existing:
                     filled += 1
-            print(f"[bhavcopy] NSE backfilled {filled} (total now {len(prices)})", flush=True)
+                else:
+                    m = meta.get(t, {})
+                    extra_rows.append({"symbol": m.get("symbol", t[:-3]),
+                                       "yf_ticker": t, "name": m.get("name", t[:-3]),
+                                       "exchange": "NSE"})
+                    added += 1
+            print(f"[bhavcopy] NSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
         except Exception as exc:
-            print(f"[bhavcopy] NSE backfill skipped: {exc}", flush=True)
+            print(f"[bhavcopy] NSE step skipped: {exc}", flush=True)
 
-        # BSE backfill (BSE servers direct — may be geo-restricted on some CI IPs)
+        # BSE (bseindia.com direct — may be geo-restricted on some CI IPs)
         try:
             from bhavcopy import fetch_bse_history
-            bse_needed = {t for t in universe["yf_ticker"]
-                          if t.endswith(".BO") and t not in prices}
-            print(f"[bhavcopy] {len(bse_needed)} BSE tickers missing from Yahoo; "
-                  f"fetching BSE bhavcopy...", flush=True)
-            bbse = fetch_bse_history(days_back=460)
-            filled = 0
+            bbse, bmeta = fetch_bse_history(days_back=460)
+            filled = added = 0
             for t, df in bbse.items():
-                if t in bse_needed and t not in prices:
-                    prices[t] = df
+                if t in prices:
+                    continue
+                prices[t] = df
+                if t in existing:
                     filled += 1
-            print(f"[bhavcopy] BSE backfilled {filled} (total now {len(prices)})", flush=True)
+                else:
+                    m = bmeta.get(t, {})
+                    extra_rows.append({"symbol": m.get("symbol", t[:-3]),
+                                       "yf_ticker": t, "name": m.get("name", t[:-3]),
+                                       "exchange": "BSE"})
+                    added += 1
+            print(f"[bhavcopy] BSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
         except Exception as exc:
-            print(f"[bhavcopy] BSE backfill skipped: {exc}", flush=True)
+            print(f"[bhavcopy] BSE step skipped: {exc}", flush=True)
+
+    # Fold the bhavcopy-only stocks into the universe so they flow through analyze()
+    if extra_rows:
+        universe = pd.concat([universe, pd.DataFrame(extra_rows)], ignore_index=True)
+        universe = universe.drop_duplicates("yf_ticker").reset_index(drop=True)
+        universe.to_csv(DATA / "universe.csv", index=False)
+        print(f"[universe] expanded to {len(universe)} with bhavcopy-only stocks", flush=True)
 
     sector_map = _load_sector_map()
     all_results: list[dict] = []        # everything analyze() produced (breadth)

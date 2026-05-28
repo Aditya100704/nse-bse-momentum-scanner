@@ -72,8 +72,9 @@ def _fetch_one(d: date) -> pd.DataFrame | None:
 
 
 def fetch_nse_history(days_back: int = 504, max_workers: int = 32,
-                      min_bars: int = 30) -> dict[str, pd.DataFrame]:
-    """Return {SYMBOL.NS: DataFrame[Close, Volume] indexed by date}."""
+                      min_bars: int = 30) -> tuple[dict[str, pd.DataFrame], dict[str, dict]]:
+    """Return ({SYMBOL.NS: DataFrame[Close, Volume]}, {SYMBOL.NS: meta}).
+    NSE bhavcopy has no company name, so meta name = the symbol."""
     candidates = _trading_day_candidates(days_back)
     frames: list[pd.DataFrame] = []
     fetched = 0
@@ -84,17 +85,20 @@ def fetch_nse_history(days_back: int = 504, max_workers: int = 32,
                 fetched += 1
     print(f"[bhavcopy] fetched {fetched} daily files", flush=True)
     if not frames:
-        return {}
+        return {}, {}
 
     big = pd.concat(frames, ignore_index=True)
     out: dict[str, pd.DataFrame] = {}
+    meta: dict[str, dict] = {}
     for sym, g in big.groupby("symbol"):
         g = g.sort_values("date").drop_duplicates("date").set_index("date")
         ser = pd.DataFrame({"Close": g["close"], "Volume": g["volume"]}).dropna(subset=["Close"])
         if len(ser) >= min_bars:
-            out[f"{sym}.NS"] = ser
+            t = f"{sym}.NS"
+            out[t] = ser
+            meta[t] = {"symbol": sym, "name": sym, "exchange": "NSE"}
     print(f"[bhavcopy] reconstructed {len(out)} NSE symbols", flush=True)
-    return out
+    return out, meta
 
 
 # ============================================================ BSE
@@ -118,6 +122,8 @@ def _fetch_one_bse(d: date) -> pd.DataFrame | None:
             return None
         return pd.DataFrame({
             "code": df["FinInstrmId"].astype(str).str.strip(),
+            "tckr": df["TckrSymb"].astype(str).str.strip() if "TckrSymb" in df.columns else df["FinInstrmId"].astype(str),
+            "name": df["FinInstrmNm"].astype(str).str.strip() if "FinInstrmNm" in df.columns else "",
             "date": pd.Timestamp(d),
             "close": pd.to_numeric(df["ClsPric"], errors="coerce"),
             "volume": pd.to_numeric(df["TtlTradgVol"], errors="coerce"),
@@ -127,9 +133,9 @@ def _fetch_one_bse(d: date) -> pd.DataFrame | None:
 
 
 def fetch_bse_history(days_back: int = 460, max_workers: int = 16,
-                      min_bars: int = 30) -> dict[str, pd.DataFrame]:
-    """Return {SCRIPCODE.BO: DataFrame[Close, Volume]}. The BSE UDiFF format
-    exists from ~mid-2024, so older dates 404 and self-prune (~21 months max)."""
+                      min_bars: int = 30) -> tuple[dict[str, pd.DataFrame], dict[str, dict]]:
+    """Return ({SCRIPCODE.BO: DataFrame[Close, Volume]}, {SCRIPCODE.BO: meta}).
+    meta carries the alpha ticker + company name from the BSE UDiFF file."""
     candidates = _trading_day_candidates(days_back)
     frames: list[pd.DataFrame] = []
     fetched = 0
@@ -140,16 +146,22 @@ def fetch_bse_history(days_back: int = 460, max_workers: int = 16,
                 fetched += 1
     print(f"[bhavcopy] BSE fetched {fetched} daily files", flush=True)
     if not frames:
-        return {}
+        return {}, {}
     big = pd.concat(frames, ignore_index=True)
     out: dict[str, pd.DataFrame] = {}
+    meta: dict[str, dict] = {}
     for code, g in big.groupby("code"):
         g = g.sort_values("date").drop_duplicates("date").set_index("date")
         ser = pd.DataFrame({"Close": g["close"], "Volume": g["volume"]}).dropna(subset=["Close"])
         if len(ser) >= min_bars:
-            out[f"{code}.BO"] = ser
+            t = f"{code}.BO"
+            out[t] = ser
+            last = g.iloc[-1]
+            meta[t] = {"symbol": str(last.get("tckr", code)) or code,
+                       "name": str(last.get("name", "")) or str(code),
+                       "exchange": "BSE"}
     print(f"[bhavcopy] BSE reconstructed {len(out)} symbols", flush=True)
-    return out
+    return out, meta
 
 
 if __name__ == "__main__":
@@ -158,10 +170,10 @@ if __name__ == "__main__":
     which = sys.argv[1] if len(sys.argv) > 1 else "nse"
     t0 = time.time()
     if which == "bse":
-        hist = fetch_bse_history(days_back=460)
+        hist, _meta = fetch_bse_history(days_back=460)
         checks = ["500325.BO", "500002.BO", "543320.BO"]
     else:
-        hist = fetch_nse_history(days_back=504)
+        hist, _meta = fetch_nse_history(days_back=504)
         checks = ["RELIANCE.NS", "HFCL.NS", "BLISSGVS.NS", "MTARTECH.NS", "20MICRONS.NS"]
     dt = time.time() - t0
     print(f"\n[bhavcopy] {len(hist)} symbols in {dt:.1f}s")
