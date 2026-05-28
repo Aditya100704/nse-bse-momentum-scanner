@@ -802,31 +802,44 @@
       { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(102, 58, 243, 0.95)" },
     ];
     const ctx = $("chartBreadthHistory").getContext("2d");
-    const sma200 = bp.above_sma200 || [];
+
+    // Background plugin: paint the whole zone ABOVE the 50% line with a light
+    // green gradient (bullish breadth) and below 50% a faint red (bearish).
+    const zonePlugin = {
+      id: "breadthZones",
+      beforeDraw(chart) {
+        const { ctx: c, chartArea: a, scales: { y } } = chart;
+        if (!a || !y) return;
+        const y50 = y.getPixelForValue(50);
+        c.save();
+        // Green above 50%
+        const g = c.createLinearGradient(0, a.top, 0, y50);
+        g.addColorStop(0, "rgba(111, 231, 179, 0.18)");
+        g.addColorStop(1, "rgba(111, 231, 179, 0.02)");
+        c.fillStyle = g;
+        c.fillRect(a.left, a.top, a.right - a.left, y50 - a.top);
+        // Faint red below 50%
+        const r = c.createLinearGradient(0, y50, 0, a.bottom);
+        r.addColorStop(0, "rgba(255, 122, 138, 0.02)");
+        r.addColorStop(1, "rgba(255, 122, 138, 0.10)");
+        c.fillStyle = r;
+        c.fillRect(a.left, y50, a.right - a.left, a.bottom - y50);
+        // 50% reference line
+        c.strokeStyle = "rgba(186, 215, 247, 0.25)";
+        c.lineWidth = 1;
+        c.setLineDash([4, 4]);
+        c.beginPath(); c.moveTo(a.left, y50); c.lineTo(a.right, y50); c.stroke();
+        c.restore();
+      },
+    };
 
     charts.breadthHistory?.destroy();
     charts.breadthHistory = new Chart(ctx, {
       type: "line",
+      plugins: [zonePlugin],
       data: {
         labels,
         datasets: [
-          // Greenish gradient FILL from the SMA200 line down to the 50% baseline,
-          // visible only where the SMA200 % > 50% (Chart.js fill: { target: { value: 50 }, above: ... })
-          {
-            label: "Bullish zone",
-            data: sma200,
-            borderColor: "transparent",
-            backgroundColor: "transparent",
-            fill: {
-              target: { value: 50 },
-              above: gradient(ctx, "rgba(111, 231, 179, 0.30)", "rgba(111, 231, 179, 0.02)"),
-              below: "rgba(255, 122, 138, 0.05)",
-            },
-            tension: 0.3,
-            pointRadius: 0,
-            borderWidth: 0,
-            order: 99,
-          },
           ...MA_DEFS.map((m) => ({
             label: m.label,
             data: bp[m.key] || [],
