@@ -1,41 +1,41 @@
 /* ============================================================
-   Phenom Trading — Midnight Command Center
+   Phenom Trading — Crimson Command Center (dark + classy red)
    ============================================================ */
 :root {
-  /* Colors */
-  --midnight: #05060f;
-  --midnight-2: #0a0c1a;
-  --midnight-3: #0f1226;
+  /* Colors — near-black base, warm-neutral text, one classy red accent */
+  --midnight: #08060a;
+  --midnight-2: #0e0b10;
+  --midnight-3: #161016;
   --ghost: #ffffff;
-  --comet: #d8ecf8;
-  --arctic: #d1e4fa;
-  --celestial: #b6d9fc;
-  --azure: #c7d3ea;
-  --slate: #3f4959;
-  --whisper: #9da7ba;
-  --interstellar: #81899b;
-  --violet: #663af3;
-  --violet-glow: rgba(102, 58, 243, 0.45);
+  --comet: #ece6e8;       /* bright warm-white text */
+  --arctic: #d8d1d4;      /* light warm grey */
+  --celestial: #f0455a;   /* bright red highlight (active states, links, primary lines) */
+  --azure: #b9b1b5;       /* muted neutral */
+  --slate: #3c373b;
+  --whisper: #9b9196;     /* muted label grey */
+  --interstellar: #7c7378;
+  --violet: #e11d2a;      /* PRIMARY accent — classy red (matches the beast logo) */
+  --violet-glow: rgba(225, 29, 42, 0.45);
 
-  /* Semantic */
-  --pos: #6fe7b3;
+  /* Semantic (kept: green = up, soft red = down, amber = warn) */
+  --pos: #5fd39b;
   --neg: #ff7a8a;
   --warn: #fbbf24;
 
-  /* Surfaces */
-  --surface-glass: rgba(186, 214, 247, 0.03);
-  --surface-elev:  rgba(186, 214, 247, 0.05);
-  --border-subtle: rgba(186, 215, 247, 0.10);
-  --border-strong: rgba(186, 215, 247, 0.18);
+  /* Surfaces — neutral warm tint */
+  --surface-glass: rgba(240, 228, 230, 0.03);
+  --surface-elev:  rgba(240, 228, 230, 0.055);
+  --border-subtle: rgba(236, 222, 226, 0.10);
+  --border-strong: rgba(236, 222, 226, 0.20);
 
   /* Shadows */
-  --shadow-glass: inset rgba(199, 211, 234, 0.12) 0 1px 1px 0,
-                  inset rgba(199, 211, 234, 0.05) 0 24px 48px 0,
-                  rgba(6, 6, 14, 0.7) 0 24px 32px 0;
-  --shadow-card:  inset rgba(216, 236, 248, 0.18) 0 1px 1px 0,
-                  inset rgba(168, 216, 245, 0.04) 0 24px 48px 0,
-                  rgba(0, 0, 0, 0.45) 0 16px 32px 0;
-  --shadow-glow:  rgba(186, 207, 247, 0.32) 0 0 6px 0;
+  --shadow-glass: inset rgba(236, 222, 226, 0.10) 0 1px 1px 0,
+                  inset rgba(236, 222, 226, 0.04) 0 24px 48px 0,
+                  rgba(6, 4, 8, 0.7) 0 24px 32px 0;
+  --shadow-card:  inset rgba(245, 230, 232, 0.16) 0 1px 1px 0,
+                  inset rgba(225, 29, 42, 0.05) 0 24px 48px 0,
+                  rgba(0, 0, 0, 0.5) 0 16px 32px 0;
+  --shadow-glow:  rgba(225, 29, 42, 0.32) 0 0 6px 0;
 
   /* Typography */
   --font-sans:     'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -81,12 +81,12 @@ body {
 }
 .glow-a {
   width: 560px; height: 560px;
-  background: radial-gradient(circle, rgba(102, 58, 243, 0.25), transparent 70%);
+  background: radial-gradient(circle, rgba(225, 29, 42, 0.22), transparent 70%);
   top: -200px; right: -180px;
 }
 .glow-b {
   width: 520px; height: 520px;
-  background: radial-gradient(circle, rgba(152, 192, 239, 0.10), transparent 70%);
+  background: radial-gradient(circle, rgba(140, 16, 34, 0.12), transparent 70%);
   bottom: -200px; left: -200px;
 }
 
@@ -109,11 +109,11 @@ body {
 .brand-mark {
   width: 38px; height: 38px;
   display: grid; place-items: center;
-  color: var(--ghost);
-  background: linear-gradient(135deg, var(--violet) 0%, #8761ff 100%);
   border-radius: 10px;
-  box-shadow: 0 0 24px var(--violet-glow), inset 0 0 0 1px rgba(255,255,255,0.18);
+  overflow: hidden;
+  box-shadow: 0 0 22px var(--violet-glow), inset 0 0 0 1px rgba(225,29,42,0.30);
 }
+.brand-mark img { width: 100%; height: 100%; display: block; }
 .brand-text h1 {
   font-family: var(--font-display);
   font-size: 18px; font-weight: 500;
@@ -138,7 +138,7 @@ body {
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-pill);
   padding: 4px;
-  box-shadow: inset rgba(186, 215, 247, 0.06) 0 0 0 1px;
+  box-shadow: inset rgba(236, 222, 226, 0.06) 0 0 0 1px;
 }
 .tab {
   font-family: var(--font-sans);
@@ -203,10 +203,10 @@ body {
   background: var(--surface-elev);
 }
 .subtab.is-active {
-  background: rgba(102, 58, 243, 0.12);
-  border-color: rgba(102, 58, 243, 0.40);
+  background: rgba(225, 29, 42, 0.12);
+  border-color: rgba(225, 29, 42, 0.40);
   color: var(--ghost);
-  box-shadow: 0 0 0 1px rgba(102, 58, 243, 0.18), 0 0 24px rgba(102, 58, 243, 0.10);
+  box-shadow: 0 0 0 1px rgba(225, 29, 42, 0.18), 0 0 24px rgba(225, 29, 42, 0.10);
 }
 .subtab-count {
   display: inline-flex;
@@ -216,14 +216,14 @@ body {
   padding: 2px 8px;
   font-size: 11px;
   border-radius: var(--r-pill);
-  background: rgba(186, 215, 247, 0.08);
+  background: rgba(236, 222, 226, 0.08);
   color: var(--azure);
   border: 1px solid var(--border-subtle);
 }
 .subtab.is-active .subtab-count {
-  background: rgba(102, 58, 243, 0.18);
+  background: rgba(225, 29, 42, 0.18);
   color: var(--celestial);
-  border-color: rgba(102, 58, 243, 0.30);
+  border-color: rgba(225, 29, 42, 0.30);
 }
 
 .badge {
@@ -340,7 +340,7 @@ body {
 }
 .temp-hot   { color: var(--pos); border-color: rgba(111, 231, 179, 0.4); background: rgba(111, 231, 179, 0.08); }
 .temp-warm  { color: var(--warn); border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.08); }
-.temp-cool  { color: var(--azure); border-color: rgba(199, 211, 234, 0.25); background: rgba(199, 211, 234, 0.05); }
+.temp-cool  { color: var(--azure); border-color: rgba(240, 228, 230, 0.25); background: rgba(240, 228, 230, 0.05); }
 .temp-cold  { color: var(--neg); border-color: rgba(255, 122, 138, 0.4); background: rgba(255, 122, 138, 0.08); }
 
 /* ============================================================ Charts grid */
@@ -404,7 +404,7 @@ body {
 }
 .controls input[type="search"],
 .controls input[type="number"] {
-  background: rgba(199, 211, 234, 0.06);
+  background: rgba(240, 228, 230, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-input);
   color: var(--ghost);
@@ -421,7 +421,7 @@ body {
 .controls input:focus {
   outline: none;
   border-color: var(--celestial);
-  box-shadow: 0 0 0 3px rgba(182, 217, 252, 0.08);
+  box-shadow: 0 0 0 3px rgba(240, 69, 90, 0.08);
 }
 .ctl {
   display: inline-flex; align-items: center; gap: 8px;
@@ -492,13 +492,13 @@ th.sort-active::after { content: ' ↓'; font-size: 10px; }
 th.sort-active.asc::after { content: ' ↑'; }
 td {
   padding: 11px 14px;
-  border-bottom: 1px solid rgba(186, 215, 247, 0.06);
+  border-bottom: 1px solid rgba(236, 222, 226, 0.06);
   white-space: nowrap;
 }
 td.num    { text-align: right; font-family: var(--font-mono); font-size: 12px; }
 td.center { text-align: center; }
 tbody tr { transition: background 0.1s ease; }
-tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
+tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
 
 .sym {
   font-weight: 600;
@@ -791,11 +791,11 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--midnight); }
 ::-webkit-scrollbar-thumb {
-  background: rgba(186, 215, 247, 0.10);
+  background: rgba(236, 222, 226, 0.10);
   border-radius: var(--r-pill);
   border: 2px solid var(--midnight);
 }
-::-webkit-scrollbar-thumb:hover { background: rgba(186, 215, 247, 0.18); }
+::-webkit-scrollbar-thumb:hover { background: rgba(236, 222, 226, 0.18); }
 
 /* ============================================================ Trade page */
 .trade-statusbar {
@@ -848,7 +848,7 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 .field-label { font-size: 11px; color: var(--whisper); letter-spacing: 0.04em; text-transform: uppercase; }
 .field-label .hint { text-transform: none; letter-spacing: 0; color: var(--interstellar); font-size: 10px; }
 .field input, .field select {
-  background: rgba(199, 211, 234, 0.06);
+  background: rgba(240, 228, 230, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-input);
   color: var(--ghost);
@@ -857,7 +857,7 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 }
 .field input:focus, .field select:focus {
   outline: none; border-color: var(--celestial);
-  box-shadow: 0 0 0 3px rgba(182, 217, 252, 0.08);
+  box-shadow: 0 0 0 3px rgba(240, 69, 90, 0.08);
 }
 .field input::placeholder { color: var(--interstellar); }
 
@@ -922,10 +922,10 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 .dir.short { background: rgba(255, 122, 138, 0.10); color: var(--neg); border: 1px solid rgba(255, 122, 138, 0.28); }
 .trade-state { display: inline-block; padding: 2px 9px; border-radius: var(--r-pill); font-size: 10px; font-weight: 600; letter-spacing: 0.04em; }
 .st-watch { background: rgba(251, 191, 36, 0.10); color: var(--warn); border: 1px solid rgba(251, 191, 36, 0.25); }
-.st-live  { background: rgba(182, 217, 252, 0.10); color: var(--celestial); border: 1px solid rgba(182, 217, 252, 0.30); }
+.st-live  { background: rgba(240, 69, 90, 0.10); color: var(--celestial); border: 1px solid rgba(240, 69, 90, 0.30); }
 .mark-input {
   width: 86px; text-align: right;
-  background: rgba(199, 211, 234, 0.06);
+  background: rgba(240, 228, 230, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-input);
   color: var(--ghost); padding: 5px 8px; font-size: 12px; font-family: var(--font-mono);
@@ -987,10 +987,10 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
   padding: 12px 16px; cursor: pointer; user-select: none;
   flex-wrap: wrap;
 }
-.jcard-head:hover { background: rgba(182, 217, 252, 0.035); }
+.jcard-head:hover { background: rgba(240, 69, 90, 0.035); }
 .jc-caret { color: var(--whisper); font-size: 12px; width: 12px; }
 .jcard-head .sym { font-size: 14px; }
-.jc-setup { font-size: 11px; color: var(--celestial); background: rgba(182,217,252,0.08); padding: 2px 8px; border-radius: var(--r-pill); }
+.jc-setup { font-size: 11px; color: var(--celestial); background: rgba(240,69,90,0.08); padding: 2px 8px; border-radius: var(--r-pill); }
 .jc-spacer { flex: 1; }
 .jc-pnl { font-family: var(--font-mono); font-size: 13px; }
 .jc-date { font-size: 11px; }
@@ -1017,19 +1017,19 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 .jf-wide { grid-column: 1 / -1; }
 .jf-l { font-size: 10px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--whisper); }
 .jf input, .jf select, .jf textarea {
-  background: rgba(199, 211, 234, 0.06);
+  background: rgba(240, 228, 230, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-input);
   color: var(--ghost); padding: 7px 10px; font-size: 13px; font-family: inherit; resize: vertical;
 }
-.jf input:focus, .jf select:focus, .jf textarea:focus { outline: none; border-color: var(--celestial); box-shadow: 0 0 0 3px rgba(182,217,252,0.08); }
+.jf input:focus, .jf select:focus, .jf textarea:focus { outline: none; border-color: var(--celestial); box-shadow: 0 0 0 3px rgba(240,69,90,0.08); }
 
 .jnotes { list-style: none; padding: 0; margin: 0 0 10px; display: flex; flex-direction: column; gap: 6px; }
 .jnotes li { font-size: 12px; color: var(--comet); line-height: 1.5; }
 .jn-time { color: var(--interstellar); font-size: 11px; margin-right: 6px; }
 .jnote-add { display: flex; gap: 8px; }
 .jnote-add input {
-  flex: 1; background: rgba(199, 211, 234, 0.06); border: 1px solid var(--border-subtle);
+  flex: 1; background: rgba(240, 228, 230, 0.06); border: 1px solid var(--border-subtle);
   border-radius: var(--r-input); color: var(--ghost); padding: 8px 10px; font-size: 13px; font-family: inherit;
 }
 .jnote-add input:focus { outline: none; border-color: var(--celestial); }
@@ -1068,12 +1068,12 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 .news-search { flex: 1 1 320px; min-width: 0; }
 .news-search input {
   width: 100%;
-  background: rgba(199, 211, 234, 0.06);
+  background: rgba(240, 228, 230, 0.06);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-input);
   color: var(--ghost); padding: 11px 14px; font-size: 15px; font-family: inherit;
 }
-.news-search input:focus { outline: none; border-color: var(--celestial); box-shadow: 0 0 0 3px rgba(182,217,252,0.08); }
+.news-search input:focus { outline: none; border-color: var(--celestial); box-shadow: 0 0 0 3px rgba(240,69,90,0.08); }
 .news-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .news-asof { font-size: 11px; color: var(--whisper); }
 
@@ -1091,10 +1091,10 @@ tbody tr:hover { background: rgba(182, 217, 252, 0.035); }
 .news-item {
   display: flex; flex-direction: column; gap: 3px;
   padding: 12px 4px; text-decoration: none;
-  border-top: 1px solid rgba(186, 215, 247, 0.07);
+  border-top: 1px solid rgba(236, 222, 226, 0.07);
   transition: background 0.12s ease;
 }
-.news-item:hover { background: rgba(182, 217, 252, 0.04); }
+.news-item:hover { background: rgba(240, 69, 90, 0.04); }
 .news-title { color: var(--comet); font-size: 14px; line-height: 1.45; }
 .news-item:hover .news-title { color: var(--ghost); }
 .news-meta { font-size: 11px; color: var(--interstellar); }

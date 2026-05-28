@@ -3,19 +3,19 @@
 
   const COLOR = {
     ghost: "#ffffff",
-    comet: "#d8ecf8",
-    arctic: "#d1e4fa",
-    celestial: "#b6d9fc",
-    azure: "#c7d3ea",
-    whisper: "#9da7ba",
-    interstellar: "#81899b",
-    violet: "#663af3",
-    violetSoft: "rgba(102, 58, 243, 0.55)",
-    pos: "#6fe7b3",
+    comet: "#ece6e8",
+    arctic: "#d8d1d4",
+    celestial: "#f0455a",   /* red highlight */
+    azure: "#b9b1b5",
+    whisper: "#9b9196",
+    interstellar: "#7c7378",
+    violet: "#e11d2a",      /* primary red accent */
+    violetSoft: "rgba(225, 29, 42, 0.55)",
+    pos: "#5fd39b",
     neg: "#ff7a8a",
     warn: "#fbbf24",
-    grid: "rgba(186, 215, 247, 0.08)",
-    border: "rgba(186, 215, 247, 0.18)",
+    grid: "rgba(236, 222, 226, 0.08)",
+    border: "rgba(236, 222, 226, 0.18)",
   };
 
   const state = {
@@ -673,9 +673,9 @@
     const ds = ["avg_r1m", "avg_r3m", "avg_r6m", "avg_r12m"];
     const dsLabels = ["1M", "3M", "6M", "12M"];
     const dsColors = [
-      "rgba(182, 217, 252, 0.85)",
-      "rgba(102, 58, 243, 0.80)",
-      "rgba(111, 231, 179, 0.85)",
+      "rgba(240, 69, 90, 0.85)",
+      "rgba(225, 29, 42, 0.85)",
+      "rgba(95, 211, 155, 0.85)",
       "rgba(251, 191, 36, 0.85)",
     ];
     const ctx = $("chartSectorHorizons").getContext("2d");
@@ -746,7 +746,7 @@
         datasets: [{
           label: def?.label || state.activeScanner,
           data,
-          backgroundColor: gradient(ctx, "rgba(182, 217, 252, 0.95)", "rgba(182, 217, 252, 0.30)"),
+          backgroundColor: gradient(ctx, "rgba(225, 29, 42, 0.95)", "rgba(225, 29, 42, 0.28)"),
           hoverBackgroundColor: COLOR.ghost,
           borderWidth: 0,
           borderRadius: 1,
@@ -795,9 +795,9 @@
     const bp = state.history.breadth_pct;
     const MA_DEFS = [
       { key: "above_sma10",  label: "% > 10‑day SMA",  color: "rgba(251, 191, 36, 0.85)" },
-      { key: "above_sma20",  label: "% > 20‑day SMA",  color: "rgba(255, 158, 105, 0.85)" },
-      { key: "above_sma50",  label: "% > 50‑day SMA",  color: "rgba(182, 217, 252, 0.85)" },
-      { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(102, 58, 243, 0.95)" },
+      { key: "above_sma20",  label: "% > 20‑day SMA",  color: "rgba(255, 138, 92, 0.85)" },
+      { key: "above_sma50",  label: "% > 50‑day SMA",  color: "rgba(240, 69, 90, 0.85)" },
+      { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(225, 29, 42, 0.95)" },
     ];
     const ctx = $("chartBreadthHistory").getContext("2d");
 
