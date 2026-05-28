@@ -682,8 +682,14 @@ def main() -> int:
     # When bhavcopy backfill is on, skip the slow yfinance retry pass —
     # bhavcopy recovers the gaps faster and more completely.
     use_bhavcopy = os.getenv("SCAN_USE_BHAVCOPY", "1") == "1"
-    prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
-    print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
+    # Bhavcopy-primary mode: skip Yahoo entirely (it rate-limits hard under
+    # repeated runs). Bhavcopy alone is the complete, reliable NSE+BSE universe.
+    if os.getenv("SCAN_SKIP_YFINANCE", "0") == "1":
+        prices = {}
+        print("[prices] SKIP_YFINANCE=1 — bhavcopy-primary mode (no Yahoo)")
+    else:
+        prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
+        print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
 
     # Bhavcopy: (1) FILL universe tickers Yahoo missed, and (2) ADD tradeable
     # stocks the Zerodha master list doesn't even include (maximizes coverage —

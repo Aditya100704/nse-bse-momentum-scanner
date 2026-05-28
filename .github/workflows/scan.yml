@@ -27,6 +27,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run scanner
+        # Bhavcopy-primary: fast (~3 min) and reliable. NSE mirror works from
+        # any IP; BSE direct may be geo-blocked on US runners (degrades to NSE).
+        env:
+          SCAN_SKIP_YFINANCE: "1"
+          SCAN_USE_BHAVCOPY: "1"
         run: python scan.py
 
       - name: Commit results
