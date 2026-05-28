@@ -270,8 +270,6 @@
     $("statWithData").textContent = (m.with_data ?? 0).toLocaleString("en-IN");
     $("statQualifiers").textContent = (m.qualifiers ?? 0).toLocaleString("en-IN");
     $("statTT").textContent = rows.filter((r) => r.trend_template).length.toLocaleString("en-IN");
-    const medMom = median(rows.map((r) => r.momentum));
-    $("statMedMom").textContent = medMom != null ? `${medMom > 0 ? "+" : ""}${medMom.toFixed(1)}` : "—";
 
     const b = state.breadth || {};
     const score = b.regime_score;

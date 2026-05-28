@@ -45,18 +45,24 @@
 
   <!-- ============================================================ Scanner page -->
   <section class="page is-active" data-page="scanner">
-    <div class="hero">
-      <h2 class="hero-title">Stocks moving with conviction.</h2>
-      <p class="hero-sub">Every NSE + BSE listing above its 200&#8209;day SMA with real liquidity, ranked Minervini&#8209;style.</p>
+    <div class="hero-split">
+      <div class="hero-left">
+        <div class="hero">
+          <h2 class="hero-title">Stocks moving with conviction.</h2>
+          <p class="hero-sub">Every NSE + BSE listing above its 200&#8209;day SMA with real liquidity, ranked Minervini&#8209;style.</p>
+        </div>
+        <section class="kpis">
+          <article class="kpi"><div class="kpi-label">Active stocks</div><div class="kpi-value mono" id="statWithData">—</div><div class="kpi-foot">tradeable · NSE + BSE bhavcopy</div></article>
+          <article class="kpi"><div class="kpi-label">Qualifiers</div><div class="kpi-value mono accent" id="statQualifiers">—</div><div class="kpi-foot">passed both gates</div></article>
+          <article class="kpi"><div class="kpi-label">Trend Template</div><div class="kpi-value mono" id="statTT">—</div><div class="kpi-foot">strict 8/8 setups</div></article>
+          <article class="kpi"><div class="kpi-label">Market</div><div class="kpi-value" id="statTemp">—</div><div class="kpi-foot" id="statTempLabel">—</div></article>
+        </section>
+      </div>
+      <div class="hero-right">
+        <canvas id="heroAnim" aria-hidden="true"></canvas>
+        <div class="hero-tape" id="heroTape"></div>
+      </div>
     </div>
-
-    <section class="kpis">
-      <article class="kpi"><div class="kpi-label">Active stocks</div><div class="kpi-value mono" id="statWithData">—</div><div class="kpi-foot">tradeable · NSE + BSE bhavcopy</div></article>
-      <article class="kpi"><div class="kpi-label">Qualifiers</div><div class="kpi-value mono accent" id="statQualifiers">—</div><div class="kpi-foot">passed both gates</div></article>
-      <article class="kpi"><div class="kpi-label">Trend Template</div><div class="kpi-value mono" id="statTT">—</div><div class="kpi-foot">strict 8/8 setups</div></article>
-      <article class="kpi"><div class="kpi-label">Median momentum</div><div class="kpi-value mono" id="statMedMom">—</div><div class="kpi-foot">composite, qualifiers</div></article>
-      <article class="kpi"><div class="kpi-label">Market</div><div class="kpi-value" id="statTemp">—</div><div class="kpi-foot" id="statTempLabel">—</div></article>
-    </section>
 
     <section class="charts">
       <article class="chart-card span-2">
@@ -486,5 +492,6 @@
 <script src="trade.js"></script>
 <script src="journal.js"></script>
 <script src="news.js"></script>
+<script src="hero.js"></script>
 </body>
 </html>

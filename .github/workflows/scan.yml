@@ -92,6 +92,7 @@ jobs:
           sed -i "s|src=\"trade.js\"|src=\"trade.js?v=${SHA}\"|g" _site/index.html
           sed -i "s|src=\"journal.js\"|src=\"journal.js?v=${SHA}\"|g" _site/index.html
           sed -i "s|src=\"news.js\"|src=\"news.js?v=${SHA}\"|g" _site/index.html
+          sed -i "s|src=\"hero.js\"|src=\"hero.js?v=${SHA}\"|g" _site/index.html
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
