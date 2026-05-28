@@ -55,6 +55,10 @@
 
 * { box-sizing: border-box; }
 
+/* Declare the site as dark-native so browsers' auto-dark-mode doesn't
+   re-invert our already-dark UI (it was washing out the dark logo/favicon). */
+:root { color-scheme: dark; }
+
 html, body {
   margin: 0;
   background: var(--midnight);
@@ -105,29 +109,8 @@ body {
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border-subtle);
 }
-.brand { display: flex; align-items: center; gap: 14px; }
-.brand-mark {
-  width: 38px; height: 38px;
-  display: grid; place-items: center;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 22px var(--violet-glow), inset 0 0 0 1px rgba(225,29,42,0.30);
-}
-.brand-mark img { width: 100%; height: 100%; display: block; }
-.brand-text h1 {
-  font-family: var(--font-display);
-  font-size: 18px; font-weight: 500;
-  letter-spacing: -0.02em;
-  margin: 0;
-  color: var(--ghost);
-}
-.brand-text .sub {
-  margin: 2px 0 0;
-  font-size: 11px;
-  color: var(--whisper);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
+.brand { display: flex; align-items: center; }
+.brand-logo { height: 50px; width: auto; display: block; }
 .topbar-meta { display: flex; gap: 10px; align-items: center; }
 
 /* Tab nav */
@@ -683,11 +666,7 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
     padding: 12px 14px;
     gap: 8px 10px;
   }
-  .brand { gap: 10px; }
-  .brand-mark { width: 32px; height: 32px; }
-  .brand-mark svg { width: 18px; height: 18px; }
-  .brand-text h1 { font-size: 15px; }
-  .brand-text .sub { font-size: 10px; letter-spacing: 0.03em; }
+  .brand-logo { height: 34px; }
   .tabs { padding: 3px; gap: 2px; }
   .tab { font-size: 12px; padding: 7px 14px; }
   .badge { padding: 6px 10px; font-size: 11px; }
@@ -784,7 +763,7 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
   .hero-title { font-size: 24px; }
   .badge { font-size: 10px; }
   #lastScan { max-width: 110px; font-size: 10px; }
-  .brand-text .sub { display: none; }
+  .brand-logo { height: 30px; }
 }
 
 /* Scrollbars */
