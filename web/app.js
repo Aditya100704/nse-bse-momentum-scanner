@@ -949,7 +949,7 @@
   // Always re-renders on switch — guarantees correct canvas dimensions.
   function renderTabCharts(name) {
     const fns = {
-      scanner: [renderTop, renderDist, renderScatter, renderHorizon, renderScannerHistory],
+      scanner: [renderTop, renderScannerHistory],
       breadth: [renderRegimeGauge, renderBreadthBars, renderRegimeComponents,
                 renderMedRet, renderBreadthSignals, renderBreadthHistory, renderNetNewHighs],
       sectors: [renderSectorMom, renderSectorHorizons, renderSectorTable],
