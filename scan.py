@@ -39,8 +39,8 @@ DATA.mkdir(exist_ok=True)
 import os
 import re
 
-MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "2.0"))
-WITHIN_PCT_OF_52W_HIGH = 25.0
+MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "5.0"))
+WITHIN_PCT_OF_52W_HIGH = float(os.getenv("SCAN_MAX_OFF_HIGH", "25.0"))
 BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "80"))
 SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "2.5"))
 INCLUDE_BSE = os.getenv("SCAN_INCLUDE_BSE", "1") == "1"
@@ -550,6 +550,7 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
             low_252  = close.rolling(252).min()
             pct_off  = (1 - close / high_252) * 100
             r1m = close.pct_change(21) * 100
+            r6m = close.pct_change(126) * 100
             turnover_cr = (close * vol).rolling(20).mean() / 1e7
             avg_vol50 = vol.rolling(50).mean()
             vol_surge = vol / avg_vol50
@@ -557,8 +558,9 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
             cond_liquid = (turnover_cr >= MIN_LIQUIDITY_CR).fillna(False)
 
             # ----- Scanner conditions per day -----
-            # Momentum (new rule: > SMA50 AND > SMA200)
-            mom = (close > smas[50]) & (close > smas[200]) & cond_liquid
+            # Momentum = the tightened base gate (uptrend + near-high + 6M positive + liquid)
+            mom = ((close > smas[50]) & (close > smas[200]) &
+                   (pct_off <= WITHIN_PCT_OF_52W_HIGH) & (r6m > 0) & cond_liquid)
             # Trend Template (strict 8/8)
             tt = (
                 (close > smas[50]) & (close > sma150) & (close > smas[200]) &
@@ -767,10 +769,17 @@ def main() -> int:
         # Mature stock?
         res = analyze(df)
         if res is not None:
-            all_results.append(res)
+            all_results.append(res)  # for breadth (full universe, pre-gate)
+            # Qualifier gates — tightened to a focused, tradeable momentum set (~<500):
+            #   in a real uptrend (above SMA50 AND SMA200), genuinely liquid,
+            #   within X% of the 52w high, and a positive 6-month trend.
             if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
                 continue
-            if not res["price_gt_sma200"]:
+            if not (res["price_gt_sma50"] and res["price_gt_sma200"]):
+                continue
+            if res["pct_off_high"] is None or res["pct_off_high"] > WITHIN_PCT_OF_52W_HIGH:
+                continue
+            if (res["r6m"] if res["r6m"] is not None else -1) <= 0:
                 continue
             rows.append({
                 "symbol": sym,

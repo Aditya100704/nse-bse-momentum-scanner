@@ -39,8 +39,8 @@
     momentum: {
       label: "Momentum",
       title: "All qualifiers",
-      sub: "Above the 50‑day AND 200‑day SMA · ≥ ₹2 cr daily turnover · ranked by RS",
-      filter: (r) => r.price_gt_sma50 === true && r.price_gt_sma200 === true,
+      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 6‑month · ≥ ₹5 cr/day · ranked by RS",
+      filter: (r) => true,   // base gate already enforces the full momentum set
     },
     trend_template: {
       label: "Trend Template",
