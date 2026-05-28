@@ -15,18 +15,23 @@
   const LS_TRADES  = "phenom_trades_v1";
   const LS_API     = "phenom_trade_api";
   const LS_CAPITAL = "phenom_trade_capital";
+  const LS_JOURNAL = "phenom_journal_v1";   // per-trade journal annotations, keyed by trade id
+  const DEFAULT_CAPITAL = 100000;
 
   const DEFAULT_SL_PCT = 4;     // used when the user leaves Stop blank
   const POLL_MS        = 15000; // worker-mode refresh cadence
 
   const state = {
     apiUrl:  (localStorage.getItem(LS_API) || "").replace(/\/+$/, ""),
-    capital: +(localStorage.getItem(LS_CAPITAL) || 100000),
+    capital: +(localStorage.getItem(LS_CAPITAL) || DEFAULT_CAPITAL),
     open:    [],
     closed:  [],
+    ann:     {},          // { tradeId: {setup, grade, emotion, wentRight, wentWrong, lesson, tags, notes:[{ts,text}]} }
     pollTimer: null,
   };
   const usingWorker = () => !!state.apiUrl;
+  const subs = [];        // journal/other listeners, fired on any trade change
+  function notify() { subs.forEach((f) => { try { f(); } catch (e) { console.error(e); } }); }
 
   const $ = (id) => document.getElementById(id);
 
@@ -81,9 +86,10 @@
     const riskPerShare = Math.abs(entry - stop);
     const slPct = entry > 0 ? (riskPerShare / entry) * 100 : 0;
 
-    const capital = inp.capital > 0 ? +inp.capital : 0;
-    const riskFrac = inp.risk == null || inp.risk === "" ? 1 : +inp.risk;
-    const riskRs = capital * riskFrac / 100;
+    // capital + risk% default if blank — only ticker + level are truly required
+    const capital = inp.capital != null && +inp.capital > 0 ? +inp.capital : DEFAULT_CAPITAL;
+    const riskPct = inp.risk == null || inp.risk === "" ? 1 : +inp.risk;
+    const riskRs = capital * riskPct / 100;
     const qty = riskPerShare > 0 ? Math.floor(riskRs / riskPerShare) : 0;
     const posValue = qty * entry;
 
@@ -92,7 +98,7 @@
     const rewardRs = qty * riskPerShare * rr;
     const deployPct = capital > 0 ? (posValue / capital) * 100 : 0;
 
-    return { dir, entry, stop, riskPerShare, slPct, riskRs, qty, posValue, rr, target, rewardRs, deployPct };
+    return { dir, entry, stop, buffer, riskPerShare, slPct, capital, riskPct, riskRs, qty, posValue, rr, target, rewardRs, deployPct };
   }
 
   // Open P&L for a triggered trade given a mark price.
@@ -114,6 +120,52 @@
     localStorage.setItem(LS_TRADES, JSON.stringify({ open: state.open, closed: state.closed }));
   }
   const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+
+  // ---------- journal annotations (work in BOTH local + worker modes) ----------
+  function loadAnn() {
+    try { state.ann = JSON.parse(localStorage.getItem(LS_JOURNAL) || "{}") || {}; }
+    catch { state.ann = {}; }
+  }
+  function saveAnn() { localStorage.setItem(LS_JOURNAL, JSON.stringify(state.ann)); }
+
+  // Build a timeline for a trade: prefer its own events[] (local mode logs them),
+  // else reconstruct from timestamps (worker mode), then merge in journal notes.
+  function eventsFor(t) {
+    const ev = Array.isArray(t.events) && t.events.length
+      ? t.events.slice()
+      : [
+          t.added       && { ts: t.added,       type: "CREATED" },
+          t.triggeredAt && { ts: t.triggeredAt, type: "TRIGGERED" },
+          t.closedAt    && { ts: t.closedAt,    type: "CLOSED", note: t.result },
+        ].filter(Boolean);
+    const ann = state.ann[t.id];
+    if (ann && Array.isArray(ann.notes)) {
+      ann.notes.forEach((n) => ev.push({ ts: n.ts, type: "NOTE", note: n.text }));
+    }
+    return ev.sort((a, b) => new Date(a.ts) - new Date(b.ts));
+  }
+
+  // Public API consumed by the Journal tab (journal.js).
+  window.PhenomTrades = {
+    getAll() {
+      const decorate = (t) => ({ ...t, _ann: state.ann[t.id] || {}, _events: eventsFor(t) });
+      return { open: state.open.map(decorate), closed: state.closed.map(decorate), mode: usingWorker() ? "worker" : "local" };
+    },
+    annotate(id, fields) {
+      // save silently — re-rendering on every field blur would detach the card
+      // mid-edit and lose focus. The journal updates chips on its next render.
+      state.ann[id] = { ...(state.ann[id] || {}), ...fields };
+      saveAnn();
+    },
+    addNote(id, text) {
+      if (!text || !text.trim()) return;
+      const a = state.ann[id] || {};
+      a.notes = Array.isArray(a.notes) ? a.notes : [];
+      a.notes.push({ ts: new Date().toISOString(), text: text.trim() });
+      state.ann[id] = a; saveAnn(); notify();
+    },
+    subscribe(fn) { if (typeof fn === "function") subs.push(fn); },
+  };
 
   /* ----------------------------------------------------------- worker calls */
   async function apiGet(path) {
@@ -145,14 +197,16 @@
       await refresh();
       return;
     }
+    const nowIso = new Date().toISOString();
     state.open.unshift({
       id: uid(),
       ticker: inp.ticker.toUpperCase(), exchange: inp.exchange, direction: inp.direction,
-      level: +inp.level, buffer: +inp.buffer,
+      level: +inp.level, buffer: c.buffer,
       entry: round2(c.entry), stop: round2(c.stop), target: round2(c.target),
       qty: c.qty, riskPerShare: round2(c.riskPerShare), riskRs: Math.round(c.riskRs),
-      rr: c.rr, note: inp.note || "",
-      state: "WATCHING", mark: null, added: new Date().toISOString(), triggeredAt: null,
+      rr: c.rr, capital: c.capital, riskPct: c.riskPct, note: inp.note || "",
+      state: "WATCHING", mark: null, added: nowIso, triggeredAt: null,
+      events: [{ ts: nowIso, type: "CREATED", note: `entry ${round2(c.entry)} · stop ${round2(c.stop)} · ${c.qty} sh · ${c.rr}R` }],
     });
     saveLocal(); render();
   }
@@ -160,7 +214,12 @@
   async function triggerTrade(id) {
     if (usingWorker()) { await apiSend(`/trades/${id}/trigger`, "POST"); return refresh(); }
     const t = state.open.find((x) => x.id === id);
-    if (t) { t.state = "TRIGGERED"; t.triggeredAt = new Date().toISOString(); if (t.mark == null) t.mark = t.entry; saveLocal(); render(); }
+    if (t) {
+      t.state = "TRIGGERED"; t.triggeredAt = new Date().toISOString();
+      if (t.mark == null) t.mark = t.entry;
+      (t.events = t.events || []).push({ ts: t.triggeredAt, type: "TRIGGERED", note: `entry ${t.entry}` });
+      saveLocal(); render();
+    }
   }
 
   async function setMark(id, mark) {
@@ -181,9 +240,11 @@
     let result = "MANUAL";
     if (sign === 1) { if (exit >= t.target) result = "TARGET"; else if (exit <= t.stop) result = "STOP"; }
     else           { if (exit <= t.target) result = "TARGET"; else if (exit >= t.stop) result = "STOP"; }
+    const closedAt = new Date().toISOString();
+    const events = (t.events || []).concat({ ts: closedAt, type: "CLOSED", note: `${result} @ ${round2(exit)} · ₹${Math.round(pnlRs)} (${round2(rMultiple)}R)` });
     state.closed.unshift({
       ...t, exit: round2(exit), pnlRs: Math.round(pnlRs), pnlPct: round2(pnlPct),
-      rMultiple: round2(rMultiple), result, closedAt: new Date().toISOString(),
+      rMultiple: round2(rMultiple), result, closedAt, events,
     });
     state.open.splice(i, 1);
     saveLocal(); render();
@@ -253,7 +314,7 @@
   }
 
   /* ----------------------------------------------------------- renderers */
-  function render() { renderStats(); renderOpen(); renderClosed(); }
+  function render() { renderStats(); renderOpen(); renderClosed(); notify(); }
 
   function renderStats() {
     const open = state.open, closed = state.closed;
@@ -479,6 +540,7 @@
     $("fCapital").value = state.capital;
 
     setModePill(false);
+    loadAnn();
     loadLocal();
     render();
     renderCalc();

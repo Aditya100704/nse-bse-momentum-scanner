@@ -32,6 +32,7 @@
     <button class="tab" data-tab="breadth" role="tab">Breadth</button>
     <button class="tab" data-tab="sectors" role="tab">Sectors</button>
     <button class="tab" data-tab="trade" role="tab">Trade</button>
+    <button class="tab" data-tab="journal" role="tab">Journal</button>
   </nav>
   <div class="topbar-meta">
     <span class="badge live" id="freshBadge">
@@ -422,6 +423,38 @@
     </section>
   </section>
 
+  <!-- ============================================================ Journal page -->
+  <section class="page" data-page="journal">
+    <div class="hero">
+      <h2 class="hero-title">Trade journal.</h2>
+      <p class="hero-sub">Every trade, logged in full — the plan, the outcome, the timeline of what happened, and your own notes. This is where you review what works and what doesn't.</p>
+    </div>
+
+    <section class="trade-stats-card">
+      <header class="card-head"><div><h3>Journal stats</h3><p class="card-sub" id="journalStatsSub">Across all recorded trades</p></div></header>
+      <div class="journal-stats" id="journalStats"></div>
+    </section>
+
+    <section class="table-section">
+      <header class="card-head">
+        <div><h3>All trades</h3><p class="card-sub">Click a trade to expand its full record — add setup, grade, what went right/wrong, lessons, tags and notes. Everything auto-saves.</p></div>
+        <div class="controls">
+          <input type="search" id="journalSearch" placeholder="Search ticker, setup, tag, note…" autocomplete="off" />
+          <select id="journalFilter">
+            <option value="all">All trades</option>
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+            <option value="win">Wins</option>
+            <option value="loss">Losses</option>
+          </select>
+          <button id="exportJournal" class="btn-ghost">Export journal CSV</button>
+        </div>
+      </header>
+      <div id="journalList" class="journal-list"></div>
+      <div id="journalEmpty" class="empty">No trades yet. Add one on the Trade tab — it shows up here automatically.</div>
+    </section>
+  </section>
+
   <footer class="foot">
     <span>Data via Yahoo Finance · NSE + BSE universe from Zerodha public dump. Educational, not investment advice.</span>
     <span id="duration" class="mono"></span>
@@ -432,5 +465,6 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <script src="app.js"></script>
 <script src="trade.js"></script>
+<script src="journal.js"></script>
 </body>
 </html>

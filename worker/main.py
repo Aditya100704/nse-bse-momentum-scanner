@@ -127,7 +127,7 @@ def compute_trade(p: "NewTrade") -> dict:
         stop = entry * (1 - d * DEFAULT_SL_PCT / 100.0)
 
     risk_per_share = abs(entry - stop)
-    capital = float(p.capital) if p.capital and p.capital > 0 else 0.0
+    capital = float(p.capital) if p.capital and p.capital > 0 else 100000.0  # default if blank
     risk_pct = 1.0 if p.risk_pct is None else float(p.risk_pct)
     risk_rs = capital * risk_pct / 100.0
     qty = int(risk_rs // risk_per_share) if risk_per_share > 0 else 0
@@ -143,6 +143,8 @@ def compute_trade(p: "NewTrade") -> dict:
         "riskRs": round(risk_rs),
         "qty": qty,
         "rr": rr,
+        "capital": round(capital),
+        "riskPct": risk_pct,
     }
 
 
