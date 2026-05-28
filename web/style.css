@@ -284,6 +284,11 @@ body {
   .hero-split { grid-template-columns: 1fr; gap: 18px; }
   .hero-right { min-height: 220px; order: -1; }
 }
+/* Hide the animation on phones (saves space + battery; the canvas loop also
+   no-ops because its container has zero size). */
+@media (max-width: 760px) {
+  .hero-right { display: none; }
+}
 
 .hero {
   display: flex;
