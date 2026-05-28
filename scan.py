@@ -612,7 +612,7 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 504) -> di
     # Compute breadth %
     breadth_pct = {}
     for w in ma_windows:
-        denom = have_sums[w].replace(0, pd.NA)
+        denom = have_sums[w].astype(float).replace(0, np.nan)  # np.nan supports .round(); pd.NA does not
         pct = (above_sums[w] / denom * 100).round(1)
         breadth_pct[f"above_sma{w}"] = [None if pd.isna(v) else float(v) for v in pct.reindex(keep_dates).tolist()]
 
@@ -774,7 +774,13 @@ def main() -> int:
     breadth = _compute_breadth(all_results)
     sectors = _compute_sectors(df_out.to_dict(orient="records") if len(df_out) else [])
     print("[history] computing 2-year scanner + breadth history...", flush=True)
-    history = _compute_history(prices)
+    try:
+        history = _compute_history(prices)
+    except Exception as exc:
+        import traceback
+        print(f"[history] FAILED (non-fatal): {exc}", flush=True)
+        traceback.print_exc()
+        history = {}
 
     finished = datetime.now(timezone.utc)
     meta = {
