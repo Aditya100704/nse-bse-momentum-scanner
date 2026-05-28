@@ -33,6 +33,7 @@
     <button class="tab" data-tab="sectors" role="tab">Sectors</button>
     <button class="tab" data-tab="trade" role="tab">Trade</button>
     <button class="tab" data-tab="journal" role="tab">Journal</button>
+    <button class="tab" data-tab="news" role="tab">News</button>
   </nav>
   <div class="topbar-meta">
     <span class="badge live" id="freshBadge">
@@ -454,8 +455,31 @@
     </section>
   </section>
 
+  <!-- ============================================================ News page -->
+  <section class="page" data-page="news">
+    <div class="hero">
+      <h2 class="hero-title">News &amp; catalysts.</h2>
+      <p class="hero-sub">Search any scanner stock for its latest headlines — results, orders, deals, upgrades. Refreshed automatically every day; hit “Fetch fresh” to pull the very latest on demand.</p>
+    </div>
+
+    <section class="news-bar">
+      <div class="news-search">
+        <input type="search" id="newsSearch" list="newsSymbols" placeholder="Type a ticker — e.g. RELIANCE, CGPOWER…" autocomplete="off" />
+        <datalist id="newsSymbols"></datalist>
+      </div>
+      <div class="news-actions">
+        <span class="news-asof mono" id="newsAsOf">—</span>
+        <a class="btn-ghost" id="newsFetch" href="https://github.com/Aditya100704/nse-bse-momentum-scanner/actions/workflows/news.yml" target="_blank" rel="noopener" title="Opens GitHub Actions — click “Run workflow” to pull fresh headlines now">Fetch fresh ↗</a>
+        <button class="btn-ghost" id="newsReload" title="Reload the latest saved headlines">Refresh</button>
+      </div>
+    </section>
+
+    <div id="newsResult" class="news-result"></div>
+    <div id="newsEmpty" class="empty">Search a ticker above to see its latest news. Tip: any name from the Scanner works.</div>
+  </section>
+
   <footer class="foot">
-    <span>Data via Yahoo Finance · NSE + BSE universe from Zerodha public dump. Educational, not investment advice.</span>
+    <span>Data via NSE + BSE bhavcopy · news via Google News. Educational, not investment advice.</span>
     <span id="duration" class="mono"></span>
   </footer>
 
@@ -465,5 +489,6 @@
 <script src="app.js"></script>
 <script src="trade.js"></script>
 <script src="journal.js"></script>
+<script src="news.js"></script>
 </body>
 </html>
