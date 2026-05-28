@@ -10,6 +10,7 @@ on:
       - 'web/**'
       - 'data/scanner_output.json'
       - 'data/news.json'
+      - 'data/tickers.json'
       - '.github/workflows/deploy.yml'
   workflow_dispatch: {}
 
@@ -39,9 +40,11 @@ jobs:
           cp -r web/* _site/
           cp data/scanner_output.json _site/data/ 2>/dev/null || true
           cp data/news.json _site/data/ 2>/dev/null || true
+          cp data/tickers.json _site/data/ 2>/dev/null || true
           # Dashboard's dev path '../data/' -> 'data/' on Pages
           sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
           sed -i 's|../data/news.json|data/news.json|g' _site/news.js
+          sed -i 's|../data/tickers.json|data/tickers.json|g' _site/trade.js
           # Cache-bust: append commit SHA as query string to CSS + JS links
           # so every deploy forces clients to re-download the new files.
           SHA="${GITHUB_SHA:0:7}"

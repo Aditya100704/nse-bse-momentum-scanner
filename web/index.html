@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phenom Trading — Momentum Command Center</title>
 <meta name="description" content="Daily momentum scanner over the entire NSE + BSE equity universe. Market breadth, sector heat, and Minervini-style filters." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta name="theme-color" content="#0a0c14" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -302,7 +305,8 @@
           <div class="form-grid">
             <label class="field span2">
               <span class="field-label">Ticker</span>
-              <input type="text" id="fTicker" placeholder="RELIANCE" required />
+              <input type="text" id="fTicker" placeholder="Type to search — RELIANCE, CGPOWER…" list="tickerList" autocomplete="off" required />
+              <datalist id="tickerList"></datalist>
             </label>
             <label class="field">
               <span class="field-label">Exchange</span>

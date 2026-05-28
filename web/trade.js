@@ -27,6 +27,7 @@
     open:    [],
     closed:  [],
     ann:     {},          // { tradeId: {setup, grade, emotion, wentRight, wentWrong, lesson, tags, notes:[{ts,text}]} }
+    tickers: {},          // { SYMBOL: "NSE"|"BSE" } — full active universe, NSE-preferred
     pollTimer: null,
   };
   const usingWorker = () => !!state.apiUrl;
@@ -166,6 +167,31 @@
     },
     subscribe(fn) { if (typeof fn === "function") subs.push(fn); },
   };
+
+  /* ----------------------------------------------------------- ticker autocomplete */
+  async function loadTickers() {
+    try {
+      const r = await fetch("../data/tickers.json", { cache: "no-store" });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      const d = await r.json();
+      state.tickers = d.map || {};
+      const dl = $("tickerList");
+      if (dl) {
+        // datalist filters natively as you type; one big innerHTML write is fast
+        dl.innerHTML = Object.keys(state.tickers)
+          .map((s) => `<option value="${s}">`).join("");
+      }
+    } catch (e) {
+      // tickers.json may not exist yet — autocomplete just stays empty, manual entry still works
+    }
+  }
+  // When the typed/picked ticker is a known symbol, default the exchange to where
+  // it's listed (NSE if available, else BSE). User can still override manually.
+  function autoExchange() {
+    const sym = ($("fTicker").value || "").trim().toUpperCase();
+    const exch = state.tickers[sym];
+    if (exch && (exch === "NSE" || exch === "BSE")) $("fExchange").value = exch;
+  }
 
   /* ----------------------------------------------------------- worker calls */
   async function apiGet(path) {
@@ -430,6 +456,9 @@
     // live calc on any form input
     ["fTicker","fExchange","fDirection","fLevel","fBuffer","fSL","fCapital","fRisk","fRR","fNote"]
       .forEach((id) => { const el = $(id); if (el) el.addEventListener("input", renderCalc); });
+    // ticker -> auto-pick its exchange (NSE if listed there)
+    $("fTicker").addEventListener("input", autoExchange);
+    $("fTicker").addEventListener("change", autoExchange);
 
     // submit
     $("tradeForm").addEventListener("submit", async (e) => {
@@ -542,6 +571,7 @@
     setModePill(false);
     loadAnn();
     loadLocal();
+    loadTickers();
     render();
     renderCalc();
     bind();
