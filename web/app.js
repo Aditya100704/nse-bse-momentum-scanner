@@ -863,10 +863,9 @@
     const labels = state.history.dates;
     const bp = state.history.breadth_pct;
     const MA_DEFS = [
-      { key: "above_sma10",  label: "% > 10‑day SMA",  color: "rgba(251, 191, 36, 0.85)" },
-      { key: "above_sma20",  label: "% > 20‑day SMA",  color: "rgba(255, 138, 92, 0.85)" },
-      { key: "above_sma50",  label: "% > 50‑day SMA",  color: "rgba(240, 69, 90, 0.85)" },
-      { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(225, 29, 42, 0.95)" },
+      { key: "above_sma10",  label: "% > 10‑day SMA",  color: "rgba(150, 150, 162, 0.85)" }, // grey
+      { key: "above_sma50",  label: "% > 50‑day SMA",  color: "rgba(255, 255, 255, 0.90)" }, // white
+      { key: "above_sma200", label: "% > 200‑day SMA", color: "rgba(225, 29, 42, 0.95)" },   // red
     ];
     const ctx = $("chartBreadthHistory").getContext("2d");
 
@@ -891,8 +890,8 @@
         r.addColorStop(1, "rgba(255, 122, 138, 0.10)");
         c.fillStyle = r;
         c.fillRect(a.left, y50, a.right - a.left, a.bottom - y50);
-        // 50% reference line
-        c.strokeStyle = "rgba(186, 215, 247, 0.25)";
+        // 50% reference line (dimmed)
+        c.strokeStyle = "rgba(120, 120, 130, 0.28)";
         c.lineWidth = 1;
         c.setLineDash([4, 4]);
         c.beginPath(); c.moveTo(a.left, y50); c.lineTo(a.right, y50); c.stroke();
