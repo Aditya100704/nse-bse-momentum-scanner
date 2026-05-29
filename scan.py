@@ -292,9 +292,17 @@ def analyze(df: pd.DataFrame) -> dict | None:
     if any(pd.isna(x) for x in [last50, last150, last200]):
         return None
 
-    window = close.iloc[-252:] if len(close) >= 252 else close
-    high_52w = window.max()
-    low_52w = window.min()
+    # 52-week high/low use the INTRADAY high/low (the conventional definition used by
+    # TradingView / Finvviz), not the highest close — so "within X% of 52w high" and the
+    # 52w-breakout scan line up with external screeners. Falls back to close if no H/L.
+    if ("High" in df.columns) and ("Low" in df.columns):
+        _hw = df["High"].astype(float); _lw = df["Low"].astype(float)
+        high_52w = (_hw.iloc[-252:].max() if len(_hw) >= 252 else _hw.max())
+        low_52w = (_lw.iloc[-252:].min() if len(_lw) >= 252 else _lw.min())
+    else:
+        window = close.iloc[-252:] if len(close) >= 252 else close
+        high_52w = window.max()
+        low_52w = window.min()
     pct_off_high = (1 - last / high_52w) * 100
 
     def ret(days: int) -> float | float:
