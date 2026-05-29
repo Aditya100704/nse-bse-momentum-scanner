@@ -82,12 +82,26 @@ def market_open_now() -> bool:
     return MKT_OPEN <= n.time() <= MKT_CLOSE
 
 
+def _ascii(s: str) -> str:
+    """ntfy renders any message containing non-ASCII chars as a downloadable
+    'attachment.txt' instead of inline text. So transliterate the symbols we use
+    (rupee, arrows, dashes, smart quotes) to ASCII and drop anything else."""
+    if s is None:
+        return ""
+    repl = {"₹": "Rs ", "↑": "^", "↓": "v", "▲": "^", "▼": "v",
+            "—": "-", "–": "-", "‘": "'", "’": "'",
+            "“": '"', "”": '"', "…": "...", "×": "x"}
+    for k, v in repl.items():
+        s = s.replace(k, v)
+    return s.encode("ascii", "ignore").decode("ascii")
+
+
 def ntfy(title: str, message: str, priority: str = "high", tags: str = "") -> None:
     try:
-        headers = {"Title": title, "Priority": priority}
+        headers = {"Title": _ascii(title), "Priority": priority}
         if tags:
             headers["Tags"] = tags
-        requests.post(NTFY_URL, data=message.encode("utf-8"), headers=headers, timeout=10)
+        requests.post(NTFY_URL, data=_ascii(message).encode("utf-8"), headers=headers, timeout=10)
     except Exception as e:
         print(f"[ntfy] failed: {e}", flush=True)
 
