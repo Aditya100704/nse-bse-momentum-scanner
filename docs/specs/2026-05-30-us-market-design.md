@@ -8,10 +8,14 @@ common‑stock universe**. E2E‑tested.
 
 ## Data sourcing (the hard part = the US analog of bhavcopy)
 - **Universe**: Nasdaq Trader official symbol directory (free, no key) —
-  `nasdaqlisted.txt` (NASDAQ) + `otherlisted.txt` (NYSE/AMEX/ARCA). Filter to common stock:
-  drop ETF flag, Test‑Issue flag, and names containing warrant/unit/right/preferred/
-  depositary/notes/debenture/ETN. Class dots → dashes for yfinance (BRK.B→BRK-B). ≈ **5,581**
-  common stocks (NASDAQ 3,225 / NYSE 2,087 / AMEX 267).
+  `nasdaqlisted.txt` (NASDAQ) + `otherlisted.txt` (NYSE/AMEX/ARCA). `_is_equity()` is an
+  INCLUSION test: keep common stock, ordinary shares, class A/B/C, REITs, AND **ADRs**
+  (TSM/ASML/BABA — major momentum names); drop only warrants/units/rights/preferred/notes/
+  ETNs (+ ETF and Test-Issue flags). Class dots → dashes for yfinance (BRK.B→BRK-B).
+  ≈ **5,869** equities (NASDAQ 3,392 / NYSE 2,202 / AMEX 273) — matches the official
+  ~5,600 US exchange-listed count (3,657 domestic operating + ~1,515 foreign/ADR).
+  NOTE: an earlier exclusion filter dropped bare "depositary" → killed all ~286 ADRs; fixed
+  to only drop "preferred" (preferred depositary shares), keeping ADRs.
 - **EOD OHLCV**: **yfinance** batch download (chunked 160, retried). Stooq — the first‑choice
   bhavcopy analog — went **API‑key‑gated in 2026** (per‑symbol returns "Get your apikey",
   bulk zip 401), and we don't create accounts/keys on the user's behalf. yfinance is the only

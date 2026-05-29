@@ -29,9 +29,30 @@ OTHER_LISTED = "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt"
 
 # exchange-code -> label (otherlisted "Exchange" column)
 _EXCH = {"N": "NYSE", "A": "AMEX", "P": "ARCA", "Z": "BATS", "V": "IEX"}
-# security-name keywords that mark a non-common-stock instrument
-_DROP_NAME = ("warrant", " unit", "units", " right", "preferred", "depositary",
-              " notes", "debenture", " etn", " etf", "%")
+
+
+def _is_equity(name: str) -> bool:
+    """Inclusion test for the tradeable equity universe. KEEPS common stock, ordinary
+    shares, class A/B/C shares, REITs, AND American Depositary Receipts (ADRs like TSM,
+    ASML, BABA — major momentum names). DROPS only non-equity instruments: warrants,
+    units (SPAC), rights, preferred shares (incl preferred depositary shares), notes/
+    debentures, and ETNs. Word-boundary checks so 'United'/'Communities' aren't dropped.
+    This matches the official ~5,600 exchange-listed company count."""
+    n = name.lower()
+    words = set(n.replace(",", " ").replace(".", " ").split())
+    if "warrant" in n or "warrants" in n:
+        return False
+    if words & {"right", "rights"}:
+        return False
+    if words & {"unit", "units"}:                 # SPAC units (keeps 'United', 'Opportunities')
+        return False
+    if "preferred" in n:                          # ordinary AND preferred depositary shares
+        return False
+    if "notes" in n or "debenture" in n or "subordinated" in n:
+        return False
+    if " etn" in n or n.endswith("etn"):
+        return False
+    return True                                   # common / ordinary / class / ADR / REIT / other
 
 
 def _get(url: str, timeout: int = 60) -> str:
@@ -65,7 +86,7 @@ def build_us_universe() -> pd.DataFrame:
         if len(f) < 8 or f[3].strip() == "Y" or f[6].strip() == "Y":  # test issue / ETF
             continue
         name = f[1]
-        if any(k in name.lower() for k in _DROP_NAME):
+        if not _is_equity(name):
             continue
         yf = _clean_symbol(f[0])
         if not yf or yf in seen:
@@ -81,7 +102,7 @@ def build_us_universe() -> pd.DataFrame:
         if len(f) < 8 or f[6].strip() == "Y" or f[4].strip() == "Y":  # test issue / ETF
             continue
         name = f[1]
-        if any(k in name.lower() for k in _DROP_NAME):
+        if not _is_equity(name):
             continue
         yf = _clean_symbol(f[0])
         if not yf or yf in seen:
