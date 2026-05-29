@@ -126,6 +126,20 @@
     const s = v > 0 ? "+" : "";
     return `<span class="${cls}">${s}${v.toFixed(0)}%</span>`;
   };
+  // Hover tooltip for the ticker — folds in name, sector/industry, liquidity, vol
+  // (those columns were removed from the table so everything fits without scroll).
+  const symHover = (r) => {
+    const bits = [r.name || r.symbol];
+    const ind = (r.industry && r.industry !== "Other") ? r.industry
+              : (r.sector && r.sector !== "Other") ? r.sector : "";
+    if (ind) bits.push(ind);
+    if (r.turnover_cr != null && !Number.isNaN(r.turnover_cr)) bits.push(`₹${fmtNum(r.turnover_cr, 1)} cr/day`);
+    if (r.vol_surge != null && !Number.isNaN(r.vol_surge)) bits.push(`${r.vol_surge.toFixed(1)}× vol`);
+    return bits.join("  ·  ").replace(/"/g, "&quot;");
+  };
+  const symbolCell = (r, badge) =>
+    `<td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs} title="${symHover(r)}">${r.symbol}</a>${badge || ""}</td>`;
+
   // Earnings badge: shows the next-earnings date; amber if within 10 days (event risk)
   const earningsBadge = (r) => {
     if (!r.next_earnings) return `<span class="muted">—</span>`;
@@ -265,17 +279,13 @@
         tbody.innerHTML = view.map((r) => `
           <tr>
             <td class="num"><span class="rs rs-md" title="trading bars since listing">${r.bars}d</span></td>
-            <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
-            <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
-            <td><span class="muted">${r.sector || "—"}</span></td>
+            ${symbolCell(r)}
             <td class="num">${fmtNum(r.close, 2)}</td>
             <td class="num">${fmtPct(r.r1w)}</td>
             <td class="num">${fmtPct(r.r1m)}</td>
             <td class="num">${fmtPct(r.r3m)}</td>
             <td class="num">${fmtPct(r.since_listing_pct)}</td>
             <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
-            <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
-            <td class="num">${fmtX(r.vol_surge)}</td>
             <td class="num">${fmtAdr(r.adr_pct)}</td>
             <td class="num">${fmtGrowth(r.eps_growth)}</td>
             <td class="num">${fmtGrowth(r.sales_growth)}</td>
@@ -286,17 +296,13 @@
         tbody.innerHTML = view.map((r) => `
           <tr>
             <td class="num">${rsBadge(r.rs_rating)}</td>
-            <td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs}>${r.symbol}</a></td>
-            <td><span class="name" title="${(r.name || "").replace(/"/g, "&quot;")}">${r.name || ""}</span></td>
-            <td><span class="muted">${r.sector || "—"}</span></td>
+            ${symbolCell(r)}
             <td class="num">${fmtNum(r.close, 2)}</td>
             <td class="num">${fmtPct(r.r1m)}</td>
             <td class="num">${fmtPct(r.r3m)}</td>
             <td class="num">${fmtPct(r.r6m)}</td>
             <td class="num">${fmtPct(r.r12m)}</td>
             <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
-            <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
-            <td class="num">${fmtX(r.vol_surge)}</td>
             <td class="num">${fmtAdr(r.adr_pct)}</td>
             <td class="num">${fmtGrowth(r.eps_growth)}</td>
             <td class="num">${fmtGrowth(r.sales_growth)}</td>
@@ -306,7 +312,7 @@
       }
       if (rows.length > 800) {
         tbody.insertAdjacentHTML("beforeend",
-          `<tr><td colspan="17" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
+          `<tr><td colspan="13" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
       }
     }
 
@@ -1140,11 +1146,16 @@
           const fd = (await fr.json()).data || {};
           const merge = (arr) => arr.forEach((r) => {
             const f = fd[(r.symbol || "").toUpperCase()];
-            if (f) Object.assign(r, {
-              eps_growth: f.eps_growth, sales_growth: f.sales_growth,
-              profit_growth: f.profit_growth, pe: f.pe, roe: f.roe,
-              next_earnings: f.next_earnings, days_to_earnings: f.days_to_earnings,
-            });
+            if (f) {
+              Object.assign(r, {
+                eps_growth: f.eps_growth, sales_growth: f.sales_growth,
+                profit_growth: f.profit_growth, pe: f.pe, roe: f.roe,
+                next_earnings: f.next_earnings, days_to_earnings: f.days_to_earnings,
+                industry: f.industry,
+              });
+              // real sector from TradingView overrides the sparse "Other" map
+              if (f.sector) r.sector = f.sector;
+            }
           });
           merge(state.rows); merge(state.ipos); merge(state.eps);
         }

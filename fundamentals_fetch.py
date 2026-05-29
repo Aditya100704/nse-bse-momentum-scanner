@@ -44,6 +44,8 @@ COLS = {
     "debt_to_equity": "de",
     "net_margin_ttm": "net_margin",
     "market_cap_basic": "mcap",
+    "sector": "sector",                                             # real sector (TV)
+    "industry": "industry",                                         # finer industry (TV)
     "earnings_release_next_date": "next_earnings",                  # unix ts
     "earnings_release_date": "last_earnings",                       # unix ts
 }
