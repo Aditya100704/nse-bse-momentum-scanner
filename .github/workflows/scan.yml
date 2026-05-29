@@ -37,6 +37,9 @@ jobs:
       - name: Refresh ticker list
         run: python build_tickers.py
 
+      - name: Refresh fundamentals (TradingView)
+        run: pip install requests && python fundamentals_fetch.py || echo "fundamentals step failed (non-fatal)"
+
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -81,8 +84,10 @@ jobs:
           cp data/scanner_output.json _site/data/ 2>/dev/null || true
           cp data/news.json _site/data/ 2>/dev/null || true
           cp data/tickers.json _site/data/ 2>/dev/null || true
+          cp data/fundamentals.json _site/data/ 2>/dev/null || true
           # Dashboard's relative path `../data/` -> `data/` on Pages
           sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
+          sed -i 's|../data/fundamentals.json|data/fundamentals.json|g' _site/app.js
           sed -i 's|../data/news.json|data/news.json|g' _site/news.js
           sed -i 's|../data/tickers.json|data/tickers.json|g' _site/trade.js
           # Cache-bust CSS + JS per deploy

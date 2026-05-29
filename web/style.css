@@ -562,6 +562,8 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
 
 .tt-yes { color: var(--celestial); font-weight: 700; }
 .tt-no  { color: var(--interstellar); }
+.earn-cell { font-size: 11px; }
+.earn-soon { color: var(--warn); font-weight: 600; }
 
 .empty {
   padding: 60px 20px;

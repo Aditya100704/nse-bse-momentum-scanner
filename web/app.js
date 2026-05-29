@@ -40,7 +40,7 @@
     momentum: {
       label: "Momentum",
       title: "All qualifiers",
-      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 3M &amp; 6M · ≥ ₹10 cr/day · ranked by RS",
+      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 3M & 6M · ≥ ₹10 cr/day · ranked by RS",
       filter: (r) => true,   // base gate already enforces the full momentum set
     },
     trend_template: {
@@ -48,6 +48,12 @@
       title: "Minervini Trend Template",
       sub: "Strict 8/8: above all SMAs, SMA cascade, rising 200‑SMA, within 25% of 52w high, 30%+ above 52w low",
       filter: (r) => r.trend_template === true,
+    },
+    fundamentals: {
+      label: "Fundamental Leaders",
+      title: "Fundamental Leaders — growth + trend",
+      sub: "Technical leaders that ALSO have real growth: EPS up ≥ 25% and sales up ≥ 20% year‑on‑year (Minervini's growth test). Fundamentals via TradingView",
+      filter: (r) => (r.eps_growth != null && r.eps_growth >= 25) && (r.sales_growth != null && r.sales_growth >= 20),
     },
     qm_breakout: {
       label: "Qullamaggie Breakout",
@@ -113,6 +119,24 @@
     return `<span class="rs ${k}">${v}</span>`;
   };
   const fmtAdr = (v) => v == null || Number.isNaN(v) ? "—" : `${v.toFixed(1)}%`;
+  // YoY growth %, color-coded; caps the display so a +900% doesn't blow the cell
+  const fmtGrowth = (v) => {
+    if (v == null || Number.isNaN(v)) return `<span class="muted">—</span>`;
+    const cls = v > 0 ? "pos" : v < 0 ? "neg" : "muted";
+    const s = v > 0 ? "+" : "";
+    return `<span class="${cls}">${s}${v.toFixed(0)}%</span>`;
+  };
+  // Earnings badge: shows the next-earnings date; amber if within 10 days (event risk)
+  const earningsBadge = (r) => {
+    if (!r.next_earnings) return `<span class="muted">—</span>`;
+    const d = r.days_to_earnings;
+    const soon = d != null && d >= 0 && d <= 10;
+    const dt = new Date(r.next_earnings);
+    const lbl = Number.isNaN(dt.getTime()) ? r.next_earnings
+      : dt.toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
+    const tail = d != null && d >= 0 ? ` <span class="muted">${d}d</span>` : "";
+    return `<span class="${soon ? "earn-soon" : ""}" title="next earnings${d != null ? ` in ${d} days` : ""}">${lbl}${tail}</span>`;
+  };
   // Mobile detection — used to choose between TV chart (desktop, new tab)
   // and the TV symbol page (mobile, universal link that opens the TV app).
   const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
@@ -253,6 +277,9 @@
             <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
             <td class="num">${fmtX(r.vol_surge)}</td>
             <td class="num">${fmtAdr(r.adr_pct)}</td>
+            <td class="num">${fmtGrowth(r.eps_growth)}</td>
+            <td class="num">${fmtGrowth(r.sales_growth)}</td>
+            <td class="num earn-cell">${earningsBadge(r)}</td>
             <td class="center"><span class="tt-no" title="not applicable for IPOs">·</span></td>
           </tr>`).join("");
       } else {
@@ -271,12 +298,15 @@
             <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
             <td class="num">${fmtX(r.vol_surge)}</td>
             <td class="num">${fmtAdr(r.adr_pct)}</td>
+            <td class="num">${fmtGrowth(r.eps_growth)}</td>
+            <td class="num">${fmtGrowth(r.sales_growth)}</td>
+            <td class="num earn-cell">${earningsBadge(r)}</td>
             <td class="center">${r.trend_template ? '<span class="tt-yes">✓</span>' : '<span class="tt-no">·</span>'}</td>
           </tr>`).join("");
       }
       if (rows.length > 800) {
         tbody.insertAdjacentHTML("beforeend",
-          `<tr><td colspan="14" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
+          `<tr><td colspan="17" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
       }
     }
 
@@ -1102,6 +1132,23 @@
       state.breadth = data.breadth || {};
       state.sectors = data.sectors || [];
       state.history = data.history || null;
+      // Fundamentals (TradingView) — separate file, non-fatal. Merge EPS/sales
+      // growth, P/E, ROE, next earnings into every row by symbol.
+      try {
+        const fr = await fetch("../data/fundamentals.json", { cache: "no-store" });
+        if (fr.ok) {
+          const fd = (await fr.json()).data || {};
+          const merge = (arr) => arr.forEach((r) => {
+            const f = fd[(r.symbol || "").toUpperCase()];
+            if (f) Object.assign(r, {
+              eps_growth: f.eps_growth, sales_growth: f.sales_growth,
+              profit_growth: f.profit_growth, pe: f.pe, roe: f.roe,
+              next_earnings: f.next_earnings, days_to_earnings: f.days_to_earnings,
+            });
+          });
+          merge(state.rows); merge(state.ipos); merge(state.eps);
+        }
+      } catch (e) { /* fundamentals optional */ }
       $("loadState").classList.add("hidden");
       renderAll();
     } catch (e) {
