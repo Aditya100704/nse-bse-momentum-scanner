@@ -691,8 +691,6 @@
         klass: b.pct_above_sma20 >= 50 ? "pos" : "neg", foot: "short-term momentum" },
       { label: "Within 10% of 52w high", value: b.pct_within_10_of_high != null ? `${b.pct_within_10_of_high.toFixed(1)}%` : "—",
         foot: "leadership concentration" },
-      { label: "Trend Template setups", value: (b.trend_template_pass ?? 0).toLocaleString("en-IN"),
-        foot: "strict Minervini 8/8 across universe" },
     ];
     $("signalGrid").innerHTML = cells.map((c) => `
       <article class="signal-card">
@@ -1020,8 +1018,8 @@
   function renderTabCharts(name) {
     const fns = {
       scanner: [renderTop, renderScannerHistory],
-      breadth: [renderRegimeGauge, renderBreadthBars, renderRegimeComponents,
-                renderMedRet, renderBreadthSignals, renderBreadthHistory, renderNetNewHighs],
+      breadth: [renderRegimeGauge, renderBreadthBars,
+                renderBreadthSignals, renderBreadthHistory, renderNetNewHighs],
       sectors: [renderSectorMom, renderSectorHorizons, renderSectorTable],
     }[name] || [];
     for (const fn of fns) {
