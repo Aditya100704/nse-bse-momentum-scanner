@@ -16,8 +16,8 @@
   const RED = (a) => `rgba(225,29,42,${a})`;
   // moving averages (period, color, width)
   const MAS = [
-    { p: 7,  c: "rgba(255,193,77,0.95)", w: 1.3 },   // fast — amber
-    { p: 21, c: "rgba(201,194,200,0.85)", w: 1.3 },  // medium — silver
+    { p: 7,  c: "rgba(255,255,255,0.92)", w: 1.4 },  // fast — white
+    { p: 21, c: "rgba(150,150,162,0.80)", w: 1.3 },  // medium — grey
     { p: 45, c: "rgba(255,122,138,0.85)", w: 1.6 },  // slow — soft red
   ];
 
@@ -58,9 +58,20 @@
       const drift = price * 0.0040 * (1 - ext * 0.8);   // climb eases as it extends
       price += drift + noise * price * 0.0018;          // noise << drift → orderly green steps
       if (--phaseLeft <= 0) {
-        if (ext > 0.82) { phase = "base"; phaseLeft = 34 + (Math.random() * 28 | 0); }
-        else { phase = "pullback"; phaseLeft = 9 + (Math.random() * 10 | 0);
-               pbTarget = price * (1 - (0.025 + Math.random() * 0.045)); }   // shallow 2.5–7%
+        if (ext > 0.85) { phase = "base"; phaseLeft = 34 + (Math.random() * 28 | 0); }
+        else {
+          phase = "pullback";
+          // depth tiers so pullbacks reach different MAs: shallow→white(7),
+          // medium→grey(21), deep→red(45). Deeper dips take longer to play out.
+          const tier = Math.random();
+          const depth = tier < 0.48 ? 0.03 + Math.random() * 0.04        // → white (7) MA
+                      : tier < 0.80 ? 0.09 + Math.random() * 0.06        // → grey (21) MA
+                      :               0.18 + Math.random() * 0.12;       // → red (45) MA
+          phaseLeft = depth < 0.08 ? 8 + (Math.random() * 8 | 0)
+                    : depth < 0.16 ? 14 + (Math.random() * 12 | 0)
+                    :                22 + (Math.random() * 16 | 0);
+          pbTarget = price * (1 - depth);
+        }
       }
     } else if (phase === "pullback") {
       price += (pbTarget - price) * 0.10 + noise * price * 0.0014;           // glide to target
