@@ -12,7 +12,8 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # India (~5 min bhavcopy) + US (~25-40 min: yfinance fetch + 1yr history over ~5.5k stocks)
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +40,22 @@ jobs:
 
       - name: Refresh fundamentals (TradingView)
         run: pip install requests && python fundamentals_fetch.py || echo "fundamentals step failed (non-fatal)"
+
+      # ---- US market (NASDAQ + NYSE + AMEX via Nasdaq Trader + yfinance) ----
+      - name: Run scanner (US)
+        env:
+          SCAN_MARKET: "us"
+        run: python scan.py || echo "US scan failed (non-fatal)"
+
+      - name: Refresh ticker list (US)
+        env:
+          SCAN_MARKET: "us"
+        run: python build_tickers.py || echo "US tickers failed (non-fatal)"
+
+      - name: Refresh fundamentals (US, TradingView)
+        env:
+          SCAN_MARKET: "us"
+        run: python fundamentals_fetch.py || echo "US fundamentals failed (non-fatal)"
 
       - name: Commit results
         run: |
@@ -81,15 +98,14 @@ jobs:
         run: |
           mkdir -p _site _site/data
           cp -r web/* _site/
-          cp data/scanner_output.json _site/data/ 2>/dev/null || true
-          cp data/news.json _site/data/ 2>/dev/null || true
-          cp data/tickers.json _site/data/ 2>/dev/null || true
-          cp data/fundamentals.json _site/data/ 2>/dev/null || true
-          # Dashboard's relative path `../data/` -> `data/` on Pages
-          sed -i 's|../data/scanner_output.json|data/scanner_output.json|g' _site/app.js
-          sed -i 's|../data/fundamentals.json|data/fundamentals.json|g' _site/app.js
-          sed -i 's|../data/news.json|data/news.json|g' _site/news.js
-          sed -i 's|../data/tickers.json|data/tickers.json|g' _site/trade.js
+          # India + US data feeds (US files may be absent if a US scan failed — non-fatal)
+          for f in scanner_output news tickers fundamentals \
+                   scanner_output_us news_us tickers_us fundamentals_us; do
+            cp "data/$f.json" _site/data/ 2>/dev/null || true
+          done
+          # Dashboard uses relative `../data/` -> rewrite to `data/` on Pages. A PREFIX
+          # rewrite (not per-filename) covers the market-aware template paths in app.js.
+          sed -i 's|\.\./data/|data/|g' _site/app.js _site/news.js _site/trade.js
           # Cache-bust CSS + JS per deploy
           SHA="${GITHUB_SHA:0:7}"
           sed -i "s|href=\"style.css\"|href=\"style.css?v=${SHA}\"|g" _site/index.html

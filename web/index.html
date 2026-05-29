@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Phenom Trading — Momentum Command Center</title>
-<meta name="description" content="Daily momentum scanner over the entire NSE + BSE equity universe. Market breadth, sector heat, and Minervini-style filters." />
+<meta name="description" content="Daily momentum scanner over the entire US (NASDAQ + NYSE) and Indian (NSE + BSE) equity universe. Market breadth, sector heat, and Minervini-style filters." />
 <link rel="icon" type="image/png" href="favicon.png" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <meta name="theme-color" content="#000000" />
@@ -31,6 +31,10 @@
     <button class="tab" data-tab="news" role="tab">News</button>
   </nav>
   <div class="topbar-meta">
+    <div class="market-toggle" role="group" aria-label="Select market">
+      <button class="market-btn" data-market="in" title="Indian market — NSE + BSE">IN</button>
+      <button class="market-btn" data-market="us" title="US market — NASDAQ + NYSE + AMEX">US</button>
+    </div>
     <span class="badge live" id="freshBadge">
       <span class="dot"></span>
       <span id="lastScan">—</span>
@@ -49,10 +53,10 @@
       <div class="hero-left">
         <div class="hero">
           <h2 class="hero-title">Stocks moving with conviction.</h2>
-          <p class="hero-sub">Every NSE + BSE listing above its 200&#8209;day SMA with real liquidity, ranked Minervini&#8209;style.</p>
+          <p class="hero-sub" id="heroSub">Every NSE + BSE listing above its 200&#8209;day SMA with real liquidity, ranked Minervini&#8209;style.</p>
         </div>
         <section class="kpis">
-          <article class="kpi"><div class="kpi-label">Active stocks</div><div class="kpi-value mono" id="statWithData">—</div><div class="kpi-foot">tradeable · NSE + BSE bhavcopy</div></article>
+          <article class="kpi"><div class="kpi-label">Active stocks</div><div class="kpi-value mono" id="statWithData">—</div><div class="kpi-foot" id="statWithDataFoot">tradeable · NSE + BSE bhavcopy</div></article>
           <article class="kpi"><div class="kpi-label">Qualifiers</div><div class="kpi-value mono accent" id="statQualifiers">—</div><div class="kpi-foot">passed both gates</div></article>
           <article class="kpi"><div class="kpi-label">Trend Template</div><div class="kpi-value mono" id="statTT">—</div><div class="kpi-foot">strict 8/8 setups</div></article>
           <article class="kpi"><div class="kpi-label">Market</div><div class="kpi-value" id="statTemp">—</div><div class="kpi-foot" id="statTempLabel">—</div></article>
@@ -82,7 +86,7 @@
         <div class="controls">
           <input type="search" id="searchBox" placeholder="Search symbol or name…" autocomplete="off" />
           <label class="ctl"><span>Min RS</span><input type="range" id="rsSlider" min="0" max="100" value="0" /><span id="rsValue" class="ctl-val mono">0</span></label>
-          <label class="ctl"><span>Min ₹cr</span><input type="number" id="liqInput" value="0" min="0" step="0.5" /></label>
+          <label class="ctl"><span id="liqLabel">Min ₹cr</span><input type="number" id="liqInput" value="0" min="0" step="0.5" /></label>
           <button id="copyTV" class="btn-ghost" title="Copy every stock across all scanners in TradingView format — paste into a TradingView watchlist">Copy for TradingView</button>
           <button id="exportCsv" class="btn-ghost">Export CSV</button>
         </div>
@@ -506,7 +510,7 @@
   </section>
 
   <footer class="foot">
-    <span>Data via NSE + BSE bhavcopy · news via Google News. Educational, not investment advice.</span>
+    <span id="footSource">Data via NSE + BSE bhavcopy · news via Google News. Educational, not investment advice.</span>
     <span id="duration" class="mono"></span>
   </footer>
 

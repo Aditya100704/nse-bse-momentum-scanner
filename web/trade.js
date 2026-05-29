@@ -175,7 +175,8 @@
      Native <datalist> positioned itself off to the side and showed no names. */
   async function loadTickers() {
     try {
-      const r = await fetch("../data/tickers.json", { cache: "no-store" });
+      const _usMkt = localStorage.getItem("phenom_market") === "us";
+      const r = await fetch(`../data/tickers${_usMkt ? "_us" : ""}.json`, { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
       const d = await r.json();
       state.tickerList = d.tickers || [];

@@ -14,7 +14,7 @@ Run locally:  py -3 news_fetch.py            (all qualifiers + IPOs)
 """
 from __future__ import annotations
 
-import sys, json, html, re
+import os, sys, json, html, re
 import concurrent.futures as cf
 from datetime import datetime, timezone
 from pathlib import Path
@@ -25,22 +25,28 @@ import requests
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-OUT = DATA / "news.json"
+MARKET = os.getenv("SCAN_MARKET", "in").strip().lower()
+_US = MARKET == "us"
+OUT = DATA / ("news_us.json" if _US else "news.json")
+IN_SCAN = DATA / ("scanner_output_us.json" if _US else "scanner_output.json")
 MAX_HEADLINES = 6
 WORKERS = 8
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; PhenomNews/1.0)"}
 S = requests.Session(); S.headers.update(UA)
-RSS = "https://news.google.com/rss/search?q={q}&hl=en-IN&gl=IN&ceid=IN:en"
+RSS = ("https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en" if _US
+       else "https://news.google.com/rss/search?q={q}&hl=en-IN&gl=IN&ceid=IN:en")
+_QUERY_TERMS = "(stock OR shares OR earnings OR Nasdaq OR NYSE)" if _US else "(stock OR share OR results OR order OR NSE)"
 
 
 def clean_name(name: str) -> str:
-    n = re.sub(r"\b(Limited|Ltd|Ltd\.|Industries|Corporation|Company|Co\.?)\b", "", name or "", flags=re.I)
-    return re.sub(r"\s+", " ", n).strip()
+    n = re.sub(r"\b(Limited|Ltd|Ltd\.|Industries|Corporation|Corp|Company|Co\.?|Inc\.?|Holdings|Group|plc|Class [A-C])\b",
+               "", name or "", flags=re.I)
+    return re.sub(r"\s+", " ", n).strip().strip(",")
 
 
 def fetch_one(sym: str, name: str) -> tuple[str, list]:
-    query = f'"{clean_name(name) or sym}" (stock OR share OR results OR order OR NSE) when:14d'
+    query = f'"{clean_name(name) or sym}" {_QUERY_TERMS} when:14d'
     url = RSS.format(q=quote_plus(query))
     try:
         r = S.get(url, timeout=15)
@@ -70,17 +76,18 @@ def fetch_one(sym: str, name: str) -> tuple[str, list]:
 def main():
     cap = int(sys.argv[1]) if len(sys.argv) > 1 else None
     try:
-        scan = json.loads((DATA / "scanner_output.json").read_text(encoding="utf-8"))
+        scan = json.loads(IN_SCAN.read_text(encoding="utf-8"))
     except Exception as e:
-        print(f"[news] cannot read scanner_output.json: {e}"); sys.exit(1)
+        print(f"[news] cannot read {IN_SCAN.name}: {e}"); sys.exit(1)
 
+    _def_exch = "NASDAQ" if _US else "NSE"
     seen, targets = set(), []
     for r in (scan.get("results", []) + scan.get("ipos", [])):
         sym = (r.get("symbol") or "").upper()
         if not sym or sym in seen:
             continue
         seen.add(sym)
-        targets.append((sym, r.get("name") or sym, r.get("exchange") or "NSE"))
+        targets.append((sym, r.get("name") or sym, r.get("exchange") or _def_exch))
     if cap:
         targets = targets[:cap]
     print(f"[news] fetching headlines for {len(targets)} stocks…", flush=True)

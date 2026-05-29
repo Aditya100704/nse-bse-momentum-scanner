@@ -39,8 +39,36 @@ DATA.mkdir(exist_ok=True)
 import os
 import re
 
-MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "10.0"))
+# ----- Market selection (in = NSE+BSE India, us = NASDAQ+NYSE+AMEX) -----
+# The whole pipeline is market-agnostic except: which universe + price source,
+# the turnover divisor + liquidity gate (Rs crore vs $ million), a min-price floor,
+# the episodic-pivot thresholds, and the output filename. All set here.
+MARKET = os.getenv("SCAN_MARKET", "in").strip().lower()
+_IS_US = MARKET == "us"
+
+if _IS_US:
+    # Liquidity floor grounded in Minervini (>= ~1M shares, price > $10-30) + Qullamaggie
+    # (liquid leaders; EP dollar-volume > $100M). Turnover is held in $ MILLIONS.
+    _TURNOVER_DIV = 1e6                                              # $ -> $M
+    MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "20.0"))   # $20M/day
+    MIN_PRICE = float(os.getenv("SCAN_MIN_PRICE", "10.0"))          # avoid sub-$10 (Minervini)
+    EP_GAP = float(os.getenv("SCAN_EP_GAP", "10.0"))                # Qullamaggie EP gap >= 10%
+    EP_TURNOVER_MIN = float(os.getenv("SCAN_EP_LIQ", "100.0"))      # EP dollar-volume >= $100M
+    IPO_LIQ_DEFAULT = "5.0"                                          # $5M/day for fresh listings
+    OUT_SUFFIX = "_us"
+    CURRENCY = "USD"
+else:
+    _TURNOVER_DIV = 1e7                                              # Rs -> Rs crore
+    MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "10.0"))   # Rs 10 cr/day
+    MIN_PRICE = float(os.getenv("SCAN_MIN_PRICE", "0.0"))
+    EP_GAP = float(os.getenv("SCAN_EP_GAP", "5.0"))
+    EP_TURNOVER_MIN = float(os.getenv("SCAN_EP_LIQ", "2.0"))
+    IPO_LIQ_DEFAULT = "1.0"
+    OUT_SUFFIX = ""
+    CURRENCY = "INR"
+
 WITHIN_PCT_OF_52W_HIGH = float(os.getenv("SCAN_MAX_OFF_HIGH", "25.0"))
+_LIMIT = int(os.getenv("SCAN_LIMIT", "0"))   # cap universe (smoke testing only; 0 = full)
 BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "80"))
 SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "2.5"))
 INCLUDE_BSE = os.getenv("SCAN_INCLUDE_BSE", "1") == "1"
@@ -276,7 +304,7 @@ def analyze(df: pd.DataFrame) -> dict | None:
 
     r1m, r3m, r6m, r12m = ret(21), ret(63), ret(126), ret(252)
 
-    turnover_cr = (close * vol).iloc[-20:].mean() / 1e7
+    turnover_cr = (close * vol).iloc[-20:].mean() / _TURNOVER_DIV
     avg_vol50 = vol.iloc[-50:].mean()
     avg_vol5 = vol.iloc[-5:].mean()
     vol_surge = vol.iloc[-1] / avg_vol50 if avg_vol50 > 0 else np.nan
@@ -418,7 +446,7 @@ def analyze_ipo(df: pd.DataFrame) -> dict | None:
 
     # Liquidity over the last 20 bars (or whatever's available)
     w = min(20, n)
-    turnover_cr = float((close * vol).iloc[-w:].mean() / 1e7)
+    turnover_cr = float((close * vol).iloc[-w:].mean() / _TURNOVER_DIV)
     avg_vol = float(vol.iloc[-w:].mean()) if w > 0 else 0.0
     vol_surge = (float(vol.iloc[-1]) / avg_vol) if avg_vol > 0 else None
 
@@ -620,7 +648,7 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
             r1m = close.pct_change(21) * 100
             r3m = close.pct_change(63) * 100
             r6m = close.pct_change(126) * 100
-            turnover_cr = (close * vol).rolling(20).mean() / 1e7
+            turnover_cr = (close * vol).rolling(20).mean() / _TURNOVER_DIV
             avg_vol50 = vol.rolling(50).mean()
             vol_surge = vol / avg_vol50
 
@@ -680,7 +708,7 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
                 # Use 20-bar SMA where it exists
                 sma20_local = smas[20]
                 # Liquidity for IPOs uses a lower threshold
-                turnover_ipo = (close * vol).rolling(min(20, n)).mean() / 1e7
+                turnover_ipo = (close * vol).rolling(min(20, n)).mean() / _TURNOVER_DIV
                 ipo_cond = (
                     (close > sma20_local) &
                     (pct_off_ath <= 25) &
@@ -747,76 +775,87 @@ def _compute_sectors(qualifiers: list[dict]) -> list[dict]:
 
 def main() -> int:
     started = datetime.now(timezone.utc)
-    universe = build_universe()
-    universe.to_csv(DATA / "universe.csv", index=False)
-
-    # When bhavcopy backfill is on, skip the slow yfinance retry pass —
-    # bhavcopy recovers the gaps faster and more completely.
-    use_bhavcopy = os.getenv("SCAN_USE_BHAVCOPY", "1") == "1"
-    # Bhavcopy-primary mode: skip Yahoo entirely (it rate-limits hard under
-    # repeated runs). Bhavcopy alone is the complete, reliable NSE+BSE universe.
-    if os.getenv("SCAN_SKIP_YFINANCE", "0") == "1":
-        prices = {}
-        print("[prices] SKIP_YFINANCE=1 — bhavcopy-primary mode (no Yahoo)")
+    if _IS_US:
+        # ---- US: Nasdaq Trader universe + yfinance EOD (the keyless US stack) ----
+        import usdata
+        universe = usdata.build_us_universe()
+        if _LIMIT:
+            universe = universe.head(_LIMIT).reset_index(drop=True)
+            print(f"[scan] SCAN_LIMIT={_LIMIT} — smoke test on {len(universe)} symbols", flush=True)
+        universe.to_csv(DATA / f"universe{OUT_SUFFIX}.csv", index=False)
+        prices, _usmeta = usdata.fetch_us_history(universe["yf_ticker"].tolist(), period="2y")
+        print(f"[prices] usdata (yfinance) got {len(prices)} of {len(universe)} US symbols", flush=True)
     else:
-        prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
-        print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
-
-    # Bhavcopy: (1) FILL universe tickers Yahoo missed, and (2) ADD tradeable
-    # stocks the Zerodha master list doesn't even include (maximizes coverage —
-    # ~3k extra NSE+BSE names + recent IPOs). Yahoo prices stay primary (split-
-    # adjusted); bhavcopy is raw, used only where Yahoo had nothing.
-    extra_rows: list[dict] = []
-    if os.getenv("SCAN_USE_BHAVCOPY", "1") == "1":
-        existing = set(universe["yf_ticker"])
-        # NSE (GitHub mirror — works from any IP)
-        try:
-            from bhavcopy import fetch_nse_history
-            bhav, meta = fetch_nse_history(days_back=504)
-            filled = added = 0
-            for t, df in bhav.items():
-                if t in prices:
-                    continue
-                prices[t] = df
-                if t in existing:
-                    filled += 1
-                else:
-                    m = meta.get(t, {})
-                    extra_rows.append({"symbol": m.get("symbol", t[:-3]),
-                                       "yf_ticker": t, "name": m.get("name", t[:-3]),
-                                       "exchange": "NSE"})
-                    added += 1
-            print(f"[bhavcopy] NSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
-        except Exception as exc:
-            print(f"[bhavcopy] NSE step skipped: {exc}", flush=True)
-
-        # BSE (bseindia.com direct — may be geo-restricted on some CI IPs)
-        try:
-            from bhavcopy import fetch_bse_history
-            bbse, bmeta = fetch_bse_history(days_back=460)
-            filled = added = 0
-            for t, df in bbse.items():
-                if t in prices:
-                    continue
-                prices[t] = df
-                if t in existing:
-                    filled += 1
-                else:
-                    m = bmeta.get(t, {})
-                    extra_rows.append({"symbol": m.get("symbol", t[:-3]),
-                                       "yf_ticker": t, "name": m.get("name", t[:-3]),
-                                       "exchange": "BSE"})
-                    added += 1
-            print(f"[bhavcopy] BSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
-        except Exception as exc:
-            print(f"[bhavcopy] BSE step skipped: {exc}", flush=True)
-
-    # Fold the bhavcopy-only stocks into the universe so they flow through analyze()
-    if extra_rows:
-        universe = pd.concat([universe, pd.DataFrame(extra_rows)], ignore_index=True)
-        universe = universe.drop_duplicates("yf_ticker").reset_index(drop=True)
+        universe = build_universe()
         universe.to_csv(DATA / "universe.csv", index=False)
-        print(f"[universe] expanded to {len(universe)} with bhavcopy-only stocks", flush=True)
+
+        # When bhavcopy backfill is on, skip the slow yfinance retry pass —
+        # bhavcopy recovers the gaps faster and more completely.
+        use_bhavcopy = os.getenv("SCAN_USE_BHAVCOPY", "1") == "1"
+        # Bhavcopy-primary mode: skip Yahoo entirely (it rate-limits hard under
+        # repeated runs). Bhavcopy alone is the complete, reliable NSE+BSE universe.
+        if os.getenv("SCAN_SKIP_YFINANCE", "0") == "1":
+            prices = {}
+            print("[prices] SKIP_YFINANCE=1 — bhavcopy-primary mode (no Yahoo)")
+        else:
+            prices = download_prices(universe["yf_ticker"].tolist(), retry_failed=not use_bhavcopy)
+            print(f"[prices] yfinance got {len(prices)} of {len(universe)} symbols")
+
+        # Bhavcopy: (1) FILL universe tickers Yahoo missed, and (2) ADD tradeable
+        # stocks the Zerodha master list doesn't even include (maximizes coverage —
+        # ~3k extra NSE+BSE names + recent IPOs). Yahoo prices stay primary (split-
+        # adjusted); bhavcopy is raw, used only where Yahoo had nothing.
+        extra_rows: list[dict] = []
+        if os.getenv("SCAN_USE_BHAVCOPY", "1") == "1":
+            existing = set(universe["yf_ticker"])
+            # NSE (GitHub mirror — works from any IP)
+            try:
+                from bhavcopy import fetch_nse_history
+                bhav, meta = fetch_nse_history(days_back=504)
+                filled = added = 0
+                for t, df in bhav.items():
+                    if t in prices:
+                        continue
+                    prices[t] = df
+                    if t in existing:
+                        filled += 1
+                    else:
+                        m = meta.get(t, {})
+                        extra_rows.append({"symbol": m.get("symbol", t[:-3]),
+                                           "yf_ticker": t, "name": m.get("name", t[:-3]),
+                                           "exchange": "NSE"})
+                        added += 1
+                print(f"[bhavcopy] NSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
+            except Exception as exc:
+                print(f"[bhavcopy] NSE step skipped: {exc}", flush=True)
+
+            # BSE (bseindia.com direct — may be geo-restricted on some CI IPs)
+            try:
+                from bhavcopy import fetch_bse_history
+                bbse, bmeta = fetch_bse_history(days_back=460)
+                filled = added = 0
+                for t, df in bbse.items():
+                    if t in prices:
+                        continue
+                    prices[t] = df
+                    if t in existing:
+                        filled += 1
+                    else:
+                        m = bmeta.get(t, {})
+                        extra_rows.append({"symbol": m.get("symbol", t[:-3]),
+                                           "yf_ticker": t, "name": m.get("name", t[:-3]),
+                                           "exchange": "BSE"})
+                        added += 1
+                print(f"[bhavcopy] BSE filled {filled}, added {added} new (total {len(prices)})", flush=True)
+            except Exception as exc:
+                print(f"[bhavcopy] BSE step skipped: {exc}", flush=True)
+
+        # Fold the bhavcopy-only stocks into the universe so they flow through analyze()
+        if extra_rows:
+            universe = pd.concat([universe, pd.DataFrame(extra_rows)], ignore_index=True)
+            universe = universe.drop_duplicates("yf_ticker").reset_index(drop=True)
+            universe.to_csv(DATA / "universe.csv", index=False)
+            print(f"[universe] expanded to {len(universe)} with bhavcopy-only stocks", flush=True)
 
     sector_map = _load_sector_map()
     all_results: list[dict] = []        # everything analyze() produced (breadth)
@@ -826,7 +865,7 @@ def main() -> int:
 
     # IPO gates (separate from main-scanner gates):
     #   bars 30-199, turnover >= 1 cr, within 25% of all-time high since listing
-    MIN_IPO_LIQ_CR = float(os.getenv("SCAN_IPO_MIN_LIQ_CR", "1.0"))
+    MIN_IPO_LIQ_CR = float(os.getenv("SCAN_IPO_MIN_LIQ_CR", IPO_LIQ_DEFAULT))
     MAX_IPO_OFF_HIGH = float(os.getenv("SCAN_IPO_MAX_OFF_HIGH", "25.0"))
 
     for _, row in universe.iterrows():
@@ -845,8 +884,8 @@ def main() -> int:
             # non-extended base — the market repricing a stock on a surprise.
             # Daily data, so this is the end-of-day footprint of Qullamaggie's EP.
             gp = res.get("gap_pct") or 0
-            if (gp >= 5 and (res.get("vol_surge") or 0) >= 3
-                    and (res.get("turnover_cr") or 0) >= 2
+            if (gp >= EP_GAP and (res.get("vol_surge") or 0) >= 3
+                    and (res.get("turnover_cr") or 0) >= EP_TURNOVER_MIN
                     and (res.get("r3m") if res.get("r3m") is not None else 99) < 40
                     and res.get("price_gt_sma50")):
                 ep_rows.append({
@@ -858,6 +897,8 @@ def main() -> int:
             #   in a real uptrend (above SMA50 AND SMA200), genuinely liquid,
             #   within X% of the 52w high, and positive 3M AND 6M momentum.
             if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
+                continue
+            if MIN_PRICE and (res["close"] is None or res["close"] < MIN_PRICE):
                 continue
             if not (res["price_gt_sma50"] and res["price_gt_sma200"]):
                 continue
@@ -945,6 +986,8 @@ def main() -> int:
     meta = {
         "generated_at": finished.isoformat(),
         "duration_s": round((finished - started).total_seconds(), 1),
+        "market": MARKET,
+        "currency": CURRENCY,
         "universe_size": int(len(universe)),
         "with_data": int(len(prices)),
         "analyzed": int(len(all_results)),
@@ -981,11 +1024,11 @@ def main() -> int:
         if isinstance(v, list):
             return [_clean(x) for x in v]
         return v
-    (DATA / "scanner_output.json").write_text(
+    (DATA / f"scanner_output{OUT_SUFFIX}.json").write_text(
         json.dumps(_clean(payload), indent=2, allow_nan=False)
     )
     if len(df_out):
-        df_out.to_csv(DATA / "scanner_output.csv", index=False)
+        df_out.to_csv(DATA / f"scanner_output{OUT_SUFFIX}.csv", index=False)
     print(
         f"[done] {meta['qualifiers']} qualifiers · {meta['ipos']} IPOs · regime "
         f"{breadth.get('regime_score', '?')} ({breadth.get('regime_label', '?')}) "

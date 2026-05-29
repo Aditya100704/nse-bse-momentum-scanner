@@ -19,7 +19,7 @@ Runs daily in fundamentals.yml (+ manual dispatch).
 """
 from __future__ import annotations
 
-import sys, json
+import os, sys, json
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -27,9 +27,14 @@ import requests
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-OUT = DATA / "fundamentals.json"
+MARKET = os.getenv("SCAN_MARKET", "in").strip().lower()
+_US = MARKET == "us"
+OUT = DATA / ("fundamentals_us.json" if _US else "fundamentals.json")
+IN_SCAN = DATA / ("scanner_output_us.json" if _US else "scanner_output.json")
 
-URL = "https://scanner.tradingview.com/india/scan"
+# TradingView public scanner region: america for US, india for NSE/BSE.
+URL = "https://scanner.tradingview.com/america/scan" if _US else "https://scanner.tradingview.com/india/scan"
+MCAP_DIV = 1e6 if _US else 1e7      # market cap units: $ million (US) vs Rs crore (India)
 H = {"User-Agent": "Mozilla/5.0", "Content-Type": "application/json"}
 BATCH = 350
 
@@ -76,7 +81,7 @@ def fetch_batch(tickers: list[str]) -> dict:
             if short in ("next_earnings", "last_earnings"):
                 rec[short] = _iso(v)
             elif short == "mcap":
-                rec[short] = round(v / 1e7) if isinstance(v, (int, float)) else None  # ₹ cr
+                rec[short] = round(v / MCAP_DIV) if isinstance(v, (int, float)) else None  # $M (US) / ₹cr (IN)
             elif isinstance(v, (int, float)):
                 rec[short] = round(v, 2)
             else:
@@ -94,17 +99,22 @@ def fetch_batch(tickers: list[str]) -> dict:
 
 def main():
     cap = int(sys.argv[1]) if len(sys.argv) > 1 else None
-    scan = json.loads((DATA / "scanner_output.json").read_text(encoding="utf-8"))
+    scan = json.loads(IN_SCAN.read_text(encoding="utf-8"))
 
-    # Collect unique TV tickers from qualifiers + IPOs + EPs (prefer NSE).
+    # Collect unique TV tickers from qualifiers + IPOs + EPs.
     seen, tickers = set(), []
     for block in ("results", "ipos", "episodic_pivots"):
         for r in scan.get(block, []):
             sym = (r.get("symbol") or "").upper()
-            exch = "NSE" if (r.get("exchange") or "NSE") == "NSE" else "BSE"
             if not sym or sym in seen:
                 continue
             seen.add(sym)
+            if _US:
+                exch = (r.get("exchange") or "NASDAQ").upper()
+                if exch not in ("NASDAQ", "NYSE", "AMEX"):
+                    exch = "NASDAQ"
+            else:
+                exch = "NSE" if (r.get("exchange") or "NSE") == "NSE" else "BSE"
             tickers.append(f"{exch}:{sym}")
     if cap:
         tickers = tickers[:cap]

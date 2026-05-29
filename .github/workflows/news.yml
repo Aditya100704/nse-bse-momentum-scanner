@@ -24,13 +24,17 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install requests
-      - name: Fetch headlines
+      - name: Fetch headlines (India)
         run: python news_fetch.py
+      - name: Fetch headlines (US)
+        env:
+          SCAN_MARKET: "us"
+        run: python news_fetch.py || echo "US news failed (non-fatal)"
       - name: Commit news.json
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/news.json
+          git add data/news.json data/news_us.json
           if git diff --cached --quiet; then
             echo "no news changes"; exit 0
           fi

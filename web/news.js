@@ -6,7 +6,7 @@
    ========================================================================== */
 (() => {
   "use strict";
-  const URL = "../data/news.json";          // -> data/news.json on Pages
+  const URL = `../data/news${localStorage.getItem("phenom_market") === "us" ? "_us" : ""}.json`;  // market-aware
   const $ = (id) => document.getElementById(id);
   const state = { data: null, loaded: false };
 

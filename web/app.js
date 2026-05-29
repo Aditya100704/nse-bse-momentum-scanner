@@ -1,5 +1,17 @@
 (() => {
-  const DATA_URL = "../data/scanner_output.json";
+  /* ---- Market selection (India ⇄ US). Sticky via localStorage, default last-used.
+     MARKET is fixed per page load; the navbar toggle persists the choice and reloads,
+     so every data fetch + render re-runs cleanly for the chosen market. ---- */
+  const MARKET = (localStorage.getItem("phenom_market") === "us") ? "us" : "in";
+  const IS_US = MARKET === "us";
+  const dpath = (base) => `../data/${base}${IS_US ? "_us" : ""}.json`;
+  const DATA_URL = dpath("scanner_output");
+  const LOCALE = IS_US ? "en-US" : "en-IN";   // number grouping (lakh/cr vs thousands)
+  const CUR = IS_US ? "$" : "₹";               // currency symbol
+  const LIQ_UNIT = IS_US ? "M" : "cr";         // daily-liquidity unit ($M vs ₹cr)
+  const LIQ_MIN = IS_US ? "$20M/day" : "₹10 cr/day";   // qualifier liquidity floor (display)
+  const BREADTH_FOOT = IS_US ? "across all US listings" : "across all NSE + BSE";
+  window.__PHENOM_MARKET = MARKET;             // shared with trade.js / news.js / hero.js
 
   const COLOR = {
     ghost: "#ffffff",
@@ -40,7 +52,7 @@
     momentum: {
       label: "Momentum",
       title: "All qualifiers",
-      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 3M & 6M · ≥ ₹10 cr/day · ranked by RS",
+      sub: `Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 3M & 6M · ≥ ${LIQ_MIN} · ranked by RS`,
       filter: (r) => true,   // base gate already enforces the full momentum set
     },
     trend_template: {
@@ -106,7 +118,7 @@
   };
   const fmtNum = (v, d = 2) => {
     if (v == null || Number.isNaN(v)) return "—";
-    return v.toLocaleString("en-IN", { maximumFractionDigits: d, minimumFractionDigits: d });
+    return v.toLocaleString(LOCALE, { maximumFractionDigits: d, minimumFractionDigits: d });
   };
   const fmtX = (v) => {
     if (v == null || Number.isNaN(v)) return "—";
@@ -135,7 +147,7 @@
     const ind = (r.industry && r.industry !== "Other") ? r.industry
               : (r.sector && r.sector !== "Other") ? r.sector : "";
     if (ind) bits.push(ind);
-    if (r.turnover_cr != null && !Number.isNaN(r.turnover_cr)) bits.push(`₹${fmtNum(r.turnover_cr, 1)} cr/day`);
+    if (r.turnover_cr != null && !Number.isNaN(r.turnover_cr)) bits.push(`${CUR}${fmtNum(r.turnover_cr, 1)} ${LIQ_UNIT}/day`);
     if (r.vol_surge != null && !Number.isNaN(r.vol_surge)) bits.push(`${r.vol_surge.toFixed(1)}× vol`);
     return bits.join("  ·  ");
   };
@@ -149,7 +161,7 @@
     const soon = d != null && d >= 0 && d <= 10;
     const dt = new Date(r.next_earnings);
     const lbl = Number.isNaN(dt.getTime()) ? r.next_earnings
-      : dt.toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
+      : dt.toLocaleDateString(LOCALE, { day: "2-digit", month: "short" });
     const tail = d != null && d >= 0 ? ` <span class="muted">${d}d</span>` : "";
     return `<span class="${soon ? "earn-soon" : ""}" title="next earnings${d != null ? ` in ${d} days` : ""}">${lbl}${tail}</span>`;
   };
@@ -158,7 +170,8 @@
   const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
 
   const tvLink = (sym, exch) => {
-    const e = exch === "NSE" ? "NSE" : "BSE";
+    const e = IS_US ? ((exch && ["NASDAQ", "NYSE", "AMEX"].includes(exch)) ? exch : "NASDAQ")
+                    : (exch === "NSE" ? "NSE" : "BSE");
     if (IS_MOBILE) {
       // Universal link: iOS/Android route this to the TradingView app if
       // installed, otherwise it opens the mobile-friendly symbol page.
@@ -195,6 +208,33 @@
     });
   }
 
+  /* ============================================================ market toggle */
+  function applyMarketLabels() {
+    const set = (id, t) => { const e = document.getElementById(id); if (e) e.textContent = t; };
+    if (IS_US) {
+      set("heroSub", "Every US listing above its 200-day SMA with real liquidity, ranked Minervini-style.");
+      set("statWithDataFoot", "tradeable · NASDAQ + NYSE + AMEX");
+      set("liqLabel", "Min $M");
+      set("footSource", "Data via Nasdaq Trader + Yahoo EOD · news via Google News. Educational, not investment advice.");
+    } else {
+      set("heroSub", "Every NSE + BSE listing above its 200-day SMA with real liquidity, ranked Minervini-style.");
+      set("statWithDataFoot", "tradeable · NSE + BSE bhavcopy");
+      set("liqLabel", "Min ₹cr");
+      set("footSource", "Data via NSE + BSE bhavcopy · news via Google News. Educational, not investment advice.");
+    }
+  }
+
+  function bindMarket() {
+    document.querySelectorAll(".market-btn").forEach((b) => {
+      b.classList.toggle("is-active", b.dataset.market === MARKET);
+      b.addEventListener("click", () => {
+        if (b.dataset.market === MARKET) return;
+        localStorage.setItem("phenom_market", b.dataset.market);
+        location.reload();   // re-run load() + every render for the chosen market
+      });
+    });
+  }
+
   /* ============================================================ subtabs */
   // Which data array a scanner reads from (qualifiers, IPOs, or episodic pivots)
   const srcArr = (def) => def?.source === "ipos" ? state.ipos
@@ -206,7 +246,7 @@
       const src = srcArr(def);
       const n = src.filter(def.filter).length;
       const el = document.querySelector(`.subtab-count[data-count="${key}"]`);
-      if (el) el.textContent = n.toLocaleString("en-IN");
+      if (el) el.textContent = n.toLocaleString(LOCALE);
     });
   }
   function renderScannerHeader() {
@@ -333,9 +373,9 @@
     const rows = state.rows;
     if (!m) return;
 
-    $("statWithData").textContent = (m.with_data ?? 0).toLocaleString("en-IN");
-    $("statQualifiers").textContent = (m.qualifiers ?? 0).toLocaleString("en-IN");
-    $("statTT").textContent = rows.filter((r) => r.trend_template).length.toLocaleString("en-IN");
+    $("statWithData").textContent = (m.with_data ?? 0).toLocaleString(LOCALE);
+    $("statQualifiers").textContent = (m.qualifiers ?? 0).toLocaleString(LOCALE);
+    $("statTT").textContent = rows.filter((r) => r.trend_template).length.toLocaleString(LOCALE);
 
     const b = state.breadth || {};
     const score = b.regime_score;
@@ -352,7 +392,7 @@
     badge.classList.remove("stale", "bad");
     if (ageHrs > 48) badge.classList.add("bad");
     else if (ageHrs > 24) badge.classList.add("stale");
-    $("lastScan").textContent = t.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
+    $("lastScan").textContent = t.toLocaleString(LOCALE, { dateStyle: "medium", timeStyle: "short" });
     $("duration").textContent = m.duration_s != null ? `${m.duration_s}s scan` : "";
   }
 
@@ -463,15 +503,15 @@
         ...baseOpts(),
         scales: {
           x: { type: "logarithmic", grid: { color: COLOR.grid },
-               ticks: { color: COLOR.whisper, font: { size: 11 }, callback: (v) => `₹${v}cr` },
-               title: { display: true, text: "Daily liquidity (₹ cr, log)", color: COLOR.whisper, font: { size: 11 } } },
+               ticks: { color: COLOR.whisper, font: { size: 11 }, callback: (v) => `${CUR}${v}${LIQ_UNIT}` },
+               title: { display: true, text: `Daily liquidity (${CUR} ${LIQ_UNIT}, log)`, color: COLOR.whisper, font: { size: 11 } } },
           y: { grid: { color: COLOR.grid }, ticks: { color: COLOR.whisper, font: { size: 11 }, callback: (v) => `${v}%` },
                title: { display: true, text: "Momentum composite", color: COLOR.whisper, font: { size: 11 } } },
         },
         plugins: { ...baseOpts().plugins, tooltip: { ...baseOpts().plugins.tooltip,
           callbacks: { label: (c) => {
             const p = pts[c.dataIndex];
-            return [p.sym, `RS ${p.rs}`, `Liq ₹${p.x.toFixed(1)}cr`, `Mom ${p.y.toFixed(1)}%`];
+            return [p.sym, `RS ${p.rs}`, `Liq ${CUR}${p.x.toFixed(1)}${LIQ_UNIT}`, `Mom ${p.y.toFixed(1)}%`];
           } } } },
       },
     });
@@ -682,7 +722,7 @@
       { label: "Suggested exposure", value: b.suggested_exposure_pct != null ? `${b.suggested_exposure_pct}%` : "—",
         klass: (b.suggested_exposure_pct ?? 0) >= 60 ? "pos" : (b.suggested_exposure_pct ?? 0) >= 40 ? "" : "neg",
         foot: b.exposure_note || "scale risk to market health (Minervini)" },
-      { label: "Stocks analyzed", value: (b.universe_with_data ?? 0).toLocaleString("en-IN"), foot: "across all NSE + BSE" },
+      { label: "Stocks analyzed", value: (b.universe_with_data ?? 0).toLocaleString(LOCALE), foot: BREADTH_FOOT },
       { label: "% above SMA200", value: b.pct_above_sma200 != null ? `${b.pct_above_sma200.toFixed(1)}%` : "—",
         klass: b.pct_above_sma200 >= 50 ? "pos" : "neg", foot: "long-term participation" },
       { label: "% above SMA50",  value: b.pct_above_sma50  != null ? `${b.pct_above_sma50.toFixed(1)}%` : "—",
@@ -701,6 +741,33 @@
   }
 
   /* ---------- Sectors page ---------- */
+  // Rebuild the Sectors-tab aggregate from the (fundamentals-enriched) rows. Used for the
+  // US market, whose scan-time sectors are all "Other" until TradingView sectors are merged.
+  function computeSectors(rows) {
+    const g = {};
+    rows.forEach((r) => {
+      const sec = (r.sector && r.sector !== "Other") ? r.sector : "Other";
+      (g[sec] = g[sec] || []).push(r);
+    });
+    const avg = (arr, k) => {
+      const v = arr.map((x) => x[k]).filter((x) => x != null && !Number.isNaN(x));
+      return v.length ? v.reduce((a, b) => a + b, 0) / v.length : 0;
+    };
+    const multi = Object.keys(g).length > 1;
+    return Object.entries(g)
+      .filter(([sec]) => sec !== "Other" || !multi)
+      .map(([sector, arr]) => ({
+        sector, count: arr.length,
+        tt_pass: arr.filter((x) => x.trend_template).length,
+        avg_r1m: avg(arr, "r1m"), avg_r3m: avg(arr, "r3m"),
+        avg_r6m: avg(arr, "r6m"), avg_r12m: avg(arr, "r12m"),
+        avg_momentum: avg(arr, "momentum"),
+        top_symbols: arr.slice().sort((a, b) => (b.rs_rating || 0) - (a.rs_rating || 0))
+          .slice(0, 4).map((x) => ({ symbol: x.symbol, rs_rating: x.rs_rating })),
+      }))
+      .sort((a, b) => b.avg_momentum - a.avg_momentum);
+  }
+
   function renderSectorMom() {
     const ss = state.sectors || [];
     if (!ss.length) return;
@@ -847,7 +914,7 @@
             ...baseOpts().plugins.tooltip,
             callbacks: {
               title: (items) => items[0]?.label || "",
-              label: (c) => ` ${c.parsed.y.toLocaleString("en-IN")} matches`,
+              label: (c) => ` ${c.parsed.y.toLocaleString(LOCALE)} matches`,
             },
           },
         },
@@ -1101,7 +1168,9 @@
       const syms = [];
       for (const r of [...state.rows, ...state.ipos, ...state.eps]) {
         if (!r.symbol) continue;
-        const tv = `${r.exchange === "NSE" ? "NSE" : "BSE"}:${r.symbol}`;
+        const tvex = IS_US ? ((r.exchange && ["NASDAQ", "NYSE", "AMEX"].includes(r.exchange)) ? r.exchange : "NASDAQ")
+                           : (r.exchange === "NSE" ? "NSE" : "BSE");
+        const tv = `${tvex}:${r.symbol}`;
         if (seen.has(tv)) continue;
         seen.add(tv);
         syms.push(tv);
@@ -1183,7 +1252,7 @@
       // Fundamentals (TradingView) — separate file, non-fatal. Merge EPS/sales
       // growth, P/E, ROE, next earnings into every row by symbol.
       try {
-        const fr = await fetch("../data/fundamentals.json", { cache: "no-store" });
+        const fr = await fetch(dpath("fundamentals"), { cache: "no-store" });
         if (fr.ok) {
           const fd = (await fr.json()).data || {};
           const merge = (arr) => arr.forEach((r) => {
@@ -1200,6 +1269,11 @@
             }
           });
           merge(state.rows); merge(state.ipos); merge(state.eps);
+          // US (sparse scan-time sectors) → rebuild the Sectors aggregate from the
+          // now-enriched rows so the Sectors tab shows real sectors, not one "Other".
+          if (state.sectors.length < 3 && state.rows.length) {
+            state.sectors = computeSectors(state.rows);
+          }
         }
       } catch (e) { /* fundamentals optional */ }
       $("loadState").classList.add("hidden");
@@ -1210,6 +1284,8 @@
   }
 
   bindTabs();
+  bindMarket();
+  applyMarketLabels();
   bindFilters();
   initTickerTooltip();
   load();

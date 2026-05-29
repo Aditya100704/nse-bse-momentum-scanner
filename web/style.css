@@ -144,6 +144,33 @@ body {
   box-shadow: 0 0 14px rgba(176, 19, 34, 0.45), inset 0 0 0 1px rgba(255, 120, 120, 0.30);
 }
 
+/* Market toggle (India / US) — segmented control in the topbar */
+.market-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: var(--r-pill);
+  overflow: hidden;
+}
+.market-btn {
+  font-family: var(--font-sans);
+  background: transparent;
+  border: none;
+  color: var(--whisper);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 6px 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.market-btn + .market-btn { border-left: 1px solid var(--border); }
+.market-btn:hover { color: var(--ghost); }
+.market-btn.is-active {
+  background: linear-gradient(180deg, #b01322 0%, #7d0b14 100%);
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 120, 120, 0.30);
+}
+
 @media (max-width: 880px) {
   .topbar { flex-wrap: wrap; gap: 10px 14px; padding: 14px clamp(14px, 4vw, 24px); }
   .tabs { order: 3; width: 100%; justify-content: center; }

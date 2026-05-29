@@ -11,16 +11,17 @@ trades). Names come from the cached Zerodha/Kite instruments dump
 Run standalone to seed; also a step in the daily scan workflow.
 """
 from __future__ import annotations
-import io, json, sys
+import io, json, os, sys
 from datetime import date, timedelta, datetime, timezone
 from pathlib import Path
 import pandas as pd, requests
 
 if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 
+MARKET = os.getenv("SCAN_MARKET", "in").strip().lower()
 DATA = Path(__file__).resolve().parent / "data"
 DATA.mkdir(exist_ok=True)
-OUT = DATA / "tickers.json"
+OUT = DATA / ("tickers_us.json" if MARKET == "us" else "tickers.json")
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; PhenomScanner/1.0)"}
 S = requests.Session(); S.headers.update(UA)
@@ -98,6 +99,17 @@ def kite_names():
 
 
 def main():
+    if MARKET == "us":
+        import usdata
+        uni = usdata.build_us_universe()
+        tickers = [[r["symbol"], r["exchange"], r["name"]] for _, r in uni.iterrows()]
+        named = sum(1 for t in tickers if t[2])
+        OUT.write_text(json.dumps({"updated": datetime.now(timezone.utc).isoformat(),
+                                   "count": len(tickers), "named": named, "tickers": tickers},
+                                  ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+        print(f"[tickers] US {len(tickers)} symbols ({named} named) -> {OUT}", flush=True)
+        return
+
     nse = nse_symbols()
     bse = bse_rows()
     kite = kite_names()
