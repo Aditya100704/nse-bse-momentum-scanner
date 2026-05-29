@@ -21,6 +21,7 @@
   const state = {
     rows: [],
     ipos: [],
+    eps: [],
     breadth: {},
     sectors: [],
     history: null,
@@ -39,7 +40,7 @@
     momentum: {
       label: "Momentum",
       title: "All qualifiers",
-      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 6‑month · ≥ ₹5 cr/day · ranked by RS",
+      sub: "Uptrend (above 50 & 200 SMA) · within 25% of 52w high · positive 3M &amp; 6M · ≥ ₹10 cr/day · ranked by RS",
       filter: (r) => true,   // base gate already enforces the full momentum set
     },
     trend_template: {
@@ -47,6 +48,18 @@
       title: "Minervini Trend Template",
       sub: "Strict 8/8: above all SMAs, SMA cascade, rising 200‑SMA, within 25% of 52w high, 30%+ above 52w low",
       filter: (r) => r.trend_template === true,
+    },
+    qm_breakout: {
+      label: "Qullamaggie Breakout",
+      title: "Qullamaggie Breakout setups",
+      sub: "High‑ADR movers (ADR ≥ 4%) above their 10/20/50‑day SMAs that already ran 25%+ and are now coiling tight near the highs — the classic momentum‑burst‑then‑flag breakout",
+      filter: (r) => r.qm_breakout === true,
+    },
+    vcp: {
+      label: "VCP / Tight",
+      title: "Minervini VCP — tight coils",
+      sub: "Stage‑2 leaders within 15% of their high whose range is contracting while volume dries up — the pre‑breakout volatility contraction",
+      filter: (r) => r.vcp_setup === true,
     },
     breakout52w: {
       label: "52w High Breakout",
@@ -59,6 +72,13 @@
       title: "Volume Shocker",
       sub: "Today's volume ≥ 2.5× the 50‑day average with a positive 1‑month return — likely institutional accumulation",
       filter: (r) => (r.vol_surge ?? 0) >= 2.5 && (r.r1m ?? 0) > 0,
+    },
+    episodic_pivot: {
+      label: "Episodic Pivot",
+      title: "Episodic Pivots — gap + volume off a base",
+      sub: "Stocks that gapped up 5%+ on 3×+ volume out of a quiet base (not already extended) — the market repricing a surprise. Daily‑data read of Qullamaggie's EP setup",
+      filter: (r) => true,            // applied via state.eps source instead
+      source: "eps",                  // marker: use state.eps not state.rows
     },
     ipo: {
       label: "IPO Momentum",
@@ -88,9 +108,11 @@
     return `<span class="${cls}">${v.toFixed(2)}×</span>`;
   };
   const rsBadge = (v) => {
+    if (v == null || Number.isNaN(v)) return `<span class="muted">—</span>`;
     const k = v >= 80 ? "rs-hi" : v >= 50 ? "rs-md" : "rs-lo";
     return `<span class="rs ${k}">${v}</span>`;
   };
+  const fmtAdr = (v) => v == null || Number.isNaN(v) ? "—" : `${v.toFixed(1)}%`;
   // Mobile detection — used to choose between TV chart (desktop, new tab)
   // and the TV symbol page (mobile, universal link that opens the TV app).
   const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
@@ -134,10 +156,14 @@
   }
 
   /* ============================================================ subtabs */
+  // Which data array a scanner reads from (qualifiers, IPOs, or episodic pivots)
+  const srcArr = (def) => def?.source === "ipos" ? state.ipos
+                        : def?.source === "eps" ? state.eps
+                        : state.rows;
   function renderSubtabCounts() {
     Object.keys(SCANNERS).forEach((key) => {
       const def = SCANNERS[key];
-      const src = def.source === "ipos" ? state.ipos : state.rows;
+      const src = srcArr(def);
       const n = src.filter(def.filter).length;
       const el = document.querySelector(`.subtab-count[data-count="${key}"]`);
       if (el) el.textContent = n.toLocaleString("en-IN");
@@ -175,7 +201,7 @@
     const def = SCANNERS[state.activeScanner];
     const scannerFilter = def?.filter || (() => true);
     const isIpo = def?.source === "ipos";
-    const sourceRows = isIpo ? state.ipos : state.rows;
+    const sourceRows = srcArr(def);
 
     let rows = sourceRows.filter(scannerFilter).filter((r) => {
       if (!isIpo && r.rs_rating != null && r.rs_rating < f.minRs) return false;
@@ -226,6 +252,7 @@
             <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
             <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
             <td class="num">${fmtX(r.vol_surge)}</td>
+            <td class="num">${fmtAdr(r.adr_pct)}</td>
             <td class="center"><span class="tt-no" title="not applicable for IPOs">·</span></td>
           </tr>`).join("");
       } else {
@@ -243,12 +270,13 @@
             <td class="num"><span class="muted">-${(r.pct_off_high ?? 0).toFixed(1)}%</span></td>
             <td class="num">${fmtNum(r.turnover_cr, 1)}</td>
             <td class="num">${fmtX(r.vol_surge)}</td>
+            <td class="num">${fmtAdr(r.adr_pct)}</td>
             <td class="center">${r.trend_template ? '<span class="tt-yes">✓</span>' : '<span class="tt-no">·</span>'}</td>
           </tr>`).join("");
       }
       if (rows.length > 800) {
         tbody.insertAdjacentHTML("beforeend",
-          `<tr><td colspan="13" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
+          `<tr><td colspan="14" class="muted center" style="padding:14px">Showing first 800 of ${rows.length}. Tighten filters to see more.</td></tr>`);
       }
     }
 
@@ -613,6 +641,9 @@
   function renderBreadthSignals() {
     const b = state.breadth || {};
     const cells = [
+      { label: "Suggested exposure", value: b.suggested_exposure_pct != null ? `${b.suggested_exposure_pct}%` : "—",
+        klass: (b.suggested_exposure_pct ?? 0) >= 60 ? "pos" : (b.suggested_exposure_pct ?? 0) >= 40 ? "" : "neg",
+        foot: b.exposure_note || "scale risk to market health (Minervini)" },
       { label: "Stocks analyzed", value: (b.universe_with_data ?? 0).toLocaleString("en-IN"), foot: "across all NSE + BSE" },
       { label: "% above SMA200", value: b.pct_above_sma200 != null ? `${b.pct_above_sma200.toFixed(1)}%` : "—",
         klass: b.pct_above_sma200 >= 50 ? "pos" : "neg", foot: "long-term participation" },
@@ -730,10 +761,14 @@
 
   /* ============================================================ scanner history (per-subtab line chart) */
   function renderScannerHistory() {
-    if (!state.history?.dates) return;
+    const card = document.querySelector(".scanner-history-card");
+    if (!state.history?.dates) { if (card) card.style.display = "none"; return; }
     const def = SCANNERS[state.activeScanner];
     const data = state.history.scanners?.[state.activeScanner] || [];
-    if (!data.length) return;
+    // Newer scanners (QM breakout, VCP, episodic pivot) have no per-day history —
+    // hide the history card for them rather than showing a stale chart.
+    if (!data.length) { if (card) card.style.display = "none"; return; }
+    if (card) card.style.display = "";
     const labels = state.history.dates;
     const ctx = $("chartScannerHistory").getContext("2d");
     charts.scannerHistory?.destroy();
@@ -1029,7 +1064,7 @@
     $("copyTV").addEventListener("click", async () => {
       const seen = new Set();
       const syms = [];
-      for (const r of [...state.rows, ...state.ipos]) {
+      for (const r of [...state.rows, ...state.ipos, ...state.eps]) {
         if (!r.symbol) continue;
         const tv = `${r.exchange === "NSE" ? "NSE" : "BSE"}:${r.symbol}`;
         if (seen.has(tv)) continue;
@@ -1063,6 +1098,7 @@
       state.meta = data.meta;
       state.rows = data.results || [];
       state.ipos = data.ipos || [];
+      state.eps = data.episodic_pivots || [];
       state.breadth = data.breadth || {};
       state.sectors = data.sectors || [];
       state.history = data.history || null;

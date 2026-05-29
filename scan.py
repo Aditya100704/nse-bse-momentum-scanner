@@ -278,7 +278,35 @@ def analyze(df: pd.DataFrame) -> dict | None:
 
     turnover_cr = (close * vol).iloc[-20:].mean() / 1e7
     avg_vol50 = vol.iloc[-50:].mean()
+    avg_vol5 = vol.iloc[-5:].mean()
     vol_surge = vol.iloc[-1] / avg_vol50 if avg_vol50 > 0 else np.nan
+    vol_dryup = bool(avg_vol50 > 0 and avg_vol5 < avg_vol50)  # selling drying up
+
+    # ----- Qullamaggie / Minervini structure metrics -----
+    # ADR% (Average Daily Range) — Qullamaggie's volatility cornerstone:
+    # mean over the last 20 bars of (High/Low - 1)*100. Falls back to a
+    # close-to-close proxy when High/Low aren't available.
+    has_hl = ("High" in df.columns) and ("Low" in df.columns)
+    if has_hl:
+        high = df["High"].astype(float)
+        low = df["Low"].astype(float)
+        dr = (high / low.replace(0, np.nan) - 1) * 100
+        adr_pct = dr.iloc[-20:].mean()
+        rng_recent = high.iloc[-10:].max() - low.iloc[-10:].min()
+        rng_prior = (high.iloc[-20:-10].max() - low.iloc[-20:-10].min()) if len(close) >= 20 else np.nan
+        gap_pct = (df["Open"].astype(float).iloc[-1] / close.iloc[-2] - 1) * 100 \
+            if ("Open" in df.columns and len(close) >= 2) else np.nan
+    else:
+        dcc = close.pct_change().abs() * 100
+        adr_pct = dcc.iloc[-20:].mean() * 1.4   # intraday range ~1.4x close-to-close
+        rng_recent = close.iloc[-10:].max() - close.iloc[-10:].min()
+        rng_prior = (close.iloc[-20:-10].max() - close.iloc[-20:-10].min()) if len(close) >= 20 else np.nan
+        gap_pct = (close.pct_change().iloc[-1] * 100) if len(close) >= 2 else np.nan
+    # recent 10-bar range as % of price (lower = tighter consolidation)
+    tightness_pct = (rng_recent / last * 100) if last else np.nan
+    # contraction = recent 10-bar range meaningfully tighter than the prior 10
+    contracting = bool(not pd.isna(rng_prior) and rng_prior > 0 and rng_recent < rng_prior * 0.75)
+    prior_move = max(r1m if not pd.isna(r1m) else 0, r3m if not pd.isna(r3m) else 0)
 
     momentum = np.nanmean([
         (r12m if not pd.isna(r12m) else 0) * 0.4,
@@ -308,6 +336,23 @@ def analyze(df: pd.DataFrame) -> dict | None:
         )
     )
 
+    # Stage-2 uptrend (Weinstein/Minervini): above the key SMAs, 50>150, 200 rising
+    stage2 = bool(crit["price_gt_sma50"] and crit["price_gt_sma150"]
+                  and crit["price_gt_sma200"] and crit["sma50_gt_sma150"]
+                  and crit["sma200_rising"])
+
+    # Minervini VCP / tight setup: a Stage-2 leader within 15% of its high whose
+    # range is contracting while volume dries up — the classic pre-breakout coil.
+    vcp_setup = bool(stage2 and pct_off_high <= 15 and contracting and vol_dryup)
+
+    # Qullamaggie breakout: a high-ADR mover above its 10/20/50 SMAs that already
+    # made a big move (>=25% over 1-3M) and is now coiling tight near its highs.
+    qm_breakout = bool(
+        (not pd.isna(adr_pct) and adr_pct >= 4)
+        and crit["price_gt_sma10"] and crit["price_gt_sma20"] and crit["price_gt_sma50"]
+        and prior_move >= 25 and pct_off_high <= 15 and contracting
+    )
+
     return {
         "close": _safe_float(last),
         "sma50": _safe_float(last50),
@@ -320,8 +365,16 @@ def analyze(df: pd.DataFrame) -> dict | None:
         "r12m": _safe_float(r12m),
         "turnover_cr": _safe_float(turnover_cr),
         "vol_surge": _safe_float(vol_surge),
+        "adr_pct": _safe_float(adr_pct),
+        "gap_pct": _safe_float(gap_pct),
+        "tightness_pct": _safe_float(tightness_pct),
+        "vol_dryup": vol_dryup,
+        "contracting": contracting,
         "momentum": _safe_float(momentum),
         "trend_template": trend_template,
+        "stage2": stage2,
+        "vcp_setup": vcp_setup,
+        "qm_breakout": qm_breakout,
         **crit,
     }
 
@@ -469,8 +522,23 @@ def _compute_breadth(all_results: list[dict]) -> dict:
     else:
         regime_label = "Bearish"
 
+    # Minervini "progressive exposure": scale how much capital you risk to how
+    # healthy the market is. Map regime 0-10 to a suggested max exposure %, and
+    # give a plain-English stance.
+    suggested_exposure = int(round(min(100, max(0, (regime - 2) / 6 * 100))))
+    if regime >= 7:
+        exposure_note = "Strong market — press your best setups."
+    elif regime >= 5:
+        exposure_note = "Constructive — normal size on A-setups, stay selective."
+    elif regime >= 4:
+        exposure_note = "Mixed — half size, only the cleanest setups."
+    else:
+        exposure_note = "Weak market — mostly cash, tiny size or sit out."
+
     return {
         "universe_with_data": n,
+        "suggested_exposure_pct": suggested_exposure,
+        "exposure_note": exposure_note,
         "pct_above_sma10": pct10,
         "pct_above_sma20": pct20,
         "pct_above_sma50": pct50,
@@ -754,6 +822,7 @@ def main() -> int:
     all_results: list[dict] = []        # everything analyze() produced (breadth)
     rows: list[dict] = []               # passed both gates (qualifiers)
     ipo_rows: list[dict] = []           # recent listings, 30-199 bars
+    ep_rows: list[dict] = []            # episodic pivots (gap + volume off a base)
 
     # IPO gates (separate from main-scanner gates):
     #   bars 30-199, turnover >= 1 cr, within 25% of all-time high since listing
@@ -771,6 +840,20 @@ def main() -> int:
         res = analyze(df)
         if res is not None:
             all_results.append(res)  # for breadth (full universe, pre-gate)
+
+            # Episodic Pivot (EOD proxy): a big up-gap on heavy volume out of a
+            # non-extended base — the market repricing a stock on a surprise.
+            # Daily data, so this is the end-of-day footprint of Qullamaggie's EP.
+            gp = res.get("gap_pct") or 0
+            if (gp >= 5 and (res.get("vol_surge") or 0) >= 3
+                    and (res.get("turnover_cr") or 0) >= 2
+                    and (res.get("r3m") if res.get("r3m") is not None else 99) < 40
+                    and res.get("price_gt_sma50")):
+                ep_rows.append({
+                    "symbol": sym, "name": row["name"], "exchange": row["exchange"],
+                    "yf_ticker": t, "sector": sector_map.get(sym.upper(), "Other"), **res,
+                })
+
             # Qualifier gates — tightened to a focused, tradeable momentum set (~<500):
             #   in a real uptrend (above SMA50 AND SMA200), genuinely liquid,
             #   within X% of the 52w high, and positive 3M AND 6M momentum.
@@ -819,6 +902,16 @@ def main() -> int:
         df_out["rs_rating"] = (
             df_out["momentum"].rank(pct=True).mul(100).round(0).astype(int)
         )
+        # Setup-quality score (0-100): blend RS strength, ADR (tradeability),
+        # strict trend, and whether it's coiling (contraction). Ranks the cleanest
+        # Minervini/Qullamaggie-style setups to the top.
+        adr_score = (df_out["adr_pct"].clip(upper=10).fillna(0) / 10 * 100)
+        df_out["setup_quality"] = (
+            0.45 * df_out["rs_rating"]
+            + 0.20 * adr_score
+            + 0.20 * df_out["trend_template"].astype(int) * 100
+            + 0.15 * df_out["contracting"].astype(int) * 100
+        ).round(0).astype(int)
         df_out = df_out.sort_values("rs_rating", ascending=False).reset_index(drop=True)
 
     # IPO list: rank by since-listing return (i.e. how much they've run since IPO)
@@ -827,6 +920,15 @@ def main() -> int:
         df_ipos = df_ipos.sort_values(
             ["since_listing_pct", "r1m"], ascending=[False, False], na_position="last"
         ).reset_index(drop=True)
+
+    # Episodic Pivots: rank by gap × volume surge (strongest repricing first)
+    df_eps = pd.DataFrame(ep_rows)
+    if len(df_eps):
+        df_eps = df_eps.drop_duplicates("yf_ticker")
+        df_eps["ep_score"] = (df_eps["gap_pct"].fillna(0) * df_eps["vol_surge"].fillna(0))
+        # give EPs an RS-like 1-99 rank by strength so the table column + sort work
+        df_eps["rs_rating"] = df_eps["ep_score"].rank(pct=True).mul(100).round(0).astype(int)
+        df_eps = df_eps.sort_values("ep_score", ascending=False).reset_index(drop=True)
 
     breadth = _compute_breadth(all_results)
     sectors = _compute_sectors(df_out.to_dict(orient="records") if len(df_out) else [])
@@ -848,6 +950,7 @@ def main() -> int:
         "analyzed": int(len(all_results)),
         "qualifiers": int(len(df_out)),
         "ipos": int(len(df_ipos)),
+        "episodic_pivots": int(len(df_eps)),
         "filters": {
             "min_liquidity_cr": MIN_LIQUIDITY_CR,
             "max_pct_below_52w_high": WITHIN_PCT_OF_52W_HIGH,
@@ -863,6 +966,7 @@ def main() -> int:
         "sectors": sectors,
         "results": df_out.to_dict(orient="records") if len(df_out) else [],
         "ipos": df_ipos.to_dict(orient="records") if len(df_ipos) else [],
+        "episodic_pivots": df_eps.to_dict(orient="records") if len(df_eps) else [],
         "history": history,
     }
     # Pandas DataFrame coerces None -> NaN on numeric columns. json.dumps

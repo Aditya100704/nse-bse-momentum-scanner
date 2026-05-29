@@ -63,6 +63,9 @@ def _fetch_one(d: date) -> pd.DataFrame | None:
         out = pd.DataFrame({
             "symbol": df["SYMBOL"],
             "date": pd.Timestamp(d),
+            "open":  pd.to_numeric(df.get("OPEN_PRICE"), errors="coerce"),
+            "high":  pd.to_numeric(df.get("HIGH_PRICE"), errors="coerce"),
+            "low":   pd.to_numeric(df.get("LOW_PRICE"), errors="coerce"),
             "close": pd.to_numeric(df["CLOSE_PRICE"], errors="coerce"),
             "volume": pd.to_numeric(df["TTL_TRD_QNTY"], errors="coerce"),
         })
@@ -92,7 +95,10 @@ def fetch_nse_history(days_back: int = 504, max_workers: int = 32,
     meta: dict[str, dict] = {}
     for sym, g in big.groupby("symbol"):
         g = g.sort_values("date").drop_duplicates("date").set_index("date")
-        ser = pd.DataFrame({"Close": g["close"], "Volume": g["volume"]}).dropna(subset=["Close"])
+        ser = pd.DataFrame({
+            "Open": g.get("open"), "High": g.get("high"), "Low": g.get("low"),
+            "Close": g["close"], "Volume": g["volume"],
+        }).dropna(subset=["Close"])
         if len(ser) >= min_bars:
             t = f"{sym}.NS"
             out[t] = ser
@@ -125,6 +131,9 @@ def _fetch_one_bse(d: date) -> pd.DataFrame | None:
             "tckr": df["TckrSymb"].astype(str).str.strip() if "TckrSymb" in df.columns else df["FinInstrmId"].astype(str),
             "name": df["FinInstrmNm"].astype(str).str.strip() if "FinInstrmNm" in df.columns else "",
             "date": pd.Timestamp(d),
+            "open":  pd.to_numeric(df.get("OpnPric"), errors="coerce"),
+            "high":  pd.to_numeric(df.get("HghPric"), errors="coerce"),
+            "low":   pd.to_numeric(df.get("LwPric"),  errors="coerce"),
             "close": pd.to_numeric(df["ClsPric"], errors="coerce"),
             "volume": pd.to_numeric(df["TtlTradgVol"], errors="coerce"),
         }).dropna(subset=["close"])
