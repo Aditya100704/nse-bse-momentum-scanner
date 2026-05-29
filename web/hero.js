@@ -21,11 +21,13 @@
     { p: 45, c: "rgba(255,122,138,0.85)", w: 1.6 },  // slow — soft red
   ];
 
-  const MAXC = 60;
+  const MAXC = 48;
+  const CAP = 460, FLOOR = 42;      // soft price band — keeps the chart framed forever
   let W = 0, H = 0, DPR = 1;
   let candles = [];                // {o,h,l,c}
-  let price = 100, mom = 0.4, vol = 1.3;
-  let forming = null, formT = 0, formLen = 12;
+  let price = 100;
+  let phase = "advance", phaseLeft = 60, pbTarget = 100;
+  let forming = null, formT = 0, formLen = 7;
   let sparks = [];
   let labelPrice = 100;
   let t = 0, raf = null;
@@ -41,28 +43,50 @@
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   }
 
-  /* ---------- price model: regimes give trends + deeper pullbacks + ranges --- */
+  /* ---------- price model: a growth-stock life cycle, calm + orderly ----------
+     advance  → steady climb (decelerating as it gets extended), small noise so
+                candles step up cleanly
+     pullback → a shallow glide down that "surfs" back toward the rising MAs, then
+                the advance resumes (higher low)
+     base     → when very extended, a tight sideways pause, then a slightly deeper
+                reset, then off it goes again
+     A soft band [FLOOR, CAP] keeps it framed forever — no runaway, no rescaling. */
   function tickPrice() {
-    if (Math.random() < 0.016) {                 // occasional regime change
-      const r = Math.random();
-      if (r < 0.50) mom = 0.45 + Math.random() * 0.75;        // uptrend (conviction)
-      else if (r < 0.82) mom = -(0.8 + Math.random() * 1.7);  // sharp / deep pullback
-      else mom = (Math.random() - 0.5) * 0.35;                // range / chop
-      vol = 0.7 + Math.random() * 2.1;
+    const noise = Math.random() - 0.5;
+    const ext = Math.max(0, Math.min(1, (price - FLOOR) / (CAP - FLOOR)));  // 0..1 extension
+    if (phase === "advance") {
+      const drift = price * 0.0040 * (1 - ext * 0.8);   // climb eases as it extends
+      price += drift + noise * price * 0.0018;          // noise << drift → orderly green steps
+      if (--phaseLeft <= 0) {
+        if (ext > 0.82) { phase = "base"; phaseLeft = 34 + (Math.random() * 28 | 0); }
+        else { phase = "pullback"; phaseLeft = 9 + (Math.random() * 10 | 0);
+               pbTarget = price * (1 - (0.025 + Math.random() * 0.045)); }   // shallow 2.5–7%
+      }
+    } else if (phase === "pullback") {
+      price += (pbTarget - price) * 0.10 + noise * price * 0.0014;           // glide to target
+      if (--phaseLeft <= 0 || price <= pbTarget) {
+        phase = "advance"; phaseLeft = 48 + (Math.random() * 60 | 0);        // long advance legs
+      }
+    } else {                                                                  // base
+      price += noise * price * 0.0016;                                        // tight, quiet
+      if (--phaseLeft <= 0) {
+        phase = "pullback"; phaseLeft = 12 + (Math.random() * 12 | 0);
+        pbTarget = price * (1 - (0.07 + Math.random() * 0.06));               // deeper reset 7–13%
+      }
     }
-    price += mom + (Math.random() - 0.5) * vol * 1.9;
-    if (price < 28) { price = 28 + Math.random() * 4; mom = Math.abs(mom) + 0.35; }   // bounce off floor
-    if (price > 330) { mom = -Math.abs(mom) - 0.2; }                                   // reversal off ceiling
+    if (price < FLOOR) price = FLOOR + Math.random() * 3;
+    if (price > CAP)   price = CAP - Math.random() * 3;
   }
-  function startCandle() { forming = { o: price, h: price, l: price, c: price }; formT = 0; formLen = 8 + (Math.random() * 12 | 0); }
+  function startCandle() { forming = { o: price, h: price, l: price, c: price }; formT = 0; formLen = 6 + (Math.random() * 4 | 0); }
   function finalize() {
     candles.push(forming);
     if (candles.length > MAXC) candles.shift();
-    if (forming.c > forming.o && (forming.c - forming.o) > vol * 0.6) spawnSparks();
+    // sparks only off a clean green advance candle, and only sometimes — keep it tasteful
+    if (phase === "advance" && forming.c > forming.o && Math.random() < 0.4) spawnSparks();
     startCandle();
   }
   function seed() {
-    candles = []; price = 100; mom = 0.5; startCandle();
+    candles = []; price = 100; phase = "advance"; phaseLeft = 60; startCandle();
     for (let i = 0; i < MAXC; i++) {
       for (let k = 0; k < 6; k++) { tickPrice(); forming.c = price; forming.h = Math.max(forming.h, price); forming.l = Math.min(forming.l, price); }
       candles.push(forming); startCandle();
@@ -70,9 +94,9 @@
     labelPrice = price;
   }
   function spawnSparks() {
-    const n = 3 + (Math.random() * 4 | 0);
-    for (let i = 0; i < n; i++) sparks.push({ dx: (Math.random() - 0.5) * 7, y: 0, vy: 0.6 + Math.random() * 1.2, life: 1, r: 0.8 + Math.random() * 1.6 });
-    if (sparks.length > 60) sparks.splice(0, sparks.length - 60);
+    const n = 2 + (Math.random() * 2 | 0);
+    for (let i = 0; i < n; i++) sparks.push({ dx: (Math.random() - 0.5) * 6, y: 0, vy: 0.5 + Math.random() * 0.9, life: 1, r: 0.8 + Math.random() * 1.3 });
+    if (sparks.length > 40) sparks.splice(0, sparks.length - 40);
   }
 
   /* ---------- moving average over candle closes (partial window at the start) */
@@ -159,14 +183,14 @@
     sparks = sparks.filter((s) => s.life > 0);
   }
 
-  /* ---------- loop (~30fps; pauses when hidden / off Scanner) ---------- */
+  /* ---------- loop (calm ~12fps; pauses when hidden / off Scanner) ---------- */
   let acc = 0, prev = 0;
   function frame(ts) {
     raf = requestAnimationFrame(frame);
     const onScanner = document.querySelector('.page[data-page="scanner"]')?.classList.contains("is-active");
     if (document.hidden || !onScanner || !W) { prev = ts; return; }
     const dt = ts - prev; prev = ts; acc += dt; t++;
-    if (acc < 33) return; acc = 0;
+    if (acc < 85) return; acc = 0;       // slower, graceful cadence
     update(); draw();
   }
 
