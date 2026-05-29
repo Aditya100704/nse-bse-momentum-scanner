@@ -565,6 +565,23 @@ tbody tr:hover { background: rgba(240, 69, 90, 0.035); }
 .earn-cell { font-size: 11px; }
 .earn-soon { color: var(--warn); font-weight: 600; }
 
+/* Custom ticker hover tooltip (styled like the chart tooltips) */
+.ph-tip {
+  position: fixed; z-index: 9999; pointer-events: none;
+  background: rgba(10, 8, 12, 0.97);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 10px 13px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+  max-width: 300px;
+  opacity: 0; transform: translateY(4px);
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.ph-tip.show { opacity: 1; transform: translateY(0); }
+.ph-tip-title { color: var(--ghost); font-weight: 600; font-size: 13px; margin-bottom: 6px; letter-spacing: -0.01em; }
+.ph-tip-row { display: flex; align-items: center; gap: 8px; color: var(--whisper); font-size: 12px; font-family: var(--font-mono); }
+.ph-tip-dot { width: 11px; height: 11px; border-radius: 3px; background: var(--violet); flex: none; box-shadow: 0 0 8px var(--violet-glow); }
+
 .empty {
   padding: 60px 20px;
   text-align: center;

@@ -126,19 +126,21 @@
     const s = v > 0 ? "+" : "";
     return `<span class="${cls}">${s}${v.toFixed(0)}%</span>`;
   };
-  // Hover tooltip for the ticker — folds in name, sector/industry, liquidity, vol
-  // (those columns were removed from the table so everything fits without scroll).
-  const symHover = (r) => {
-    const bits = [r.name || r.symbol];
+  // Styled hover tooltip for the ticker (custom — not the native title). The
+  // secondary line folds in sector/industry, liquidity and volume (those columns
+  // were removed from the table so it fits without scroll).
+  const attr = (s) => String(s == null ? "" : s).replace(/"/g, "&quot;");
+  const symSub = (r) => {
+    const bits = [];
     const ind = (r.industry && r.industry !== "Other") ? r.industry
               : (r.sector && r.sector !== "Other") ? r.sector : "";
     if (ind) bits.push(ind);
     if (r.turnover_cr != null && !Number.isNaN(r.turnover_cr)) bits.push(`₹${fmtNum(r.turnover_cr, 1)} cr/day`);
     if (r.vol_surge != null && !Number.isNaN(r.vol_surge)) bits.push(`${r.vol_surge.toFixed(1)}× vol`);
-    return bits.join("  ·  ").replace(/"/g, "&quot;");
+    return bits.join("  ·  ");
   };
   const symbolCell = (r, badge) =>
-    `<td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs} title="${symHover(r)}">${r.symbol}</a>${badge || ""}</td>`;
+    `<td class="sym"><a href="${tvLink(r.symbol, r.exchange)}" ${tvAnchorAttrs} data-nm="${attr(r.name || r.symbol)}" data-sub="${attr(symSub(r))}">${r.symbol}</a>${badge || ""}</td>`;
 
   // Earnings badge: shows the next-earnings date; amber if within 10 days (event risk)
   const earningsBadge = (r) => {
@@ -1125,6 +1127,49 @@
     });
   }
 
+  /* ============================================================ ticker tooltip
+     A single floating dark tooltip (styled like the chart tooltips) that follows
+     the cursor when hovering any ticker with data-nm/data-sub. Replaces the
+     native title popup. */
+  function initTickerTooltip() {
+    const tip = document.createElement("div");
+    tip.className = "ph-tip";
+    tip.innerHTML = '<div class="ph-tip-title"></div>' +
+      '<div class="ph-tip-row"><span class="ph-tip-dot"></span><span class="ph-tip-sub"></span></div>';
+    document.body.appendChild(tip);
+    const titleEl = tip.querySelector(".ph-tip-title");
+    const subEl = tip.querySelector(".ph-tip-sub");
+    const rowEl = tip.querySelector(".ph-tip-row");
+    let cur = null;
+    const place = (x0, y0) => {
+      const pad = 14, r = tip.getBoundingClientRect();
+      let x = x0 + pad, y = y0 + pad;
+      if (x + r.width > innerWidth - 8) x = x0 - r.width - pad;
+      if (y + r.height > innerHeight - 8) y = y0 - r.height - pad;
+      tip.style.left = x + "px"; tip.style.top = y + "px";
+    };
+    // single mousemove handler — works for real and synthetic events
+    document.addEventListener("mousemove", (e) => {
+      const a = e.target.closest && e.target.closest("a[data-nm]");
+      if (a) {
+        if (a !== cur) {
+          cur = a;
+          titleEl.textContent = a.dataset.nm || "";
+          const sub = a.dataset.sub || "";
+          subEl.textContent = sub;
+          rowEl.style.display = sub ? "flex" : "none";
+          tip.classList.add("show");
+        }
+        place(e.clientX, e.clientY);
+      } else if (cur) {
+        cur = null;
+        tip.classList.remove("show");
+      }
+    });
+    // also hide on scroll (tooltip would otherwise stick)
+    document.addEventListener("scroll", () => { if (cur) { cur = null; tip.classList.remove("show"); } }, true);
+  }
+
   /* ============================================================ load */
   async function load() {
     try {
@@ -1169,5 +1214,6 @@
 
   bindTabs();
   bindFilters();
+  initTickerTooltip();
   load();
 })();
