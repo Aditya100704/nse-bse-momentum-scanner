@@ -344,6 +344,47 @@ def analyze(df: pd.DataFrame) -> dict | None:
     contracting = bool(not pd.isna(rng_prior) and rng_prior > 0 and rng_recent < rng_prior * 0.75)
     prior_move = max(r1m if not pd.isna(r1m) else 0, r3m if not pd.isna(r3m) else 0)
 
+    # ----- Qullamaggie "surfing a moving average" -----
+    # His signature read: after a big move the stock goes sideways and *rides*
+    # ("surfs") one of three MAs — the 10, 20 or 50-day — building higher lows
+    # before the breakout. "Anytime you have a clean bounce off one of these
+    # three moving averages, that's a GO." We flag the tightest *rising* MA the
+    # price is currently hugging (None if it's not surfing any of them).
+    def _surf(ser, last_ma, band):
+        if pd.isna(last_ma) or last_ma <= 0 or len(close) < 15:
+            return None
+        c = close.iloc[-10:]; m = ser.iloc[-10:]
+        if m.isna().any() or m.iloc[0] <= 0:
+            return None
+        mean_dist = float(((c - m).abs() / m * 100).mean())  # avg % gap close↔MA
+        rising = bool(last_ma > ser.iloc[-10])               # MA higher than ~10 bars ago
+        above = bool(last >= last_ma * 0.97)                 # on/just-above (small undercut ok)
+        return mean_dist if (mean_dist <= band and rising and above) else None
+    _surf_cands = []
+    for _tag, _ser, _lv, _band in (("10", sma10, last10, 4.0),
+                                    ("20", sma20, last20, 5.5),
+                                    ("50", sma50, last50, 8.0)):
+        _md = _surf(_ser, _lv, _band)
+        if _md is not None:
+            _surf_cands.append((_md, _tag))
+    surfing_ma = min(_surf_cands)[1] if _surf_cands else None      # tightest rising MA it rides
+    dist_to_ma_pct = min(_surf_cands)[0] if _surf_cands else np.nan
+
+    # ----- "building higher lows" (base structure) -----
+    # Qullamaggie keeps repeating he wants the consolidation to carve *higher
+    # lows* into the pivot. Detect swing-low pivots over the recent base and
+    # count the trailing run that's ascending (0 = choppy/lower lows).
+    _lows = (low if has_hl else close).iloc[-40:].values
+    _piv = [_lows[i] for i in range(2, len(_lows) - 2)
+            if _lows[i] <= _lows[i-1] and _lows[i] <= _lows[i-2]
+            and _lows[i] <= _lows[i+1] and _lows[i] <= _lows[i+2]]
+    higher_lows = 0
+    for _j in range(len(_piv) - 1, 0, -1):
+        if _piv[_j] > _piv[_j-1]:
+            higher_lows += 1
+        else:
+            break
+
     momentum = np.nanmean([
         (r12m if not pd.isna(r12m) else 0) * 0.4,
         (r6m if not pd.isna(r6m) else 0) * 0.3,
@@ -406,6 +447,9 @@ def analyze(df: pd.DataFrame) -> dict | None:
         "tightness_pct": _safe_float(tightness_pct),
         "vol_dryup": vol_dryup,
         "contracting": contracting,
+        "surfing_ma": surfing_ma,
+        "dist_to_ma_pct": _safe_float(dist_to_ma_pct),
+        "higher_lows": int(higher_lows),
         "momentum": _safe_float(momentum),
         "trend_template": trend_template,
         "stage2": stage2,
@@ -952,14 +996,19 @@ def main() -> int:
             df_out["momentum"].rank(pct=True).mul(100).round(0).astype(int)
         )
         # Setup-quality score (0-100): blend RS strength, ADR (tradeability),
-        # strict trend, and whether it's coiling (contraction). Ranks the cleanest
+        # strict trend, coiling (contraction), and the two Qullamaggie staples —
+        # surfing a *rising* MA and building *higher lows*. Ranks the cleanest
         # Minervini/Qullamaggie-style setups to the top.
         adr_score = (df_out["adr_pct"].clip(upper=10).fillna(0) / 10 * 100)
+        surf_score = df_out["surfing_ma"].notna().astype(int) * 100
+        hl_score = (df_out["higher_lows"].clip(upper=3).fillna(0) / 3 * 100)
         df_out["setup_quality"] = (
-            0.45 * df_out["rs_rating"]
-            + 0.20 * adr_score
-            + 0.20 * df_out["trend_template"].astype(int) * 100
-            + 0.15 * df_out["contracting"].astype(int) * 100
+            0.35 * df_out["rs_rating"]
+            + 0.15 * adr_score
+            + 0.15 * df_out["trend_template"].astype(int) * 100
+            + 0.10 * df_out["contracting"].astype(int) * 100
+            + 0.15 * surf_score
+            + 0.10 * hl_score
         ).round(0).astype(int)
         df_out = df_out.sort_values("rs_rating", ascending=False).reset_index(drop=True)
 

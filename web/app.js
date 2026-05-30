@@ -149,6 +149,8 @@
     if (ind) bits.push(ind);
     if (r.turnover_cr != null && !Number.isNaN(r.turnover_cr)) bits.push(`${CUR}${fmtNum(r.turnover_cr, 1)} ${LIQ_UNIT}/day`);
     if (r.vol_surge != null && !Number.isNaN(r.vol_surge)) bits.push(`${r.vol_surge.toFixed(1)}× vol`);
+    if (r.surfing_ma) bits.push(`surfing ${r.surfing_ma}D MA`);
+    if (r.higher_lows >= 2) bits.push(`${r.higher_lows} higher lows`);
     return bits.join("  ·  ");
   };
   const symbolCell = (r, badge) =>
@@ -158,12 +160,16 @@
   const earningsBadge = (r) => {
     if (!r.next_earnings) return `<span class="muted">—</span>`;
     const d = r.days_to_earnings;
+    const risk = d != null && d >= 0 && d <= 3;   // Qullamaggie: never buy within ~3 days of earnings
     const soon = d != null && d >= 0 && d <= 10;
     const dt = new Date(r.next_earnings);
     const lbl = Number.isNaN(dt.getTime()) ? r.next_earnings
       : dt.toLocaleDateString(LOCALE, { day: "2-digit", month: "short" });
     const tail = d != null && d >= 0 ? ` <span class="muted">${d}d</span>` : "";
-    return `<span class="${soon ? "earn-soon" : ""}" title="next earnings${d != null ? ` in ${d} days` : ""}">${lbl}${tail}</span>`;
+    const cls = risk ? "earn-risk" : soon ? "earn-soon" : "";
+    const ttl = risk ? `earnings in ${d} days — avoid new entries (Qullamaggie rule)`
+                     : `next earnings${d != null ? ` in ${d} days` : ""}`;
+    return `<span class="${cls}" title="${ttl}">${lbl}${tail}</span>`;
   };
   // Mobile detection — used to choose between TV chart (desktop, new tab)
   // and the TV symbol page (mobile, universal link that opens the TV app).
