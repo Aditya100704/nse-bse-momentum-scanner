@@ -946,7 +946,6 @@ ECBK,ECBK,"ECB Bancorp, Inc. - Common Stock",NASDAQ
 ECOR,ECOR,"electroCore, Inc. - Common Stock",NASDAQ
 ECPG,ECPG,Encore Capital Group Inc - Common Stock,NASDAQ
 ECX,ECX,ECARX Holdings Inc. - Class A Ordinary shares,NASDAQ
-EDAP,EDAP,"EDAP TMS S.A. - American Depositary Shares, each representing One Ordinary Share",NASDAQ
 EDBL,EDBL,Edible Garden AG Incorporated - Common Stock,NASDAQ
 EDHL,EDHL,Everbright Digital Holding Limited - Ordinary Shares,NASDAQ
 EDIT,EDIT,"Editas Medicine, Inc. - Common Stock",NASDAQ
@@ -1149,6 +1148,7 @@ FNRN,FNRN,First Northern Community Bancorp - Common stock,NASDAQ
 FNUC,FNUC,Frontier Nuclear and Minerals Inc. - Common Shares,NASDAQ
 FNWB,FNWB,First Northwest Bancorp - Common Stock,NASDAQ
 FNWD,FNWD,Finward Bancorp - common stock,NASDAQ
+FOCL,FOCL,"EDAP TMS S.A. - American Depositary Shares, each representing One Ordinary Share",NASDAQ
 FOFO,FOFO,"Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares",NASDAQ
 FONR,FONR,Fonar Corporation - Common Stock,NASDAQ
 FORM,FORM,"FormFactor, Inc. - Common Stock",NASDAQ
@@ -1773,6 +1773,9 @@ LIF,LIF,"Life360, Inc. - Common Stock",NASDAQ
 LIFE,LIFE,Ethos Technologies Inc. - Class A Common Stock,NASDAQ
 LILA,LILA,Liberty Latin America Ltd. - Class A Common Stock,NASDAQ
 LILAK,LILAK,Liberty Latin America Ltd. - Class C Common Stock,NASDAQ
+LILAV,LILAV,Liberty Latin America Ltd - Class A Common Stock Ex-Distribution When Issued,NASDAQ
+LILKV,LILKV,Liberty Latin America Ltd - Class C Common Stock Ex-Distribution When Issued,NASDAQ
+LILPV,LILPV,Liberty Latin America Ltd. - 9.0% Fixed Rate Cumulative Perpetual Redeemable Series A Preference Shares,NASDAQ
 LIMN,LIMN,"Liminatus Pharma, Inc. - Class A Common Stock",NASDAQ
 LIN,LIN,Linde plc - Ordinary Shares,NASDAQ
 LINC,LINC,Lincoln Educational Services Corporation - Common Stock,NASDAQ
@@ -3606,6 +3609,7 @@ AYI,AYI,Acuity Inc. Common Stock,NYSE
 AZN,AZN,AstraZeneca PLC Ordinary Shares,NYSE
 AZO,AZO,"AutoZone, Inc. Common Stock",NYSE
 AZTR,AZTR,Azitra Inc Common Stock,AMEX
+AZUL,AZUL,"Azul S.A. American Depositary Shares, each representing two (2) Common Shares",AMEX
 AZZ,AZZ,AZZ Inc.,NYSE
 B,B,Barrick Mining Corporation Common Shares,NYSE
 BA,BA,Boeing Company (The) Common Stock,NYSE
@@ -4239,8 +4243,7 @@ FCX,FCX,"Freeport-McMoRan, Inc. Common Stock",NYSE
 FDP,FDP,"Fresh Del Monte Produce, Inc. Common Stock",NYSE
 FDS,FDS,FactSet Research Systems Inc. Common Stock,NYSE
 FDX,FDX,FedEx Corporation Common Stock,NYSE
-FDX-V,FDX-V,FedEx Corporation Common Stock When-Issued,NYSE
-FDXF-V,FDXF-V,"FedEx Freight Holding Company, Inc. Common Stock When-Issued",NYSE
+FDXF,FDXF,"FedEx Freight Holding Company, Inc. Common Stock",NYSE
 FE,FE,FirstEnergy Corp. Common Stock,NYSE
 FEDU,FEDU,"Four Seasons Education (Cayman) Inc. American Depositary Shares, each ADS representing 10 ordinary shares",NYSE
 FENG,FENG,"Phoenix New Media Limited American Depositary Shares, each representing 48 Class A ordinary shares.",NYSE
@@ -5019,7 +5022,6 @@ NVG,NVG,Nuveen AMT-Free Municipal Credit Income Fund,NYSE
 NVGS,NVGS,Navigator Holdings Ltd. Ordinary Shares (Marshall Islands),NYSE
 NVO,NVO,Novo Nordisk A/S Common Stock,NYSE
 NVR,NVR,"NVR, Inc. Common Stock",NYSE
-NVRI,NVRI,Enviri Corporation Common Stock,NYSE
 NVRI-V,NVRI-V,Enviri Corporation Common Stock When-Issued,NYSE
 NVS,NVS,Novartis AG Common Stock,NYSE
 NVST,NVST,Envista Holdings Corporation Common Stock,NYSE
@@ -5561,7 +5563,6 @@ THG,THG,Hanover Insurance Group Inc,NYSE
 THM,THM,"International Tower Hill Mines, Ltd. Ordinary Shares (Canada)",AMEX
 THO,THO,"Thor Industries, Inc. Common Stock",NYSE
 THQ,THQ,abrdn Healthcare Opportunities Fund Shares of Beneficial Interest,NYSE
-THR,THR,"Thermon Group Holdings, Inc. Common Stock",NYSE
 THW,THW,abrdn World Healthcare Fund Shares of Beneficial Interest,NYSE
 TIC,TIC,"TIC Solutions, Inc. Common Stock",NYSE
 TII,TII,Titan Mining Corporation Common Shares,AMEX
