@@ -22,7 +22,6 @@ ABTC,ABTC,American Bitcoin Corp. - Class A Common Stock,NASDAQ
 ABTS,ABTS,Abits Group Inc - Ordinary Shares,NASDAQ
 ABUS,ABUS,Arbutus Biopharma Corporation - Common Stock,NASDAQ
 ABVC,ABVC,"ABVC BioPharma, Inc. - Common Stock",NASDAQ
-ABVE,ABVE,Above Food Ingredients Inc. - Common Stock,NASDAQ
 ABVX,ABVX,Abivax SA - American Depositary Shares,NASDAQ
 ACAA,ACAA,Averin Capital Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 ACAD,ACAD,ACADIA Pharmaceuticals Inc. - Common Stock,NASDAQ
@@ -1096,7 +1095,6 @@ FER,FER,Ferrovial N.V. - Ordinary Shares,NASDAQ
 FERA,FERA,Fifth Era Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 FFAI,FFAI,Faraday Future Intelligent Electric Inc. - Class A Common Stock,NASDAQ
 FFBC,FFBC,First Financial Bancorp. - Common Stock,NASDAQ
-FFIC,FFIC,Flushing Financial Corporation - Common Stock,NASDAQ
 FFIN,FFIN,"First Financial Bankshares, Inc. - Common Stock",NASDAQ
 FFIV,FFIV,"F5, Inc. - Common Stock",NASDAQ
 FGBI,FGBI,"First Guaranty Bancshares, Inc. - Common Stock",NASDAQ
@@ -4019,7 +4017,7 @@ DC,DC,Dakota Gold Corp. Common Stock,AMEX
 DCH,DCH,Dauch Corporation Common Stock,NYSE
 DCI,DCI,"Donaldson Company, Inc. Common Stock",NYSE
 DCO,DCO,Ducommun Incorporated Common Stock,NYSE
-DCOM,DCOM,"Dime Community Bancshares, Inc. Common Stock",NYSE
+DCOM,DCOM,"Dime Commercial Bancshares, Inc. Common Stock",NYSE
 DD,DD,"DuPont de Nemours, Inc. Common Stock",NYSE
 DDC,DDC,DDC Enterprise Limited Class A Ordinary Shares,AMEX
 DDD,DDD,3D Systems Corporation Common Stock,NYSE
@@ -5022,7 +5020,7 @@ NVG,NVG,Nuveen AMT-Free Municipal Credit Income Fund,NYSE
 NVGS,NVGS,Navigator Holdings Ltd. Ordinary Shares (Marshall Islands),NYSE
 NVO,NVO,Novo Nordisk A/S Common Stock,NYSE
 NVR,NVR,"NVR, Inc. Common Stock",NYSE
-NVRI-V,NVRI-V,Enviri Corporation Common Stock When-Issued,NYSE
+NVRI,NVRI,Enviri Corporation Common Stock,NYSE
 NVS,NVS,Novartis AG Common Stock,NYSE
 NVST,NVST,Envista Holdings Corporation Common Stock,NYSE
 NVT,NVT,nVent Electric plc Ordinary Shares,NYSE
@@ -5741,10 +5739,10 @@ VPG,VPG,"Vishay Precision Group, Inc. Common Stock",NYSE
 VPV,VPV,Invesco Pennsylvania Value Municipal Income Trust Common Stock (DE),NYSE
 VRT,VRT,"Vertiv Holdings, LLC Class A Common Stock",NYSE
 VRTS,VRTS,"Virtus Investment Partners, Inc. Common Stock",NYSE
-VSCO,VSCO,Victorias Secret & Co. Common Stock,NYSE
 VSH,VSH,"Vishay Intertechnology, Inc. Common Stock",NYSE
 VST,VST,Vistra Corp. Common Stock,NYSE
 VSTS,VSTS,Vestis Corporation Common Stock,NYSE
+VSXY,VSXY,Victorias Secret & Co. Common Stock,NYSE
 VTAK,VTAK,"Catheter Precision, Inc. Common Stock",AMEX
 VTEX,VTEX,VTEX Class A Common Shares,NYSE
 VTMX,VTMX,"Corporacion Inmobiliaria Vesta, S.A.B de C.V. American Depositary Shares, each representing ten (10) Common Shares",NYSE
