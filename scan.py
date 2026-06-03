@@ -344,6 +344,19 @@ def analyze(df: pd.DataFrame) -> dict | None:
     contracting = bool(not pd.isna(rng_prior) and rng_prior > 0 and rng_recent < rng_prior * 0.75)
     prior_move = max(r1m if not pd.isna(r1m) else 0, r3m if not pd.isna(r3m) else 0)
 
+    # ----- Holding vs rolling over (ground-truthed to user chart reads 2026-06-03) -----
+    # Where the last close sits in the recent 15-bar range: ~100 = pinned at the
+    # highs (coiling under a pivot), ~0 = collapsed to the lows (a BROKEN base, e.g.
+    # the user's CYTK "broken base"). A buyable VCP holds the upper part; a base
+    # rolling into the lower third is failing and must not be tagged a tight VCP.
+    if len(close) >= 15:
+        _lo15 = (low.iloc[-15:].min() if has_hl else close.iloc[-15:].min())
+        _hi15 = (high.iloc[-15:].max() if has_hl else close.iloc[-15:].max())
+        range_pos = float(100 * (last - _lo15) / (_hi15 - _lo15)) if _hi15 > _lo15 else 50.0
+    else:
+        range_pos = 50.0
+    rolling_over = bool(range_pos < 35)
+
     # ----- Qullamaggie "surfing a moving average" -----
     # His signature read: after a big move the stock goes sideways and *rides*
     # ("surfs") one of three MAs — the 10, 20 or 50-day — building higher lows
@@ -420,7 +433,7 @@ def analyze(df: pd.DataFrame) -> dict | None:
 
     # Minervini VCP / tight setup: a Stage-2 leader within 15% of its high whose
     # range is contracting while volume dries up — the classic pre-breakout coil.
-    vcp_setup = bool(stage2 and pct_off_high <= 15 and contracting and vol_dryup)
+    vcp_setup = bool(stage2 and pct_off_high <= 15 and contracting and vol_dryup and not rolling_over)
 
     # Qullamaggie breakout: a high-ADR mover above its 10/20/50 SMAs that already
     # made a big move (>=25% over 1-3M) and is now coiling tight near its highs.
@@ -429,6 +442,77 @@ def analyze(df: pd.DataFrame) -> dict | None:
         and crit["price_gt_sma10"] and crit["price_gt_sma20"] and crit["price_gt_sma50"]
         and prior_move >= 25 and pct_off_high <= 15 and contracting
     )
+
+    # ===== Minervini / Momentum-Masters metrics (studied from the books, 2026-05-31) =====
+    # Accumulation: total volume on up-days vs down-days over ~50 bars. >1 = under
+    # accumulation (Minervini's Stage-2 criterion; David Ryan & Ritchie's core read).
+    _w = min(50, len(close) - 1)
+    _chg = close.diff().iloc[-_w:]
+    _volw = vol.iloc[-_w:]
+    _upv = float(_volw[_chg > 0].sum()); _dnv = float(_volw[_chg < 0].sum())
+    up_down_vol_ratio = (_upv / _dnv) if _dnv > 0 else np.nan
+    under_accumulation = bool(not pd.isna(up_down_vol_ratio) and up_down_vol_ratio > 1.0)
+
+    # Pocket pivot (Morales/Kacher — O'Neil disciples in Minervini's circle): an UP day
+    # whose volume exceeds the largest DOWN-day volume of the prior 10 sessions, in a
+    # constructive uptrend (above 10 & 50 SMA, near highs) — an institutional footprint.
+    pocket_pivot = False
+    if len(close) >= 11:
+        _d = close.diff()
+        _downv = [vol.iloc[-1 - k] for k in range(1, 11) if _d.iloc[-1 - k] < 0]
+        if _d.iloc[-1] > 0 and _downv and vol.iloc[-1] > max(_downv) \
+           and crit["price_gt_sma10"] and crit["price_gt_sma50"] and pct_off_high <= 25:
+            pocket_pivot = True
+
+    # Power Play / High Tight Flag (Minervini's "velocity pattern"): an explosive +100%
+    # move in <= ~8 weeks, then a tight (<=25%) 3-6 week consolidation, still near the
+    # high, in a Stage-2 uptrend. The one setup he'll buy without fundamentals.
+    power_play = False
+    power_play_gain = np.nan
+    if has_hl and stage2 and len(close) >= 70:
+        _H = df["High"].astype(float); _L = df["Low"].astype(float)
+        for _c in range(10, 31):                        # consolidation length ~2-6 weeks
+            _s = len(close) - _c
+            _chi = _H.iloc[_s:].max(); _clo = _L.iloc[_s:].min()
+            if _chi <= 0 or (_chi - _clo) / _chi > 0.25:
+                continue                                 # consolidation must be tight
+            _p0 = max(0, _s - 40)                         # explosive leg: 40 bars before it
+            if _p0 >= _s:
+                continue
+            _plo = _L.iloc[_p0:_s].min(); _ptop = _H.iloc[_p0:_s].max()
+            if _plo > 0 and (_ptop / _plo - 1) >= 1.00 and last >= _chi * 0.80:
+                power_play = True
+                power_play_gain = (_ptop / _plo - 1) * 100
+                break
+
+    # VCP contraction count + footprint (Minervini's real VCP): successive pullbacks in
+    # the base, each shallower than the last, tightening into the pivot. Footprint =
+    # "<weeks>W <deepest%>/<tightest%> <#>T". Refines the coarse vcp_setup boolean.
+    vcp_contractions = 0
+    vcp_footprint = None
+    if has_hl and len(close) >= 30:
+        _w2 = min(60, len(close))
+        _Hs = df["High"].astype(float).iloc[-_w2:].values
+        _Ls = df["Low"].astype(float).iloc[-_w2:].values
+        _ph = [i for i in range(2, _w2 - 2)
+               if _Hs[i] >= _Hs[i-1] and _Hs[i] >= _Hs[i-2] and _Hs[i] >= _Hs[i+1] and _Hs[i] >= _Hs[i+2]]
+        _pl = [i for i in range(2, _w2 - 2)
+               if _Ls[i] <= _Ls[i-1] and _Ls[i] <= _Ls[i-2] and _Ls[i] <= _Ls[i+1] and _Ls[i] <= _Ls[i+2]]
+        _depths = []
+        for _hi in _ph:
+            _nl = [lo for lo in _pl if lo > _hi]
+            if _nl and _Hs[_hi] > 0:
+                _depths.append((_Hs[_hi] - _Ls[_nl[0]]) / _Hs[_hi] * 100)
+        if _depths and _depths[-1] <= 15:
+            _run = 1
+            for _j in range(len(_depths) - 1, 0, -1):
+                if _depths[_j] <= _depths[_j - 1] + 1e-9:
+                    _run += 1
+                else:
+                    break
+            if _run >= 2:
+                vcp_contractions = min(_run, 6)
+                vcp_footprint = f"{max(1, round(_w2 / 5))}W {round(max(_depths))}/{round(_depths[-1])} {vcp_contractions}T"
 
     return {
         "close": _safe_float(last),
@@ -450,6 +534,15 @@ def analyze(df: pd.DataFrame) -> dict | None:
         "surfing_ma": surfing_ma,
         "dist_to_ma_pct": _safe_float(dist_to_ma_pct),
         "higher_lows": int(higher_lows),
+        "up_down_vol_ratio": _safe_float(up_down_vol_ratio),
+        "under_accumulation": under_accumulation,
+        "pocket_pivot": pocket_pivot,
+        "power_play": power_play,
+        "power_play_gain": _safe_float(power_play_gain),
+        "vcp_contractions": int(vcp_contractions),
+        "vcp_footprint": vcp_footprint,
+        "range_pos": _safe_float(range_pos),
+        "rolling_over": rolling_over,
         "momentum": _safe_float(momentum),
         "trend_template": trend_template,
         "stage2": stage2,
@@ -1002,13 +1095,19 @@ def main() -> int:
         adr_score = (df_out["adr_pct"].clip(upper=10).fillna(0) / 10 * 100)
         surf_score = df_out["surfing_ma"].notna().astype(int) * 100
         hl_score = (df_out["higher_lows"].clip(upper=3).fillna(0) / 3 * 100)
+        accum_score = df_out["under_accumulation"].astype(int) * 100   # up-vol > down-vol
+        pocket_score = df_out["pocket_pivot"].astype(int) * 100        # institutional footprint
+        hold_score = (~df_out["rolling_over"].astype(bool)).astype(int) * 100  # holding, not breaking down
         df_out["setup_quality"] = (
-            0.35 * df_out["rs_rating"]
-            + 0.15 * adr_score
-            + 0.15 * df_out["trend_template"].astype(int) * 100
-            + 0.10 * df_out["contracting"].astype(int) * 100
-            + 0.15 * surf_score
-            + 0.10 * hl_score
+            0.30 * df_out["rs_rating"]
+            + 0.12 * adr_score
+            + 0.12 * df_out["trend_template"].astype(int) * 100
+            + 0.08 * df_out["contracting"].astype(int) * 100
+            + 0.12 * surf_score
+            + 0.08 * hl_score
+            + 0.06 * accum_score
+            + 0.05 * pocket_score
+            + 0.07 * hold_score
         ).round(0).astype(int)
         df_out = df_out.sort_values("rs_rating", ascending=False).reset_index(drop=True)
 

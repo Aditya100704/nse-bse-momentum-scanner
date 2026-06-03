@@ -79,6 +79,12 @@
       sub: "Stage‑2 leaders within 15% of their high whose range is contracting while volume dries up — the pre‑breakout volatility contraction",
       filter: (r) => r.vcp_setup === true,
     },
+    power_play: {
+      label: "Power Play",
+      title: "Minervini Power Play — high tight flag",
+      sub: "Explosive +100% move in ≤ 8 weeks, then a tight (≤ 25%) 3–6 week consolidation still near the high — Minervini's 'velocity pattern', the one setup he'll buy without fundamentals",
+      filter: (r) => r.power_play === true,
+    },
     breakout52w: {
       label: "52w High Breakout",
       title: "52‑Week High Breakout",
@@ -151,6 +157,9 @@
     if (r.vol_surge != null && !Number.isNaN(r.vol_surge)) bits.push(`${r.vol_surge.toFixed(1)}× vol`);
     if (r.surfing_ma) bits.push(`surfing ${r.surfing_ma}D MA`);
     if (r.higher_lows >= 2) bits.push(`${r.higher_lows} higher lows`);
+    if (r.power_play) bits.push("Power Play");
+    if (r.pocket_pivot) bits.push("pocket pivot");
+    if (r.vcp_footprint) bits.push(`VCP ${r.vcp_footprint}`);
     return bits.join("  ·  ");
   };
   const symbolCell = (r, badge) =>
@@ -314,6 +323,8 @@
       if (typeof av === "string") return av.localeCompare(bv) * dir;
       return (av - bv) * dir;
     });
+
+    state.shownRows = rows;   // exactly what this scanner shows (filtered+sorted) — for per-scanner copy
 
     if (!rows.length) {
       tbody.innerHTML = "";
@@ -1167,36 +1178,42 @@
       URL.revokeObjectURL(a.href);
     });
 
-    // Copy every stock across ALL scanners (qualifiers + IPOs), deduped, in
-    // TradingView import format: NSE:SYM,BSE:SYM,...  Paste into a TV watchlist.
-    $("copyTV").addEventListener("click", async () => {
-      const seen = new Set();
-      const syms = [];
-      for (const r of [...state.rows, ...state.ipos, ...state.eps]) {
-        if (!r.symbol) continue;
-        const tvex = IS_US ? ((r.exchange && ["NASDAQ", "NYSE", "AMEX"].includes(r.exchange)) ? r.exchange : "NASDAQ")
-                           : (r.exchange === "NSE" ? "NSE" : "BSE");
-        const tv = `${tvex}:${r.symbol}`;
+    // TradingView import symbol for a row: NASDAQ:SYM / NYSE:SYM / NSE:SYM / BSE:SYM
+    const tvSym = (r) => {
+      const ex = IS_US ? ((r.exchange && ["NASDAQ", "NYSE", "AMEX"].includes(r.exchange)) ? r.exchange : "NASDAQ")
+                       : (r.exchange === "NSE" ? "NSE" : "BSE");
+      return `${ex}:${r.symbol}`;
+    };
+    // Copy a set of rows as a deduped TradingView watchlist string (EX:SYM,EX:SYM,…).
+    const copyRowsToTV = async (rows, btn) => {
+      const seen = new Set(), syms = [];
+      for (const r of (rows || [])) {
+        if (!r || !r.symbol) continue;
+        const tv = tvSym(r);
         if (seen.has(tv)) continue;
-        seen.add(tv);
-        syms.push(tv);
+        seen.add(tv); syms.push(tv);
       }
+      const orig = btn.dataset.label || btn.textContent;
+      btn.dataset.label = orig;
+      const done = (msg) => { btn.textContent = msg; setTimeout(() => { btn.textContent = btn.dataset.label; }, 2000); };
+      if (!syms.length) { done("Nothing to copy"); return; }
       const text = syms.join(",");
-      const btn = $("copyTV");
-      const orig = btn.textContent;
       try {
         await navigator.clipboard.writeText(text);
-        btn.textContent = `Copied ${syms.length} ✓`;
+        done(`Copied ${syms.length} ✓`);
       } catch (e) {
-        // Fallback for older browsers / permission issues
         const ta = document.createElement("textarea");
         ta.value = text; document.body.appendChild(ta); ta.select();
-        try { document.execCommand("copy"); btn.textContent = `Copied ${syms.length} ✓`; }
-        catch (_) { btn.textContent = "Copy failed"; }
+        try { document.execCommand("copy"); done(`Copied ${syms.length} ✓`); }
+        catch (_) { done("Copy failed"); }
         document.body.removeChild(ta);
       }
-      setTimeout(() => { btn.textContent = orig; }, 2000);
-    });
+    };
+    // "Copy list" = THIS scanner only, exactly as currently filtered/sorted (per-scanner).
+    $("copyTV").addEventListener("click", () => copyRowsToTV(state.shownRows, $("copyTV")));
+    // "Copy all" = every stock across ALL scanners (qualifiers + IPOs + EPs), deduped.
+    $("copyTVAll").addEventListener("click", () =>
+      copyRowsToTV([...state.rows, ...state.ipos, ...state.eps], $("copyTVAll")));
   }
 
   /* ============================================================ ticker tooltip
