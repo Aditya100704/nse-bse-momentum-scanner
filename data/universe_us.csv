@@ -1663,7 +1663,7 @@ KG,KG,"Kestrel Group, Ltd. - Common Stock",NASDAQ
 KGEI,KGEI,Kolibri Global Energy Inc. - Common stock,NASDAQ
 KHC,KHC,The Kraft Heinz Company - Common Stock,NASDAQ
 KIDS,KIDS,OrthoPediatrics Corp. - Common Stock,NASDAQ
-KIDZ,KIDZ,"Classover Holdings, Inc. - Class B Common Stock",NASDAQ
+KIDZ,KIDZ,KIDZ AI Inc. - Class B Common Stock,NASDAQ
 KINS,KINS,"Kingstone Companies, Inc - Common Stock",NASDAQ
 KITT,KITT,"Nauticus Robotics, Inc. - Common stock",NASDAQ
 KLAC,KLAC,KLA Corporation  - Common Stock,NASDAQ
@@ -2321,6 +2321,7 @@ PAYS,PAYS,"Paysign, Inc. - Common Stock",NASDAQ
 PAYX,PAYX,"Paychex, Inc. - Common Stock",NASDAQ
 PBFS,PBFS,"Pioneer Bancorp, Inc. - Common Stock",NASDAQ
 PBHC,PBHC,"Pathfinder Bancorp, Inc. - Common Stock",NASDAQ
+PBK,PBK,PowerBank Corporation - Common Stock,NASDAQ
 PBM,PBM,Psyence Biomedical Ltd. - Common Shares,NASDAQ
 PBYI,PBYI,Puma Biotechnology Inc - Common Stock,NASDAQ
 PC,PC,Premium Catering (Holdings) Limited - Ordinary Shares,NASDAQ
@@ -2905,7 +2906,6 @@ SUNS,SUNS,"Sunrise Realty Trust, Inc. - Common Stock",NASDAQ
 SUPN,SUPN,"Supernus Pharmaceuticals, Inc. - Common Stock",NASDAQ
 SUPX,SUPX,SuperX AI Technology Limited - Ordinary Shares,NASDAQ
 SURG,SURG,"SurgePays, Inc. - Common Stock",NASDAQ
-SUUN,SUUN,PowerBank Corporation - Common Stock,NASDAQ
 SVA,SVA,"Sinovac Biotech, Ltd. - Ordinary Shares (Antigua/Barbudo)",NASDAQ
 SVAC,SVAC,Spring Valley Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
 SVAQ,SVAQ,Silicon Valley Acquisition Corp. - Class A Ordinary Shares,NASDAQ
@@ -3394,6 +3394,7 @@ ZYBT,ZYBT,Zhengye Biotechnology Holding Limited - Class A Ordinary Shares,NASDAQ
 ZYME,ZYME,Zymeworks Inc. - Common Stock,NASDAQ
 A,A,"Agilent Technologies, Inc. Common Stock",NYSE
 AA,AA,Alcoa Corporation Common Stock,NYSE
+AADX,AADX,"Applied Aerospace & Defense, Inc. Common Stock",NYSE
 AAMI,AAMI,Acadian Asset Management Inc. Common Stock,NYSE
 AAP,AAP,Advance Auto Parts Inc.,NYSE
 AAT,AAT,"American Assets Trust, Inc. Common Stock",NYSE
