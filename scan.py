@@ -52,6 +52,7 @@ if _IS_US:
     _TURNOVER_DIV = 1e6                                              # $ -> $M
     MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "10.0"))   # $10M/day
     MIN_PRICE = float(os.getenv("SCAN_MIN_PRICE", "10.0"))          # avoid sub-$10 (Minervini)
+    MIN_ADR = float(os.getenv("SCAN_MIN_ADR", "4.0"))               # US: Qullamaggie energetic-mover floor
     EP_GAP = float(os.getenv("SCAN_EP_GAP", "10.0"))                # Qullamaggie EP gap >= 10%
     EP_TURNOVER_MIN = float(os.getenv("SCAN_EP_LIQ", "100.0"))      # EP dollar-volume >= $100M
     IPO_LIQ_DEFAULT = "5.0"                                          # $5M/day for fresh listings
@@ -61,6 +62,7 @@ else:
     _TURNOVER_DIV = 1e7                                              # Rs -> Rs crore
     MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "10.0"))   # Rs 10 cr/day
     MIN_PRICE = float(os.getenv("SCAN_MIN_PRICE", "0.0"))
+    MIN_ADR = float(os.getenv("SCAN_MIN_ADR", "0.0"))               # India: no ADR floor
     EP_GAP = float(os.getenv("SCAN_EP_GAP", "5.0"))
     EP_TURNOVER_MIN = float(os.getenv("SCAN_EP_LIQ", "2.0"))
     IPO_LIQ_DEFAULT = "1.0"
@@ -596,15 +598,17 @@ def analyze_ipo(df: pd.DataFrame) -> dict | None:
     # Trend conditions (relaxed for IPOs — no SMA200 yet)
     price_gt_sma20 = (smas["sma20"] is not None and last > smas["sma20"])
     price_gt_sma50 = (smas["sma50"] is not None and last > smas["sma50"])
-    # Uptrend gate that degrades gracefully for very fresh listings: prefer the
-    # 20-bar SMA, fall back to the 10-bar, and for listings too new for even a
-    # 10-bar SMA (< 10 bars, incl. 1-day-old) don't reject on trend — include them.
-    if smas["sma20"] is not None:
-        uptrend_ok = bool(last > smas["sma20"])
-    elif smas["sma10"] is not None:
-        uptrend_ok = bool(last > smas["sma10"])
-    else:
+    # Age-staged uptrend gate: < 10 bars show all (too new to judge); 10-19 bars
+    # must hold the 10-day SMA; 20-49 the 20-day; 50+ the 50-day. The MA lengthens
+    # as the listing matures so the trend test is always age-appropriate.
+    if n < 10:
         uptrend_ok = True
+    elif n < 20:
+        uptrend_ok = bool(smas["sma10"] is not None and last > smas["sma10"])
+    elif n < 50:
+        uptrend_ok = bool(smas["sma20"] is not None and last > smas["sma20"])
+    else:
+        uptrend_ok = bool(smas["sma50"] is not None and last > smas["sma50"])
 
     return {
         "is_ipo": True,
@@ -927,6 +931,39 @@ def _compute_sectors(qualifiers: list[dict]) -> list[dict]:
     return rows
 
 
+def _fetch_ipo_mcap(rows: list[dict]) -> dict[str, float | None]:
+    """Market cap (₹ crore for India, $M for US) per symbol, from TradingView's
+    PUBLIC scanner (same keyless endpoint fundamentals_fetch uses). Needed because
+    bhavcopy carries no shares-outstanding, so the scanner can't compute mcap on
+    its own. Returns {SYMBOL: mcap} (None if TV doesn't resolve the ticker)."""
+    url = "https://scanner.tradingview.com/america/scan" if _IS_US else "https://scanner.tradingview.com/india/scan"
+    div = 1e6 if _IS_US else 1e7
+    headers = {"User-Agent": "Mozilla/5.0", "Content-Type": "application/json"}
+    tickers = []
+    for r in rows:
+        sym = r["symbol"].upper()
+        if _IS_US:
+            ex = (r.get("exchange") or "NASDAQ").upper()
+            ex = ex if ex in ("NASDAQ", "NYSE", "AMEX") else "NASDAQ"
+        else:
+            ex = "NSE" if (r.get("exchange") or "NSE") == "NSE" else "BSE"
+        tickers.append(f"{ex}:{sym}")
+    out: dict[str, float | None] = {}
+    for i in range(0, len(tickers), 350):
+        chunk = tickers[i:i + 350]
+        try:
+            body = {"symbols": {"tickers": chunk, "query": {"types": []}}, "columns": ["market_cap_basic"]}
+            resp = requests.post(url, json=body, headers=headers, timeout=30)
+            resp.raise_for_status()
+            for row in resp.json().get("data", []):
+                s = row["s"].split(":", 1)[1].upper()
+                v = row["d"][0]
+                out[s] = round(v / div) if isinstance(v, (int, float)) else None
+        except Exception as exc:
+            print(f"[ipo-mcap] batch {i} failed: {exc}", flush=True)
+    return out
+
+
 def main() -> int:
     started = datetime.now(timezone.utc)
     if _IS_US:
@@ -1025,6 +1062,10 @@ def main() -> int:
     #   bars 30-199, turnover >= 1 cr, within 25% of all-time high since listing
     MIN_IPO_LIQ_CR = float(os.getenv("SCAN_IPO_MIN_LIQ_CR", IPO_LIQ_DEFAULT))
     MAX_IPO_OFF_HIGH = float(os.getenv("SCAN_IPO_MAX_OFF_HIGH", "25.0"))
+    # Quality floor on the IPO list (India default): drop penny + micro-cap names.
+    # mcap comes from TradingView (bhavcopy has no shares) — see _fetch_ipo_mcap.
+    IPO_MIN_PRICE = float(os.getenv("SCAN_IPO_MIN_PRICE", "0.0" if _IS_US else "20.0"))
+    IPO_MIN_MCAP = float(os.getenv("SCAN_IPO_MIN_MCAP", "0.0" if _IS_US else "100.0"))  # cr (IN) / $M (US)
 
     for _, row in universe.iterrows():
         t = row["yf_ticker"]
@@ -1067,6 +1108,9 @@ def main() -> int:
             if (res["close"] is None or res["sma200"] is None or res["sma200"] <= 0
                     or (res["close"] / res["sma200"] - 1) * 100 < 20):
                 continue
+            # ADR floor (US only by default): an energetic mover, not a sleeper.
+            if MIN_ADR and (res["adr_pct"] is None or res["adr_pct"] < MIN_ADR):
+                continue
             rows.append({
                 "symbol": sym,
                 "name": row["name"],
@@ -1080,6 +1124,11 @@ def main() -> int:
         # Recent IPO?
         ipo = analyze_ipo(df)
         if ipo is None:
+            continue
+        # Skip rights entitlements (symbol ending in -RE): temporary ~1-week
+        # instruments, not IPOs. They're <10 bars with no mcap, so without this
+        # they'd flood in via the fresh-listing carve-out.
+        if sym.upper().endswith("-RE"):
             continue
         if ipo["turnover_cr"] is None or ipo["turnover_cr"] < MIN_IPO_LIQ_CR:
             continue
@@ -1097,6 +1146,33 @@ def main() -> int:
             "sector": sector_map.get(sym.upper(), "Other"),
             **ipo,
         })
+
+    # IPO quality gate (India default: price > Rs20 AND mcap > Rs100cr). mcap is
+    # fetched from TradingView since bhavcopy has no shares-outstanding. This also
+    # cleans out symbol-rename / corporate-action artifacts and -RE rights that
+    # masquerade as fresh listings (TV can't resolve them -> dropped). Skipped if
+    # both floors are 0, or if the TV fetch comes back empty (don't nuke on outage).
+    if ipo_rows and (IPO_MIN_PRICE > 0 or IPO_MIN_MCAP > 0):
+        mcap_map = _fetch_ipo_mcap(ipo_rows) if IPO_MIN_MCAP > 0 else {}
+        apply_mcap = IPO_MIN_MCAP > 0 and len(mcap_map) > 0
+        kept = []
+        for r in ipo_rows:
+            if IPO_MIN_PRICE > 0 and (r.get("close") is None or r["close"] < IPO_MIN_PRICE):
+                continue
+            mc = mcap_map.get(r["symbol"].upper())
+            r["mcap"] = mc
+            if apply_mcap and (mc is None or mc < IPO_MIN_MCAP):
+                # Carve-out: KEEP brand-new listings (< 10 bars) that TV hasn't
+                # indexed yet (no mcap) — too fresh to judge. The moment TV has an
+                # mcap for them (any age), the price+mcap rule applies normally.
+                if mc is None and (r.get("bars") or 0) < 10:
+                    pass  # keep the very-fresh, mcap-less listing
+                else:
+                    continue
+            kept.append(r)
+        note = "" if (apply_mcap or IPO_MIN_MCAP <= 0) else " (mcap gate skipped: TV fetch empty)"
+        print(f"[ipo] price>={IPO_MIN_PRICE} & mcap>={IPO_MIN_MCAP} gate: {len(ipo_rows)} -> {len(kept)}{note}", flush=True)
+        ipo_rows = kept
 
     df_out = pd.DataFrame(rows)
     if len(df_out):
@@ -1178,10 +1254,13 @@ def main() -> int:
             "max_pct_below_52w_high": WITHIN_PCT_OF_52W_HIGH,
             "above_sma200": True,
             "min_pct_above_sma200": 20.0,
+            "min_adr_pct": MIN_ADR,
             "dedupe_nse_bse": "keep NSE",
             "ipo_min_bars": 1,
             "ipo_min_liquidity_cr": MIN_IPO_LIQ_CR,
             "ipo_max_off_high": MAX_IPO_OFF_HIGH,
+            "ipo_min_price": IPO_MIN_PRICE,
+            "ipo_min_mcap": IPO_MIN_MCAP,
         },
     }
 
