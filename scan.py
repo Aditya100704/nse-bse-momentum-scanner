@@ -1273,6 +1273,13 @@ def main() -> int:
         "episodic_pivots": df_eps.to_dict(orient="records") if len(df_eps) else [],
         "history": history,
     }
+    # Tag each stock with tv_ok / tv_exchange so the dashboard's copy-to-TradingView
+    # list never emits a ticker TV can't resolve. Non-fatal (skips on any error).
+    try:
+        from tv_validate import annotate as _tv_annotate
+        _tv_annotate(payload, _IS_US)
+    except Exception as exc:
+        print(f"[tv_validate] skipped (non-fatal): {exc}", flush=True)
     # Pandas DataFrame coerces None -> NaN on numeric columns. json.dumps
     # writes NaN as the literal "NaN", which JavaScript JSON.parse rejects.
     # Walk the payload and replace NaN/Inf with None before serializing.

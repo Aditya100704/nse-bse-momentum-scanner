@@ -133,7 +133,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 100,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BW",
@@ -185,7 +187,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 100,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MU",
@@ -237,7 +241,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 99,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BE",
@@ -289,7 +295,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 99,
-      "setup_quality": 80
+      "setup_quality": 80,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AEHR",
@@ -341,7 +349,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 99,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WDC",
@@ -393,7 +403,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 98,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LITE",
@@ -445,7 +457,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 98,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PL",
@@ -497,7 +511,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 98,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MXL",
@@ -549,7 +565,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 97,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OPTX",
@@ -601,7 +619,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 97,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TE",
@@ -653,7 +673,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 97,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CLYM",
@@ -705,7 +727,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 96,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HUT",
@@ -757,7 +781,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 96,
-      "setup_quality": 70
+      "setup_quality": 70,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VICR",
@@ -809,7 +835,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 95,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "STX",
@@ -861,7 +889,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 95,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DOCN",
@@ -913,7 +943,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 95,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AMPX",
@@ -965,7 +997,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 94,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "QTTB",
@@ -1017,7 +1051,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 94,
-      "setup_quality": 73
+      "setup_quality": 73,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CIEN",
@@ -1069,7 +1105,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 94,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "OSS",
@@ -1121,7 +1159,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 93,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VSH",
@@ -1173,7 +1213,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 93,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "NVTS",
@@ -1225,7 +1267,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 93,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NBIS",
@@ -1277,7 +1321,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 92,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BAND",
@@ -1329,7 +1375,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 92,
-      "setup_quality": 70
+      "setup_quality": 70,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CIFR",
@@ -1381,7 +1429,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 92,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TSEM",
@@ -1433,7 +1483,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 91,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MRVL",
@@ -1485,7 +1537,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 91,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VPG",
@@ -1537,7 +1591,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 91,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "TTMI",
@@ -1589,7 +1645,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 90,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "IREN",
@@ -1641,7 +1699,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 90,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WULF",
@@ -1693,7 +1753,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 90,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "INTC",
@@ -1745,7 +1807,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 89,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "UMAC",
@@ -1797,7 +1861,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 89,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "AMEX"
     },
     {
       "symbol": "SIMO",
@@ -1849,7 +1915,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 88,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VIAV",
@@ -1901,7 +1969,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 88,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PENG",
@@ -1953,7 +2023,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 88,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "QUIK",
@@ -2005,7 +2077,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 87,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "STRL",
@@ -2057,7 +2131,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 87,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ICHR",
@@ -2109,7 +2185,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 87,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "UCTT",
@@ -2161,7 +2239,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 86,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AGL",
@@ -2213,7 +2293,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 86,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "POWL",
@@ -2265,7 +2347,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 86,
-      "setup_quality": 89
+      "setup_quality": 89,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "COHR",
@@ -2317,7 +2401,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 85,
-      "setup_quality": 80
+      "setup_quality": 80,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "BRUN",
@@ -2369,7 +2455,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 85,
-      "setup_quality": 70
+      "setup_quality": 70,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AMD",
@@ -2421,7 +2509,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 85,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DELL",
@@ -2473,7 +2563,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 84,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LAR",
@@ -2525,7 +2617,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 84,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AIP",
@@ -2577,7 +2671,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 84,
-      "setup_quality": 87
+      "setup_quality": 87,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LPTH",
@@ -2629,7 +2725,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 83,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TER",
@@ -2681,7 +2779,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 83,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SYRE",
@@ -2733,7 +2833,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 83,
-      "setup_quality": 82
+      "setup_quality": 82,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FLEX",
@@ -2785,7 +2887,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 82,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ARM",
@@ -2837,7 +2941,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 82,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ENLT",
@@ -2889,7 +2995,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 81,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ALAB",
@@ -2941,7 +3049,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 81,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ASX",
@@ -2993,7 +3103,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 81,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ALM",
@@ -3045,7 +3157,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 80,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LASR",
@@ -3097,7 +3211,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 80,
-      "setup_quality": 88
+      "setup_quality": 88,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HIMX",
@@ -3149,7 +3265,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 80,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "STM",
@@ -3201,7 +3319,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 79,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "RLAY",
@@ -3253,7 +3373,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 79,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SEDG",
@@ -3305,7 +3427,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 79,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SKYT",
@@ -3357,7 +3481,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 78,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SMTC",
@@ -3409,7 +3535,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 78,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ACMR",
@@ -3461,7 +3589,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 78,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "URGN",
@@ -3513,7 +3643,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 77,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HPE",
@@ -3565,7 +3697,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 77,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LRCX",
@@ -3617,7 +3751,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 77,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ASTS",
@@ -3669,7 +3805,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 76,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DRTS",
@@ -3721,7 +3859,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 76,
-      "setup_quality": 73
+      "setup_quality": 73,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GLW",
@@ -3773,7 +3913,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 76,
-      "setup_quality": 73
+      "setup_quality": 73,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MKSI",
@@ -3825,7 +3967,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 75,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AMKR",
@@ -3877,7 +4021,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 75,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NOK",
@@ -3929,7 +4075,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 74,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "APLD",
@@ -3981,7 +4129,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 74,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FEIM",
@@ -4033,7 +4183,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 74,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "UMC",
@@ -4085,7 +4237,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 73,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ON",
@@ -4137,7 +4291,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 73,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "RVMD",
@@ -4189,7 +4345,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 73,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ATEX",
@@ -4241,7 +4399,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 72,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "KLIC",
@@ -4293,7 +4453,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 72,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BB",
@@ -4345,7 +4507,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 72,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "COHU",
@@ -4397,7 +4561,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 71,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OUST",
@@ -4449,7 +4615,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 71,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LSCC",
@@ -4501,7 +4669,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 71,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ARWR",
@@ -4553,7 +4723,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 70,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FIX",
@@ -4605,7 +4777,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 70,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "BELFA",
@@ -4657,7 +4831,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 70,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CENX",
@@ -4709,7 +4885,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 69,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BELFB",
@@ -4761,7 +4939,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 69,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VSXY",
@@ -4813,7 +4993,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 69,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "NESR",
@@ -4865,7 +5047,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 68,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CLS",
@@ -4917,7 +5101,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 68,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CEVA",
@@ -4969,7 +5155,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 67,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SANM",
@@ -5021,7 +5209,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 67,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AOSL",
@@ -5073,7 +5263,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 67,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VECO",
@@ -5125,7 +5317,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 66,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MTSI",
@@ -5177,7 +5371,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 66,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CMPS",
@@ -5229,7 +5425,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 66,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MOD",
@@ -5281,7 +5479,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 65,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SPHR",
@@ -5333,7 +5533,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 65,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "GTX",
@@ -5385,7 +5587,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 65,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "EFXT",
@@ -5437,7 +5641,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 64,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "RIOT",
@@ -5489,7 +5695,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 64,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TXG",
@@ -5541,7 +5749,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 64,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "RMBS",
@@ -5593,7 +5803,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 63,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FTRE",
@@ -5645,7 +5857,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 63,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "RAPP",
@@ -5697,7 +5911,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 63,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PDFS",
@@ -5749,7 +5965,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 62,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LQDA",
@@ -5801,7 +6019,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 62,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NBR",
@@ -5853,7 +6073,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 62,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "INOD",
@@ -5905,7 +6127,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 61,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NEXA",
@@ -5957,7 +6181,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 61,
-      "setup_quality": 78
+      "setup_quality": 78,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CRDO",
@@ -6009,7 +6235,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 60,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CYD",
@@ -6061,7 +6289,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 60,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CYRX",
@@ -6113,7 +6343,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 60,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AXGN",
@@ -6165,7 +6397,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 59,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AMAT",
@@ -6217,7 +6451,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 59,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AGX",
@@ -6269,7 +6505,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 59,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "DIOD",
@@ -6321,7 +6559,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 58,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AMBQ",
@@ -6373,7 +6613,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 58,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "HBM",
@@ -6425,7 +6667,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 58,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ADEA",
@@ -6477,7 +6721,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 57,
-      "setup_quality": 70
+      "setup_quality": 70,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "IRDM",
@@ -6529,7 +6775,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 57,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DFTX",
@@ -6581,7 +6829,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 57,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CSTM",
@@ -6633,7 +6883,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 56,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AA",
@@ -6685,7 +6937,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 56,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ACLS",
@@ -6737,7 +6991,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 56,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GFS",
@@ -6789,7 +7045,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 55,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TH",
@@ -6841,7 +7099,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 55,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SYNA",
@@ -6893,7 +7153,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 55,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MYRG",
@@ -6945,7 +7207,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 54,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ONTO",
@@ -6997,7 +7261,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 54,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PACS",
@@ -7049,7 +7315,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 53,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SHLS",
@@ -7101,7 +7369,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 53,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VRT",
@@ -7153,7 +7423,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 53,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "TWST",
@@ -7205,7 +7477,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 52,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FN",
@@ -7257,7 +7531,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 52,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "KLAC",
@@ -7309,7 +7585,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 52,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PUMP",
@@ -7361,7 +7639,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 51,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CLMT",
@@ -7413,7 +7693,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 51,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CORZ",
@@ -7465,7 +7747,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 51,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "QMCO",
@@ -7517,7 +7801,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 50,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "IESC",
@@ -7569,7 +7855,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 50,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PLPC",
@@ -7621,7 +7909,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 50,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MPWR",
@@ -7673,7 +7963,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 49,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ALNT",
@@ -7725,7 +8017,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 49,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CECO",
@@ -7777,7 +8071,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 49,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LINC",
@@ -7829,7 +8125,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 48,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "XMTR",
@@ -7881,7 +8179,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 48,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GH",
@@ -7933,7 +8233,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 48,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NXT",
@@ -7985,7 +8287,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 47,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TVTX",
@@ -8037,7 +8341,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 47,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GHM",
@@ -8089,7 +8395,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 47,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SKM",
@@ -8141,7 +8449,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 46,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ARCB",
@@ -8193,7 +8503,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 46,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CAMT",
@@ -8245,7 +8557,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 45,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SEI",
@@ -8297,7 +8611,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 45,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LFUS",
@@ -8349,7 +8665,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 45,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OBE",
@@ -8401,7 +8719,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 44,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "AMEX"
     },
     {
       "symbol": "ADTN",
@@ -8453,7 +8773,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 44,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "POWI",
@@ -8505,7 +8827,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 44,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BWA",
@@ -8557,7 +8881,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 43,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "DDOG",
@@ -8609,7 +8935,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 43,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ENPH",
@@ -8661,7 +8989,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 43,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ECG",
@@ -8713,7 +9043,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 42,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "VSTS",
@@ -8765,7 +9097,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 42,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PTEN",
@@ -8817,7 +9151,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 42,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WTTR",
@@ -8869,7 +9205,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 41,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LBRT",
@@ -8921,7 +9259,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 41,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MEC",
@@ -8973,7 +9313,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 41,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "TIGO",
@@ -9025,7 +9367,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 40,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NVMI",
@@ -9077,7 +9421,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 40,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GNRC",
@@ -9129,7 +9475,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 40,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AKAM",
@@ -9181,7 +9529,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 39,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ALGM",
@@ -9233,7 +9583,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 39,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ROG",
@@ -9285,7 +9637,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 38,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "EZPW",
@@ -9337,7 +9691,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 38,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ATRO",
@@ -9389,7 +9745,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 38,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TWLO",
@@ -9441,7 +9799,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 37,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CGNX",
@@ -9493,7 +9853,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 37,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "RXO",
@@ -9545,7 +9907,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 37,
-      "setup_quality": 36
+      "setup_quality": 36,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MRCY",
@@ -9597,7 +9961,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 36,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "EWTX",
@@ -9649,7 +10015,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 36,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ATI",
@@ -9701,7 +10069,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 36,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "FROG",
@@ -9753,7 +10123,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 35,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NTAP",
@@ -9805,7 +10177,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 35,
-      "setup_quality": 29
+      "setup_quality": 29,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SA",
@@ -9857,7 +10231,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 35,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "YOU",
@@ -9909,7 +10285,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 34,
-      "setup_quality": 43
+      "setup_quality": 43,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "EXTR",
@@ -9961,7 +10339,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 34,
-      "setup_quality": 36
+      "setup_quality": 36,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HCC",
@@ -10013,7 +10393,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 34,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "DGII",
@@ -10065,7 +10447,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 33,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DK",
@@ -10117,7 +10501,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 33,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LIND",
@@ -10169,7 +10555,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 33,
-      "setup_quality": 35
+      "setup_quality": 35,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SNEX",
@@ -10221,7 +10609,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 32,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ENTG",
@@ -10273,7 +10663,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 32,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FSLR",
@@ -10325,7 +10717,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 31,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CALY",
@@ -10377,7 +10771,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 31,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "LPG",
@@ -10429,7 +10825,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 31,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MEI",
@@ -10481,7 +10879,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 30,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AESI",
@@ -10533,7 +10933,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 30,
-      "setup_quality": 40
+      "setup_quality": 40,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CMPR",
@@ -10585,7 +10987,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 30,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LION",
@@ -10637,7 +11041,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 29,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SCCO",
@@ -10689,7 +11095,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 29,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ALMU",
@@ -10741,7 +11149,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 29,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "QCOM",
@@ -10793,7 +11203,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 28,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PSNL",
@@ -10845,7 +11257,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 28,
-      "setup_quality": 36
+      "setup_quality": 36,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NVEC",
@@ -10897,7 +11311,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 28,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FTNT",
@@ -10949,7 +11365,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 27,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DCO",
@@ -11001,7 +11419,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 27,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ILMN",
@@ -11053,7 +11473,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 27,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "APGE",
@@ -11105,7 +11527,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 26,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CRS",
@@ -11157,7 +11581,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 26,
-      "setup_quality": 38
+      "setup_quality": 38,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "DY",
@@ -11209,7 +11635,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 26,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "IONQ",
@@ -11261,7 +11689,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 25,
-      "setup_quality": 32
+      "setup_quality": 32,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ITRN",
@@ -11313,7 +11743,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 25,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PBF",
@@ -11365,7 +11797,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 24,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CRWD",
@@ -11417,7 +11851,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 24,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "KNX",
@@ -11469,7 +11905,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 24,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AAON",
@@ -11521,7 +11959,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 23,
-      "setup_quality": 73
+      "setup_quality": 73,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CMP",
@@ -11573,7 +12013,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 23,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MCHP",
@@ -11625,7 +12067,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 23,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BRKR",
@@ -11677,7 +12121,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 22,
-      "setup_quality": 34
+      "setup_quality": 34,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NXPI",
@@ -11729,7 +12175,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 22,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NN",
@@ -11781,7 +12229,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 22,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DUOT",
@@ -11833,7 +12283,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 21,
-      "setup_quality": 31
+      "setup_quality": 31,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "IMVT",
@@ -11885,7 +12337,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 21,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "DXPE",
@@ -11937,7 +12391,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 21,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AMN",
@@ -11989,7 +12445,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 20,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CRUS",
@@ -12041,7 +12499,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 20,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BLBD",
@@ -12093,7 +12553,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 20,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FCX",
@@ -12145,7 +12607,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 19,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MITK",
@@ -12197,7 +12661,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 19,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ANET",
@@ -12249,7 +12715,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 19,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PANW",
@@ -12301,7 +12769,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 18,
-      "setup_quality": 33
+      "setup_quality": 33,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HLIT",
@@ -12353,7 +12823,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 18,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CLF",
@@ -12405,7 +12877,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 17,
-      "setup_quality": 25
+      "setup_quality": 25,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SM",
@@ -12457,7 +12931,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 17,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SAIA",
@@ -12509,7 +12985,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 17,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HZO",
@@ -12561,7 +13039,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 16,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ZETA",
@@ -12613,7 +13093,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 16,
-      "setup_quality": 26
+      "setup_quality": 26,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CODI",
@@ -12665,7 +13147,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 16,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ASTH",
@@ -12717,7 +13201,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 15,
-      "setup_quality": 24
+      "setup_quality": 24,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "GRDN",
@@ -12769,7 +13255,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 15,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "HUM",
@@ -12821,7 +13309,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 15,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "RNG",
@@ -12873,7 +13363,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 14,
-      "setup_quality": 52
+      "setup_quality": 52,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "VCYT",
@@ -12925,7 +13417,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 14,
-      "setup_quality": 30
+      "setup_quality": 30,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OKTA",
@@ -12977,7 +13471,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 14,
-      "setup_quality": 32
+      "setup_quality": 32,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NET",
@@ -13029,7 +13525,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 13,
-      "setup_quality": 26
+      "setup_quality": 26,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "UTI",
@@ -13081,7 +13579,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 13,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "VIST",
@@ -13133,7 +13633,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 13,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "RRX",
@@ -13185,7 +13687,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 12,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "F",
@@ -13237,7 +13741,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 12,
-      "setup_quality": 28
+      "setup_quality": 28,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "VAC",
@@ -13289,7 +13795,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 12,
-      "setup_quality": 25
+      "setup_quality": 25,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "CGEM",
@@ -13341,7 +13849,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 11,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LNTH",
@@ -13393,7 +13903,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 11,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CRNC",
@@ -13445,7 +13957,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 10,
-      "setup_quality": 26
+      "setup_quality": 26,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NVAX",
@@ -13497,7 +14011,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 10,
-      "setup_quality": 27
+      "setup_quality": 27,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CLFD",
@@ -13549,7 +14065,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 10,
-      "setup_quality": 38
+      "setup_quality": 38,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NOVT",
@@ -13601,7 +14119,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 9,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TDC",
@@ -13653,7 +14173,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 9,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "IART",
@@ -13705,7 +14227,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 9,
-      "setup_quality": 28
+      "setup_quality": 28,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MRX",
@@ -13757,7 +14281,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 8,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OSCR",
@@ -13809,7 +14335,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 8,
-      "setup_quality": 25
+      "setup_quality": 25,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "HUN",
@@ -13861,7 +14389,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 8,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ATKR",
@@ -13913,7 +14443,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 7,
-      "setup_quality": 35
+      "setup_quality": 35,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SPB",
@@ -13965,7 +14497,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 7,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "HNGE",
@@ -14017,7 +14551,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 7,
-      "setup_quality": 33
+      "setup_quality": 33,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "TRNS",
@@ -14069,7 +14605,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 6,
-      "setup_quality": 26
+      "setup_quality": 26,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "QRVO",
@@ -14121,7 +14659,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 6,
-      "setup_quality": 28
+      "setup_quality": 28,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "PENN",
@@ -14173,7 +14713,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 6,
-      "setup_quality": 20
+      "setup_quality": 20,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AVBP",
@@ -14225,7 +14767,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 5,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SWKS",
@@ -14277,7 +14821,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 5,
-      "setup_quality": 30
+      "setup_quality": 30,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ZM",
@@ -14329,7 +14875,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 5,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CDNA",
@@ -14381,7 +14929,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 4,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ACHC",
@@ -14433,7 +14983,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 4,
-      "setup_quality": 34
+      "setup_quality": 34,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TBBB",
@@ -14485,7 +15037,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 3,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "GEO",
@@ -14537,7 +15091,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 3,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PVH",
@@ -14589,7 +15145,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 3,
-      "setup_quality": 27
+      "setup_quality": 27,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MLAB",
@@ -14641,7 +15199,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 2,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LB",
@@ -14693,7 +15253,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 2,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "TGTX",
@@ -14745,7 +15307,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 2,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WSC",
@@ -14797,7 +15361,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 1,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "TENB",
@@ -14849,7 +15415,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 1,
-      "setup_quality": 23
+      "setup_quality": 23,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NVCR",
@@ -14901,7 +15469,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 1,
-      "setup_quality": 30
+      "setup_quality": 30,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BBAR",
@@ -14953,7 +15523,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 0,
-      "setup_quality": 21
+      "setup_quality": 21,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     }
   ],
   "ipos": [
@@ -14982,7 +15554,9 @@
       "sma10": 88.93,
       "sma20": 89.51,
       "sma50": 78.43,
-      "sma100": 66.45
+      "sma100": 66.45,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "LGN",
@@ -15009,7 +15583,9 @@
       "sma10": 84.82,
       "sma20": 89.03,
       "sma50": 77.29,
-      "sma100": 63.84
+      "sma100": 63.84,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WOLF",
@@ -15036,7 +15612,9 @@
       "sma10": 63.48,
       "sma20": 59.33,
       "sma50": 38.1,
-      "sma100": 28.12
+      "sma100": 28.12,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PURR",
@@ -15063,7 +15641,9 @@
       "sma10": 9.18,
       "sma20": 7.98,
       "sma50": 6.65,
-      "sma100": 5.6
+      "sma100": 5.6,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CDNL",
@@ -15090,7 +15670,9 @@
       "sma10": 53.08,
       "sma20": 53.48,
       "sma50": 48.82,
-      "sma100": 38.73
+      "sma100": 38.73,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MANE",
@@ -15117,7 +15699,9 @@
       "sma10": 101.45,
       "sma20": 103.18,
       "sma50": 86.84,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SHAZ",
@@ -15144,7 +15728,9 @@
       "sma10": 70.14,
       "sma20": 62.11,
       "sma50": 45.24,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SWMR",
@@ -15171,7 +15757,9 @@
       "sma10": 52.04,
       "sma20": 41.3,
       "sma50": 40.88,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VIDA",
@@ -15198,7 +15786,9 @@
       "sma10": 4.27,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "AMEX"
     },
     {
       "symbol": "FPS",
@@ -15225,7 +15815,9 @@
       "sma10": 51.35,
       "sma20": 47.44,
       "sma50": 39.08,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "SOLS",
@@ -15252,7 +15844,9 @@
       "sma10": 84.26,
       "sma20": 83.75,
       "sma50": 81.01,
-      "sma100": 75.28
+      "sma100": 75.28,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VGNT",
@@ -15279,7 +15873,9 @@
       "sma10": 43.79,
       "sma20": 43.29,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "Q",
@@ -15306,7 +15902,9 @@
       "sma10": 156.36,
       "sma20": 155.12,
       "sma50": 140.14,
-      "sma100": 123.51
+      "sma100": 123.51,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ANDG",
@@ -15333,7 +15931,9 @@
       "sma10": 37.84,
       "sma20": 36.85,
       "sma50": 33.49,
-      "sma100": 28.22
+      "sma100": 28.22,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MPLT",
@@ -15360,7 +15960,9 @@
       "sma10": 28.94,
       "sma20": 28.88,
       "sma50": 27.1,
-      "sma100": 22.5
+      "sma100": 22.5,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MAIR",
@@ -15387,7 +15989,9 @@
       "sma10": 41.73,
       "sma20": 41.36,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "WBI",
@@ -15414,7 +16018,9 @@
       "sma10": 30.07,
       "sma20": 29.69,
       "sma50": 28.22,
-      "sma100": 26.03
+      "sma100": 26.03,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "MDA",
@@ -15441,7 +16047,9 @@
       "sma10": 43.47,
       "sma20": 40.23,
       "sma50": 34.3,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "PTRN",
@@ -15468,7 +16076,9 @@
       "sma10": 18.87,
       "sma20": 17.66,
       "sma50": 14.86,
-      "sma100": 13.55
+      "sma100": 13.55,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "NHP",
@@ -15495,7 +16105,9 @@
       "sma10": 14.56,
       "sma20": 14.28,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "HMH",
@@ -15522,7 +16134,9 @@
       "sma10": 22.27,
       "sma20": 21.89,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "CBC",
@@ -15549,7 +16163,9 @@
       "sma10": 28.23,
       "sma20": 27.67,
       "sma50": 26.1,
-      "sma100": 25.1
+      "sma100": 25.1,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MICC",
@@ -15576,7 +16192,9 @@
       "sma10": 16.28,
       "sma20": 15.75,
       "sma50": 14.85,
-      "sma100": 15.66
+      "sma100": 15.66,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "BBCQ",
@@ -15603,7 +16221,9 @@
       "sma10": 10.66,
       "sma20": 10.52,
       "sma50": 10.3,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "INFQ",
@@ -15630,7 +16250,9 @@
       "sma10": 16.25,
       "sma20": 14.4,
       "sma50": 13.19,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "NAVN",
@@ -15657,7 +16279,9 @@
       "sma10": 20.54,
       "sma20": 19.47,
       "sma50": 16.33,
-      "sma100": 13.87
+      "sma100": 13.87,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BCAR",
@@ -15684,7 +16308,9 @@
       "sma10": 10.8,
       "sma20": 10.7,
       "sma50": 10.4,
-      "sma100": 10.28
+      "sma100": 10.28,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ELMT",
@@ -15711,7 +16337,9 @@
       "sma10": 16.7,
       "sma20": 16.11,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "FRVO",
@@ -15738,7 +16366,9 @@
       "sma10": 38.42,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "ARXS",
@@ -15765,7 +16395,9 @@
       "sma10": 40.23,
       "sma20": 37.83,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "SUNB",
@@ -15792,7 +16424,9 @@
       "sma10": 77.21,
       "sma20": 76.12,
       "sma50": 72.25,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "FDXF",
@@ -15819,7 +16453,9 @@
       "sma10": null,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ALH",
@@ -15846,7 +16482,9 @@
       "sma10": 24.97,
       "sma20": 24.89,
       "sma50": 24.02,
-      "sma100": 23.01
+      "sma100": 23.01,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "AACP",
@@ -15873,7 +16511,9 @@
       "sma10": null,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "AADX",
@@ -15900,7 +16540,9 @@
       "sma10": null,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NYSE"
     },
     {
       "symbol": "ACGC",
@@ -15927,7 +16569,9 @@
       "sma10": null,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "BLLN",
@@ -15954,7 +16598,9 @@
       "sma10": 91.15,
       "sma20": 90.42,
       "sma50": 84.23,
-      "sma100": 83.07
+      "sma100": 83.07,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "OCTV",
@@ -15981,7 +16627,9 @@
       "sma10": null,
       "sma20": null,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "VSNT",
@@ -16008,7 +16656,9 @@
       "sma10": 42.36,
       "sma20": 42.03,
       "sma50": 40.19,
-      "sma100": 36.41
+      "sma100": 36.41,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "KLRA",
@@ -16035,7 +16685,9 @@
       "sma10": 21.98,
       "sma20": 21.83,
       "sma50": null,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "WLTH",
@@ -16062,7 +16714,9 @@
       "sma10": 11.94,
       "sma20": 11.71,
       "sma50": 10.8,
-      "sma100": 9.78
+      "sma100": 9.78,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     },
     {
       "symbol": "MMED",
@@ -16089,7 +16743,9 @@
       "sma10": 11.93,
       "sma20": 11.61,
       "sma50": 12.92,
-      "sma100": null
+      "sma100": null,
+      "tv_ok": true,
+      "tv_exchange": "NASDAQ"
     }
   ],
   "episodic_pivots": [],

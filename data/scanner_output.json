@@ -413,7 +413,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 100,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MTARTECH",
@@ -465,7 +467,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 99,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VMARCIND",
@@ -517,7 +521,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 99,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "DEEDEV",
@@ -569,7 +575,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 98,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BLISSGVS",
@@ -621,7 +629,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 98,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HFCL",
@@ -673,7 +683,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 97,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MODISONLTD",
@@ -725,7 +737,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 96,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "APOLLO",
@@ -777,7 +791,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 96,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BAJAJCON",
@@ -829,7 +845,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 95,
-      "setup_quality": 88
+      "setup_quality": 88,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "AEROFLEX",
@@ -881,7 +899,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 95,
-      "setup_quality": 79
+      "setup_quality": 79,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ROSSTECH",
@@ -933,7 +953,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 94,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BBOX",
@@ -985,7 +1007,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 93,
-      "setup_quality": 79
+      "setup_quality": 79,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SAKAR",
@@ -1037,7 +1061,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 93,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GVT&D",
@@ -1089,7 +1115,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 92,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PRECWIRE",
@@ -1141,7 +1169,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 92,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TDPOWERSYS",
@@ -1193,7 +1223,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 91,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NETWEB",
@@ -1245,7 +1277,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 90,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MIRCELECTR",
@@ -1297,7 +1331,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 90,
-      "setup_quality": 85
+      "setup_quality": 85,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KERNEX",
@@ -1349,7 +1385,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 89,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "IDEAFORGE",
@@ -1401,7 +1439,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 89,
-      "setup_quality": 80
+      "setup_quality": 80,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SILVERETF",
@@ -1453,7 +1493,8 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 88,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": false
     },
     {
       "symbol": "LUMAXTECH",
@@ -1505,7 +1546,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 88,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SANSERA",
@@ -1557,7 +1600,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 87,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "POWERINDIA",
@@ -1609,7 +1654,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 86,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SYRMA",
@@ -1661,7 +1708,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 86,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NATIONALUM",
@@ -1713,7 +1762,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 85,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KIRLOSENG",
@@ -1765,7 +1816,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 85,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CONFIPET",
@@ -1817,7 +1870,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 84,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "UNIVCABLES",
@@ -1869,7 +1924,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 83,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "YASHHV",
@@ -1921,7 +1978,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 83,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "SPORTKING",
@@ -1973,7 +2032,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 82,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "WHEELS",
@@ -2025,7 +2086,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 82,
-      "setup_quality": 73
+      "setup_quality": 73,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SUVEN",
@@ -2077,7 +2140,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 81,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SBC",
@@ -2129,7 +2194,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 80,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SUNDARMHLD",
@@ -2181,7 +2248,8 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 80,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": false
     },
     {
       "symbol": "E2E",
@@ -2233,7 +2301,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 79,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KRISHANA",
@@ -2285,7 +2355,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 79,
-      "setup_quality": 74
+      "setup_quality": 74,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "APARINDS",
@@ -2337,7 +2409,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 78,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BALAMINES",
@@ -2389,7 +2463,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 77,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "IOLCP",
@@ -2441,7 +2517,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 77,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RRKABEL",
@@ -2493,7 +2571,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 76,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "THANGAMAYL",
@@ -2545,7 +2625,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 76,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CENTUM",
@@ -2597,7 +2679,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 75,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "AVALON",
@@ -2649,7 +2733,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 74,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "WELCORP",
@@ -2701,7 +2787,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 74,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SKYGOLD",
@@ -2753,7 +2841,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 73,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "INDSWFTLAB",
@@ -2805,7 +2895,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 73,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JAYNECOIND",
@@ -2857,7 +2949,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 72,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VINDHYATEL",
@@ -2909,7 +3003,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 72,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "LAURUSLABS",
@@ -2961,7 +3057,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 71,
-      "setup_quality": 75
+      "setup_quality": 75,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "IFCI",
@@ -3013,7 +3111,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 70,
-      "setup_quality": 57
+      "setup_quality": 57,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JAYBARMARU",
@@ -3065,7 +3165,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 70,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SASKEN",
@@ -3117,7 +3219,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 69,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RPTECH",
@@ -3169,7 +3273,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 68,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "IDEA",
@@ -3221,7 +3327,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 68,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HARDWYN",
@@ -3273,7 +3381,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 67,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MON100",
@@ -3325,7 +3435,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 67,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SENORES",
@@ -3377,7 +3489,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 66,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SOUTHWEST",
@@ -3429,7 +3543,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 65,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CPPLUS",
@@ -3481,7 +3597,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 65,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SHAILY",
@@ -3533,7 +3651,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 64,
-      "setup_quality": 40
+      "setup_quality": 40,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RAIN",
@@ -3585,7 +3705,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 64,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SBCL",
@@ -3637,7 +3759,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 63,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "DREDGECORP",
@@ -3689,7 +3813,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 62,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PARACABLES",
@@ -3741,7 +3867,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 62,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SANDHAR",
@@ -3793,7 +3921,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 61,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GRWRHITECH",
@@ -3845,7 +3975,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 61,
-      "setup_quality": 71
+      "setup_quality": 71,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BHEL",
@@ -3897,7 +4029,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 60,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "DIACABS",
@@ -3949,7 +4083,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 60,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RISHABH",
@@ -4001,7 +4137,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 59,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ITDCEM",
@@ -4053,7 +4191,8 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 58,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": false
     },
     {
       "symbol": "UNIPARTS",
@@ -4105,7 +4244,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 58,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SAIL",
@@ -4157,7 +4298,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 57,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HONASA",
@@ -4209,7 +4352,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 57,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "STYLAMIND",
@@ -4261,7 +4406,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 56,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SEAMECLTD",
@@ -4313,7 +4460,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 55,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "WOCKPHARMA",
@@ -4365,7 +4514,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 55,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SUNFLAG",
@@ -4417,7 +4568,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 54,
-      "setup_quality": 76
+      "setup_quality": 76,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PAISALO",
@@ -4469,7 +4622,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 54,
-      "setup_quality": 64
+      "setup_quality": 64,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "INDOTECH",
@@ -4521,7 +4676,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 53,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADANIENSOL",
@@ -4573,7 +4730,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 52,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GRANULES",
@@ -4625,7 +4784,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 52,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "DATAPATTNS",
@@ -4677,7 +4838,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 51,
-      "setup_quality": 72
+      "setup_quality": 72,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CUMMINSIND",
@@ -4729,7 +4892,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 51,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SATIN",
@@ -4781,7 +4946,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 50,
-      "setup_quality": 69
+      "setup_quality": 69,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CHENNPETRO",
@@ -4833,7 +5000,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 49,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "THERMAX",
@@ -4885,7 +5054,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 49,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ACMESOLAR",
@@ -4937,7 +5108,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 48,
-      "setup_quality": 33
+      "setup_quality": 33,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ATALREAL",
@@ -4989,7 +5162,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 48,
-      "setup_quality": 61
+      "setup_quality": 61,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HINDALCO",
@@ -5041,7 +5216,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 47,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SPARC",
@@ -5093,7 +5270,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 46,
-      "setup_quality": 49
+      "setup_quality": 49,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CRAFTSMAN",
@@ -5145,7 +5324,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 46,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CARYSIL",
@@ -5197,7 +5378,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 45,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ASTRAMICRO",
@@ -5249,7 +5432,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 45,
-      "setup_quality": 33
+      "setup_quality": 33,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RATEGAIN",
@@ -5301,7 +5486,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 44,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADANIGREEN",
@@ -5353,7 +5540,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 43,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MAYURUNIQ",
@@ -5405,7 +5594,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 43,
-      "setup_quality": 48
+      "setup_quality": 48,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "APCOTEXIND",
@@ -5457,7 +5648,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 42,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HAPPYFORGE",
@@ -5509,7 +5702,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 42,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SCI",
@@ -5561,7 +5756,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 41,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "POLYCAB",
@@ -5613,7 +5810,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 40,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NEOGEN",
@@ -5665,7 +5864,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 40,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BHARATFORG",
@@ -5717,7 +5918,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 39,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TMB",
@@ -5769,7 +5972,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 39,
-      "setup_quality": 67
+      "setup_quality": 67,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NITINSPIN",
@@ -5821,7 +6026,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 38,
-      "setup_quality": 70
+      "setup_quality": 70,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "J&KBANK",
@@ -5873,7 +6080,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 38,
-      "setup_quality": 68
+      "setup_quality": 68,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "LLOYDSME",
@@ -5925,7 +6134,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 37,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NRBBEARING",
@@ -5977,7 +6188,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 36,
-      "setup_quality": 50
+      "setup_quality": 50,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GLAND",
@@ -6029,7 +6242,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 36,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KRN",
@@ -6081,7 +6296,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 35,
-      "setup_quality": 66
+      "setup_quality": 66,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KIRLPNU",
@@ -6133,7 +6350,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 35,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NLCINDIA",
@@ -6185,7 +6404,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 34,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SOTL",
@@ -6237,7 +6458,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 33,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CEIGALL",
@@ -6289,7 +6512,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 33,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JNKINDIA",
@@ -6341,7 +6566,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 32,
-      "setup_quality": 45
+      "setup_quality": 45,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "APOLLOPIPE",
@@ -6393,7 +6620,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 32,
-      "setup_quality": 40
+      "setup_quality": 40,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SOLARINDS",
@@ -6445,7 +6674,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 31,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SAILIFE",
@@ -6497,7 +6728,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 30,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NSLNISP",
@@ -6549,7 +6782,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 30,
-      "setup_quality": 33
+      "setup_quality": 33,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GESHIP",
@@ -6601,7 +6836,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 29,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "MAHABANK",
@@ -6653,7 +6890,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 29,
-      "setup_quality": 65
+      "setup_quality": 65,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ACUTAAS",
@@ -6705,7 +6944,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 28,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PREMEXPLN",
@@ -6757,7 +6998,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 27,
-      "setup_quality": 32
+      "setup_quality": 32,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "CGPOWER",
@@ -6809,7 +7052,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 27,
-      "setup_quality": 37
+      "setup_quality": 37,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ARVIND",
@@ -6861,7 +7106,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 26,
-      "setup_quality": 58
+      "setup_quality": 58,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RPEL",
@@ -6913,7 +7160,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 26,
-      "setup_quality": 36
+      "setup_quality": 36,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KRISHNADEF",
@@ -6965,7 +7214,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 25,
-      "setup_quality": 62
+      "setup_quality": 62,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "METALIETF",
@@ -7017,7 +7268,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 24,
-      "setup_quality": 63
+      "setup_quality": 63,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "WALCHANNAG",
@@ -7069,7 +7322,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 24,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SKIPPER",
@@ -7121,7 +7376,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 23,
-      "setup_quality": 31
+      "setup_quality": 31,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NIBE",
@@ -7173,7 +7430,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 23,
-      "setup_quality": 30
+      "setup_quality": 30,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "LLOYDSENGG",
@@ -7225,7 +7484,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 22,
-      "setup_quality": 30
+      "setup_quality": 30,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TALBROAUTO",
@@ -7277,7 +7538,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 21,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "INOXINDIA",
@@ -7329,7 +7592,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 21,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SAMMAANCAP",
@@ -7381,7 +7646,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 20,
-      "setup_quality": 23
+      "setup_quality": 23,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "SANSTAR",
@@ -7433,7 +7700,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 20,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SUPRIYA",
@@ -7485,7 +7754,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 19,
-      "setup_quality": 25
+      "setup_quality": 25,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "AIAENG",
@@ -7537,7 +7808,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 18,
-      "setup_quality": 40
+      "setup_quality": 40,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADANIPORTS",
@@ -7589,7 +7862,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 18,
-      "setup_quality": 59
+      "setup_quality": 59,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BANDHANBNK",
@@ -7641,7 +7916,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 17,
-      "setup_quality": 53
+      "setup_quality": 53,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VTL",
@@ -7693,7 +7970,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 17,
-      "setup_quality": 47
+      "setup_quality": 47,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ABB",
@@ -7745,7 +8024,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 16,
-      "setup_quality": 54
+      "setup_quality": 54,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "AZAD",
@@ -7797,7 +8078,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 15,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADANIENT",
@@ -7849,7 +8132,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 15,
-      "setup_quality": 29
+      "setup_quality": 29,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HSCL",
@@ -7901,7 +8186,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 14,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TRITURBINE",
@@ -7953,7 +8240,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 14,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SURYODAY",
@@ -8005,7 +8294,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 13,
-      "setup_quality": 60
+      "setup_quality": 60,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MARINE",
@@ -8057,7 +8348,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 12,
-      "setup_quality": 27
+      "setup_quality": 27,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KTKBANK",
@@ -8109,7 +8402,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 12,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADVENZYMES",
@@ -8161,7 +8456,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 11,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JINDALSAW",
@@ -8213,7 +8510,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 11,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SGFIN",
@@ -8265,7 +8564,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 10,
-      "setup_quality": 46
+      "setup_quality": 46,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ATHERENERG",
@@ -8317,7 +8618,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 10,
-      "setup_quality": 51
+      "setup_quality": 51,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VIJAYA",
@@ -8369,7 +8672,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 9,
-      "setup_quality": 56
+      "setup_quality": 56,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MARKSANS",
@@ -8421,7 +8726,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 8,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ATGL",
@@ -8473,7 +8780,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 8,
-      "setup_quality": 26
+      "setup_quality": 26,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SONACOMS",
@@ -8525,7 +8834,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 7,
-      "setup_quality": 43
+      "setup_quality": 43,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ELGIEQUIP",
@@ -8577,7 +8888,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 7,
-      "setup_quality": 44
+      "setup_quality": 44,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "OFSS",
@@ -8629,7 +8942,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 6,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ICIL",
@@ -8681,7 +8996,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 5,
-      "setup_quality": 40
+      "setup_quality": 40,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KOPRAN",
@@ -8733,7 +9050,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 5,
-      "setup_quality": 25
+      "setup_quality": 25,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "EBGNG",
@@ -8785,7 +9104,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 4,
-      "setup_quality": 41
+      "setup_quality": 41,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SHREEJISPG",
@@ -8837,7 +9158,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 4,
-      "setup_quality": 39
+      "setup_quality": 39,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TEJASNET",
@@ -8889,7 +9212,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 3,
-      "setup_quality": 28
+      "setup_quality": 28,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "MOTHERSON",
@@ -8941,7 +9266,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 2,
-      "setup_quality": 31
+      "setup_quality": 31,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ZENTEC",
@@ -8993,7 +9320,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 2,
-      "setup_quality": 42
+      "setup_quality": 42,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "BELRISE",
@@ -9045,7 +9374,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 1,
-      "setup_quality": 55
+      "setup_quality": 55,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ENRIN",
@@ -9097,7 +9428,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "rs_rating": 1,
-      "setup_quality": 27
+      "setup_quality": 27,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     }
   ],
   "ipos": [
@@ -9127,7 +9460,9 @@
       "sma20": 1940.05,
       "sma50": 1849.03,
       "sma100": 1687.83,
-      "mcap": 10424.0
+      "mcap": 10424.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GVPIL",
@@ -9155,7 +9490,9 @@
       "sma20": 738.94,
       "sma50": 587.99,
       "sma100": 491.3,
-      "mcap": 5840.0
+      "mcap": 5840.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SIGMAADV",
@@ -9183,7 +9520,9 @@
       "sma20": 356.0,
       "sma50": 263.79,
       "sma100": null,
-      "mcap": 7701.0
+      "mcap": 7701.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NITTAGELA",
@@ -9211,7 +9550,9 @@
       "sma20": 1446.07,
       "sma50": null,
       "sma100": null,
-      "mcap": 1640.0
+      "mcap": 1640.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "UFBL",
@@ -9239,7 +9580,9 @@
       "sma20": 424.06,
       "sma50": 339.04,
       "sma100": 282.1,
-      "mcap": 1858.0
+      "mcap": 1858.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "COCKERILL",
@@ -9267,7 +9610,9 @@
       "sma20": 6158.9,
       "sma50": null,
       "sma100": null,
-      "mcap": 4500.0
+      "mcap": 4500.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ELPROINTL",
@@ -9295,7 +9640,9 @@
       "sma20": 163.19,
       "sma50": null,
       "sma100": null,
-      "mcap": 2846.0
+      "mcap": 2846.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SGMART",
@@ -9323,7 +9670,9 @@
       "sma20": 596.42,
       "sma50": 555.7,
       "sma100": 481.9,
-      "mcap": 6802.0
+      "mcap": 6802.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ANTELOPUS",
@@ -9351,7 +9700,9 @@
       "sma20": 750.17,
       "sma50": 672.21,
       "sma100": 608.3,
-      "mcap": 3072.0
+      "mcap": 3072.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "ADVAIT",
@@ -9379,7 +9730,9 @@
       "sma20": 2006.83,
       "sma50": 1937.55,
       "sma100": null,
-      "mcap": 2259.0
+      "mcap": 2259.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "DECNGOLD",
@@ -9407,7 +9760,9 @@
       "sma20": 143.31,
       "sma50": null,
       "sma100": null,
-      "mcap": 3471.0
+      "mcap": 3471.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RHETAN",
@@ -9435,7 +9790,9 @@
       "sma20": 28.39,
       "sma50": 27.01,
       "sma100": 26.37,
-      "mcap": 2425.0
+      "mcap": 2425.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "KPL",
@@ -9463,7 +9820,9 @@
       "sma20": 2004.25,
       "sma50": null,
       "sma100": null,
-      "mcap": 2433.0
+      "mcap": 2433.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "POWERICA",
@@ -9491,7 +9850,9 @@
       "sma20": 539.04,
       "sma50": null,
       "sma100": null,
-      "mcap": 6896.0
+      "mcap": 6896.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "TIMEX",
@@ -9519,7 +9880,9 @@
       "sma20": 381.18,
       "sma50": null,
       "sma100": null,
-      "mcap": 4380.0
+      "mcap": 4380.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "NOVARTIND",
@@ -9547,7 +9910,9 @@
       "sma20": 1315.07,
       "sma50": null,
       "sma100": null,
-      "mcap": 3274.0
+      "mcap": 3274.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GCSL",
@@ -9575,7 +9940,9 @@
       "sma20": 395.04,
       "sma50": 365.61,
       "sma100": 350.04,
-      "mcap": 931.0
+      "mcap": 931.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "LENSKART",
@@ -9603,7 +9970,9 @@
       "sma20": 498.56,
       "sma50": 510.91,
       "sma100": 496.16,
-      "mcap": 89651.0
+      "mcap": 89651.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "LENSKART",
@@ -9631,7 +10000,9 @@
       "sma20": 498.18,
       "sma50": 510.7,
       "sma100": 493.23,
-      "mcap": 89651.0
+      "mcap": 89651.0,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "GKSL",
@@ -9659,7 +10030,9 @@
       "sma20": 138.98,
       "sma50": 121.88,
       "sma100": 114.53,
-      "mcap": 1045.0
+      "mcap": 1045.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HALDYNGL",
@@ -9687,7 +10060,9 @@
       "sma20": 109.98,
       "sma50": null,
       "sma100": null,
-      "mcap": 604.0
+      "mcap": 604.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MODINATUR",
@@ -9715,7 +10090,9 @@
       "sma20": 429.62,
       "sma50": 379.46,
       "sma100": 348.15,
-      "mcap": 628.0
+      "mcap": 628.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GKSL",
@@ -9743,7 +10120,9 @@
       "sma20": 138.83,
       "sma50": 121.71,
       "sma100": 114.36,
-      "mcap": 1045.0
+      "mcap": 1045.0,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "CEMPRO",
@@ -9771,7 +10150,9 @@
       "sma20": 939.98,
       "sma50": 760.77,
       "sma100": 681.85,
-      "mcap": 17598.0
+      "mcap": 17598.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JSLL",
@@ -9799,7 +10180,9 @@
       "sma20": 659.31,
       "sma50": 651.86,
       "sma100": 660.17,
-      "mcap": 8608.0
+      "mcap": 8608.0,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "WELSPLSOL",
@@ -9827,7 +10210,9 @@
       "sma20": 42.49,
       "sma50": null,
       "sma100": null,
-      "mcap": 2952.0
+      "mcap": 2952.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PRADPME",
@@ -9855,7 +10240,9 @@
       "sma20": 408.97,
       "sma50": null,
       "sma100": null,
-      "mcap": 774.0
+      "mcap": 774.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VIYASH",
@@ -9883,7 +10270,9 @@
       "sma20": 239.52,
       "sma50": 217.14,
       "sma100": null,
-      "mcap": 10822.0
+      "mcap": 10822.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "IBULLSLTD",
@@ -9911,7 +10300,9 @@
       "sma20": 20.06,
       "sma50": 16.61,
       "sma100": 13.53,
-      "mcap": 5420.0
+      "mcap": 5420.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "VPAL",
@@ -9939,7 +10330,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "NIMBSPROJ",
@@ -9967,7 +10360,9 @@
       "sma20": 213.2,
       "sma50": null,
       "sma100": null,
-      "mcap": 437.0
+      "mcap": 437.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SHINDL",
@@ -9995,7 +10390,9 @@
       "sma20": 154.33,
       "sma50": null,
       "sma100": null,
-      "mcap": 614.0
+      "mcap": 614.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JSWDULUX",
@@ -10023,7 +10420,9 @@
       "sma20": 2976.38,
       "sma50": null,
       "sma100": null,
-      "mcap": 14195.0
+      "mcap": 14195.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "UJJIVAN",
@@ -10051,7 +10450,8 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": false
     },
     {
       "symbol": "GRAUWEIL",
@@ -10079,7 +10479,9 @@
       "sma20": 68.47,
       "sma50": null,
       "sma100": null,
-      "mcap": 3190.0
+      "mcap": 3190.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "SETL",
@@ -10107,7 +10509,9 @@
       "sma20": 137.03,
       "sma50": 133.19,
       "sma100": null,
-      "mcap": 2748.0
+      "mcap": 2748.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GROWEV",
@@ -10135,7 +10539,8 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": false
     },
     {
       "symbol": "TEAMTECH",
@@ -10163,7 +10568,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "HARIKANTA",
@@ -10191,7 +10598,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "AFLTD",
@@ -10219,7 +10628,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "TMPV",
@@ -10247,7 +10658,9 @@
       "sma20": 367.89,
       "sma50": 348.18,
       "sma100": 351.19,
-      "mcap": 146579.0
+      "mcap": 146579.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "YAASHVI",
@@ -10275,7 +10688,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "MANIVENI",
@@ -10303,7 +10718,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "FEDDERSHOL",
@@ -10331,7 +10748,9 @@
       "sma20": 33.87,
       "sma50": null,
       "sma100": null,
-      "mcap": 710.0
+      "mcap": 710.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "QLINE",
@@ -10359,7 +10778,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "BMLL",
@@ -10387,7 +10808,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "RFIL",
@@ -10415,7 +10838,9 @@
       "sma20": null,
       "sma50": null,
       "sma100": null,
-      "mcap": null
+      "mcap": null,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "MARKOLINES",
@@ -10443,7 +10868,9 @@
       "sma20": 164.56,
       "sma50": 155.8,
       "sma100": 153.57,
-      "mcap": 361.0
+      "mcap": 361.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "MODIS",
@@ -10471,7 +10898,9 @@
       "sma20": 351.52,
       "sma50": 339.31,
       "sma100": 328.67,
-      "mcap": 682.0
+      "mcap": 682.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "JSWCEMENT",
@@ -10499,7 +10928,9 @@
       "sma20": 126.71,
       "sma50": 123.9,
       "sma100": 122.09,
-      "mcap": 17567.0
+      "mcap": 17567.0,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "JAYKAY",
@@ -10527,7 +10958,9 @@
       "sma20": 175.2,
       "sma50": 162.86,
       "sma100": 157.14,
-      "mcap": 2363.0
+      "mcap": 2363.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GANESHHOU",
@@ -10555,7 +10988,9 @@
       "sma20": 698.76,
       "sma50": 644.59,
       "sma100": 666.02,
-      "mcap": 6043.0
+      "mcap": 6043.0,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     }
   ],
   "episodic_pivots": [
@@ -10609,7 +11044,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "ep_score": 451.75519999999995,
-      "rs_rating": 100
+      "rs_rating": 100,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "CONCORDBIO",
@@ -10661,7 +11098,9 @@
       "within_25_of_high": false,
       "above_30_of_low": false,
       "ep_score": 82.4329,
-      "rs_rating": 89
+      "rs_rating": 89,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "GOCOLORS",
@@ -10713,7 +11152,9 @@
       "within_25_of_high": false,
       "above_30_of_low": true,
       "ep_score": 61.686,
-      "rs_rating": 78
+      "rs_rating": 78,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "ZEEL",
@@ -10765,7 +11206,9 @@
       "within_25_of_high": false,
       "above_30_of_low": true,
       "ep_score": 43.68000000000001,
-      "rs_rating": 67
+      "rs_rating": 67,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "ZENTEC",
@@ -10817,7 +11260,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "ep_score": 35.2836,
-      "rs_rating": 56
+      "rs_rating": 56,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "MIDHANI",
@@ -10869,7 +11314,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "ep_score": 28.339799999999997,
-      "rs_rating": 44
+      "rs_rating": 44,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "ADVAIT",
@@ -10921,7 +11368,9 @@
       "within_25_of_high": true,
       "above_30_of_low": true,
       "ep_score": 28.008000000000003,
-      "rs_rating": 33
+      "rs_rating": 33,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     },
     {
       "symbol": "IZMO",
@@ -10973,7 +11422,9 @@
       "within_25_of_high": false,
       "above_30_of_low": true,
       "ep_score": 22.9,
-      "rs_rating": 22
+      "rs_rating": 22,
+      "tv_ok": true,
+      "tv_exchange": "NSE"
     },
     {
       "symbol": "PARAS",
@@ -11025,7 +11476,9 @@
       "within_25_of_high": false,
       "above_30_of_low": true,
       "ep_score": 19.331799999999998,
-      "rs_rating": 11
+      "rs_rating": 11,
+      "tv_ok": true,
+      "tv_exchange": "BSE"
     }
   ],
   "history": {

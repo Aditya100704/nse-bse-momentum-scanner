@@ -1178,9 +1178,12 @@
       URL.revokeObjectURL(a.href);
     });
 
-    // TradingView import symbol for a row: NASDAQ:SYM / NYSE:SYM / NSE:SYM / BSE:SYM
+    // TradingView import symbol for a row: NASDAQ:SYM / NYSE:SYM / NSE:SYM / BSE:SYM.
+    // Prefer tv_exchange (the exchange TradingView actually resolves, set by
+    // tv_validate.py) so a stock that only exists on the other exchange still works.
     const tvSym = (r) => {
-      const ex = IS_US ? ((r.exchange && ["NASDAQ", "NYSE", "AMEX"].includes(r.exchange)) ? r.exchange : "NASDAQ")
+      const ex = r.tv_exchange ? r.tv_exchange
+               : IS_US ? ((r.exchange && ["NASDAQ", "NYSE", "AMEX"].includes(r.exchange)) ? r.exchange : "NASDAQ")
                        : (r.exchange === "NSE" ? "NSE" : "BSE");
       return `${ex}:${r.symbol}`;
     };
@@ -1189,6 +1192,7 @@
       const seen = new Set(), syms = [];
       for (const r of (rows || [])) {
         if (!r || !r.symbol) continue;
+        if (r.tv_ok === false) continue;   // skip tickers TradingView can't resolve (dead/renamed/ETF gaps)
         const tv = tvSym(r);
         if (seen.has(tv)) continue;
         seen.add(tv); syms.push(tv);
