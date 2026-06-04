@@ -50,7 +50,7 @@ if _IS_US:
     # Liquidity floor grounded in Minervini (>= ~1M shares, price > $10-30) + Qullamaggie
     # (liquid leaders; EP dollar-volume > $100M). Turnover is held in $ MILLIONS.
     _TURNOVER_DIV = 1e6                                              # $ -> $M
-    MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "20.0"))   # $20M/day
+    MIN_LIQUIDITY_CR = float(os.getenv("SCAN_MIN_LIQ_CR", "10.0"))   # $10M/day
     MIN_PRICE = float(os.getenv("SCAN_MIN_PRICE", "10.0"))          # avoid sub-$10 (Minervini)
     EP_GAP = float(os.getenv("SCAN_EP_GAP", "10.0"))                # Qullamaggie EP gap >= 10%
     EP_TURNOVER_MIN = float(os.getenv("SCAN_EP_LIQ", "100.0"))      # EP dollar-volume >= $100M
@@ -67,7 +67,7 @@ else:
     OUT_SUFFIX = ""
     CURRENCY = "INR"
 
-WITHIN_PCT_OF_52W_HIGH = float(os.getenv("SCAN_MAX_OFF_HIGH", "25.0"))
+WITHIN_PCT_OF_52W_HIGH = float(os.getenv("SCAN_MAX_OFF_HIGH", "20.0"))
 _LIMIT = int(os.getenv("SCAN_LIMIT", "0"))   # cap universe (smoke testing only; 0 = full)
 BATCH_SIZE = int(os.getenv("SCAN_BATCH_SIZE", "80"))
 SLEEP_BETWEEN_BATCHES = float(os.getenv("SCAN_SLEEP_S", "2.5"))
@@ -203,14 +203,13 @@ def _download_one_batch(
         try:
             df = data if len(batch) == 1 else data[t]
             df = df.dropna(subset=["Close"])
-            if len(df) >= 30:
-                # Keep anything with at least ~6 weeks of data.
-                # Full analyze() needs 200 bars; analyze_ipo() handles 30-199.
+            if len(df) >= 1:
+                # Keep anything with at least one bar — fresh IPOs (even 1 day
+                # old) included. analyze() needs 200 bars; analyze_ipo() 1-199.
                 out[t] = df
-            elif len(df) == 0:
+            else:
                 # Bulk fetch silently dropped this ticker; worth a single retry.
                 failed.append(t)
-            # Else: ticker has < 30 bars — too new to do anything meaningful.
         except (KeyError, TypeError):
             failed.append(t)
     return out, failed
@@ -553,13 +552,12 @@ def analyze(df: pd.DataFrame) -> dict | None:
 
 
 def analyze_ipo(df: pd.DataFrame) -> dict | None:
-    """For recent listings — between 30 and 199 trading bars (~6 weeks to ~10
+    """For recent listings — between 1 and 199 trading bars (~1 day to ~10
     months). Returns IPO-friendly metrics: all-time-high proximity, returns
     over whatever windows fit, liquidity, and a 'momentum since listing' read.
-    Returns None when the stock has full history (>= 200 bars) or too little
-    history (< 30 bars)."""
+    Returns None only when the stock has full history (>= 200 bars)."""
     n = len(df)
-    if n < 30 or n >= 200:
+    if n < 1 or n >= 200:
         return None
     close = df["Close"].astype(float)
     vol = df["Volume"].astype(float)
@@ -598,6 +596,15 @@ def analyze_ipo(df: pd.DataFrame) -> dict | None:
     # Trend conditions (relaxed for IPOs — no SMA200 yet)
     price_gt_sma20 = (smas["sma20"] is not None and last > smas["sma20"])
     price_gt_sma50 = (smas["sma50"] is not None and last > smas["sma50"])
+    # Uptrend gate that degrades gracefully for very fresh listings: prefer the
+    # 20-bar SMA, fall back to the 10-bar, and for listings too new for even a
+    # 10-bar SMA (< 10 bars, incl. 1-day-old) don't reject on trend — include them.
+    if smas["sma20"] is not None:
+        uptrend_ok = bool(last > smas["sma20"])
+    elif smas["sma10"] is not None:
+        uptrend_ok = bool(last > smas["sma10"])
+    else:
+        uptrend_ok = True
 
     return {
         "is_ipo": True,
@@ -615,6 +622,7 @@ def analyze_ipo(df: pd.DataFrame) -> dict | None:
         "vol_surge": _safe_float(vol_surge),
         "price_gt_sma20": bool(price_gt_sma20),
         "price_gt_sma50": bool(price_gt_sma50),
+        "uptrend_ok": bool(uptrend_ok),
         **smas,
     }
 
@@ -800,9 +808,10 @@ def _compute_history(prices: dict[str, pd.DataFrame], lookback: int = 252) -> di
             cond_liquid = (turnover_cr >= MIN_LIQUIDITY_CR).fillna(False)
 
             # ----- Scanner conditions per day -----
-            # Momentum = the tightened base gate (uptrend + near-high + 3M&6M positive + liquid)
-            mom = ((close > smas[50]) & (close > smas[200]) &
-                   (pct_off <= WITHIN_PCT_OF_52W_HIGH) & (r6m > 0) & (r3m > 0) & cond_liquid)
+            # Momentum = the qualifier gate: liquid, above SMA50, at least 20%
+            # above the 200-day SMA, and within the off-high band.
+            mom = ((close > smas[50]) & (close >= smas[200] * 1.20) &
+                   (pct_off <= WITHIN_PCT_OF_52W_HIGH) & cond_liquid)
             # Trend Template (strict 8/8)
             tt = (
                 (close > smas[50]) & (close > sma150) & (close > smas[200]) &
@@ -928,7 +937,9 @@ def main() -> int:
             universe = universe.head(_LIMIT).reset_index(drop=True)
             print(f"[scan] SCAN_LIMIT={_LIMIT} — smoke test on {len(universe)} symbols", flush=True)
         universe.to_csv(DATA / f"universe{OUT_SUFFIX}.csv", index=False)
-        prices, _usmeta = usdata.fetch_us_history(universe["yf_ticker"].tolist(), period="2y")
+        # min_bars=1 so day-1 fresh listings reach analyze_ipo (the IPO scan
+        # handles 1-199 bars). The data layer would otherwise drop sub-30-bar names.
+        prices, _usmeta = usdata.fetch_us_history(universe["yf_ticker"].tolist(), period="2y", min_bars=1)
         print(f"[prices] usdata (yfinance) got {len(prices)} of {len(universe)} US symbols", flush=True)
     else:
         universe = build_universe()
@@ -956,7 +967,8 @@ def main() -> int:
             # NSE (GitHub mirror — works from any IP)
             try:
                 from bhavcopy import fetch_nse_history
-                bhav, meta = fetch_nse_history(days_back=504)
+                # min_bars=1: keep day-1 fresh listings so they reach the IPO scan.
+                bhav, meta = fetch_nse_history(days_back=504, min_bars=1)
                 filled = added = 0
                 for t, df in bhav.items():
                     if t in prices:
@@ -977,7 +989,8 @@ def main() -> int:
             # BSE (bseindia.com direct — may be geo-restricted on some CI IPs)
             try:
                 from bhavcopy import fetch_bse_history
-                bbse, bmeta = fetch_bse_history(days_back=460)
+                # min_bars=1: keep day-1 fresh listings so they reach the IPO scan.
+                bbse, bmeta = fetch_bse_history(days_back=460, min_bars=1)
                 filled = added = 0
                 for t, df in bbse.items():
                     if t in prices:
@@ -1038,9 +1051,10 @@ def main() -> int:
                     "yf_ticker": t, "sector": sector_map.get(sym.upper(), "Other"), **res,
                 })
 
-            # Qualifier gates — tightened to a focused, tradeable momentum set (~<500):
-            #   in a real uptrend (above SMA50 AND SMA200), genuinely liquid,
-            #   within X% of the 52w high, and positive 3M AND 6M momentum.
+            # Qualifier gates — a focused, tradeable Stage-2 leadership set:
+            #   genuinely liquid, in a real uptrend (above SMA50 AND SMA200),
+            #   within X% of the 52w high, and extended at least 20% above the
+            #   200-day SMA (a confirmed leader, not just barely above the line).
             if res["turnover_cr"] is None or res["turnover_cr"] < MIN_LIQUIDITY_CR:
                 continue
             if MIN_PRICE and (res["close"] is None or res["close"] < MIN_PRICE):
@@ -1049,9 +1063,9 @@ def main() -> int:
                 continue
             if res["pct_off_high"] is None or res["pct_off_high"] > WITHIN_PCT_OF_52W_HIGH:
                 continue
-            if (res["r6m"] if res["r6m"] is not None else -1) <= 0:
-                continue
-            if (res["r3m"] if res["r3m"] is not None else -1) <= 0:
+            # Must be at least 20% above the 200-day SMA.
+            if (res["close"] is None or res["sma200"] is None or res["sma200"] <= 0
+                    or (res["close"] / res["sma200"] - 1) * 100 < 20):
                 continue
             rows.append({
                 "symbol": sym,
@@ -1071,8 +1085,9 @@ def main() -> int:
             continue
         if ipo["pct_off_high"] is None or ipo["pct_off_high"] > MAX_IPO_OFF_HIGH:
             continue
-        # Must be in a real uptrend — above 20-bar SMA at minimum
-        if not ipo["price_gt_sma20"]:
+        # Must be in a real uptrend — above the 20-bar SMA (or the 10-bar for
+        # fresh listings; brand-new 1-day listings pass, no MA to judge yet).
+        if not ipo["uptrend_ok"]:
             continue
         ipo_rows.append({
             "symbol": sym,
@@ -1085,6 +1100,14 @@ def main() -> int:
 
     df_out = pd.DataFrame(rows)
     if len(df_out):
+        # Drop NSE/BSE dual-listing duplicates — keep the NSE ticker.
+        # (The same company can qualify on both exchanges; NSE is the primary
+        # book. For US the exchange is never "NSE" so this is a harmless no-op.)
+        df_out["_exch_rank"] = (df_out["exchange"] != "NSE").astype(int)
+        df_out = (df_out.sort_values("_exch_rank")
+                        .drop_duplicates("symbol", keep="first")
+                        .drop(columns="_exch_rank")
+                        .reset_index(drop=True))
         df_out["rs_rating"] = (
             df_out["momentum"].rank(pct=True).mul(100).round(0).astype(int)
         )
@@ -1154,6 +1177,9 @@ def main() -> int:
             "min_liquidity_cr": MIN_LIQUIDITY_CR,
             "max_pct_below_52w_high": WITHIN_PCT_OF_52W_HIGH,
             "above_sma200": True,
+            "min_pct_above_sma200": 20.0,
+            "dedupe_nse_bse": "keep NSE",
+            "ipo_min_bars": 1,
             "ipo_min_liquidity_cr": MIN_IPO_LIQ_CR,
             "ipo_max_off_high": MAX_IPO_OFF_HIGH,
         },

@@ -1148,7 +1148,6 @@ FNWB,FNWB,First Northwest Bancorp - Common Stock,NASDAQ
 FNWD,FNWD,Finward Bancorp - common stock,NASDAQ
 FOCL,FOCL,"EDAP TMS S.A. - American Depositary Shares, each representing One Ordinary Share",NASDAQ
 FOFO,FOFO,"Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares",NASDAQ
-FONR,FONR,Fonar Corporation - Common Stock,NASDAQ
 FORM,FORM,"FormFactor, Inc. - Common Stock",NASDAQ
 FORR,FORR,"Forrester Research, Inc. - Common Stock",NASDAQ
 FORTY,FORTY,Formula Systems (1985) Ltd. - American Depositary Shares,NASDAQ
@@ -1456,7 +1455,6 @@ HYMC,HYMC,Hycroft Mining Holding Corporation - Class A Common Stock,NASDAQ
 HYNE,HYNE,"Hoyne Bancorp, Inc. - Common Stock",NASDAQ
 HYPD,HYPD,"Hyperion DeFi, Inc. - Common Stock",NASDAQ
 HYPR,HYPR,"Hyperfine, Inc.  - Class A Common Stock",NASDAQ
-IAC,IAC,IAC Inc. - Common Stock,NASDAQ
 IACO,IACO,Idea Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IART,IART,Integra LifeSciences Holdings Corporation - Common Stock,NASDAQ
 IBAC,IBAC,IB Acquisition Corp. - Common Stock,NASDAQ
@@ -2163,7 +2161,6 @@ NUTR,NUTR,Nusatrip Incorporated - Common Stock,NASDAQ
 NUTX,NUTX,Nutex Health Inc. - Common Stock,NASDAQ
 NUVL,NUVL,"Nuvalent, Inc. - Class A Common Stock",NASDAQ
 NUWE,NUWE,"Nuwellis, Inc. - Common Stock",NASDAQ
-NVA,NVA,Nova Minerals Limited - American Depositary Shares,NASDAQ
 NVAX,NVAX,"Novavax, Inc. - Common Stock",NASDAQ
 NVCR,NVCR,NovoCure Limited - Ordinary Shares,NASDAQ
 NVCT,NVCT,"Nuvectis Pharma, Inc. - Common Stock",NASDAQ
@@ -2427,6 +2424,7 @@ PPC,PPC,Pilgrim's Pride Corporation - Common Stock,NASDAQ
 PPCB,PPCB,"Propanc Biopharma, Inc. - Common Stock",NASDAQ
 PPHC,PPHC,"Public Policy Holding Company, Inc. - Common Stock",NASDAQ
 PPIH,PPIH,"Perma-Pipe International Holdings, Inc. - Common Stock",NASDAQ
+PPLI,PPLI,People Incorporated - Common Stock,NASDAQ
 PPSI,PPSI,"Pioneer Power Solutions, Inc. - Common Stock",NASDAQ
 PPTA,PPTA,Perpetua Resources Corp. - Common Shares,NASDAQ
 PRAA,PRAA,"PRA Group, Inc. - Common Stock",NASDAQ
@@ -4199,6 +4197,7 @@ ETJ,ETJ,Eaton Vance Risk-Managed Diversified Equity Income Fund Common Shares of
 ETN,ETN,"Eaton Corporation, PLC Ordinary Shares",NYSE
 ETO,ETO,Eaton Vance Tax-Advantage Global Dividend Opp Common Stock,NYSE
 ETR,ETR,Entergy Corporation Common Stock,NYSE
+ETSS,ETSS,Energy Transition Special Opportunities Class A Ordinary Shares,NYSE
 ETSY,ETSY,"Etsy, Inc. Common Stock",NYSE
 ETV,ETV,Eaton Vance Corporation Eaton Vance Tax-Managed Buy-Write Opportunities Fund Common Shares of Beneficial Interest,NYSE
 ETW,ETW,Eaton Vance Corporation Eaton Vance Tax-Managed Global Buy-Write Opportunites Fund Common Shares of Beneficial Interest,NYSE
@@ -5475,6 +5474,7 @@ SRXH,SRXH,"SRX Health Solutions, Inc. Common Stock",AMEX
 SSB,SSB,SouthState Bank Corporation Common Stock,NYSE
 SSD,SSD,"Simpson Manufacturing Company, Inc. Common Stock",NYSE
 SSL,SSL,Sasol Ltd. American Depositary Shares,NYSE
+SSMR,SSMR,Sunshine Silver Mining & Refining Company Common Stock,NYSE
 SST,SST,"System1, Inc. Class A Common Stock",NYSE
 SSTK,SSTK,"Shutterstock, Inc. Common Stock",NYSE
 ST,ST,Sensata Technologies Holding plc Ordinary Shares,NYSE
