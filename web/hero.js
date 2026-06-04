@@ -22,10 +22,15 @@
   ];
 
   const MAXC = 48;
-  const CAP = 460, FLOOR = 42;      // soft price band — keeps the chart framed forever
+  // Rescale band (NOT a price clamp): when price leaves [LO_BAND, HI_BAND] we scale
+  // price + every candle by the same factor back toward MID. The visible window
+  // auto-scales, so it's invisible — but it lets the stock trend UP forever instead
+  // of getting pinned under a ceiling (the old CAP bug = stuck-sideways-at-the-top).
+  const HI_BAND = 900, LO_BAND = 25, MID = 140;
   let W = 0, H = 0, DPR = 1;
   let candles = [];                // {o,h,l,c}
   let price = 100;
+  let anchor = 100;                // slow trailing reference = the stock's own trend
   let phase = "advance", phaseLeft = 60, pbTarget = 100;
   let forming = null, formT = 0, formLen = 7;
   let sparks = [];
@@ -53,40 +58,49 @@
      A soft band [FLOOR, CAP] keeps it framed forever — no runaway, no rescaling. */
   function tickPrice() {
     const noise = Math.random() - 0.5;
-    const ext = Math.max(0, Math.min(1, (price - FLOOR) / (CAP - FLOOR)));  // 0..1 extension
+    anchor += (price - anchor) * 0.012;                 // slow trailing trend reference
+    const ext = Math.max(0, price / anchor - 1);        // how stretched ABOVE its own trend (~0..0.4)
     if (phase === "advance") {
-      const drift = price * 0.0040 * (1 - ext * 0.8);   // climb eases as it extends
-      price += drift + noise * price * 0.0018;          // noise << drift → orderly green steps
+      // persistent climb; eases a bit when far above the trend but NEVER stalls
+      const drift = price * 0.0042 * (1 - Math.min(0.6, ext * 1.6));
+      price += drift + noise * price * 0.0016;          // noise << drift → orderly green steps
       if (--phaseLeft <= 0) {
-        if (ext > 0.85) { phase = "base"; phaseLeft = 34 + (Math.random() * 28 | 0); }
-        else {
+        if (ext > 0.20 && Math.random() < 0.55) {       // extended → pause in a tight base
+          phase = "base"; phaseLeft = 26 + (Math.random() * 22 | 0);
+        } else {
           phase = "pullback";
           // depth tiers so pullbacks reach different MAs: shallow→white(7),
           // medium→grey(21), deep→red(45). Deeper dips take longer to play out.
           const tier = Math.random();
-          const depth = tier < 0.48 ? 0.03 + Math.random() * 0.04        // → white (7) MA
-                      : tier < 0.80 ? 0.09 + Math.random() * 0.06        // → grey (21) MA
-                      :               0.18 + Math.random() * 0.12;       // → red (45) MA
+          const depth = tier < 0.50 ? 0.03 + Math.random() * 0.04        // → white (7) MA
+                      : tier < 0.82 ? 0.08 + Math.random() * 0.06        // → grey (21) MA
+                      :               0.15 + Math.random() * 0.10;       // → red (45) MA
           phaseLeft = depth < 0.08 ? 8 + (Math.random() * 8 | 0)
-                    : depth < 0.16 ? 14 + (Math.random() * 12 | 0)
-                    :                22 + (Math.random() * 16 | 0);
+                    : depth < 0.15 ? 13 + (Math.random() * 10 | 0)
+                    :                20 + (Math.random() * 14 | 0);
           pbTarget = price * (1 - depth);
         }
       }
     } else if (phase === "pullback") {
-      price += (pbTarget - price) * 0.10 + noise * price * 0.0014;           // glide to target
+      price += (pbTarget - price) * 0.12 + noise * price * 0.0012;           // glide to target
       if (--phaseLeft <= 0 || price <= pbTarget) {
-        phase = "advance"; phaseLeft = 48 + (Math.random() * 60 | 0);        // long advance legs
+        phase = "advance"; phaseLeft = 46 + (Math.random() * 64 | 0);        // resume the uptrend (higher low)
       }
-    } else {                                                                  // base
-      price += noise * price * 0.0016;                                        // tight, quiet
+    } else {                                                                  // base — tight, quiet
+      price += noise * price * 0.0014;
       if (--phaseLeft <= 0) {
-        phase = "pullback"; phaseLeft = 12 + (Math.random() * 12 | 0);
-        pbTarget = price * (1 - (0.07 + Math.random() * 0.06));               // deeper reset 7–13%
+        phase = "advance"; phaseLeft = 40 + (Math.random() * 50 | 0);        // base BREAKS OUT (up), never resolves down
       }
     }
-    if (price < FLOOR) price = FLOOR + Math.random() * 3;
-    if (price > CAP)   price = CAP - Math.random() * 3;
+    // Keep numbers framed forever by RESCALING (not clamping). The visible window
+    // auto-scales, so scaling price + every candle by the same factor is invisible,
+    // yet lets the stock keep making new highs like a real growth name.
+    if (price > HI_BAND || price < LO_BAND) {
+      const k = MID / price;
+      price *= k; anchor *= k; pbTarget *= k; labelPrice *= k;
+      for (const c of candles) { c.o *= k; c.h *= k; c.l *= k; c.c *= k; }
+      if (forming) { forming.o *= k; forming.h *= k; forming.l *= k; forming.c *= k; }
+    }
   }
   function startCandle() { forming = { o: price, h: price, l: price, c: price }; formT = 0; formLen = 6 + (Math.random() * 4 | 0); }
   function finalize() {
@@ -97,7 +111,7 @@
     startCandle();
   }
   function seed() {
-    candles = []; price = 100; phase = "advance"; phaseLeft = 60; startCandle();
+    candles = []; price = 100; anchor = 100; phase = "advance"; phaseLeft = 60; startCandle();
     for (let i = 0; i < MAXC; i++) {
       for (let k = 0; k < 6; k++) { tickPrice(); forming.c = price; forming.h = Math.max(forming.h, price); forming.l = Math.min(forming.l, price); }
       candles.push(forming); startCandle();
