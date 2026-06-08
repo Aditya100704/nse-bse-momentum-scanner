@@ -485,6 +485,7 @@ BRZE,BRZE,"Braze, Inc. - Class A Common Stock",NASDAQ
 BSAA,BSAA,BEST SPAC I Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BSBK,BSBK,Bogota Financial Corp. - Common Stock,NASDAQ
 BSET,BSET,"Bassett Furniture Industries, Incorporated - Common Stock",NASDAQ
+BSIN,BSIN,Big Sky Industrial Inc. - Common Stock,NASDAQ
 BSRR,BSRR,Sierra Bancorp - Common Stock,NASDAQ
 BSVN,BSVN,Bank7 Corp. - Common stock,NASDAQ
 BSY,BSY,"Bentley Systems, Incorporated - Class B Common Stock",NASDAQ
@@ -618,7 +619,6 @@ CFFN,CFFN,"Capitol Federal Financial, Inc. - Common Stock",NASDAQ
 CG,CG,The Carlyle Group Inc. - Common Stock,NASDAQ
 CGBD,CGBD,"Carlyle Secured Lending, Inc. - Closed End Fund",NASDAQ
 CGC,CGC,Canopy Growth Corporation - Common Shares,NASDAQ
-CGCT,CGCT,Cartesian Growth Corporation III - Class A Ordinary Shares,NASDAQ
 CGEM,CGEM,"Cullinan Therapeutics, Inc. - Common Stock",NASDAQ
 CGEN,CGEN,Compugen Ltd. - Ordinary Shares,NASDAQ
 CGNT,CGNT,Cognyte Software Ltd. - Ordinary Shares,NASDAQ
@@ -1058,6 +1058,7 @@ EZPW,EZPW,"EZCORP, Inc. - Class A Non-Voting Common Stock",NASDAQ
 EZRA,EZRA,"Reliance Global Group, Inc. - Common Stock",NASDAQ
 FA,FA,First Advantage Corporation - Common Stock,NASDAQ
 FABC,FABC,"Fabric.AI, Inc. - Common Stock",NASDAQ
+FAC,FAC,Factorial Energy Inc. - Class A Common Stock,NASDAQ
 FACT,FACT,FACT II Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 FAMI,FAMI,"Farmmi, Inc. - Class A Ordinary Shares",NASDAQ
 FANG,FANG,"Diamondback Energy, Inc. - Common Stock",NASDAQ
@@ -1170,6 +1171,7 @@ FRPT,FRPT,"Freshpet, Inc. - Common Stock",NASDAQ
 FRSH,FRSH,Freshworks Inc. - Class A Common Stock,NASDAQ
 FRST,FRST,Primis Financial Corp. - Common Stock,NASDAQ
 FRSX,FRSX,Foresight Autonomous Holdings Ltd. - American Depositary Shares,NASDAQ
+FRTT,FRTT,Fort Technology Inc. - Common Shares,NASDAQ
 FRVO,FRVO,Fervo Energy Company - Class A common stock,NASDAQ
 FSBC,FSBC,Five Star Bancorp - Common Stock,NASDAQ
 FSBW,FSBW,"FS Bancorp, Inc. - Common Stock",NASDAQ
@@ -1771,8 +1773,8 @@ LIF,LIF,"Life360, Inc. - Common Stock",NASDAQ
 LIFE,LIFE,Ethos Technologies Inc. - Class A Common Stock,NASDAQ
 LILA,LILA,Liberty Latin America Ltd. - Class A Common Stock,NASDAQ
 LILAK,LILAK,Liberty Latin America Ltd. - Class C Common Stock,NASDAQ
-LILAV,LILAV,Liberty Latin America Ltd - Class A Common Stock Ex-Distribution When Issued,NASDAQ
-LILKV,LILKV,Liberty Latin America Ltd - Class C Common Stock Ex-Distribution When Issued,NASDAQ
+LILAV,LILAV,Liberty Latin America Ltd. - Class A Common Stock Ex-Distribution When Issued,NASDAQ
+LILKV,LILKV,Liberty Latin America Ltd. - Class C Common Stock Ex-Distribution When Issued,NASDAQ
 LILPV,LILPV,Liberty Latin America Ltd. - 9.0% Fixed Rate Cumulative Perpetual Redeemable Series A Preference Shares,NASDAQ
 LIMN,LIMN,"Liminatus Pharma, Inc. - Class A Common Stock",NASDAQ
 LIN,LIN,Linde plc - Ordinary Shares,NASDAQ
@@ -2098,6 +2100,7 @@ NFLX,NFLX,"Netflix, Inc. - Common Stock",NASDAQ
 NGEN,NGEN,NervGen Pharma Corp. - Common stock,NASDAQ
 NGNE,NGNE,Neurogene Inc. - Common Stock,NASDAQ
 NHIC,NHIC,NewHold Investment Corp III - Class A Ordinary shares,NASDAQ
+NHIV,NHIV,NewHold Investment Corp IV - Class A Ordinary Shares,NASDAQ
 NHP,NHP,"National Healthcare Properties, Inc. - Class A Common Stock",NASDAQ
 NHTC,NHTC,Natural Health Trends Corp. - Common Stock,NASDAQ
 NICE,NICE,NICE Ltd - American Depositary Shares each representing one Ordinary Share,NASDAQ
@@ -2713,7 +2716,6 @@ SEER,SEER,"Seer, Inc. - Class A Common Stock",NASDAQ
 SEGG,SEGG,Sports Entertainment Gaming Global Corporation  - Common Stock,NASDAQ
 SEIC,SEIC,SEI Investments Company - Common Stock,NASDAQ
 SELF,SELF,"Global Self Storage, Inc. - Common Stock",NASDAQ
-SELX,SELX,Semilux International Ltd. - Ordinary Shares,NASDAQ
 SENEA,SENEA,Seneca Foods Corp. - Class A Common Stock,NASDAQ
 SENEB,SENEB,Seneca Foods Corp. - Class B Common Stock,NASDAQ
 SENS,SENS,"Senseonics Holdings, Inc. - Common Stock",NASDAQ
@@ -3133,7 +3135,6 @@ USAR,USAR,"USA Rare Earth, Inc. - Common Stock",NASDAQ
 USAU,USAU,U.S. Gold Corp. - Common Stock,NASDAQ
 USCB,USCB,"USCB Financial Holdings, Inc.  - Class A Common Stock",NASDAQ
 USEA,USEA,United Maritime Corporation - Common Stock,NASDAQ
-USEG,USEG,U.S. Energy Corp. - Common Stock,NASDAQ
 USGO,USGO,U.S. GoldMining Inc. - Common stock,NASDAQ
 USIO,USIO,"Usio, Inc. - Common Stock",NASDAQ
 USLM,USLM,"United States Lime & Minerals, Inc. - Common Stock",NASDAQ
@@ -3902,7 +3903,6 @@ CMRE,CMRE,Costamare Inc. Common Stock $0.0001 par value,NYSE
 CMS,CMS,CMS Energy Corporation Common Stock,NYSE
 CMT,CMT,Core Molding Technologies Inc Common Stock,AMEX
 CMTG,CMTG,"Claros Mortgage Trust, Inc. Common Stock",NYSE
-CMU,CMU,MFS Municipal Income Trust Common Stock,NYSE
 CNA,CNA,CNA Financial Corporation Common Stock,NYSE
 CNC,CNC,Centene Corporation Common Stock,NYSE
 CNF,CNF,"CNFinance Holdings Limited American Depositary Shares, each representing two hundred (200) Ordinary Shares",NYSE
@@ -3998,8 +3998,6 @@ CWH,CWH,"Camping World Holdings, Inc. Class A Common Stock",NYSE
 CWK,CWK,Cushman & Wakefield Ltd. Common Shares,NYSE
 CWT,CWT,California Water Service Group Common Stock,NYSE
 CX,CX,"Cemex, S.A.B. de C.V. Sponsored ADR",NYSE
-CXE,CXE,MFS High Income Municipal Trust Common Stock,NYSE
-CXH,CXH,MFS Investment Grade Municipal Trust Common Stock,NYSE
 CXM,CXM,"Sprinklr, Inc. Class A Common Stock",NYSE
 CXT,CXT,"Crane NXT, Co. Common Stock",NYSE
 CXW,CXW,"CoreCivic, Inc. Common Stock",NYSE
@@ -4807,7 +4805,7 @@ MET,MET,"MetLife, Inc. Common Stock",NYSE
 MFA,MFA,"MFA Financial, Inc.",NYSE
 MFC,MFC,Manulife Financial Corporation Common Stock,NYSE
 MFG,MFG,"Mizuho Financial Group, Inc. Sponosred ADR (Japan)",NYSE
-MFM,MFM,MFS Municipal Income Trust Common Stock,NYSE
+MFM,MFM,Aberdeen Municipal Income Fund Common Shares of Beneficial Interest,NYSE
 MG,MG,Mistras Group Inc Common Stock,NYSE
 MGA,MGA,"Magna International, Inc. Common Stock",NYSE
 MGF,MGF,MFS Government Markets Income Trust Common Stock,NYSE
