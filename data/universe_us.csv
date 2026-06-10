@@ -224,6 +224,7 @@ APPF,APPF,"AppFolio, Inc. - Class A Common Stock",NASDAQ
 APPN,APPN,Appian Corporation - Class A Common Stock,NASDAQ
 APPS,APPS,"Digital Turbine, Inc. - Common Stock",NASDAQ
 APRE,APRE,"Aprea Therapeutics, Inc. - Common Stock",NASDAQ
+APUR,APUR,Aperture AC - Class A Ordinary Shares,NASDAQ
 APVO,APVO,Aptevo Therapeutics Inc. - Common Stock,NASDAQ
 APWC,APWC,"Asia Pacific Wire & Cable Corporation Limited  - Common shares, Par value .01 per share",NASDAQ
 APXT,APXT,Apex Treasury Corporation - Class A Ordinary Share,NASDAQ
@@ -996,6 +997,7 @@ ENGS,ENGS,Energys Group Limited - Ordinary Shares,NASDAQ
 ENLT,ENLT,Enlight Renewable Energy Ltd. - Ordinary Shares,NASDAQ
 ENLV,ENLV,Enlivex Ltd. - Ordinary Shares,NASDAQ
 ENPH,ENPH,"Enphase Energy, Inc. - Common Stock",NASDAQ
+ENRD,ENRD,Einride AB - American Depositary Shares,NASDAQ
 ENSC,ENSC,"Ensysce Biosciences, Inc. - Common Stock",NASDAQ
 ENSG,ENSG,"The Ensign Group, Inc. - Common Stock",NASDAQ
 ENTA,ENTA,"Enanta Pharmaceuticals, Inc. - Common Stock",NASDAQ
@@ -2327,6 +2329,7 @@ PAYX,PAYX,"Paychex, Inc. - Common Stock",NASDAQ
 PBFS,PBFS,"Pioneer Bancorp, Inc. - Common Stock",NASDAQ
 PBHC,PBHC,"Pathfinder Bancorp, Inc. - Common Stock",NASDAQ
 PBK,PBK,PowerBank Corporation - Common Stock,NASDAQ
+PBLS,PBLS,"Parabilis Medicines, Inc. - Common Stock",NASDAQ
 PBM,PBM,Psyence Biomedical Ltd. - Common Shares,NASDAQ
 PBYI,PBYI,Puma Biotechnology Inc - Common Stock,NASDAQ
 PC,PC,Premium Catering (Holdings) Limited - Ordinary Shares,NASDAQ
@@ -4185,6 +4188,7 @@ EQX,EQX,Equinox Gold Corp. Common Shares,AMEX
 ERC,ERC,Allspring Multi-Sector Income Fund Common Stock,AMEX
 ERH,ERH,Allspring Utilities and High Income Fund Common Shares,AMEX
 ERO,ERO,Ero Copper Corp. Common Shares,NYSE
+EROC,EROC,"ERock, Inc. Class A Common Stock",NYSE
 EROK,EROK,"EagleRock Land, LLC Class A shares representing limited liability company interests",NYSE
 ES,ES,Eversource Energy (D/B/A) Common Stock,NYSE
 ESAB,ESAB,ESAB Corporation Common Stock,NYSE
@@ -4710,7 +4714,6 @@ LDOS,LDOS,"Leidos Holdings, Inc. Common Stock",NYSE
 LEA,LEA,Lear Corporation Common Stock,NYSE
 LEG,LEG,"Leggett & Platt, Incorporated Common Stock",NYSE
 LEGO,LEGO,Legato Merger Corp. IV Ordinary Shares,AMEX
-LEGT,LEGT,Legato Merger Corp. III Ordinary Shares,AMEX
 LEN,LEN,Lennar Corporation Class A Common Stock,NYSE
 LEN-B,LEN-B,Lennar Corporation Class B,NYSE
 LEO,LEO,"BNY Mellon Strategic Municipals, Inc. Common Stock",NYSE
@@ -5608,6 +5611,7 @@ TRAK,TRAK,"ReposiTrak, Inc. Common Stock",NYSE
 TRC,TRC,Tejon Ranch Co Common Stock,NYSE
 TREX,TREX,"Trex Company, Inc. Common Stock",NYSE
 TRGP,TRGP,"Targa Resources, Inc. Common Stock",NYSE
+TRLV,TRLV,Trulieve Cannabis Corp. Subordinate Voting Shares,NYSE
 TRN,TRN,"Trinity Industries, Inc. Common Stock",NYSE
 TRNO,TRNO,Terreno Realty Corporation Common Stock,NYSE
 TROX,TROX,Tronox Holdings plc Ordinary Shares (UK),NYSE
