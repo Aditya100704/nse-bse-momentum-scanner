@@ -94,7 +94,7 @@ AGIO,AGIO,"Agios Pharmaceuticals, Inc. - Common Stock",NASDAQ
 AGMB,AGMB,AgomAb Therapeutics NV - ADRs representing one common share.,NASDAQ
 AGMH,AGMH,AGM Group Holdings Inc. - Class A Ordinary Shares,NASDAQ
 AGNC,AGNC,AGNC Investment Corp. - Common Stock,NASDAQ
-AGNT,AGNT,"eXp World Holdings, Inc. - Common Stock",NASDAQ
+AGNT,AGNT,"AGNT, Inc. - Common Stock",NASDAQ
 AGPU,AGPU,Axe Compute Inc. - Common Stock,NASDAQ
 AGRZ,AGRZ,Agroz Inc. - Ordinary Shares,NASDAQ
 AGYS,AGYS,"Agilysys, Inc. - Common Stock",NASDAQ
@@ -317,6 +317,7 @@ AURE,AURE,Aurelion Inc.  - Class A Ordinary Shares,NASDAQ
 AUTL,AUTL,Autolus Therapeutics plc - American Depositary Shares,NASDAQ
 AUUD,AUUD,Auddia Inc. - Common Stock,NASDAQ
 AVAH,AVAH,Aveanna Healthcare Holdings Inc. - Common Stock,NASDAQ
+AVAT,AVAT,Avalanche Treasury Corporation - Class A Common Stock,NASDAQ
 AVAV,AVAV,"AeroVironment, Inc. - Common Stock",NASDAQ
 AVBH,AVBH,"Avidbank Holdings, Inc. - Common Stock",NASDAQ
 AVBP,AVBP,"ArriVent BioPharma, Inc. - Common Stock",NASDAQ
@@ -1119,8 +1120,6 @@ FINW,FINW,FinWise Bancorp - Common Stock,NASDAQ
 FIP,FIP,FTAI Infrastructure Inc. - Common Stock,NASDAQ
 FISI,FISI,"Financial Institutions, Inc. - Common Stock",NASDAQ
 FISV,FISV,"Fiserv, Inc. - Common Stock",NASDAQ
-FITB,FITB,Fifth Third Bancorp - Common Stock,NASDAQ
-FITBI,FITBI,Fifth Third Bancorp - Depositary Share repstg 1/1000th Ownership Interest Perp Pfd Series I,NASDAQ
 FIVE,FIVE,"Five Below, Inc. - Common Stock",NASDAQ
 FIVN,FIVN,"Five9, Inc. - Common Stock",NASDAQ
 FIZZ,FIZZ,National Beverage Corp. - Common Stock,NASDAQ
@@ -1651,7 +1650,6 @@ JZ,JZ,Jianzhi Education Technology Group Company Limited - American Depositary S
 JZXN,JZXN,"Jiuzi Holdings, Inc. - Ordinary Shares",NASDAQ
 KALA,KALA,"KALA BIO, Inc. - Common Stock",NASDAQ
 KALU,KALU,Kaiser Aluminum Corporation - Common Stock,NASDAQ
-KALV,KALV,"KalVista Pharmaceuticals, Inc. - Common Stock",NASDAQ
 KARO,KARO,Karooooo Ltd. - Ordinary shares,NASDAQ
 KBON,KBON,Karbon Capital Partners Corp. - Class A Ordinary Shares,NASDAQ
 KBSX,KBSX,FST Corp. - Ordinary Shares,NASDAQ
@@ -2703,7 +2701,6 @@ SCNX,SCNX,"Scienture Holdings, Inc. - Common Stock",NASDAQ
 SCOR,SCOR,"comScore, Inc. - Common Stock",NASDAQ
 SCPQ,SCPQ,Social Commerce Partners Corporation - Class A Ordinary Shares,NASDAQ
 SCSC,SCSC,"ScanSource, Inc. - Common Stock",NASDAQ
-SCVL,SCVL,"Shoe Carnival, Inc. - Common Stock",NASDAQ
 SCWO,SCWO,374Water Inc. - common stock,NASDAQ
 SCYX,SCYX,"SCYNEXIS, Inc. - Common Stock",NASDAQ
 SCZM,SCZM,Santacruz Silver Mining Ltd. - Common Shares,NASDAQ
@@ -2755,6 +2752,7 @@ SHIM,SHIM,Shimmick Corporation - Common Stock,NASDAQ
 SHIP,SHIP,Seanergy Maritime Holdings Corp. - Common Stock,NASDAQ
 SHLS,SHLS,"Shoals Technologies Group, Inc. - Class A Common Stock",NASDAQ
 SHMD,SHMD,SCHMID Group N.V. - Class A Ordinary Shares,NASDAQ
+SHOE,SHOE,"Shoe Station Group, Inc. - Common Stock",NASDAQ
 SHOO,SHOO,"Steven Madden, Ltd. - Common Stock",NASDAQ
 SHOP,SHOP,Shopify Inc. - Class A Subordinate Voting Shares,NASDAQ
 SHPH,SHPH,"Shuttle Pharmaceuticals Holdings, Inc. - common stock",NASDAQ
@@ -2846,6 +2844,7 @@ SOUN,SOUN,"SoundHound AI, Inc. - Class A Common Stock",NASDAQ
 SOWG,SOWG,Sow Good Inc. - Common Stock,NASDAQ
 SPAI,SPAI,Safe Pro Group Inc. - Common Stock,NASDAQ
 SPCB,SPCB,"SuperCom, Ltd. - Ordinary Shares",NASDAQ
+SPCX,SPCX,Space Exploration Technologies Corp. - Class A Common Stock,NASDAQ
 SPEG,SPEG,Silver Pegasus Acquisition Corp - Class A Ordinary Shares,NASDAQ
 SPFI,SPFI,"South Plains Financial, Inc. - Common Stock",NASDAQ
 SPHL,SPHL,Springview Holdings Ltd - Ordinary shares,NASDAQ
@@ -4266,6 +4265,7 @@ FIGS,FIGS,"FIGS, Inc. Class A Common Stock",NYSE
 FINS,FINS,Angel Oak Financial Strategies Income Term Trust Common Shares of Beneficial Interest,NYSE
 FINV,FINV,FinVolution Group American Depositary Shares,NYSE
 FIS,FIS,"Fidelity National Information Services, Inc. Common Stock",NYSE
+FITB,FITB,Fifth Third Bancorp Common Stock,NYSE
 FIX,FIX,"Comfort Systems USA, Inc. Common Stock",NYSE
 FJET,FJET,"Starfighters Space, Inc. Common Stock",AMEX
 FLC,FLC,Flaherty & Crumrine Total Return Fund Inc Common Stock,NYSE
