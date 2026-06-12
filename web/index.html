@@ -399,6 +399,7 @@
     <section class="table-section">
       <header class="card-head">
         <div><h3>Pending orders <span class="cnt mono" id="pendingCount"></span></h3><p class="card-sub">Placed and waiting — fills only on a <strong>strong break</strong> of the level (price reaches the entry)</p></div>
+        <div class="controls"><button id="copyTVPending" class="btn-ghost">Copy for TradingView</button></div>
       </header>
       <div class="table-wrap">
         <table id="pendingTable">
@@ -419,6 +420,7 @@
     <section class="table-section">
       <header class="card-head">
         <div><h3>Open trades <span class="cnt mono" id="openCount"></span></h3><p class="card-sub">Triggered — live positions, running toward target or stop</p></div>
+        <div class="controls"><button id="copyTVOpen" class="btn-ghost">Copy for TradingView</button></div>
       </header>
       <div class="table-wrap">
         <table id="openTable">
@@ -440,6 +442,7 @@
       <header class="card-head">
         <div><h3>Closed trades</h3><p class="card-sub">Trade history with realized P&amp;L and R multiple</p></div>
         <div class="controls">
+          <button id="copyTVClosed" class="btn-ghost">Copy for TradingView</button>
           <button id="exportTrades" class="btn-ghost">Export CSV</button>
           <button id="clearClosed" class="btn-ghost">Clear history</button>
         </div>

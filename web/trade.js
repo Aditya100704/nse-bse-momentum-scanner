@@ -586,6 +586,24 @@
     });
 
     // export closed trades
+    // ---- Copy for TradingView (one button per table) ----
+    const copyTV = (btn, rows) => {
+      const syms = [...new Set(rows.map((t) =>
+        `${(t.exchange || "NSE").toUpperCase()}:${t.ticker}`))];
+      if (!syms.length) { btn.textContent = "Nothing to copy"; }
+      else {
+        navigator.clipboard.writeText(syms.join(","));
+        btn.textContent = `Copied ${syms.length} ✓`;
+      }
+      setTimeout(() => { btn.textContent = "Copy for TradingView"; }, 1600);
+    };
+    $("copyTVPending").addEventListener("click", (e) =>
+      copyTV(e.target, state.open.filter((t) => t.state === "WATCHING")));
+    $("copyTVOpen").addEventListener("click", (e) =>
+      copyTV(e.target, state.open.filter((t) => t.state === "TRIGGERED")));
+    $("copyTVClosed").addEventListener("click", (e) =>
+      copyTV(e.target, state.closed));
+
     $("exportTrades").addEventListener("click", exportClosed);
     $("clearClosed").addEventListener("click", () => {
       if (!state.closed.length) return;
