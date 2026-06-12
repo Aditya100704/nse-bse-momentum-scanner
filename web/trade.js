@@ -14,6 +14,9 @@
 
   const LS_TRADES  = "phenom_trades_v1";
   const LS_API     = "phenom_trade_api";
+  // Default worker = the Phenom Autotrader on Railway (autonomous paper trader).
+  // Stored value "local" = user explicitly disconnected -> pure local mode.
+  const DEFAULT_API = "https://phenom-autotrader-production.up.railway.app";
   const LS_CAPITAL = "phenom_trade_capital";
   const LS_JOURNAL = "phenom_journal_v1";   // per-trade journal annotations, keyed by trade id
   const DEFAULT_CAPITAL = 100000;
@@ -22,7 +25,9 @@
   const POLL_MS        = 15000; // worker-mode refresh cadence
 
   const state = {
-    apiUrl:  (localStorage.getItem(LS_API) || "").replace(/\/+$/, ""),
+    apiUrl:  (() => { const v = localStorage.getItem(LS_API);
+                      if (v === "local") return "";
+                      return (v || DEFAULT_API).replace(/\/+$/, ""); })(),
     capital: +(localStorage.getItem(LS_CAPITAL) || DEFAULT_CAPITAL),
     open:    [],
     closed:  [],
@@ -594,7 +599,7 @@
     $("apiSaveBtn").addEventListener("click", () => {
       const url = $("apiUrlInput").value.trim().replace(/\/+$/, "");
       state.apiUrl = url;
-      if (url) localStorage.setItem(LS_API, url); else localStorage.removeItem(LS_API);
+      localStorage.setItem(LS_API, url || "local");
       state.capital = +$("capitalInput").value || state.capital;
       localStorage.setItem(LS_CAPITAL, String(state.capital));
       $("fCapital").value = state.capital;
@@ -610,7 +615,7 @@
       catch (e) { $("apiStatus").textContent = "Unreachable ✗"; }
     });
     $("apiClearBtn").addEventListener("click", () => {
-      state.apiUrl = ""; localStorage.removeItem(LS_API);
+      state.apiUrl = ""; localStorage.setItem(LS_API, "local");
       $("apiUrlInput").value = "";
       $("apiStatus").textContent = "Disconnected. Local mode.";
       stopPolling(); loadLocal(); setModePill(false); render();
