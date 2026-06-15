@@ -1409,6 +1409,8 @@ HNVR,HNVR,"Hanover Bancorp, Inc. - Common Stock",NASDAQ
 HOFT,HOFT,Hooker Furnishings Corporation - Common Stock,NASDAQ
 HOLO,HOLO,MicroCloud Hologram Inc. - Ordinary Shares,NASDAQ
 HON,HON,Honeywell International Inc. - Common Stock,NASDAQ
+HONAV,HONAV,Honeywell Aerospace Inc. - Common Stock,NASDAQ
+HONIV,HONIV,Honeywell International Inc. - Common Stock Ex Distribution When Issued,NASDAQ
 HOOD,HOOD,"Robinhood Markets, Inc. - Class A Common Stock",NASDAQ
 HOPE,HOPE,"Hope Bancorp, Inc. - Common Stock",NASDAQ
 HOUR,HOUR,"Hour Loop, Inc. - common stock",NASDAQ
@@ -1427,7 +1429,6 @@ HSAI,HSAI,"Hesai Group - American Depositary Share, each ADS represents one Clas
 HSCS,HSCS,HeartSciences Inc. - Common Stock,NASDAQ
 HSDT,HSDT,Solana Company - Class A Common Stock,NASDAQ
 HSIC,HSIC,"Henry Schein, Inc. - Common Stock",NASDAQ
-HSPT,HSPT,Horizon Space Acquisition II Corp. - Ordinary share,NASDAQ
 HST,HST,"Host Hotels & Resorts, Inc. - Common Stock",NASDAQ
 HSTM,HSTM,"HealthStream, Inc. - Common Stock",NASDAQ
 HTCO,HTCO,High-Trend International Group - Class A Ordinary Shares,NASDAQ
@@ -2782,6 +2783,7 @@ SKYT,SKYT,"SkyWater Technology, Inc. - Common Stock",NASDAQ
 SKYW,SKYW,"SkyWest, Inc. - Common Stock",NASDAQ
 SKYX,SKYX,SKYX Platforms Corp. - Common Stock,NASDAQ
 SLAB,SLAB,"Silicon Laboratories, Inc. - Common Stock",NASDAQ
+SLBT,SLBT,SL Science Holding Limited - Ordinary Shares,NASDAQ
 SLDB,SLDB,Solid Biosciences Inc. - Common Stock,NASDAQ
 SLDE,SLDE,"Slide Insurance Holdings, Inc. - Common Stock",NASDAQ
 SLDP,SLDP,"Solid Power, Inc. - Class A Common Stock",NASDAQ
@@ -4624,7 +4626,6 @@ JILL,JILL,"J. Jill, Inc. Common Stock",NYSE
 JKS,JKS,JinkoSolar Holding Company Limited American Depositary Shares (each representing 4 Common Shares),NYSE
 JLL,JLL,Jones Lang LaSalle Incorporated Common Stock,NYSE
 JLS,JLS,Nuveen Mortgage and Income Fund,NYSE
-JMG,JMG,JM Group Limited Ordinary Shares,AMEX
 JMIA,JMIA,"Jumia Technologies AG American Depositary Shares, each representing two Ordinary Shares",NYSE
 JMM,JMM,Nuveen Multi-Market Income Fund (MA),NYSE
 JNJ,JNJ,Johnson & Johnson Common Stock,NYSE
@@ -5533,7 +5534,6 @@ TBBB,TBBB,BBB Foods Inc. Class A Common Shares,NYSE
 TBI,TBI,"TrueBlue, Inc. Common Stock",NYSE
 TBN,TBN,Tamboran Resources Corporation Common stock,NYSE
 TCBX,TCBX,"Third Coast Bancshares, Inc. Common Stock",NYSE
-TCGL,TCGL,TechCreate Group Ltd. Class A Ordinary Shares,AMEX
 TCI,TCI,"Transcontinental Realty Investors, Inc. Common Stock",NYSE
 TD,TD,Toronto Dominion Bank (The) Common Stock,NYSE
 TDAY,TDAY,"USA TODAY Co., Inc. Common Stock",NYSE
