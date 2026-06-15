@@ -395,6 +395,26 @@
       </section>
     </div>
 
+    <!-- watchlist (interesting setups, still coiling below pivot — not armed yet) -->
+    <section class="table-section watchlist-section">
+      <header class="card-head">
+        <div><h3>Watchlist <span class="cnt mono" id="watchCount"></span></h3><p class="card-sub">Interesting setups still <strong>coiling below the pivot</strong> — not ready to place as orders yet. They promote to Pending on their own as they tighten near the breakout.</p></div>
+        <div class="controls"><button id="copyTVWatch" class="btn-ghost">Copy for TradingView</button></div>
+      </header>
+      <div class="table-wrap">
+        <table id="watchTable">
+          <thead><tr>
+            <th>Ticker</th><th>Dir</th>
+            <th class="num">Pivot</th><th class="num">Stop</th><th class="num">Target</th>
+            <th class="num">Qty</th><th class="num">Risk ₹</th>
+            <th class="num">To pivot</th><th>Setup</th>
+          </tr></thead>
+          <tbody id="watchBody"></tbody>
+        </table>
+        <div id="watchEmpty" class="empty">No watchlist setups right now. Names coiling below their pivot will appear here.</div>
+      </div>
+    </section>
+
     <!-- pending orders (placed, not yet triggered) -->
     <section class="table-section">
       <header class="card-head">

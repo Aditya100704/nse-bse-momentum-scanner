@@ -1121,6 +1121,29 @@ td.entry-col { color: var(--celestial); }
 }
 .jf input:focus, .jf select:focus, .jf textarea:focus { outline: none; border-color: var(--celestial); box-shadow: 0 0 0 3px rgba(240,69,90,0.08); }
 
+/* native <select> popups render in the OS light theme unless we force a dark
+   color-scheme ON the control itself (the :root one doesn't reach the popup),
+   and style the option rows explicitly for browsers that honour it. */
+select, .jf select, .field select, #journalFilter {
+  color-scheme: dark;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23b9a9ac' stroke-width='1.5'/></svg>");
+  background-repeat: no-repeat; background-position: right 10px center; padding-right: 26px;
+}
+select option, select optgroup {
+  background-color: #1a0f11; color: var(--ghost);
+}
+
+/* watchlist = the pre-order tier (interesting but not armed). Muted amber accent
+   so it reads as "still cooking", distinct from live pending orders. */
+.watchlist-section { opacity: 0.97; }
+.watchlist-section h3::after {
+  content: "watching"; margin-left: 8px; font-size: 9px; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--warn); border: 1px solid var(--warn);
+  border-radius: 999px; padding: 1px 7px; vertical-align: middle; opacity: 0.8;
+}
+.watch-setup { font-size: 12px; color: var(--whisper); }
+
 .jnotes { list-style: none; padding: 0; margin: 0 0 10px; display: flex; flex-direction: column; gap: 6px; }
 .jnotes li { font-size: 12px; color: var(--comet); line-height: 1.5; }
 .jn-time { color: var(--interstellar); font-size: 11px; margin-right: 6px; }

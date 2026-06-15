@@ -31,6 +31,7 @@
     capital: +(localStorage.getItem(LS_CAPITAL) || DEFAULT_CAPITAL),
     open:    [],
     closed:  [],
+    watchlist: [],        // interesting setups not yet ready to arm (worker mode)
     ann:     {},          // { tradeId: {setup, grade, emotion, wentRight, wentWrong, lesson, tags, notes:[{ts,text}]} }
     tickers: {},          // { SYMBOL: "NSE"|"BSE" } — full active universe, NSE-preferred
     tnames: {},           // { SYMBOL: "Company Name" }
@@ -38,6 +39,9 @@
     pollTimer: null,
   };
   const usingWorker = () => !!state.apiUrl;
+  // which market the dashboard is on (IN/US toggle) — the worker is one merged
+  // service that serves both, switched by ?market=
+  const mkt = () => (localStorage.getItem("phenom_market") === "us" ? "us" : "in");
   const subs = [];        // journal/other listeners, fired on any trade change
   function notify() { subs.forEach((f) => { try { f(); } catch (e) { console.error(e); } }); }
 
@@ -156,7 +160,9 @@
   // Public API consumed by the Journal tab (journal.js).
   window.PhenomTrades = {
     getAll() {
-      const decorate = (t) => ({ ...t, _ann: state.ann[t.id] || {}, _events: eventsFor(t) });
+      // worker auto-fills a `journal` object per trade (the bot journals itself);
+      // the user's own edits (localStorage) sit on TOP and win.
+      const decorate = (t) => ({ ...t, _ann: { ...(t.journal || {}), ...(state.ann[t.id] || {}) }, _events: eventsFor(t) });
       return { open: state.open.map(decorate), closed: state.closed.map(decorate), mode: usingWorker() ? "worker" : "local" };
     },
     annotate(id, fields) {
@@ -334,9 +340,10 @@
   async function refresh() {
     if (!usingWorker()) { loadLocal(); render(); return; }
     try {
-      const d = await apiGet("/trades");
+      const d = await apiGet(`/trades?market=${mkt()}`);
       state.open = d.open || [];
       state.closed = d.closed || [];
+      state.watchlist = d.watchlist || [];
       setModePill(true, d.broker_mode || "paper");
       render();
     } catch (e) {
@@ -389,7 +396,7 @@
   }
 
   /* ----------------------------------------------------------- renderers */
-  function render() { renderStats(); renderPending(); renderOpen(); renderClosed(); notify(); }
+  function render() { renderStats(); renderWatchlist(); renderPending(); renderOpen(); renderClosed(); notify(); }
 
   function renderStats() {
     const live = state.open.filter((t) => t.state === "TRIGGERED");
@@ -420,6 +427,35 @@
     : `<input class="mark-input mono" type="number" step="0.05" value="${t.mark != null ? t.mark : ""}" data-id="${t.id}" placeholder="mark" />`;
   const symCell = (t) => `<td class="sym"><a href="${tvLink(t.ticker, t.exchange)}" ${tvAttrs}>${esc(t.ticker)}</a>${t.note ? `<span class="row-note" title="${esc(t.note)}">●</span>` : ""}</td>`;
   const dirCell = (t) => `<td><span class="dir ${t.direction}">${t.direction === "short" ? "Short" : "Long"}</span></td>`;
+
+  // WATCHLIST (interesting setups still coiling below the pivot — not armed yet).
+  // Worker-only: the bot surfaces names that are too far below their pivot to be
+  // ready orders. Read-only (no actions) — they promote to Pending on their own
+  // when they tighten up near the breakout.
+  function renderWatchlist() {
+    const body = $("watchBody");
+    if (!body) return;
+    const rows = state.watchlist || [];
+    const wc = $("watchCount");
+    if (wc) wc.textContent = rows.length ? `(${rows.length})` : "";
+    const empty = $("watchEmpty");
+    if (empty) empty.classList.toggle("hidden", rows.length > 0);
+    body.innerHTML = rows.map((t) => {
+      const d = t.distToPivot;
+      const toPivot = d == null ? '<span class="muted">—</span>'
+        : `${Number(d).toFixed(1)}% <span class="muted">below</span>`;
+      return `<tr>
+        ${symCell(t)}${dirCell(t)}
+        <td class="num mono">${price(t.level)}</td>
+        <td class="num mono">${price(t.stop)}</td>
+        <td class="num mono">${price(t.target)}</td>
+        <td class="num mono">${(t.qty ?? 0).toLocaleString("en-IN")}</td>
+        <td class="num mono">${rupee(t.riskRs)}</td>
+        <td class="num mono">${toPivot}</td>
+        <td class="muted watch-setup">${esc((t.journal && t.journal.setup) || "")}</td>
+      </tr>`;
+    }).join("");
+  }
 
   // PENDING orders (placed, waiting for a strong break of the level)
   function renderPending() {
@@ -597,6 +633,8 @@
       }
       setTimeout(() => { btn.textContent = "Copy for TradingView"; }, 1600);
     };
+    const cw = $("copyTVWatch");
+    if (cw) cw.addEventListener("click", (e) => copyTV(e.target, state.watchlist));
     $("copyTVPending").addEventListener("click", (e) =>
       copyTV(e.target, state.open.filter((t) => t.state === "WATCHING")));
     $("copyTVOpen").addEventListener("click", (e) =>
