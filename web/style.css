@@ -1224,3 +1224,14 @@ select option, select optgroup {
   .news-bar { flex-direction: column; align-items: stretch; }
   .news-actions { justify-content: space-between; }
 }
+
+/* collapsible dropdown sections (Trade tab: Watchlist + Near-misses) — 2026-06-16 */
+.table-section.collapsible .collapse-head { cursor: pointer; user-select: none; }
+.table-section.collapsible .collapse-head:hover h3 { color: var(--violet); }
+.table-section.collapsible .caret {
+  display: inline-block; transition: transform .15s ease; color: var(--violet);
+  font-size: .8em; margin-right: 4px; transform: rotate(0deg);
+}
+.table-section.collapsible:not(.collapsed) .caret { transform: rotate(90deg); }
+.table-section.collapsed .table-wrap { display: none; }
+.table-section.collapsed .card-sub { display: none; }

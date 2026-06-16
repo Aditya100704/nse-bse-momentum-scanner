@@ -442,29 +442,66 @@
   // Worker-only: the bot surfaces names that are too far below their pivot to be
   // ready orders. Read-only (no actions) — they promote to Pending on their own
   // when they tighten up near the breakout.
+  const _toPivot = (d) => d == null ? '<span class="muted">—</span>'
+    : `${Number(d).toFixed(1)}% <span class="muted">below</span>`;
+
   function renderWatchlist() {
+    const all = state.watchlist || [];
+    const regular = all.filter((t) => !t.nearMiss);
+    const near = all.filter((t) => t.nearMiss);
+    // regular watchlist (coiling below pivot, armed but not yet a ready order)
     const body = $("watchBody");
-    if (!body) return;
-    const rows = state.watchlist || [];
-    const wc = $("watchCount");
-    if (wc) wc.textContent = rows.length ? `(${rows.length})` : "";
-    const empty = $("watchEmpty");
-    if (empty) empty.classList.toggle("hidden", rows.length > 0);
-    body.innerHTML = rows.map((t) => {
-      const d = t.distToPivot;
-      const toPivot = d == null ? '<span class="muted">—</span>'
-        : `${Number(d).toFixed(1)}% <span class="muted">below</span>`;
-      return `<tr>
+    if (body) {
+      const wc = $("watchCount"); if (wc) wc.textContent = regular.length ? `(${regular.length})` : "";
+      const empty = $("watchEmpty"); if (empty) empty.classList.toggle("hidden", regular.length > 0);
+      body.innerHTML = regular.map((t) => `<tr>
         ${symCell(t)}${dirCell(t)}
         <td class="num mono">${price(t.level)}</td>
         <td class="num mono">${price(t.stop)}</td>
         <td class="num mono">${price(t.target)}</td>
         <td class="num mono">${(t.qty ?? 0).toLocaleString("en-IN")}</td>
         <td class="num mono">${rupee(t.riskRs)}</td>
-        <td class="num mono">${toPivot}</td>
+        <td class="num mono">${_toPivot(t.distToPivot)}</td>
         <td class="muted watch-setup">${esc((t.journal && t.journal.setup) || "")}</td>
-      </tr>`;
-    }).join("");
+      </tr>`).join("");
+    }
+    // near-misses (strong setups failing only a soft readiness gate; auto-promoted by the bot)
+    const nbody = $("nearmissBody");
+    if (nbody) {
+      const nc = $("nearmissCount"); if (nc) nc.textContent = near.length ? `(${near.length})` : "";
+      const nempty = $("nearmissEmpty"); if (nempty) nempty.classList.toggle("hidden", near.length > 0);
+      nbody.innerHTML = near.map((t) => {
+        // "waiting on" = the first segment of the note ("ALMOST READY — needs ... | grade* coil ...")
+        const reason = String(t.note || "").split(" | ")[0].replace(/^ALMOST READY\s*[—-]\s*/, "");
+        return `<tr>
+          ${symCell(t)}${dirCell(t)}
+          <td class="num mono">${price(t.level)}</td>
+          <td class="num mono">${price(t.stop)}</td>
+          <td class="num mono">${_toPivot(t.distToPivot)}</td>
+          <td class="muted">${esc(reason || "almost ready")}</td>
+        </tr>`;
+      }).join("");
+    }
+  }
+
+  // collapsible dropdown sections (watchlist + near-misses), remembered in localStorage
+  function bindCollapsibles() {
+    document.querySelectorAll(".table-section.collapsible").forEach((sec) => {
+      const head = sec.querySelector(".collapse-head");
+      if (!head || head.dataset.bound) return;
+      head.dataset.bound = "1";
+      const key = "phenom_collapse_" + (sec.dataset.collapse || "x");
+      try {
+        const saved = localStorage.getItem(key);
+        if (saved === "1") sec.classList.add("collapsed");
+        else if (saved === "0") sec.classList.remove("collapsed");
+      } catch (e) {}
+      head.addEventListener("click", (e) => {
+        if (e.target.closest("button, a, input, select")) return;   // ignore the Copy button etc.
+        sec.classList.toggle("collapsed");
+        try { localStorage.setItem(key, sec.classList.contains("collapsed") ? "1" : "0"); } catch (e) {}
+      });
+    });
   }
 
   // PENDING orders (placed, waiting for a strong break of the level)
@@ -724,6 +761,7 @@
     render();
     renderCalc();
     bind();
+    bindCollapsibles();
 
     if (usingWorker()) { startPolling(); refresh(); }
   }
