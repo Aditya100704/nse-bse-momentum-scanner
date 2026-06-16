@@ -212,6 +212,7 @@
       t.addEventListener("click", () => {
         const name = t.dataset.tab;
         state.activeTab = name;
+        try { localStorage.setItem("phenom_tab", name); } catch (e) {}   // remember tab across refresh + IN/US switch
         document.querySelectorAll(".tab").forEach((x) => x.classList.toggle("is-active", x === t));
         document.querySelectorAll(".page").forEach((p) =>
           p.classList.toggle("is-active", p.dataset.page === name)
@@ -1316,4 +1317,15 @@
   bindFilters();
   initTickerTooltip();
   load();
+  // Remember the active tab across a refresh AND across the IN/US switch (the toggle reloads
+  // the page). Restore on window.load, after every tab's script (trade/journal/news) has bound
+  // its own open-hook, by re-firing the tab's click so those hooks run too.
+  window.addEventListener("load", () => {
+    let saved = null;
+    try { saved = localStorage.getItem("phenom_tab"); } catch (e) {}
+    if (saved && saved !== "scanner") {
+      const btn = document.querySelector(`.tab[data-tab="${saved}"]`);
+      if (btn) btn.click();
+    }
+  });
 })();
