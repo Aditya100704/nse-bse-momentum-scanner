@@ -82,11 +82,26 @@
   };
 
   const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  // Resolve the proper TradingView exchange. The autotrader stores US trades with a generic
+  // exchange "US" (NOT a real TV exchange — TradingView rejects "US:AAP"). So look up the real
+  // exchange (NYSE/NASDAQ/AMEX) from the loaded ticker list; if unknown, emit a BARE ticker,
+  // which TradingView resolves on its own. IN trades already carry NSE/BSE and pass through.
+  const TV_EXCH = ["NSE", "BSE", "NASDAQ", "NYSE", "AMEX"];
+  const tvExch = (sym, exch) => {
+    const real = ((state.tickers && state.tickers[sym]) || "").toUpperCase();
+    if (TV_EXCH.includes(real)) return real;
+    const e = (exch || "").toUpperCase();
+    return TV_EXCH.includes(e) ? e : "";
+  };
+  const tvSym = (sym, exch) => {
+    const e = tvExch(sym, exch);
+    return e ? `${e}:${sym}` : sym;          // bare ticker if unknown — TradingView resolves it
+  };
   const tvLink = (sym, exch) => {
-    const e = exch === "BSE" ? "BSE" : "NSE";
+    const e = tvExch(sym, exch);
     return IS_MOBILE
-      ? `https://www.tradingview.com/symbols/${e}-${encodeURIComponent(sym)}/`
-      : `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(e + ":" + sym)}`;
+      ? `https://www.tradingview.com/symbols/${encodeURIComponent(e ? e + "-" + sym : sym)}/`
+      : `https://www.tradingview.com/chart/?symbol=${encodeURIComponent(e ? e + ":" + sym : sym)}`;
   };
   const tvAttrs = IS_MOBILE ? `rel="noopener"` : `target="_blank" rel="noopener"`;
 
@@ -671,8 +686,7 @@
     // export closed trades
     // ---- Copy for TradingView (one button per table) ----
     const copyTV = (btn, rows) => {
-      const syms = [...new Set(rows.map((t) =>
-        `${(t.exchange || "NSE").toUpperCase()}:${t.ticker}`))];
+      const syms = [...new Set(rows.map((t) => tvSym(t.ticker, t.exchange)))];
       if (!syms.length) { btn.textContent = "Nothing to copy"; }
       else {
         navigator.clipboard.writeText(syms.join(","));
