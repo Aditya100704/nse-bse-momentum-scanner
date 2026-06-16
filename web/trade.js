@@ -64,11 +64,21 @@
   };
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  // Indian trades show in IST, US trades in ET. The autotrader worker (Railway) emits
+  // NAIVE timestamps that are actually UTC; local-mode ones already carry a Z/offset.
+  // So mark any tz-less string as UTC, then render in the active market's timezone.
+  const _TZ = { in: "Asia/Kolkata", us: "America/New_York" };
+  const _TZLBL = { in: "IST", us: "ET" };
   const shortTime = (iso) => {
     if (!iso) return "—";
-    const d = new Date(iso);
+    let s = String(iso);
+    if (!/[zZ]$|[+-]\d{2}:?\d{2}$/.test(s)) s += "Z";   // naive -> treat as UTC
+    const d = new Date(s);
     if (Number.isNaN(d.getTime())) return "—";
-    return d.toLocaleString("en-IN", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" });
+    const m = mkt();
+    return d.toLocaleString("en-IN", {
+      day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit", timeZone: _TZ[m],
+    }) + " " + _TZLBL[m];
   };
 
   const IS_MOBILE = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);

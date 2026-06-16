@@ -23,10 +23,20 @@
     const cls = v > 0 ? "pos" : v < 0 ? "neg" : "muted";
     return `<span class="${cls}">${v > 0 ? "+" : ""}${txt}</span>`;
   };
+  // IN trades show in IST, US trades in ET. Worker (Railway) timestamps are naive-UTC;
+  // mark tz-less strings as UTC, then render in the active market's timezone.
+  const _JTZ = { in: "Asia/Kolkata", us: "America/New_York" };
+  const _JTZLBL = { in: "IST", us: "ET" };
   const dt = (iso) => {
     if (!iso) return "—";
-    const d = new Date(iso);
-    return Number.isNaN(d.getTime()) ? "—" : d.toLocaleString("en-IN", { day: "2-digit", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit" });
+    let s = String(iso);
+    if (!/[zZ]$|[+-]\d{2}:?\d{2}$/.test(s)) s += "Z";   // naive -> treat as UTC
+    const d = new Date(s);
+    if (Number.isNaN(d.getTime())) return "—";
+    const m = localStorage.getItem("phenom_market") === "us" ? "us" : "in";
+    return d.toLocaleString("en-IN", {
+      day: "2-digit", month: "short", year: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: _JTZ[m],
+    }) + " " + _JTZLBL[m];
   };
   const dur = (a, b) => {
     if (!a || !b) return "—";
