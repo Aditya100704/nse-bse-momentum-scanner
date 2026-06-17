@@ -271,7 +271,6 @@ ASO,ASO,"Academy Sports and Outdoors, Inc. - Common Stock",NASDAQ
 ASPC,ASPC,A SPAC III Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 ASPI,ASPI,ASP Isotopes Inc. - Common Stock,NASDAQ
 ASPS,ASPS,Altisource Portfolio Solutions S.A. - Common Stock,NASDAQ
-ASRT,ASRT,"Assertio Holdings, Inc. - Common Stock",NASDAQ
 ASRV,ASRV,AmeriServ Financial Inc. - Common Stock,NASDAQ
 ASST,ASST,"Strive, Inc. - Class A Common Stock",NASDAQ
 ASTC,ASTC,Astrotech Corporation - Common Stock,NASDAQ
@@ -532,6 +531,7 @@ CABR,CABR,"Caring Brands, Inc. - Common Stock",NASDAQ
 CAC,CAC,Camden National Corporation - Common Stock,NASDAQ
 CACC,CACC,Credit Acceptance Corporation - Common Stock,NASDAQ
 CADL,CADL,"Candel Therapeutics, Inc. - Common Stock",NASDAQ
+CAES,CAES,"Cantor Equity Partners VII, Inc. - Class A Ordinary Shares",NASDAQ
 CAI,CAI,"Caris Life Sciences, Inc. - Common Stock",NASDAQ
 CAKE,CAKE,The Cheesecake Factory Incorporated - Common Stock,NASDAQ
 CALC,CALC,"CalciMedica, Inc. - Common Stock",NASDAQ
@@ -826,6 +826,7 @@ CWD,CWD,CaliberCos Inc. - Class A Common Stock,NASDAQ
 CWST,CWST,"Casella Waste Systems, Inc. - Class A Common Stock",NASDAQ
 CXAI,CXAI,CXApp Inc. - Class A Common Stock,NASDAQ
 CXDO,CXDO,"Crexendo, Inc. - Common Stock",NASDAQ
+CXII,CXII,Churchill Capital Corp XII - Class A Ordinary Shares,NASDAQ
 CYAB,CYAB,"Cyabra, Inc. - Common Stock",NASDAQ
 CYCN,CYCN,"Cyclerion Therapeutics, Inc. - Common Stock",NASDAQ
 CYCU,CYCU,"Cycurion, Inc. - Common Stock",NASDAQ
@@ -1653,6 +1654,7 @@ JZXN,JZXN,"Jiuzi Holdings, Inc. - Ordinary Shares",NASDAQ
 KALA,KALA,"KALA BIO, Inc. - Common Stock",NASDAQ
 KALU,KALU,Kaiser Aluminum Corporation - Common Stock,NASDAQ
 KARO,KARO,Karooooo Ltd. - Ordinary shares,NASDAQ
+KAZR,KAZR,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
 KBON,KBON,Karbon Capital Partners Corp. - Class A Ordinary Shares,NASDAQ
 KBSX,KBSX,FST Corp. - Ordinary Shares,NASDAQ
 KC,KC,Kingsoft Cloud Holdings Limited - American Depositary Shares,NASDAQ
@@ -1779,9 +1781,7 @@ LIF,LIF,"Life360, Inc. - Common Stock",NASDAQ
 LIFE,LIFE,Ethos Technologies Inc. - Class A Common Stock,NASDAQ
 LILA,LILA,Liberty Latin America Ltd. - Class A Common Stock,NASDAQ
 LILAK,LILAK,Liberty Latin America Ltd. - Class C Common Stock,NASDAQ
-LILAV,LILAV,Liberty Latin America Ltd. - Class A Common Stock Ex-Distribution When Issued,NASDAQ
-LILKV,LILKV,Liberty Latin America Ltd. - Class C Common Stock Ex-Distribution When Issued,NASDAQ
-LILPV,LILPV,Liberty Latin America Ltd. - 9.0% Fixed Rate Cumulative Perpetual Redeemable Series A Preference Shares,NASDAQ
+LILAP,LILAP,Liberty Latin America Ltd. - 9.0% Fixed Rate Cumulative Perpetual Redeemable Series A Preference Shares,NASDAQ
 LIMN,LIMN,"Liminatus Pharma, Inc. - Class A Common Stock",NASDAQ
 LIN,LIN,Linde plc - Ordinary Shares,NASDAQ
 LINC,LINC,Lincoln Educational Services Corporation - Common Stock,NASDAQ
@@ -2772,7 +2772,6 @@ SION,SION,"Sionna Therapeutics, Inc. - Common Stock",NASDAQ
 SIRI,SIRI,SiriusXM Holdings Inc. - Common Stock,NASDAQ
 SITM,SITM,SiTime Corporation - Common Stock,NASDAQ
 SJ,SJ,Scienjoy Holding Corporation - Class A Ordinary Shares,NASDAQ
-SKBL,SKBL,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
 SKIN,SKIN,SkinHealth Systems Inc. - Class A Common Stock,NASDAQ
 SKK,SKK,SKK Holdings Limited - Class A Ordinary Shares,NASDAQ
 SKWD,SKWD,"Skyward Specialty Insurance Group, Inc. - Common Stock",NASDAQ
@@ -5021,6 +5020,7 @@ NUS,NUS,"Nu Skin Enterprises, Inc. Common Stock",NYSE
 NUV,NUV,"Nuveen Municipal Value Fund, Inc. Common Stock",NYSE
 NUVB,NUVB,Nuvation Bio Inc. Class A Common Stock,NYSE
 NUW,NUW,Nuveen AMT-Free Municipal Value Fund,NYSE
+NVA,NVA,Nova Minerals Corp Common Stock,AMEX
 NVG,NVG,Nuveen AMT-Free Municipal Credit Income Fund,NYSE
 NVGS,NVGS,Navigator Holdings Ltd. Ordinary Shares (Marshall Islands),NYSE
 NVO,NVO,Novo Nordisk A/S Common Stock,NYSE
