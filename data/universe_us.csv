@@ -1120,6 +1120,7 @@ FIGX,FIGX,FIGX Capital Acquisition Corp. - Class A ordinary share,NASDAQ
 FINW,FINW,FinWise Bancorp - Common Stock,NASDAQ
 FIP,FIP,FTAI Infrastructure Inc. - Common Stock,NASDAQ
 FISI,FISI,"Financial Institutions, Inc. - Common Stock",NASDAQ
+FISN,FISN,"Deep Fission, Inc. - Common Stock",NASDAQ
 FISV,FISV,"Fiserv, Inc. - Common Stock",NASDAQ
 FIVE,FIVE,"Five Below, Inc. - Common Stock",NASDAQ
 FIVN,FIVN,"Five9, Inc. - Common Stock",NASDAQ
@@ -1466,6 +1467,7 @@ HYNE,HYNE,"Hoyne Bancorp, Inc. - Common Stock",NASDAQ
 HYPD,HYPD,"Hyperion DeFi, Inc. - Common Stock",NASDAQ
 HYPR,HYPR,"Hyperfine, Inc.  - Class A Common Stock",NASDAQ
 IACO,IACO,Idea Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+IACQ,IACQ,Irenic Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IART,IART,Integra LifeSciences Holdings Corporation - Common Stock,NASDAQ
 IBAC,IBAC,IB Acquisition Corp. - Common Stock,NASDAQ
 IBCP,IBCP,Independent Bank Corporation - Common Stock,NASDAQ
@@ -1653,6 +1655,7 @@ JZ,JZ,Jianzhi Education Technology Group Company Limited - American Depositary S
 JZXN,JZXN,"Jiuzi Holdings, Inc. - Ordinary Shares",NASDAQ
 KALA,KALA,"KALA BIO, Inc. - Common Stock",NASDAQ
 KALU,KALU,Kaiser Aluminum Corporation - Common Stock,NASDAQ
+KARD,KARD,"Kardigan, Inc. - Common Stock",NASDAQ
 KARO,KARO,Karooooo Ltd. - Ordinary shares,NASDAQ
 KAZR,KAZR,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
 KBON,KBON,Karbon Capital Partners Corp. - Class A Ordinary Shares,NASDAQ
@@ -2260,6 +2263,7 @@ OPAL,OPAL,OPAL Fuels Inc. - Class A Common Stock,NASDAQ
 OPBK,OPBK,OP Bancorp - Common Stock,NASDAQ
 OPCH,OPCH,"Option Care Health, Inc. - Common Stock",NASDAQ
 OPEN,OPEN,Opendoor Technologies Inc  - Common Stock,NASDAQ
+OPI,OPI,Office Properties Income Trust - Common shares of beneficial interest,NASDAQ
 OPK,OPK,"Opko Health, Inc. - Common Stock",NASDAQ
 OPRA,OPRA,Opera Limited - American Depositary Shares,NASDAQ
 OPRT,OPRT,Oportun Financial Corporation - common stock,NASDAQ
@@ -2412,7 +2416,7 @@ PMN,PMN,ProMIS Neurosciences Inc. - Common Shares,NASDAQ
 PMTR,PMTR,Perimeter Acquisition Corp. I - Class A Ordinary Shares,NASDAQ
 PMTS,PMTS,CPI Card Group Inc. - Common Stock,NASDAQ
 PMVP,PMVP,"PMV Pharmaceuticals, Inc. - Common Stock",NASDAQ
-PN,PN,Skycorp Solar Group Limited - Class A Ordinary Shares,NASDAQ
+PN,PN,PN Smart Energy Limited - Class A Ordinary Shares,NASDAQ
 PNBK,PNBK,Patriot National Bancorp Inc. - Common Stock,NASDAQ
 PNRG,PNRG,PrimeEnergy Resources Corporation - Common Stock,NASDAQ
 PNTG,PNTG,"The Pennant Group, Inc. - Common Stock",NASDAQ
@@ -4238,6 +4242,7 @@ FBK,FBK,FB Financial Corporation Common Stock,NYSE
 FBP,FBP,First BanCorp. New Common Stock,NYSE
 FBRT,FBRT,"Franklin BSP Realty Trust, Inc. Common Stock",NYSE
 FC,FC,Franklin Covey Company Common Stock,NYSE
+FCBM,FCBM,"First Carolina Financial Services, Inc. Common Stock",NYSE
 FCF,FCF,First Commonwealth Financial Corporation Common Stock,NYSE
 FCN,FCN,"FTI Consulting, Inc. Common Stock",NYSE
 FCPT,FCPT,"Four Corners Property Trust, Inc. Common Stock",NYSE
@@ -5183,12 +5188,12 @@ PLG,PLG,Platinum Group Metals Ltd. Ordinary Shares (Canada),AMEX
 PLGO,PLGO,Pelagos Insurance Capital Limited Common Shares,NYSE
 PLNT,PLNT,"Planet Fitness, Inc. Common Stock",NYSE
 PLOW,PLOW,"Douglas Dynamics, Inc. Common Stock",NYSE
+PLUN,PLUN,Plutonian Acquisition Corp II Class A Ordinary Shares,NYSE
 PLX,PLX,"Protalix BioTherapeutics, Inc. (DE) Common Stock",AMEX
 PM,PM,Philip Morris International Inc Common Stock,NYSE
 PMI,PMI,"Picard Medical, Inc. Common Stock",AMEX
 PML,PML,Pimco Municipal Income Fund II Common Shares of Beneficial Interest,NYSE
 PMM,PMM,Putnam Managed Municipal Income Trust Common Stock,NYSE
-PMNT,PMNT,Perfect Moment Ltd. Common Stock,AMEX
 PMO,PMO,Putnam Municipal Opportunities Trust Common Stock,NYSE
 PMT,PMT,PennyMac Mortgage Investment Trust Common Shares of Beneficial Interest,NYSE
 PNC,PNC,"PNC Financial Services Group, Inc. (The) Common Stock",NYSE
