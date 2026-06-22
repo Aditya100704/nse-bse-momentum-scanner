@@ -411,7 +411,7 @@ BIIB,BIIB,Biogen Inc. - Common Stock,NASDAQ
 BILI,BILI,Bilibili Inc. - American Depositary Shares,NASDAQ
 BIOA,BIOA,"BioAge Labs, Inc. - Common Stock",NASDAQ
 BIOX,BIOX,Bioceres Crop Solutions Corp. - Ordinary Shares,NASDAQ
-BIRD,BIRD,"Allbirds, Inc. - Class A Common Stock",NASDAQ
+BIRD,BIRD,"Smartbird, Inc. - Class A Common Stock",NASDAQ
 BIVI,BIVI,BioVie Inc. - Common stock,NASDAQ
 BIXI,BIXI,Bitcoin Infrastructure Acquisition Corp Ltd. - Class A Ordinary Shares,NASDAQ
 BIYA,BIYA,Baiya International Group Inc.  - Ordinary Shares,NASDAQ
@@ -533,6 +533,7 @@ CACC,CACC,Credit Acceptance Corporation - Common Stock,NASDAQ
 CADL,CADL,"Candel Therapeutics, Inc. - Common Stock",NASDAQ
 CAES,CAES,"Cantor Equity Partners VII, Inc. - Class A Ordinary Shares",NASDAQ
 CAI,CAI,"Caris Life Sciences, Inc. - Common Stock",NASDAQ
+CAII,CAII,Collective Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 CAKE,CAKE,The Cheesecake Factory Incorporated - Common Stock,NASDAQ
 CALC,CALC,"CalciMedica, Inc. - Common Stock",NASDAQ
 CALM,CALM,"Cal-Maine Foods, Inc. - Common Stock",NASDAQ
@@ -1196,6 +1197,7 @@ FTDR,FTDR,"Frontdoor, Inc. - Common Stock",NASDAQ
 FTEK,FTEK,"Fuel Tech, Inc. - Common Stock",NASDAQ
 FTFT,FTFT,Future FinTech Group Inc. - Common Stock,NASDAQ
 FTH,FTH,"Faeth Therapeutics, Inc.  - Common Stock",NASDAQ
+FTHA,FTHA,Forefront Tech Holdings Acquisition Corp - Class A Ordinary Shares,NASDAQ
 FTHM,FTHM,Fathom Holdings Inc. - Common Stock,NASDAQ
 FTLF,FTLF,"FitLife Brands, Inc. - Common Stock",NASDAQ
 FTNT,FTNT,"Fortinet, Inc. - Common Stock",NASDAQ
@@ -1231,6 +1233,7 @@ GBDC,GBDC,"Golub Capital BDC, Inc. - Closed End Fund",NASDAQ
 GBFH,GBFH,GBank Financial Holdings Inc. - Common Stock,NASDAQ
 GBLI,GBLI,"Global Indemnity Group, LLC - Class A Common Shares",NASDAQ
 GCBC,GCBC,"Greene County Bancorp, Inc. - Common Stock",NASDAQ
+GCGR,GCGR,General Catalyst Global Resilience Merger Corp. - Class A Ordinary Shares,NASDAQ
 GCL,GCL,GCL Global Holdings Ltd - Ordinary Shares,NASDAQ
 GCMG,GCMG,GCM Grosvenor Inc. - Class A Common Stock,NASDAQ
 GCT,GCT,GigaCloud Technology Inc - Class A Ordinary Shares,NASDAQ
@@ -1357,6 +1360,7 @@ HAFC,HAFC,Hanmi Financial Corporation - Common Stock,NASDAQ
 HAIN,HAIN,"The Hain Celestial Group, Inc. - Common Stock",NASDAQ
 HALO,HALO,"Halozyme Therapeutics, Inc. - Common Stock",NASDAQ
 HAO,HAO,Haoxi Health Technology Limited - Class A Ord Share,NASDAQ
+HAPN,HAPN,"Happen, Inc. - Common Stock",NASDAQ
 HAS,HAS,"Hasbro, Inc. - Common Stock",NASDAQ
 HAVA,HAVA,Harvard Ave Acquisition Corporation - Class A Ordinary Share,NASDAQ
 HBAN,HBAN,Huntington Bancshares Incorporated - Common Stock,NASDAQ
@@ -1669,6 +1673,7 @@ KEEL,KEEL,Keel Infrastructure Corp. - Common Stock,NASDAQ
 KELYA,KELYA,"Kelly Services, Inc. - Class A Common Stock",NASDAQ
 KELYB,KELYB,"Kelly Services, Inc. - Class B Common Stock",NASDAQ
 KEQU,KEQU,Kewaunee Scientific Corporation - Common Stock,NASDAQ
+KEYY,KEYY,Keystone Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 KFFB,KFFB,Kentucky First Federal Bancorp - Common Stock,NASDAQ
 KFII,KFII,K&F Growth Acquisition Corp. II - Class A Ordinary shares,NASDAQ
 KG,KG,"Kestrel Group, Ltd. - Common Stock",NASDAQ
@@ -1897,6 +1902,7 @@ MBUU,MBUU,"Malibu Boats, Inc. - Common Stock",NASDAQ
 MBVI,MBVI,M3-Brigade Acquisition VI Corp. - Class A Ordinary Shares,NASDAQ
 MBWM,MBWM,Mercantile Bank Corporation - Common Stock,NASDAQ
 MBX,MBX,"MBX Biosciences, Inc. - Common Stock",NASDAQ
+MCAH,MCAH,Mountain Crest Acquisition 6 Corp. - Ordinary Shares,NASDAQ
 MCBS,MCBS,"MetroCity Bankshares, Inc. - Common Stock",NASDAQ
 MCFT,MCFT,"MasterCraft Boat Holdings, Inc. - Common Stock",NASDAQ
 MCGA,MCGA,Yorkville Acquisition Corp. - Class A Ordinary Share,NASDAQ
@@ -3872,7 +3878,6 @@ CHWY,CHWY,"Chewy, Inc. Class A Common Stock",NYSE
 CI,CI,The Cigna Group Common Stock,NYSE
 CIA,CIA,"Citizens, Inc. Class A Common Stock ($1.00 Par)",NYSE
 CIEN,CIEN,Ciena Corporation Common Stock,NYSE
-CIF,CIF,MFS Intermediate High Income Fund Common Stock,NYSE
 CIG,CIG,Comp En De Mn Cemig ADS American Depositary Shares,NYSE
 CIG-C,CIG-C,Comp En De Mn Cemig ADS American Depositary Receipts,NYSE
 CII,CII,"BlackRock Enhanced Large Cap Core Fund, Inc. Common Stock",NYSE
@@ -4268,6 +4273,7 @@ FIG,FIG,"Figma, Inc. Class A Common Stock",NYSE
 FIGS,FIGS,"FIGS, Inc. Class A Common Stock",NYSE
 FINS,FINS,Angel Oak Financial Strategies Income Term Trust Common Shares of Beneficial Interest,NYSE
 FINV,FINV,FinVolution Group American Depositary Shares,NYSE
+FIRY,FIRY,Firy Inc. Class A Common Stock,NYSE
 FIS,FIS,"Fidelity National Information Services, Inc. Common Stock",NYSE
 FITB,FITB,Fifth Third Bancorp Common Stock,NYSE
 FIX,FIX,"Comfort Systems USA, Inc. Common Stock",NYSE
@@ -4706,7 +4712,6 @@ LAW,LAW,"CS Disco, Inc. Common Stock",NYSE
 LAZ,LAZ,"Lazard, Inc. Common Stock",NYSE
 LB,LB,LandBridge Company LLC Class A Shares Representing Limited Liability Company Interests,NYSE
 LBRT,LBRT,Liberty Energy Inc. Class A common stock,NYSE
-LC,LC,LendingClub Corporation Common Stock,NYSE
 LCII,LCII,LCI Industries,NYSE
 LCLN,LCLN,"Lincoln International, Inc. Class A Common Stock",NYSE
 LCTX,LCTX,"Lineage Cell Therapeutics, Inc. Common Stock",AMEX
@@ -4794,7 +4799,6 @@ MCI,MCI,Barings Corporate Investors Common Stock,NYSE
 MCK,MCK,McKesson Corporation Common Stock,NYSE
 MCN,MCN,XAI Madison Equity Premium Income Fund Common Shares,NYSE
 MCO,MCO,Moody's Corporation Common Stock,NYSE
-MCR,MCR,MFS Charter Income Trust Common Stock,NYSE
 MCRP,MCRP,Micropolis AI Robotics Ordinary Shares,AMEX
 MCS,MCS,Marcus Corporation (The) Common Stock,NYSE
 MCY,MCY,Mercury General Corporation Common Stock,NYSE
@@ -4846,7 +4850,7 @@ MMD,MMD,NYLI MacKay DefinedTerm Muni Opportunities Fund Common Shares,NYSE
 MMI,MMI,"Marcus & Millichap, Inc. Common Stock",NYSE
 MMM,MMM,3M Company Common Stock,NYSE
 MMS,MMS,"Maximus, Inc. Common Stock",NYSE
-MMT,MMT,MFS Multimarket Income Trust Common Stock,NYSE
+MMT,MMT,Aberdeen Multi-Market Income Fund Common Shares of Beneficial Interest,NYSE
 MMU,MMU,"Western Asset Managed Municipals Fund, Inc. Common Stock",NYSE
 MNSO,MNSO,"MINISO Group Holding Limited American Depositary Shares, each representing four Ordinary Shares",NYSE
 MNTN,MNTN,"MNTN, Inc. Class A Common Stock",NYSE
@@ -4893,6 +4897,7 @@ MTG,MTG,MGIC Investment Corporation Common Stock,NYSE
 MTH,MTH,Meritage Homes Corporation Common Stock,NYSE
 MTN,MTN,"Vail Resorts, Inc. Common Stock",NYSE
 MTNB,MTNB,"Matinas Biopharma Holdings, Inc. Common Stock",AMEX
+MTNE,MTNE,CH4 Natural Solutions Corporation Class A Ordinary Shares,NYSE
 MTR,MTR,Mesa Royalty Trust Common Stock,NYSE
 MTRN,MTRN,Materion Corporation,NYSE
 MTUS,MTUS,Metallus Inc. Common Shares,NYSE
@@ -5412,7 +5417,6 @@ SJM,SJM,The J.M. Smucker Company Common Stock,NYSE
 SJT,SJT,San Juan Basin Royalty Trust Common Stock,NYSE
 SKE,SKE,Skeena Resources Limited Common Shares,NYSE
 SKIL,SKIL,Skillsoft Corp. Class A Common Stock,NYSE
-SKLZ,SKLZ,Skillz Inc. Class A Common Stock,NYSE
 SKM,SKM,"SK Telecom Co., Ltd. Common Stock",NYSE
 SKT,SKT,Tanger Inc. Common Stock,NYSE
 SKY,SKY,"Champion Homes, Inc. Common Stock",NYSE
