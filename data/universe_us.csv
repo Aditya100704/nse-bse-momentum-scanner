@@ -1823,7 +1823,6 @@ LOAN,LOAN,"Manhattan Bridge Capital, Inc - Common Stock",NASDAQ
 LOBO,LOBO,LOBO TECHNOLOGIES LTD. - Class A Ordinary Shares,NASDAQ
 LOCO,LOCO,"El Pollo Loco Holdings, Inc. - Common Stock",NASDAQ
 LOGI,LOGI,Logitech International S.A. - Registered Shares,NASDAQ
-LOKV,LOKV,Live Oak Acquisition Corp. V - Class A Ordinary Shares,NASDAQ
 LONA,LONA,"LeonaBio, Inc. - Common Stock",NASDAQ
 LOOP,LOOP,"Loop Industries, Inc. - Common Stock",NASDAQ
 LOPE,LOPE,"Grand Canyon Education, Inc. - Common Stock",NASDAQ
@@ -2292,7 +2291,7 @@ ORRF,ORRF,"Orrstown Financial Services, Inc. - Common Stock",NASDAQ
 OSBC,OSBC,"Old Second Bancorp, Inc. - Common Stock",NASDAQ
 OSIS,OSIS,"OSI Systems, Inc. - Common Stock",NASDAQ
 OSPN,OSPN,OneSpan Inc. - Common Stock,NASDAQ
-OSRH,OSRH,"OSR Holdings, Inc. - Common Stock",NASDAQ
+OSRH,OSRH,"OSR Health, Inc. - Common Stock",NASDAQ
 OSS,OSS,"One Stop Systems, Inc. - Common Stock",NASDAQ
 OST,OST,"Ostin Technology Group Co., Ltd. - Class A Ordinary Shares",NASDAQ
 OSUR,OSUR,"OraSure Technologies, Inc. - Common Stock",NASDAQ
@@ -2821,7 +2820,6 @@ SMTK,SMTK,"SmartKem, Inc. - Common Stock",NASDAQ
 SMX,SMX,SMX (Security Matters) Public Limited Company - Ordinary Shares,NASDAQ
 SMXT,SMXT,Solarmax Technology Inc. - Common Stock,NASDAQ
 SNAL,SNAL,"Snail, Inc. - Class A Common Stock",NASDAQ
-SNBR,SNBR,Sleep Number Corporation - Common Stock,NASDAQ
 SND,SND,"Smart Sand, Inc. - Common Stock",NASDAQ
 SNDK,SNDK,Sandisk Corporation - Common Stock When-Issued,NASDAQ
 SNDL,SNDL,SNDL Inc. - Common Shares,NASDAQ
@@ -3027,6 +3025,7 @@ TMC,TMC,TMC the metals company Inc. - Common Stock,NASDAQ
 TMCI,TMCI,"Treace Medical Concepts, Inc. - Common Stock",NASDAQ
 TMCR,TMCR,The Metals Royalty Company Inc. - Common Stock,NASDAQ
 TMDX,TMDX,"TransMedics Group, Inc. - Common Stock",NASDAQ
+TMS,TMS,Teamshares Inc. - Common Stock,NASDAQ
 TMTS,TMTS,Spartacus Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 TMUS,TMUS,"T-Mobile US, Inc. - Common Stock",NASDAQ
 TNDM,TNDM,"Tandem Diabetes Care, Inc. - Common Stock",NASDAQ
@@ -5249,6 +5248,7 @@ PZG,PZG,Paramount Gold Nevada Corp. Common Stock,AMEX
 Q,Q,"Qnity Electronics, Inc. Common Stock",NYSE
 QBTS,QBTS,D-Wave Quantum Inc. Common Shares,NYSE
 QGEN,QGEN,Qiagen N.V. Common Shares,NYSE
+QLEP,QLEP,Quantum Leap Acquisition Corp Class A Ordinary Shares,NYSE
 QNC,QNC,Quantum eMotion Corp. Common Shares,AMEX
 QRED,QRED,QuasarEdge Acquisition Corporation Ordinary Shares,NYSE
 QSR,QSR,Restaurant Brands International Inc. Common Shares,NYSE
