@@ -860,7 +860,6 @@ DDOG,DDOG,"Datadog, Inc. - Class A Common Stock",NASDAQ
 DEFT,DEFT,"Defi Technologies, Inc. - Common Stock",NASDAQ
 DERM,DERM,Journey Medical Corporation - Common Stock,NASDAQ
 DETX,DETX,"Liberty Defense Holdings, Ltd. - Common Shares",NASDAQ
-DEVS,DEVS,DevvStream Corp. - Common Stock,NASDAQ
 DFDV,DFDV,DeFi Development Corp. - Common Stock,NASDAQ
 DFLI,DFLI,Dragonfly Energy Holdings Corp - Common Stock,NASDAQ
 DFNS,DFNS,T3 Defense Inc. - Common Stock,NASDAQ
@@ -948,6 +947,7 @@ EBC,EBC,"Eastern Bankshares, Inc. - Common Stock",NASDAQ
 EBMT,EBMT,"Eagle Bancorp Montana, Inc. - Common Stock",NASDAQ
 EBON,EBON,Ebang International Holdings Inc. - Class A Ordinary Shares,NASDAQ
 ECBK,ECBK,"ECB Bancorp, Inc. - Common Stock",NASDAQ
+ECHO,ECHO,EchoStar Corporation - Common stock,NASDAQ
 ECOR,ECOR,"electroCore, Inc. - Common Stock",NASDAQ
 ECPG,ECPG,Encore Capital Group Inc - Common Stock,NASDAQ
 ECX,ECX,ECARX Holdings Inc. - Class A Ordinary shares,NASDAQ
@@ -2282,7 +2282,6 @@ ORGO,ORGO,Organogenesis Holdings Inc.  - Class A,NASDAQ
 ORIC,ORIC,"Oric Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ORIO,ORIO,Orion Digital Corp. - Common Shares,NASDAQ
 ORIQ,ORIQ,Origin Investment Corp I - Ordinary Shares,NASDAQ
-ORIS,ORIS,Oriental Rise Holdings Limited - Ordinary Shares,NASDAQ
 ORKA,ORKA,"Oruka Therapeutics, Inc. - Common Stock",NASDAQ
 ORKT,ORKT,Orangekloud Technology Inc. - Class A Ordinary Shares,NASDAQ
 ORLY,ORLY,"O'Reilly Automotive, Inc. - Common Stock",NASDAQ
@@ -2657,7 +2656,7 @@ RSVR,RSVR,"Reservoir Media, Inc.. - Common Stock",NASDAQ
 RTAC,RTAC,Renatus Tactical Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 RTB,RTB,"RTB Digital, Inc. - Common Stock",NASDAQ
 RUBI,RUBI,Rubico Inc. - Common Stock,NASDAQ
-RUM,RUM,Rumble Inc. - Class A Common Stock,NASDAQ
+RUM,RUM,RUM Group Inc. - Class A Common Stock,NASDAQ
 RUN,RUN,Sunrun Inc. - Common Stock,NASDAQ
 RUSHA,RUSHA,"Rush Enterprises, Inc. - Class A Common Stock",NASDAQ
 RUSHB,RUSHB,"Rush Enterprises, Inc. - Class B Common Stock",NASDAQ
@@ -2690,7 +2689,6 @@ SANA,SANA,"Sana Biotechnology, Inc. - Common Stock",NASDAQ
 SANG,SANG,Sangoma Technologies Corporation - Common Shares,NASDAQ
 SANM,SANM,Sanmina Corporation - Common Stock,NASDAQ
 SATL,SATL,Satellogic Inc. - Class A Common Stock,NASDAQ
-SATS,SATS,EchoStar Corporation - Common stock,NASDAQ
 SBAC,SBAC,SBA Communications Corporation - Class A Common Stock,NASDAQ
 SBC,SBC,SBC Medical Group Holdings Incorporated - Common Stock,NASDAQ
 SBCF,SBCF,Seacoast Banking Corporation of Florida - Common Stock,NASDAQ
