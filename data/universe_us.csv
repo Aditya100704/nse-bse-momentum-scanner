@@ -63,7 +63,6 @@ ADPT,ADPT,Adaptive Biotechnologies Corporation - Common Stock,NASDAQ
 ADSE,ADSE,ADS-TEC ENERGY PLC - Ordinary Shares,NASDAQ
 ADSK,ADSK,"Autodesk, Inc. - Common Stock",NASDAQ
 ADTN,ADTN,"ADTRAN Holdings, Inc. - Common Stock",NASDAQ
-ADTX,ADTX,"Aditxt, Inc. - Common Stock",NASDAQ
 ADUR,ADUR,Aduro Clean Technologies Inc. - Common Stock,NASDAQ
 ADUS,ADUS,Addus HomeCare Corporation - Common Stock,NASDAQ
 ADV,ADV,Advantage Solutions Inc.  - Class A Common Stock,NASDAQ
@@ -554,7 +553,7 @@ CASS,CASS,"Cass Information Systems, Inc - Common Stock",NASDAQ
 CAST,CAST,"FreeCast, Inc. - Class A common stock",NASDAQ
 CASY,CASY,"Caseys General Stores, Inc. - Common Stock",NASDAQ
 CATY,CATY,Cathay General Bancorp - Common Stock,NASDAQ
-CBAT,CBAT,"CBAK Energy Technology, Inc. - Common Stock",NASDAQ
+CBAT,CBAT,CBAK Energy Technology Limited - Ordinary Shares,NASDAQ
 CBC,CBC,"Central Bancompany, Inc. - Class A Common Stock",NASDAQ
 CBFV,CBFV,"CB Financial Services, Inc. - Common Stock",NASDAQ
 CBIO,CBIO,"Crescent Biopharma, Inc. - Common Stock",NASDAQ
@@ -705,7 +704,6 @@ CNET,CNET,ZW Data Action Technologies Inc. - Common Stock,NASDAQ
 CNEY,CNEY,CN Energy Group Inc. - Class A Ordinary Shares,NASDAQ
 CNOB,CNOB,"ConnectOne Bancorp, Inc. - Common Stock",NASDAQ
 CNSP,CNSP,"CNS Pharmaceuticals, Inc. - Common Stock",NASDAQ
-CNTA,CNTA,Centessa Pharmaceuticals plc - American Depositary Shares,NASDAQ
 CNTB,CNTB,Connect Biopharma Holdings Limited - Ordinary Shares,NASDAQ
 CNTN,CNTN,"Canton Strategic Holdings, Inc. - Common Stock",NASDAQ
 CNTX,CNTX,Context Therapeutics Inc. - Common Stock,NASDAQ
@@ -913,6 +911,7 @@ DRTS,DRTS,Alpha Tau Medical Ltd. - Ordinary Shares,NASDAQ
 DRUG,DRUG,Bright Minds Biosciences Inc. - common stock,NASDAQ
 DRVN,DRVN,Driven Brands Holdings Inc. - Common Stock,NASDAQ
 DSAC,DSAC,Daedalus Special Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+DSC,DSC,DSC Holdings Ltd. - American Depositary Shares,NASDAQ
 DSGN,DSGN,"Design Therapeutics, Inc. - Common Stock",NASDAQ
 DSGR,DSGR,"Distribution Solutions Group, Inc. - Common Stock",NASDAQ
 DSGX,DSGX,The Descartes Systems Group Inc. - Common Stock,NASDAQ
@@ -3728,7 +3727,7 @@ BLK,BLK,"BlackRock, Inc. Common Stock",NYSE
 BLND,BLND,"Blend Labs, Inc. Class A Common Stock",NYSE
 BLSH,BLSH,Bullish Ordinary Shares,NYSE
 BLW,BLW,Blackrock Limited Duration Income Trust,NYSE
-BLX,BLX,"Banco Latinoamericano de Comercio Exterior, S.A.",NYSE
+BLX,BLX,"Bladex, Inc. Class E Common Stock",NYSE
 BMA,BMA,Banco Macro S.A.  ADR (representing Ten Class B Common Shares),NYSE
 BME,BME,Blackrock Health Sciences Trust,NYSE
 BMEZ,BMEZ,BlackRock Health Sciences Term Trust Common Shares of Beneficial Interest,NYSE
@@ -4000,7 +3999,6 @@ CVSA,CVSA,Covista Inc. Common Shares,NYSE
 CVU,CVU,"CPI Aerostructures, Inc. Common Stock",AMEX
 CVX,CVX,Chevron Corporation Common Stock,NYSE
 CW,CW,Curtiss-Wright Corporation Common Stock,NYSE
-CWAN,CWAN,"Clearwater Analytics Holdings, Inc. Class A Common Stock",NYSE
 CWEN,CWEN,"Clearway Energy, Inc. Class C Common Stock",NYSE
 CWH,CWH,"Camping World Holdings, Inc. Class A Common Stock",NYSE
 CWK,CWK,Cushman & Wakefield Ltd. Common Shares,NYSE
@@ -4075,6 +4073,7 @@ DOLE,DOLE,Dole plc Ordinary Shares,NYSE
 DOUG,DOUG,Douglas Elliman Inc. Common Stock,NYSE
 DOV,DOV,Dover Corporation Common Stock,NYSE
 DOW,DOW,Dow Inc. Common Stock,NYSE
+DPC,DPC,DPC Holdings PLC Ordinary Shares,NYSE
 DPG,DPG,Duff & Phelps Utility and Infrastructure Fund Inc.,NYSE
 DQ,DQ,"DAQO New Energy Corp. American Depositary Shares, each representing five ordinary shares",NYSE
 DRD,DRD,DRDGOLD Limited American Depositary Shares,NYSE
