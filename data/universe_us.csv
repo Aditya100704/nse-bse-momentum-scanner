@@ -1937,6 +1937,7 @@ MEVO,MEVO,M Evo Global Acquisition Corp II - Class A Ordinary Shares,NASDAQ
 MFI,MFI,mF International Limited - Class A Ordinary Shares,NASDAQ
 MFIC,MFIC,MidCap Financial Investment Corporation - Closed End Fund,NASDAQ
 MFIN,MFIN,Medallion Financial Corp. - Common Stock,NASDAQ
+MFPVV,MFPVV,"Midera Food Processing, Inc. - Common Stock When Issued",NASDAQ
 MGEE,MGEE,MGE Energy Inc. - Common Stock,NASDAQ
 MGIH,MGIH,Millennium Group International Holdings Limited - Ordinary Shares,NASDAQ
 MGN,MGN,Megan Holdings Limited - Class A Ordinary Shares,NASDAQ
@@ -1950,6 +1951,7 @@ MGTX,MGTX,MeiraGTx Holdings plc - Ordinary Shares,NASDAQ
 MGX,MGX,"Metagenomi Therapeutics, Inc. - Common Stock",NASDAQ
 MGYR,MGYR,"Magyar Bancorp, Inc. - Common Stock",NASDAQ
 MIDD,MIDD,The Middleby Corporation - Common Stock,NASDAQ
+MIDDV,MIDDV,Middleby Corp. - Common Stock Ex-Distribution When Issued,NASDAQ
 MIMI,MIMI,Mint Incorporation Limited - Class A Ordinary Shares,NASDAQ
 MIND,MIND,"MIND Technology, Inc. - Common Stock",NASDAQ
 MIRA,MIRA,"MIRA Pharmaceuticals, Inc. - Common Stock",NASDAQ
@@ -2714,7 +2716,6 @@ SCZM,SCZM,Santacruz Silver Mining Ltd. - Common Shares,NASDAQ
 SDA,SDA,SunCar Technology Group Inc. - Ordinary Shares,NASDAQ
 SDGR,SDGR,"Schrodinger, Inc. - Common Stock",NASDAQ
 SDHI,SDHI,Siddhi Acquisition Corp - Class A Common stock,NASDAQ
-SDM,SDM,Smart Digital Group Limited - Ordinary Shares,NASDAQ
 SDOT,SDOT,Sadot Group Inc. - Common Stock,NASDAQ
 SDST,SDST,Stardust Power Inc. - Common Stock,NASDAQ
 SEAT,SEAT,Vivid Seats Inc. - Class A common stock,NASDAQ
@@ -3142,6 +3143,7 @@ UROY,UROY,Uranium Royalty Corp. - Common Stock,NASDAQ
 USAR,USAR,"USA Rare Earth, Inc. - Common Stock",NASDAQ
 USAU,USAU,U.S. Gold Corp. - Common Stock,NASDAQ
 USCB,USCB,"USCB Financial Holdings, Inc.  - Class A Common Stock",NASDAQ
+USDE,USDE,StablecoinX Inc. - Class A Common Stock,NASDAQ
 USEA,USEA,United Maritime Corporation - Common Stock,NASDAQ
 USGO,USGO,U.S. GoldMining Inc. - Common stock,NASDAQ
 USIO,USIO,"Usio, Inc. - Common Stock",NASDAQ
@@ -3188,7 +3190,7 @@ VIRC,VIRC,Virco Manufacturing Corporation - Common Stock,NASDAQ
 VISN,VISN,"Vistance Networks, Inc.  - Common Stock",NASDAQ
 VITL,VITL,"Vital Farms, Inc. - Common Stock",NASDAQ
 VIVK,VIVK,"Vivakor, Inc. - Common Stock",NASDAQ
-VIVO,VIVO,VivoPower PLC - Ordinary Shares,NASDAQ
+VIVO,VIVO,VivoPower PLC - Class A Ordinary Shares,NASDAQ
 VIVS,VIVS,"VivoSim Labs, Inc. - Common Stock",NASDAQ
 VKTX,VKTX,"Viking Therapeutics, Inc. - Common Stock",NASDAQ
 VLGEA,VLGEA,"Village Super Market, Inc. - Class A Common Stock",NASDAQ
@@ -3471,7 +3473,7 @@ AHR,AHR,"American Healthcare REIT, Inc. Common Stock",NYSE
 AHRT,AHRT,"AH Realty Trust, Inc. Common Stock",NYSE
 AHT,AHT,Ashford Hospitality Trust Inc Common Stock,NYSE
 AI,AI,"C3.ai, Inc. Class A Common Stock",NYSE
-AIB,AIB,"BlockchAIn Digital Infrastructure, Inc Common Shares",AMEX
+AIB,AIB,AIB Data Centers Inc. Common Stock,AMEX
 AIG,AIG,"American International Group, Inc. New Common Stock",NYSE
 AII,AII,"American Integrity Insurance Group, Inc. Common Stock",NYSE
 AIIA,AIIA,AI Infrastructure Acquisition Corp. Class A Ordinary Shares,NYSE
@@ -4787,6 +4789,7 @@ MATV,MATV,"Mativ Holdings, Inc. Common Stock",NYSE
 MATX,MATX,"Matson, Inc. Common Stock",NYSE
 MAX,MAX,"MediaAlpha, Inc. Class A Common Stock",NYSE
 MBC,MBC,"MasterBrand, Inc. Common Stock",NYSE
+MBGL-V,MBGL-V,Mobility Global Inc. Common Stock When-Issued,NYSE
 MBI,MBI,MBIA Inc. Common Stock,NYSE
 MC,MC,Moelis & Company Class A Common Stock,NYSE
 MCB,MCB,Metropolitan Bank Holding Corp. Common Stock,NYSE
@@ -5210,7 +5213,6 @@ PPG,PPG,"PPG Industries, Inc. Common Stock",NYSE
 PPL,PPL,PPL Corporation Common Stock,NYSE
 PPT,PPT,Putnam Premier Income Trust Common Stock,NYSE
 PR,PR,Permian Resources Corporation Class A Common Stock,NYSE
-PRA,PRA,ProAssurance Corporation Common Stock,NYSE
 PRG,PRG,"PROG Holdings, Inc. Common Stock",NYSE
 PRGO,PRGO,Perrigo Company plc Ordinary Shares,NYSE
 PRI,PRI,"Primerica, Inc. Common Stock",NYSE
@@ -5408,6 +5410,7 @@ SIG,SIG,Signet Jewelers Limited Common Shares,NYSE
 SII,SII,Sprott Inc. Common Shares,NYSE
 SILA,SILA,"Sila Realty Trust, Inc. Common Stock",NYSE
 SIM,SIM,"Grupo Simec, S.A.B. de C.V. American Depositary Shares",AMEX
+SIND,SIND,Sinda Ltd. Common Stock,NYSE
 SITC,SITC,SITE Centers Corp. Common Stock,NYSE
 SITE,SITE,"SiteOne Landscape Supply, Inc. Common Stock",NYSE
 SJM,SJM,The J.M. Smucker Company Common Stock,NYSE
@@ -5463,6 +5466,7 @@ SPCE,SPCE,"Virgin Galactic Holdings, Inc. Common Stock",NYSE
 SPE,SPE,"Special Opportunities Fund, Inc Common Stock",NYSE
 SPG,SPG,"Simon Property Group, Inc. Common Stock",NYSE
 SPGI,SPGI,S&P Global Inc. Common Stock,NYSE
+SPGI-V,SPGI-V,S&P Global Inc. Common Stock When-Issued,NYSE
 SPH,SPH,"Suburban Propane Partners, L.P. Common Stock",NYSE
 SPHR,SPHR,Sphere Entertainment Co. Class A Common Stock,NYSE
 SPIR,SPIR,"Spire Global, Inc. Class A Common Stock",NYSE
