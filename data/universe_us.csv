@@ -217,6 +217,7 @@ API,API,"Agora, Inc. - ADS",NASDAQ
 APLD,APLD,Applied Digital Corporation - Common Stock,NASDAQ
 APLM,APLM,Apollomics Inc. - Class A Ordinary Shares,NASDAQ
 APM,APM,Aptorum Group Limited - Class A Ordinary Shares,NASDAQ
+APMC,APMC,AmperCap Acquisition Company - Ordinary Shares,NASDAQ
 APOG,APOG,"Apogee Enterprises, Inc. - Common Stock",NASDAQ
 APP,APP,Applovin Corporation - Class A Common Stock,NASDAQ
 APPF,APPF,"AppFolio, Inc. - Class A Common Stock",NASDAQ
@@ -1415,8 +1416,7 @@ HNVR,HNVR,"Hanover Bancorp, Inc. - Common Stock",NASDAQ
 HOFT,HOFT,Hooker Furnishings Corporation - Common Stock,NASDAQ
 HOLO,HOLO,MicroCloud Hologram Inc. - Ordinary Shares,NASDAQ
 HON,HON,Honeywell International Inc. - Common Stock,NASDAQ
-HONAV,HONAV,Honeywell Aerospace Inc. - Common Stock,NASDAQ
-HONIV,HONIV,Honeywell International Inc. - Common Stock Ex Distribution When Issued,NASDAQ
+HONA,HONA,Honeywell Aerospace Inc. - Common Stock,NASDAQ
 HOOD,HOOD,"Robinhood Markets, Inc. - Class A Common Stock",NASDAQ
 HOPE,HOPE,"Hope Bancorp, Inc. - Common Stock",NASDAQ
 HOUR,HOUR,"Hour Loop, Inc. - common stock",NASDAQ
@@ -4063,6 +4063,7 @@ DLX,DLX,Deluxe Corporation Common Stock,NYSE
 DLY,DLY,DoubleLine Yield Opportunities Fund Common Shares of Beneficial Interest,NYSE
 DMA,DMA,Destra Multi-Alternative Fund Common Stock,NYSE
 DMB,DMB,"BNY Mellon Municipal Bond Infrastructure Fund, Inc. Common Stock",NYSE
+DMC,DMC,Del Monte Corporation Ordinary Shares,NYSE
 DMO,DMO,Western Asset Mortgage Opportunity Fund Inc. Common Stock,NYSE
 DNA,DNA,"Ginkgo Bioworks Holdings, Inc. Class A Common Stock",NYSE
 DNN,DNN,Denison Mines Corp Ordinary Shares (Canada),AMEX
@@ -4252,7 +4253,6 @@ FCPT,FCPT,"Four Corners Property Trust, Inc. Common Stock",NYSE
 FCRS,FCRS,FutureCrest Acquisition Corp. Class A Ordinary Shares,NYSE
 FCT,FCT,First Trust Senior Floating Rate Income Fund II Common Shares of Beneficial Interest,NYSE
 FCX,FCX,"Freeport-McMoRan, Inc. Common Stock",NYSE
-FDP,FDP,Del Monte Corporation Ordinary Shares,NYSE
 FDS,FDS,FactSet Research Systems Inc. Common Stock,NYSE
 FDX,FDX,FedEx Corporation Common Stock,NYSE
 FDXF,FDXF,"FedEx Freight Holding Company, Inc. Common Stock",NYSE
@@ -5103,6 +5103,7 @@ OSCR,OSCR,"Oscar Health, Inc. Class A Common Stock",NYSE
 OSG,OSG,"Octave Specialty Group, Inc. Common Stock",NYSE
 OSK,OSK,Oshkosh Corporation (Holding Company)Common Stock,NYSE
 OSTX,OSTX,OS Therapies Incorporated Common Stock,AMEX
+OTAI,OTAI,Starlink AI Acquisition Corporation Ordinary Shares,NYSE
 OTF,OTF,Blue Owl Technology Finance Corp. Common Stock,NYSE
 OTIS,OTIS,Otis Worldwide Corporation Common Stock,NYSE
 OUT,OUT,OUTFRONT Media Inc. Common Stock,NYSE
@@ -5485,7 +5486,7 @@ SRG,SRG,Seritage Growth Properties Class A Common Stock,NYSE
 SRI,SRI,"Stoneridge, Inc. Common Stock",NYSE
 SRL,SRL,Scully Royalty Ltd.,NYSE
 SRV,SRV,NXG Cushing Midstream Energy Fund Common Shares of Beneficial Interest,NYSE
-SRXH,SRXH,"SRX Health Solutions, Inc. Common Stock",AMEX
+SRXH,SRXH,SRX Global Inc. Common Stock,AMEX
 SSB,SSB,SouthState Bank Corporation Common Stock,NYSE
 SSD,SSD,"Simpson Manufacturing Company, Inc. Common Stock",NYSE
 SSL,SSL,Sasol Ltd. American Depositary Shares,NYSE
@@ -5565,7 +5566,7 @@ TFIN,TFIN,"Triumph Financial, Inc. Common Stock",NYSE
 TFPM,TFPM,Triple Flag Precious Metals Corp. Common Shares,NYSE
 TFX,TFX,Teleflex Incorporated Common Stock,NYSE
 TG,TG,Tredegar Corporation Common Stock,NYSE
-TGB,TGB,"Taseko Mines, Ltd. Common Stock",AMEX
+TGB,TGB,Trekor Metals Limited Common Shares,AMEX
 TGE,TGE,The Generation Essentials Group Class A Ordinary Shares,NYSE
 TGEN,TGEN,Tecogen Inc. Common Stock,AMEX
 TGLS,TGLS,Tecnoglass Inc. Ordinary Shares,NYSE
