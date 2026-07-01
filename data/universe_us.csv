@@ -79,6 +79,7 @@ AEMD,AEMD,"Aethlon Medical, Inc. - Common Stock",NASDAQ
 AENT,AENT,Alliance Entertainment Holding Corporation - common stock,NASDAQ
 AEP,AEP,"American Electric Power Company, Inc. - Common Stock",NASDAQ
 AERT,AERT,"Aeries Technology, Inc. - Class A Ordinary Share",NASDAQ
+AESP,AESP,Aeon Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
 AEVA,AEVA,"Aeva Technologies, Inc. - Common Stock",NASDAQ
 AEYE,AEYE,"AudioEye, Inc. - Common Stock",NASDAQ
 AFBI,AFBI,"Affinity Bancshares, Inc. - Common Stock",NASDAQ
@@ -489,6 +490,7 @@ BSAA,BSAA,BEST SPAC I Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BSBK,BSBK,Bogota Financial Corp. - Common Stock,NASDAQ
 BSET,BSET,"Bassett Furniture Industries, Incorporated - Common Stock",NASDAQ
 BSIN,BSIN,Big Sky Industrial Inc. - Common Stock,NASDAQ
+BSP,BSP,Bending Spoons S.p.A. - Ordinary Shares,NASDAQ
 BSRR,BSRR,Sierra Bancorp - Common Stock,NASDAQ
 BSVN,BSVN,Bank7 Corp. - Common stock,NASDAQ
 BSY,BSY,"Bentley Systems, Incorporated - Class B Common Stock",NASDAQ
@@ -1413,6 +1415,7 @@ HNNA,HNNA,"Hennessy Advisors, Inc. - Common Stock",NASDAQ
 HNRG,HNRG,Hallador Energy Company - Common Stock,NASDAQ
 HNST,HNST,"The Honest Company, Inc. - Common Stock",NASDAQ
 HNVR,HNVR,"Hanover Bancorp, Inc. - Common Stock",NASDAQ
+HODO,HODO,House of Doge Inc. - Common Stock,NASDAQ
 HOFT,HOFT,Hooker Furnishings Corporation - Common Stock,NASDAQ
 HOLO,HOLO,MicroCloud Hologram Inc. - Ordinary Shares,NASDAQ
 HON,HON,Honeywell International Inc. - Common Stock,NASDAQ
@@ -1603,6 +1606,7 @@ ISPR,ISPR,Ispire Technology Inc. - Common Stock,NASDAQ
 ISRG,ISRG,"Intuitive Surgical, Inc. - Common Stock",NASDAQ
 ISSC,ISSC,"Innovative Solutions and Support, Inc. - Common Stock",NASDAQ
 ISTR,ISTR,Investar Holding Corporation - Common Stock,NASDAQ
+ITG,ITG,"ITG, Inc. - Class A Common Stock",NASDAQ
 ITHA,ITHA,ITHAX Acquisition Corp III - Class A Ordinary Shares,NASDAQ
 ITIC,ITIC,Investors Title Company - Common Stock,NASDAQ
 ITOC,ITOC,iTonic Holdings Ltd - Class A Ordinary Shares,NASDAQ
@@ -1789,6 +1793,7 @@ LIFE,LIFE,Ethos Technologies Inc. - Class A Common Stock,NASDAQ
 LILA,LILA,Liberty Latin America Ltd. - Class A Common Stock,NASDAQ
 LILAK,LILAK,Liberty Latin America Ltd. - Class C Common Stock,NASDAQ
 LILAP,LILAP,Liberty Latin America Ltd. - 9.0% Fixed Rate Cumulative Perpetual Redeemable Series A Preference Shares,NASDAQ
+LIME,LIME,"Neutron Holdings, Inc. - Common Stock",NASDAQ
 LIMN,LIMN,"Liminatus Pharma, Inc. - Class A Common Stock",NASDAQ
 LIN,LIN,Linde plc - Ordinary Shares,NASDAQ
 LINC,LINC,Lincoln Educational Services Corporation - Common Stock,NASDAQ
@@ -2151,6 +2156,7 @@ NRIX,NRIX,"Nurix Therapeutics, Inc. - Common stock",NASDAQ
 NRSN,NRSN,NeuroSense Therapeutics Ltd. - Ordinary Shares,NASDAQ
 NRXP,NRXP,"NRX Pharmaceuticals, Inc. - Common Stock",NASDAQ
 NSIT,NSIT,"Insight Enterprises, Inc. - Common Stock",NASDAQ
+NSLR,NSLR,Neostellar Capital Corp. - Closed End Fund,NASDAQ
 NSPR,NSPR,InspireMD Inc. - Common Stock,NASDAQ
 NSSC,NSSC,"NAPCO Security Technologies, Inc. - Common Stock",NASDAQ
 NSTS,NSTS,"NSTS Bancorp, Inc. - Common Stock",NASDAQ
@@ -2883,7 +2889,6 @@ SSM,SSM,Sono Group N.V. - Ordinary Shares,NASDAQ
 SSNC,SSNC,"SS&C Technologies Holdings, Inc. - Common Stock",NASDAQ
 SSP,SSP,E.W. Scripps Company (The) - Class A Common Stock,NASDAQ
 SSRM,SSRM,SSR Mining Inc. - Common Stock,NASDAQ
-SSSS,SSSS,SuRo Capital Corp. - Closed End Fund,NASDAQ
 SSTI,SSTI,"SoundThinking, Inc. - Common Stock",NASDAQ
 SSYS,SSYS,"Stratasys, Ltd. - Common Stock",NASDAQ
 STAA,STAA,STAAR Surgical Company - Common Stock,NASDAQ
@@ -2960,7 +2965,6 @@ TAVI,TAVI,Tavia Acquisition Corp. - Ordinary Shares,NASDAQ
 TAYD,TAYD,"Taylor Devices, Inc. - Common Stock",NASDAQ
 TBBK,TBBK,"The Bancorp, Inc. - Common Stock",NASDAQ
 TBCH,TBCH,Turtle Beach Corporation - Common Stock,NASDAQ
-TBH,TBH,"Brag House Holdings, Inc. - Common Stock",NASDAQ
 TBLA,TBLA,Taboola.com Ltd. - Ordinary Shares,NASDAQ
 TBLD,TBLD,Thornburg Income Builder Opportunities Trust - Closed End Fund,NASDAQ
 TBPH,TBPH,"Theravance Biopharma, Inc. - Ordinary Shares",NASDAQ
@@ -3723,7 +3727,6 @@ BKTI,BKTI,BK Technologies Corporation Common Stock,AMEX
 BKU,BKU,"BankUnited, Inc. Common Stock",NYSE
 BKV,BKV,BKV Corporation Common Stock,NYSE
 BLCO,BLCO,Bausch + Lomb Corporation Common Shares,NYSE
-BLD,BLD,TopBuild Corp. Common Stock,NYSE
 BLDR,BLDR,"Builders FirstSource, Inc. Common Stock",NYSE
 BLK,BLK,"BlackRock, Inc. Common Stock",NYSE
 BLND,BLND,"Blend Labs, Inc. Class A Common Stock",NYSE
@@ -4625,7 +4628,6 @@ JELD,JELD,"JELD-WEN Holding, Inc. Common Stock",NYSE
 JENA,JENA,Jena Acquisition Corporation II Class A Ordinary Shares,NYSE
 JFR,JFR,Nuveen Floating Rate Income Fund Common Stock,NYSE
 JGH,JGH,Nuveen Global High Income Fund Common Shares of Beneficial Interest,NYSE
-JHG,JHG,Janus Henderson Group plc Ordinary Shares,NYSE
 JHI,JHI,John Hancock Investors Trust Common Stock,NYSE
 JHS,JHS,John Hancock Income Securities Trust Common Stock,NYSE
 JHX,JHX,James Hardie Industries plc. Ordinary Shares,NYSE
@@ -4790,7 +4792,7 @@ MATV,MATV,"Mativ Holdings, Inc. Common Stock",NYSE
 MATX,MATX,"Matson, Inc. Common Stock",NYSE
 MAX,MAX,"MediaAlpha, Inc. Class A Common Stock",NYSE
 MBC,MBC,"MasterBrand, Inc. Common Stock",NYSE
-MBGL-V,MBGL-V,Mobility Global Inc. Common Stock When-Issued,NYSE
+MBGL,MBGL,Mobility Global Inc. Common Stock,NYSE
 MBI,MBI,MBIA Inc. Common Stock,NYSE
 MC,MC,Moelis & Company Class A Common Stock,NYSE
 MCB,MCB,Metropolitan Bank Holding Corp. Common Stock,NYSE
@@ -5390,7 +5392,6 @@ SE,SE,"Sea Limited American Depositary Shares, each representing one Class A Ord
 SEB,SEB,Seaboard Corporation Common Stock,AMEX
 SEG,SEG,Seaport Entertainment Group Inc. Common Stock,NYSE
 SEI,SEI,"Solaris Energy Infrastructure, Inc. Class A Common Stock",NYSE
-SEM,SEM,Select Medical Holdings Corporation Common Stock,NYSE
 SER,SER,"Serina Therapeutics, Inc. Common Stock",AMEX
 SES,SES,SES AI Corporation Class A Common Stock,NYSE
 SF,SF,Stifel Financial Corporation Common Stock,NYSE
@@ -5410,7 +5411,6 @@ SID,SID,Companhia Siderurgica Nacional S.A. Common Stock,NYSE
 SIF,SIF,"SIFCO Industries, Inc. Common Stock",AMEX
 SIG,SIG,Signet Jewelers Limited Common Shares,NYSE
 SII,SII,Sprott Inc. Common Shares,NYSE
-SILA,SILA,"Sila Realty Trust, Inc. Common Stock",NYSE
 SIM,SIM,"Grupo Simec, S.A.B. de C.V. American Depositary Shares",AMEX
 SIND,SIND,Sinda Ltd. Common Stock,NYSE
 SITC,SITC,SITE Centers Corp. Common Stock,NYSE
@@ -5468,7 +5468,6 @@ SPCE,SPCE,"Virgin Galactic Holdings, Inc. Common Stock",NYSE
 SPE,SPE,"Special Opportunities Fund, Inc Common Stock",NYSE
 SPG,SPG,"Simon Property Group, Inc. Common Stock",NYSE
 SPGI,SPGI,S&P Global Inc. Common Stock,NYSE
-SPGI-V,SPGI-V,S&P Global Inc. Common Stock When-Issued,NYSE
 SPH,SPH,"Suburban Propane Partners, L.P. Common Stock",NYSE
 SPHR,SPHR,Sphere Entertainment Co. Class A Common Stock,NYSE
 SPIR,SPIR,"Spire Global, Inc. Class A Common Stock",NYSE
@@ -5498,7 +5497,6 @@ ST,ST,Sensata Technologies Holding plc Ordinary Shares,NYSE
 STAG,STAG,"Stag Industrial, Inc. Common Stock",NYSE
 STC,STC,Stewart Information Services Corporation Common Stock,NYSE
 STE,STE,STERIS plc (Ireland) Ordinary Shares,NYSE
-STEL,STEL,"Stellar Bancorp, Inc. Common Stock",NYSE
 STEM,STEM,"Stem, Inc. Class A Common Stock",NYSE
 STEW,STEW,"SRH Total Return Fund, Inc. Common Stock",NYSE
 STG,STG,"Sunlands Technology Group American Depositary Shares, representing Class A ordinary shares",NYSE
