@@ -1349,6 +1349,7 @@ GTIM,GTIM,Good Times Restaurants Inc. - Common Stock,NASDAQ
 GTLB,GTLB,GitLab Inc. - Class A Common Stock,NASDAQ
 GTM,GTM,ZoomInfo Technologies Inc. - Common Stock,NASDAQ
 GTX,GTX,Garrett Motion Inc. - Common Stock,NASDAQ
+GUAC,GUAC,Berto Acquisition Corp. II - Ordinary Shares,NASDAQ
 GURE,GURE,"Gulf Resources, Inc. - Common Stock",NASDAQ
 GUTS,GUTS,"Fractyl Health, Inc. - Common Stock",NASDAQ
 GV,GV,Visionary Holdings Inc. - Common Shares,NASDAQ
@@ -1494,6 +1495,7 @@ ICMB,ICMB,"Investcorp Credit Management BDC, Inc. - Common Stock",NASDAQ
 ICON,ICON,Icon Energy Corp. - Common stock,NASDAQ
 ICU,ICU,SeaStar Medical Holding Corporation - Common Stock,NASDAQ
 ICUI,ICUI,"ICU Medical, Inc. - Common Stock",NASDAQ
+IDAC,IDAC,Iron Dome Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
 IDAI,IDAI,T Stamp Inc. - Class A Common Stock,NASDAQ
 IDCC,IDCC,"InterDigital, Inc. - Common Stock",NASDAQ
 IDN,IDN,"Intellicheck, Inc. - Common Stock",NASDAQ
@@ -1807,7 +1809,6 @@ LITE,LITE,Lumentum Holdings Inc. - Common Stock,NASDAQ
 LITS,LITS,"Lite Strategy, Inc. - Common Stock",NASDAQ
 LIVE,LIVE,Live Ventures Incorporated - Common Stock,NASDAQ
 LIVN,LIVN,LivaNova PLC - Ordinary Shares,NASDAQ
-LIXT,LIXT,"Lixte Biotechnology Holdings, Inc. - Common Stock",NASDAQ
 LKFN,LKFN,Lakeland Financial Corporation - Common Stock,NASDAQ
 LKFT,LKFT,Lakefront Biotherapeutics - American Depositary Shares,NASDAQ
 LKQ,LKQ,LKQ Corporation - Common Stock,NASDAQ
@@ -1958,7 +1959,7 @@ MGTX,MGTX,MeiraGTx Holdings plc - Ordinary Shares,NASDAQ
 MGX,MGX,"Metagenomi Therapeutics, Inc. - Common Stock",NASDAQ
 MGYR,MGYR,"Magyar Bancorp, Inc. - Common Stock",NASDAQ
 MIDD,MIDD,The Middleby Corporation - Common Stock,NASDAQ
-MIDDV,MIDDV,Middleby Corp. - Common Stock Ex-Distribution When Issued,NASDAQ
+MIDDV,MIDDV,The Middleby Corporation - Common Stock Ex-Distribution When Issued,NASDAQ
 MIMI,MIMI,Mint Incorporation Limited - Class A Ordinary Shares,NASDAQ
 MIND,MIND,"MIND Technology, Inc. - Common Stock",NASDAQ
 MIRA,MIRA,"MIRA Pharmaceuticals, Inc. - Common Stock",NASDAQ
@@ -2132,6 +2133,7 @@ NKLR,NKLR,Terra Innovatum Global N.V. - Ordinary shares,NASDAQ
 NKSH,NKSH,"National Bankshares, Inc. - Common Stock",NASDAQ
 NKTR,NKTR,Nektar Therapeutics - Common Stock,NASDAQ
 NKTX,NKTX,"Nkarta, Inc. - Common Stock",NASDAQ
+NMAD,NMAD,"Nomad Power Solutions, Inc. - Common Stock",NASDAQ
 NMFC,NMFC,New Mountain Finance Corporation - Common Stock,NASDAQ
 NMIH,NMIH,NMI Holdings Inc - Common Stock,NASDAQ
 NMP,NMP,NMP Acquisition Corp. - Class A Ordinary Shares,NASDAQ
@@ -2487,6 +2489,7 @@ PSNL,PSNL,"Personalis, Inc. - Common Stock",NASDAQ
 PSNY,PSNY,Polestar Automotive Holding UK Limited - Class A ADS,NASDAQ
 PSNYW,PSNYW,Polestar Automotive Holding UK Limited - Class C-1 ADS (ADW),NASDAQ
 PSTV,PSTV,"PLUS THERAPEUTICS, Inc. - Common Stock",NASDAQ
+PTAC,PTAC,Patriot Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 PTC,PTC,PTC Inc. - Common Stock,NASDAQ
 PTCT,PTCT,"PTC Therapeutics, Inc. - Common Stock",NASDAQ
 PTEN,PTEN,"Patterson-UTI Energy, Inc. - Common Stock",NASDAQ
@@ -2928,7 +2931,7 @@ SURG,SURG,"SurgePays, Inc. - Common Stock",NASDAQ
 SVA,SVA,"Sinovac Biotech, Ltd. - Ordinary Shares (Antigua/Barbudo)",NASDAQ
 SVAC,SVAC,Spring Valley Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
 SVAQ,SVAQ,Silicon Valley Acquisition Corp. - Class A Ordinary Shares,NASDAQ
-SVC,SVC,Service Properties Trust - Shares of Beneficial Interest,NASDAQ
+SVC,SVC,Service Properties Trust - Common Shares of Beneficial Interest,NASDAQ
 SVCC,SVCC,Stellar V Capital Corp. - Class A Ordinary Shares,NASDAQ
 SVCO,SVCO,"Silvaco Group, Inc. - Common Stock",NASDAQ
 SVIV,SVIV,Spring Valley Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
@@ -4821,7 +4824,7 @@ MFG,MFG,"Mizuho Financial Group, Inc. Sponosred ADR (Japan)",NYSE
 MFM,MFM,Aberdeen Municipal Income Fund Common Shares of Beneficial Interest,NYSE
 MG,MG,Mistras Group Inc Common Stock,NYSE
 MGA,MGA,"Magna International, Inc. Common Stock",NYSE
-MGF,MGF,MFS Government Markets Income Trust Common Stock,NYSE
+MGF,MGF,Aberdeen Government Markets Income Fund Common Shares of Beneficial Interest,NYSE
 MGLD,MGLD,"The Marygold Companies, Inc. Common Stock",AMEX
 MGM,MGM,MGM Resorts International Common Stock,NYSE
 MGY,MGY,Magnolia Oil & Gas Corporation Class A Common Stock,NYSE
@@ -4834,7 +4837,7 @@ MHO,MHO,"M/I Homes, Inc. Common Stock",NYSE
 MI,MI,NFT Limited Class A Ordinary Share,AMEX
 MIAX,MIAX,"Miami International Holdings, Inc. Common Stock",NYSE
 MICC,MICC,The Magnum Ice Cream Company N.V. Ordinary Shares,NYSE
-MIN,MIN,MFS Intermediate Income Trust Common Stock,NYSE
+MIN,MIN,Aberdeen Intermediate Income Fund Common Shares of Beneficial Interest,NYSE
 MINE,MINE,Mayfair Gold Corp. Common Shares,AMEX
 MIR,MIR,"Mirion Technologies, Inc. Class A Common Stock",NYSE
 MITQ,MITQ,"Moving iMage Technologies, Inc. Common Stock",AMEX
@@ -5425,7 +5428,7 @@ SKM,SKM,"SK Telecom Co., Ltd. Common Stock",NYSE
 SKT,SKT,Tanger Inc. Common Stock,NYSE
 SKY,SKY,"Champion Homes, Inc. Common Stock",NYSE
 SKYH,SKYH,Sky Harbour Group Corporation Class A Common Stock,NYSE
-SLAI,SLAI,SOLAI Limited American Depositary Shares (each representing one hundred (100) Class A Ordinary Shares),NYSE
+SLAI,SLAI,SOLAI Limited American Depositary Shares (each representing seven hundred (700) Class A Ordinary Shares),NYSE
 SLB,SLB,SLB Limited Common Shares,NYSE
 SLF,SLF,Sun Life Financial Inc. Common Stock,NYSE
 SLG,SLG,SL Green Realty Corp Common Stock,NYSE
