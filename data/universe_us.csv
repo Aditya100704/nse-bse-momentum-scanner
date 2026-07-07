@@ -159,6 +159,7 @@ ALOV,ALOV,"Aldabra 4 Liquidity Opportunity Vehicle, Inc. - Class A Ordinary Shar
 ALOY,ALOY,REalloys Inc. - Common Stock,NASDAQ
 ALP,ALP,Alpha Compute Corp  - Common Stock,NASDAQ
 ALPS,ALPS,ALPS Group Inc - Ordinary Share,NASDAQ
+ALPX,ALPX,Alpex Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 ALRM,ALRM,"Alarm.com Holdings, Inc. - Common Stock",NASDAQ
 ALRS,ALRS,Alerus Financial Corporation - Common Stock,NASDAQ
 ALT,ALT,"Altimmune, Inc. - Common Stock",NASDAQ
@@ -354,7 +355,6 @@ BANX,BANX,ArrowMark Financial Corp. - Closed End Fund,NASDAQ
 BAOS,BAOS,Baosheng Media Group Holdings Limited - Ordinary shares,NASDAQ
 BATRA,BATRA,"Atlanta Braves Holdings, Inc. - Series A Common Stock",NASDAQ
 BATRK,BATRK,"Atlanta Braves Holdings, Inc. - Series C Common Stock",NASDAQ
-BAYA,BAYA,Bayview Acquisition Corp - Ordinary Share,NASDAQ
 BBCP,BBCP,"Concrete Pumping Holdings, Inc.  - Common Stock",NASDAQ
 BBCQ,BBCQ,Bleichroeder Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 BBGI,BBGI,"Beasley Broadcast Group, Inc. - Class A Common Stock",NASDAQ
@@ -1220,6 +1220,7 @@ FWONA,FWONA,Liberty Media Corporation - Series A Liberty Formula One Common Stoc
 FWONK,FWONK,Liberty Media Corporation - Series C Liberty Formula One Common Stock,NASDAQ
 FWRD,FWRD,Forward Air Corporation - Common Stock,NASDAQ
 FWRG,FWRG,"First Watch Restaurant Group, Inc. - Common Stock",NASDAQ
+FXAC,FXAC,FortuneX Acquisition Corporation - Ordinary shares,NASDAQ
 FXHO,FXHO,UTime Limited - Class A Ordinary Shares,NASDAQ
 FXNC,FXNC,First National Corporation - Common Stock,NASDAQ
 GABC,GABC,"German American Bancorp, Inc. - Common Stock",NASDAQ
@@ -1945,7 +1946,7 @@ MEVO,MEVO,M Evo Global Acquisition Corp II - Class A Ordinary Shares,NASDAQ
 MFI,MFI,mF International Limited - Class A Ordinary Shares,NASDAQ
 MFIC,MFIC,MidCap Financial Investment Corporation - Closed End Fund,NASDAQ
 MFIN,MFIN,Medallion Financial Corp. - Common Stock,NASDAQ
-MFPVV,MFPVV,"Midera Food Processing, Inc. - Common Stock When Issued",NASDAQ
+MFP,MFP,"Midera Food Processing, Inc. - Common Stock",NASDAQ
 MGEE,MGEE,MGE Energy Inc. - Common Stock,NASDAQ
 MGIH,MGIH,Millennium Group International Holdings Limited - Ordinary Shares,NASDAQ
 MGN,MGN,Megan Holdings Limited - Class A Ordinary Shares,NASDAQ
@@ -1959,7 +1960,6 @@ MGTX,MGTX,MeiraGTx Holdings plc - Ordinary Shares,NASDAQ
 MGX,MGX,"Metagenomi Therapeutics, Inc. - Common Stock",NASDAQ
 MGYR,MGYR,"Magyar Bancorp, Inc. - Common Stock",NASDAQ
 MIDD,MIDD,The Middleby Corporation - Common Stock,NASDAQ
-MIDDV,MIDDV,The Middleby Corporation - Common Stock Ex-Distribution When Issued,NASDAQ
 MIMI,MIMI,Mint Incorporation Limited - Class A Ordinary Shares,NASDAQ
 MIND,MIND,"MIND Technology, Inc. - Common Stock",NASDAQ
 MIRA,MIRA,"MIRA Pharmaceuticals, Inc. - Common Stock",NASDAQ
@@ -2586,7 +2586,6 @@ REAL,REAL,"The RealReal, Inc. - Common Stock",NASDAQ
 REAX,REAX,"The Real Brokerage, Inc. - Common Shares",NASDAQ
 REBN,REBN,"Reborn Coffee, Inc. - Common Stock",NASDAQ
 RECT,RECT,Rectitude Holdings Ltd - Ordinary Shares,NASDAQ
-REE,REE,REE Automotive Ltd. - Class A Ordinary Shares,NASDAQ
 REFI,REFI,"Chicago Atlantic Real Estate Finance, Inc. - Common Stock",NASDAQ
 REFR,REFR,Research Frontiers Incorporated - Common Stock,NASDAQ
 REG,REG,Regency Centers Corporation - Common Stock,NASDAQ
