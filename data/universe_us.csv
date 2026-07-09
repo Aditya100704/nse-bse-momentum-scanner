@@ -420,6 +420,7 @@ BJRI,BJRI,"BJ's Restaurants, Inc. - Common Stock",NASDAQ
 BKHA,BKHA,Black Hawk Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 BKNG,BKNG,Booking Holdings Inc. - Common Stock,NASDAQ
 BKR,BKR,Baker Hughes Company - Common Stock,NASDAQ
+BKYI,BKYI,"BIO-key International, Inc. - Common Stock",NASDAQ
 BL,BL,"BlackLine, Inc. - Common Stock",NASDAQ
 BLBD,BLBD,Blue Bird Corporation - Common Stock,NASDAQ
 BLDP,BLDP,"Ballard Power Systems, Inc. - Common Shares",NASDAQ
@@ -610,6 +611,7 @@ CENT,CENT,Central Garden & Pet Company - Common Stock,NASDAQ
 CENTA,CENTA,Central Garden & Pet Company - Class A Common Stock Nonvoting,NASDAQ
 CENX,CENX,Century Aluminum Company - Common Stock,NASDAQ
 CEPF,CEPF,"Cantor Equity Partners IV, Inc. - Class A Ordinary Shares",NASDAQ
+CEPL,CEPL,"Capstone Energy Plus, Inc. - Common Stock",NASDAQ
 CEPO,CEPO,"Cantor Equity Partners I, Inc. - Class A Ordinary Shares",NASDAQ
 CEPS,CEPS,"Cantor Equity Partners VI, Inc. - Class A Ordinary Shares",NASDAQ
 CEPV,CEPV,"Cantor Equity Partners V, Inc. - Class A Ordinary Shares",NASDAQ
@@ -2034,7 +2036,6 @@ MSGY,MSGY,Masonglory Limited - Ordinary Shares,NASDAQ
 MSLE,MSLE,Satellos Bioscience Inc. - Common Stock,NASDAQ
 MSS,MSS,Maison Solutions Inc. - Class A Common Stock,NASDAQ
 MSTR,MSTR,Strategy Inc - Class A Common Stock,NASDAQ
-MSW,MSW,Ming Shing Group Holdings Limited - Ordinary Shares,NASDAQ
 MTC,MTC,"MMTec, Inc. - Common Shares",NASDAQ
 MTCH,MTCH,"Match Group, Inc. - Common Stock",NASDAQ
 MTEK,MTEK,Maris-Tech Ltd. - ordinary shares,NASDAQ
@@ -2422,6 +2423,7 @@ PLUS,PLUS,ePlus inc. - Common Stock,NASDAQ
 PLUT,PLUT,Plutus Financial Group Limited - Ordinary Shares,NASDAQ
 PLXS,PLXS,Plexus Corp. - Common Stock,NASDAQ
 PLYX,PLYX,"Polaryx Therapeutics, Inc. - Common Stock",NASDAQ
+PMA,PMA,Ming Shing Group Holdings Limited - Ordinary Shares,NASDAQ
 PMAX,PMAX,Powell Max Limited - Class A Ordinary Shares,NASDAQ
 PMCB,PMCB,"PharmaCyte  Biotech, Inc. - Common Stock",NASDAQ
 PMEC,PMEC,Primech Holdings Ltd. - Ordinary Shares,NASDAQ
@@ -3627,7 +3629,7 @@ AYI,AYI,Acuity Inc. Common Stock,NYSE
 AZN,AZN,AstraZeneca PLC Ordinary Shares,NYSE
 AZO,AZO,"AutoZone, Inc. Common Stock",NYSE
 AZTR,AZTR,Azitra Inc Common Stock,AMEX
-AZUL,AZUL,"Azul S.A. American Depositary Shares, each representing two (2) Common Shares",AMEX
+AZUL,AZUL,"Azul S.A. American Depositary Shares, each representing two (2) Common Shares",NYSE
 AZZ,AZZ,AZZ Inc.,NYSE
 B,B,Barrick Mining Corporation Common Shares,NYSE
 BA,BA,Boeing Company (The) Common Stock,NYSE
