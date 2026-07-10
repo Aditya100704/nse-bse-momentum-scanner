@@ -1049,7 +1049,7 @@ EVLV,EVLV,"Evolv Technologies Holdings, Inc. - Class A Common Stock",NASDAQ
 EVO,EVO,Evotec SE - American Depositary Shares each representing 1/2 of one ordinary share,NASDAQ
 EVOX,EVOX,Evolution Global Acquisition Corp - Class A Ordinary Shares,NASDAQ
 EVRG,EVRG,"Evergy, Inc. - Common Stock",NASDAQ
-EVTV,EVTV,"Envirotech Vehicles, Inc. - Common stock",NASDAQ
+EVTV,EVTV,"Azio AI Holdings, Inc. - Common stock",NASDAQ
 EWBC,EWBC,"East West Bancorp, Inc. - Common Stock",NASDAQ
 EWTX,EWTX,"Edgewise Therapeutics, Inc. - Common Stock",NASDAQ
 EXC,EXC,Exelon Corporation - Common Stock,NASDAQ
@@ -1439,7 +1439,7 @@ HRMY,HRMY,"Harmony Biosciences Holdings, Inc. - Common Stock",NASDAQ
 HROW,HROW,"Harrow, Inc. - Common Stock",NASDAQ
 HRTX,HRTX,"Heron Therapeutics, Inc.   - Common Stock",NASDAQ
 HRZN,HRZN,Horizon Technology Finance Corporation - Common Stock,NASDAQ
-HSAI,HSAI,"Hesai Group - American Depositary Share, each ADS represents one Class B ordinary share",NASDAQ
+HSAI,HSAI,Hesai Group - American Depositary Share,NASDAQ
 HSCS,HSCS,HeartSciences Inc. - Common Stock,NASDAQ
 HSDT,HSDT,Solana Company - Class A Common Stock,NASDAQ
 HSIC,HSIC,"Henry Schein, Inc. - Common Stock",NASDAQ
@@ -2788,6 +2788,7 @@ SION,SION,"Sionna Therapeutics, Inc. - Common Stock",NASDAQ
 SIRI,SIRI,SiriusXM Holdings Inc. - Common Stock,NASDAQ
 SITM,SITM,SiTime Corporation - Common Stock,NASDAQ
 SJ,SJ,Scienjoy Holding Corporation - Class A Ordinary Shares,NASDAQ
+SKHYV,SKHYV,SK hynix Inc. - American Depository Shares,NASDAQ
 SKIN,SKIN,SkinHealth Systems Inc. - Class A Common Stock,NASDAQ
 SKK,SKK,SKK Holdings Limited - Class A Ordinary Shares,NASDAQ
 SKWD,SKWD,"Skyward Specialty Insurance Group, Inc. - Common Stock",NASDAQ
@@ -2803,7 +2804,7 @@ SLDB,SLDB,Solid Biosciences Inc. - Common Stock,NASDAQ
 SLDE,SLDE,"Slide Insurance Holdings, Inc. - Common Stock",NASDAQ
 SLDP,SLDP,"Solid Power, Inc. - Class A Common Stock",NASDAQ
 SLE,SLE,"Super League Enterprise, Inc. - Common Stock",NASDAQ
-SLGB,SLGB,Smart Logistics Global Limited - Ordinary Shares,NASDAQ
+SLGB,SLGB,Smart Logistics Global Limited - Class A Ordinary Shares,NASDAQ
 SLGL,SLGL,Sol-Gel Technologies Ltd. - Ordinary Shares,NASDAQ
 SLM,SLM,SLM Corporation - Common Stock,NASDAQ
 SLMT,SLMT,Brera Holdings PLC - Class B Ordinary Shares,NASDAQ
@@ -2971,7 +2972,6 @@ TBCH,TBCH,Turtle Beach Corporation - Common Stock,NASDAQ
 TBLA,TBLA,Taboola.com Ltd. - Ordinary Shares,NASDAQ
 TBLD,TBLD,Thornburg Income Builder Opportunities Trust - Closed End Fund,NASDAQ
 TBPH,TBPH,"Theravance Biopharma, Inc. - Ordinary Shares",NASDAQ
-TBRG,TBRG,"TruBridge, Inc. - Common Stock",NASDAQ
 TC,TC,Token Cat Limited - American Depositary Shares,NASDAQ
 TCBI,TCBI,"Texas Capital Bancshares, Inc. - Common Stock",NASDAQ
 TCBK,TCBK,TriCo Bancshares - Common Stock,NASDAQ
