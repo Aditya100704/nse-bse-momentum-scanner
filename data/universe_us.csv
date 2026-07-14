@@ -449,7 +449,6 @@ BMRA,BMRA,"Biomerica, Inc. - Common Stock",NASDAQ
 BMRC,BMRC,Bank of Marin Bancorp - Common Stock,NASDAQ
 BMRN,BMRN,BioMarin Pharmaceutical Inc. - Common Stock,NASDAQ
 BNAI,BNAI,Brand Engagement Network Inc. - Common Stock,NASDAQ
-BNBX,BNBX,BNB Plus Corp. - Common Stock,NASDAQ
 BNC,BNC,CEA Industries Inc. - Common Stock,NASDAQ
 BNGO,BNGO,"Bionano Genomics, Inc. - Common Stock",NASDAQ
 BNKK,BNKK,"Bonk, Inc. - Common Stock",NASDAQ
@@ -1032,7 +1031,6 @@ ESEA,ESEA,Euroseas Ltd. - Common Stock,NASDAQ
 ESLA,ESLA,"Estrella Immunopharma, Inc. - Common Stock",NASDAQ
 ESLT,ESLT,Elbit Systems Ltd. - Ordinary Shares,NASDAQ
 ESOA,ESOA,Energy Services of America Corporation - Common Stock,NASDAQ
-ESPR,ESPR,"Esperion Therapeutics, Inc. - Common Stock",NASDAQ
 ESQ,ESQ,"Esquire Financial Holdings, Inc. - Common Stock",NASDAQ
 ESTA,ESTA,Establishment Labs Holdings Inc. - Common Shares,NASDAQ
 ETON,ETON,"Eton Pharmaceuticals, Inc. - Common Stock",NASDAQ
@@ -2027,7 +2025,7 @@ MRNO,MRNO,Murano Global Investments PLC - Ordinary Shares,NASDAQ
 MRTN,MRTN,"Marten Transport, Ltd. - Common Stock",NASDAQ
 MRVI,MRVI,"Maravai LifeSciences Holdings, Inc. - Class A common stock",NASDAQ
 MRVL,MRVL,"Marvell Technology, Inc. - Common Stock",NASDAQ
-MRX,MRX,Marex Group plc - Ordinary Shares,NASDAQ
+MRX,MRX,Marex Group Limited - Ordinary Shares,NASDAQ
 MSAI,MSAI,"MultiSensor AI Holdings, Inc. - Common Stock",NASDAQ
 MSBI,MSBI,"Midland States Bancorp, Inc. - Common Stock",NASDAQ
 MSEX,MSEX,Middlesex Water Company - Common Stock,NASDAQ
@@ -4132,7 +4130,6 @@ EDN,EDN,Empresa Distribuidora Y Comercializadora Norte S.A. (Edenor) American De
 EDU,EDU,"New Oriental Education & Technology Group, Inc. Sponsored ADR representing 10 Ordinary Share (Cayman Islands)",NYSE
 EE,EE,"Excelerate Energy, Inc. Class A Common Stock",NYSE
 EEA,EEA,"The European Equity Fund, Inc. Common Stock",NYSE
-EEX,EEX,"Emerald Holding, Inc. Common Stock",NYSE
 EFC,EFC,Ellington Financial Inc. Common Stock,NYSE
 EFOR,EFOR,"Everforth, Inc. Common Stock",NYSE
 EFR,EFR,Eaton Vance Senior Floating-Rate Fund Common Shares of Beneficial Interest,NYSE
@@ -5832,7 +5829,6 @@ WS,WS,"Worthington Steel, Inc. Common Shares",NYSE
 WSM,WSM,"Williams-Sonoma, Inc. Common Stock (DE)",NYSE
 WSO,WSO,"Watsco, Inc. Common Stock",NYSE
 WSO-B,WSO-B,"Watsco, Inc. Class B Common Stock",NYSE
-WSR,WSR,Whitestone REIT Common Shares,NYSE
 WST,WST,"West Pharmaceutical Services, Inc. Common Stock",NYSE
 WT,WT,"WisdomTree, Inc. Common Stock",NYSE
 WTI,WTI,"W&T Offshore, Inc. Common Stock",NYSE
@@ -5854,7 +5850,7 @@ XPEV,XPEV,"XPeng Inc. American depositary shares, each representing two Class A 
 XPL,XPL,Solitario Resources Corp. Common Stock,AMEX
 XPO,XPO,"XPO, Inc. Common Stock",NYSE
 XPOF,XPOF,"Xponential Fitness, Inc. Class A Common Stock",NYSE
-XPRO,XPRO,Expro Group Holdings N.V. Common Stock,NYSE
+XPRO,XPRO,Expro Ltd Ordinary Shares,NYSE
 XRN,XRN,Chiron Real Estate Inc. Common Stock,NYSE
 XTNT,XTNT,"Xtant Medical Holdings, Inc. Common Stock",AMEX
 XXI,XXI,"Twenty One Capital, Inc. Class A Common Stock",NYSE
