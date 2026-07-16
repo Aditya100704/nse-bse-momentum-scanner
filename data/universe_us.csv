@@ -745,7 +745,6 @@ CPHC,CPHC,Canterbury Park Holding Corporation - Common Stock,NASDAQ
 CPIX,CPIX,Cumberland Pharmaceuticals Inc. - Common Stock,NASDAQ
 CPOP,CPOP,"Pop Culture Group Co., Ltd - Class A Ordinary Shares",NASDAQ
 CPRT,CPRT,"Copart, Inc. - Common Stock",NASDAQ
-CPRX,CPRX,"Catalyst Pharmaceuticals, Inc. - Common Stock",NASDAQ
 CPSH,CPSH,CPS Technologies Corp. - Common Stock,NASDAQ
 CPSS,CPSS,"Consumer Portfolio Services, Inc. - Common Stock",NASDAQ
 CPZ,CPZ,Calamos Long/Short Equity & Dynamic Income Trust - Closed End Fund,NASDAQ
@@ -905,6 +904,7 @@ DORM,DORM,"Dorman Products, Inc. - Common Stock",NASDAQ
 DOX,DOX,Amdocs Limited - Ordinary Shares,NASDAQ
 DOYU,DOYU,DouYu International Holdings Limited - American Depositary Shares,NASDAQ
 DPRO,DPRO,Draganfly Inc. - Common Shares,NASDAQ
+DPU,DPU,Top KingWin Ltd - Class A Ordinary Shares,NASDAQ
 DPZ,DPZ,Domino's Pizza Inc - Common Stock,NASDAQ
 DRCT,DRCT,"Direct Digital Holdings, Inc. - Class A Common Stock",NASDAQ
 DRDB,DRDB,Roman DBDR Acquisition Corp. II - Ordinary shares,NASDAQ
@@ -2186,7 +2186,6 @@ NUAI,NUAI,"New Era Energy & Digital, Inc. - Common Stock",NASDAQ
 NUCL,NUCL,Eagle Nuclear Energy Corp. - Common stock,NASDAQ
 NUTR,NUTR,Nusatrip Incorporated - Common Stock,NASDAQ
 NUTX,NUTX,Nutex Health Inc. - Common Stock,NASDAQ
-NUVL,NUVL,"Nuvalent, Inc. - Class A Common Stock",NASDAQ
 NUWE,NUWE,"Nuwellis, Inc. - Common Stock",NASDAQ
 NVAX,NVAX,"Novavax, Inc. - Common Stock",NASDAQ
 NVCR,NVCR,NovoCure Limited - Ordinary Shares,NASDAQ
@@ -2498,7 +2497,6 @@ PTGX,PTGX,"Protagonist Therapeutics, Inc. - Common Stock",NASDAQ
 PTLE,PTLE,PTL LTD - Class A Ordinary Shares,NASDAQ
 PTLO,PTLO,Portillo's Inc. - Class A Common Stock,NASDAQ
 PTN,PTN,"Palatin Technologies, Inc. - Common Stock",NASDAQ
-PTNM,PTNM,Pitanium Limited - Class A Ordinary Shares,NASDAQ
 PTON,PTON,"Peloton Interactive, Inc. - Common Stock",NASDAQ
 PTOR,PTOR,Praetorian Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 PTRN,PTRN,Pattern Group Inc. - Series A Common Stock,NASDAQ
@@ -3251,7 +3249,6 @@ WABC,WABC,Westamerica Bancorporation - Common Stock,NASDAQ
 WAFD,WAFD,"WaFd, Inc. - Common Stock",NASDAQ
 WAFDP,WAFDP,"WaFd, Inc. - Depositary Shares",NASDAQ
 WAFU,WAFU,Wah Fu Education Group Limited - Ordinary Shares,NASDAQ
-WAI,WAI,Top KingWin Ltd - Class A Ordinary Shares,NASDAQ
 WALD,WALD,Waldencast plc - Class A Ordinary Share,NASDAQ
 WASH,WASH,"Washington Trust Bancorp, Inc. - Common Stock",NASDAQ
 WATT,WATT,Energous Corporation - Common Stock,NASDAQ
@@ -3979,6 +3976,7 @@ CRS,CRS,Carpenter Technology Corporation Common Stock,NYSE
 CRT,CRT,Cross Timbers Royalty Trust Common Stock,NYSE
 CSAN,CSAN,Cosan S.A. ADS,NYSE
 CSL,CSL,Carlisle Companies Incorporated Common Stock,NYSE
+CSQR,CSQR,"Csquare, Inc. Common Stock",NYSE
 CSR,CSR,D/B/A Centerspace Common Stock,NYSE
 CSTM,CSTM,Constellium SE Ordinary Shares (France),NYSE
 CSV,CSV,"Carriage Services, Inc. Common Stock",NYSE
@@ -4443,7 +4441,6 @@ GSK,GSK,GSK plc American Depositary Shares (Each representing two Ordinary Share
 GSL,GSL,Global Ship Lease Inc New Class A Common Shares,NYSE
 GTE,GTE,Gran Tierra Energy Inc. Common Stock,AMEX
 GTES,GTES,Gates Industrial Corporation plc Ordinary Shares,NYSE
-GTLS,GTLS,"Chart Industries, Inc. Common Stock",NYSE
 GTN,GTN,"Gray Media, Inc. Common Stock",NYSE
 GTN-A,GTN-A,"Gray Media, Inc. Class A Common Stock",NYSE
 GTY,GTY,Getty Realty Corporation Common Stock,NYSE
@@ -5501,6 +5498,7 @@ SSTK,SSTK,"Shutterstock, Inc. Common Stock",NYSE
 ST,ST,Sensata Technologies Holding plc Ordinary Shares,NYSE
 STAG,STAG,"Stag Industrial, Inc. Common Stock",NYSE
 STC,STC,Stewart Information Services Corporation Common Stock,NYSE
+STDN,STDN,"Standard Nuclear, Inc. Class A Common Stock",NYSE
 STE,STE,STERIS plc (Ireland) Ordinary Shares,NYSE
 STEM,STEM,"Stem, Inc. Class A Common Stock",NYSE
 STEW,STEW,"SRH Total Return Fund, Inc. Common Stock",NYSE
