@@ -218,7 +218,7 @@ APGE,APGE,"Apogee Therapeutics, Inc. - Common Stock",NASDAQ
 API,API,"Agora, Inc. - ADS",NASDAQ
 APLD,APLD,Applied Digital Corporation - Common Stock,NASDAQ
 APLM,APLM,Apollomics Inc. - Class A Ordinary Shares,NASDAQ
-APM,APM,Aptorum Group Limited - Class A Ordinary Shares,NASDAQ
+APM,APM,Aptorum Group Limited - Common Stock,NASDAQ
 APMC,APMC,AmperCap Acquisition Company - Ordinary Shares,NASDAQ
 APOG,APOG,"Apogee Enterprises, Inc. - Common Stock",NASDAQ
 APP,APP,Applovin Corporation - Class A Common Stock,NASDAQ
@@ -2520,9 +2520,10 @@ QCRH,QCRH,"QCR Holdings, Inc. - Common Stock",NASDAQ
 QDEL,QDEL,QuidelOrtho Corporation - Common Stock,NASDAQ
 QETA,QETA,Quetta Acquisition Corporation - Common Stock,NASDAQ
 QFIN,QFIN,"Qfin Holdings, Inc.  - American Depositary Shares",NASDAQ
-QH,QH,Quhuo Limited - American Depository Shares,NASDAQ
+QH,QH,Quhuo Limited - Class A Ordinary Shares,NASDAQ
 QLYS,QLYS,"Qualys, Inc. - Common Stock",NASDAQ
 QMCO,QMCO,Quantum Corporation - Common Stock,NASDAQ
+QMLS,QMLS,"QumulusAI, Inc. - Common Stock",NASDAQ
 QMMM,QMMM,QMMM Holdings Limited - Class A Ordinary Shares,NASDAQ
 QNCX,QNCX,"Quince Therapeutics, Inc. - Common Stock",NASDAQ
 QNRX,QNRX,"Quoin Pharmaceuticals, Ltd. - American Depositary Shares",NASDAQ
@@ -4050,6 +4051,7 @@ DEO,DEO,Diageo plc Common Stock,NYSE
 DFH,DFH,"Dream Finders Homes, Inc. Class A Common Stock",NYSE
 DFIN,DFIN,"Donnelley Financial Solutions, Inc. Common Stock",NYSE
 DG,DG,Dollar General Corporation Common Stock,NYSE
+DGAC,DGAC,Disciplined Growth Acquisition Corporation Class A Ordinary Shares,NYSE
 DGX,DGX,Quest Diagnostics Incorporated Common Stock,NYSE
 DHF,DHF,BNY Mellon High Yield Strategies Fund Common Stock,NYSE
 DHI,DHI,"D.R. Horton, Inc. Common Stock",NYSE
@@ -5425,7 +5427,6 @@ SKM,SKM,"SK Telecom Co., Ltd. Common Stock",NYSE
 SKT,SKT,Tanger Inc. Common Stock,NYSE
 SKY,SKY,"Champion Homes, Inc. Common Stock",NYSE
 SKYH,SKYH,Sky Harbour Group Corporation Class A Common Stock,NYSE
-SLAI,SLAI,SOLAI Limited American Depositary Shares (each representing seven hundred (700) Class A Ordinary Shares),NYSE
 SLB,SLB,SLB Limited Common Shares,NYSE
 SLF,SLF,Sun Life Financial Inc. Common Stock,NYSE
 SLG,SLG,SL Green Realty Corp Common Stock,NYSE
