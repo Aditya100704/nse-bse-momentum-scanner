@@ -218,7 +218,6 @@ APGE,APGE,"Apogee Therapeutics, Inc. - Common Stock",NASDAQ
 API,API,"Agora, Inc. - ADS",NASDAQ
 APLD,APLD,Applied Digital Corporation - Common Stock,NASDAQ
 APLM,APLM,Apollomics Inc. - Class A Ordinary Shares,NASDAQ
-APM,APM,Aptorum Group Limited - Common Stock,NASDAQ
 APMC,APMC,AmperCap Acquisition Company - Ordinary Shares,NASDAQ
 APOG,APOG,"Apogee Enterprises, Inc. - Common Stock",NASDAQ
 APP,APP,Applovin Corporation - Class A Common Stock,NASDAQ
@@ -407,6 +406,7 @@ BHF,BHF,"Brighthouse Financial, Inc. - Common Stock",NASDAQ
 BHRB,BHRB,Burke & Herbert Financial Services Corp. - Common Stock,NASDAQ
 BHST,BHST,BioHarvest Sciences Inc. - Common Stock,NASDAQ
 BIAF,BIAF,"bioAffinity Technologies, Inc. - Common Stock",NASDAQ
+BID,BID,Tribeca Strategic Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BIDU,BIDU,"Baidu, Inc. - American Depositary Shares, each representing 8 ordinary share",NASDAQ
 BIIB,BIIB,Biogen Inc. - Common Stock,NASDAQ
 BILI,BILI,Bilibili Inc. - American Depositary Shares,NASDAQ
@@ -519,6 +519,7 @@ BWEN,BWEN,"Broadwind, Inc. - Common Stock",NASDAQ
 BWFG,BWFG,"Bankwell Financial Group, Inc. - Common Stock",NASDAQ
 BWIN,BWIN,"The Baldwin Insurance Group, Inc. - Class A Common Stock",NASDAQ
 BWMN,BWMN,Bowman Consulting Group Ltd. - Common Stock,NASDAQ
+BXBL,BXBL,"BOXABL, Inc.  - Common stock",NASDAQ
 BYAH,BYAH,"Park Ha Biological Technology Co., Ltd. - Class A Ordinary Shares",NASDAQ
 BYFC,BYFC,Broadway Financial Corporation - Class A Common Stock,NASDAQ
 BYND,BYND,"Beyond Meat, Inc. - Common stock",NASDAQ
@@ -815,6 +816,7 @@ CUPR,CUPR,Cuprina Holdings (Cayman) Limited - Class A Ordinary shares,NASDAQ
 CURI,CURI,CuriosityStream Inc.  - Class A Common Stock,NASDAQ
 CURR,CURR,Currenc Group Inc. - Ordinary Shares,NASDAQ
 CURX,CURX,Curanex Pharmaceuticals Inc - Common Stock,NASDAQ
+CUVL,CUVL,Clinuvel Pharmaceuticals Limited - American Depositary Shares,NASDAQ
 CV,CV,"CapsoVision, Inc. - Common Stock",NASDAQ
 CVBF,CVBF,CVB Financial Corporation - Common Stock,NASDAQ
 CVCO,CVCO,"Cavco Industries, Inc. - Common Stock",NASDAQ
@@ -889,7 +891,7 @@ DLXY,DLXY,Delixy Holdings Limited - Class A Ordinary Shares,NASDAQ
 DMAA,DMAA,Drugs Made In America Acquisition Corp. - Ordinary Shares,NASDAQ
 DMAC,DMAC,DiaMedica Therapeutics Inc. - Common Stock,NASDAQ
 DMII,DMII,Drugs Made In America Acquisition II Corp. - Ordinary Shares,NASDAQ
-DMRA,DMRA,"Damora Therapeutics, Inc. - Common Stock",NASDAQ
+DMRA,DMRA,"Damora Therapeutics, Inc. - Ordinary Shares",NASDAQ
 DMRC,DMRC,Digimarc Corporation - Common Stock,NASDAQ
 DNLI,DNLI,Denali Therapeutics Inc. - Common Stock,NASDAQ
 DNMX,DNMX,Dynamix Corporation III - Class A Ordinary Shares,NASDAQ
@@ -1112,7 +1114,6 @@ FGBI,FGBI,"First Guaranty Bancshares, Inc. - Common Stock",NASDAQ
 FGI,FGI,FGI Industries Ltd. - Ordinary Shares,NASDAQ
 FGII,FGII,FG Imperii Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 FGL,FGL,Founder Group Limited - Class A Ordinary Shares,NASDAQ
-FGMC,FGMC,FG Merger II Corp. - Common stock,NASDAQ
 FGNX,FGNX,FG Nexus Inc. - Common Stock,NASDAQ
 FHB,FHB,"First Hawaiian, Inc. - Common Stock",NASDAQ
 FHTX,FHTX,Foghorn Therapeutics Inc. - Common Stock,NASDAQ
@@ -1945,6 +1946,7 @@ META,META,"Meta Platforms, Inc. - Class A Common Stock",NASDAQ
 METC,METC,"Ramaco Resources, Inc. - Class A Common Stock",NASDAQ
 METCB,METCB,"Ramaco Resources, Inc. - Class B Common Stock",NASDAQ
 MEVO,MEVO,M Evo Global Acquisition Corp II - Class A Ordinary Shares,NASDAQ
+MF,MF,MindForge Inc. - Class A Ordinary Shares,NASDAQ
 MFI,MFI,mF International Limited - Class A Ordinary Shares,NASDAQ
 MFIC,MFIC,MidCap Financial Investment Corporation - Closed End Fund,NASDAQ
 MFIN,MFIN,Medallion Financial Corp. - Common Stock,NASDAQ
@@ -2126,6 +2128,7 @@ NHP,NHP,"National Healthcare Properties, Inc. - Class A Common Stock",NASDAQ
 NHTC,NHTC,Natural Health Trends Corp. - Common Stock,NASDAQ
 NICE,NICE,NICE Ltd - American Depositary Shares each representing one Ordinary Share,NASDAQ
 NICM,NICM,Nicola Mining Inc. - American Depositary Shares,NASDAQ
+NIKI,NIKI,"Niki BioSolutions, Inc. - Common Stock",NASDAQ
 NIPG,NIPG,NIP Group Inc. - American Depositary Shares,NASDAQ
 NIU,NIU,Niu Technologies - American Depositary Shares,NASDAQ
 NIVF,NIVF,NewGenIvf Group Limited - Class A Ordinary Shares,NASDAQ
@@ -2772,6 +2775,7 @@ SHMD,SHMD,SCHMID Group N.V. - Class A Ordinary Shares,NASDAQ
 SHOE,SHOE,"Shoe Station Group, Inc. - Common Stock",NASDAQ
 SHOO,SHOO,"Steven Madden, Ltd. - Common Stock",NASDAQ
 SHOP,SHOP,Shopify Inc. - Class A Subordinate Voting Shares,NASDAQ
+SHOT,SHOT,RMG ML Sports Holdings - Class A Ordinary Shares,NASDAQ
 SHPH,SHPH,"Shuttle Pharmaceuticals Holdings, Inc. - common stock",NASDAQ
 SIBN,SIBN,"SI-BONE, Inc. - Common Stock",NASDAQ
 SIDU,SIDU,"Sidus Space, Inc. - Class A Common Stock",NASDAQ
@@ -3114,7 +3118,6 @@ TZOO,TZOO,Travelzoo - Common Stock,NASDAQ
 UAL,UAL,"United Airlines Holdings, Inc. - Common Stock",NASDAQ
 UBCP,UBCP,"United Bancorp, Inc. - Common Stock",NASDAQ
 UBSI,UBSI,"United Bankshares, Inc. - Common Stock",NASDAQ
-UBXG,UBXG,U-BX Technology Ltd. - Class A Ordinary Shares,NASDAQ
 UCAR,UCAR,U Power Limited - Class A Ordinary Shares,NASDAQ
 UCFI,UCFI,CN Healthy Food Tech Group Corp. - Common Stock,NASDAQ
 UCL,UCL,uCloudlink Group Inc. - American Depositary Shares,NASDAQ
@@ -3795,7 +3798,6 @@ BUDA,BUDA,"Buda Juice, Inc. Common Stock",AMEX
 BUI,BUI,"BlackRock Utility, Infrastructure & Power Opportunities Trust",NYSE
 BUR,BUR,Burford Capital Limited Ordinary Shares,NYSE
 BURL,BURL,"Burlington Stores, Inc. Common Stock",NYSE
-BURU,BURU,"Nuburu, Inc. Common Stock",AMEX
 BV,BV,"BrightView Holdings, Inc. Common Stock",NYSE
 BVN,BVN,Buenaventura Mining Company Inc.,NYSE
 BW,BW,"Babcock & Wilcox Enterprises, Inc. Common Stock",NYSE
@@ -4414,7 +4416,7 @@ GOF,GOF,Guggenheim Strategic Opportunities Fund Common Shares of Beneficial Inte
 GOLD,GOLD,"Gold.com, Inc. Common Stock",NYSE
 GOLF,GOLF,Acushnet Holdings Corp. Common Stock,NYSE
 GOOS,GOOS,Canada Goose Holdings Inc. Subordinate Voting Shares,NYSE
-GORO,GORO,Gold Resource Corporation Common Stock,AMEX
+GORO,GORO,Goldgroup Mining Inc. Common Shares,AMEX
 GOTU,GOTU,Gaotu Techedu Inc. American Depositary Shares,NYSE
 GPC,GPC,Genuine Parts Company Common Stock,NYSE
 GPGI,GPGI,"GPGI, Inc. Class A Common Stock",NYSE
@@ -4442,7 +4444,7 @@ GSBD,GSBD,"Goldman Sachs BDC, Inc. Common Stock",NYSE
 GSK,GSK,GSK plc American Depositary Shares (Each representing two Ordinary Shares),NYSE
 GSL,GSL,Global Ship Lease Inc New Class A Common Shares,NYSE
 GTE,GTE,Gran Tierra Energy Inc. Common Stock,AMEX
-GTES,GTES,Gates Industrial Corporation plc Ordinary Shares,NYSE
+GTES,GTES,Gates Industrial Corporation Ltd. Common Shares,NYSE
 GTN,GTN,"Gray Media, Inc. Common Stock",NYSE
 GTN-A,GTN-A,"Gray Media, Inc. Class A Common Stock",NYSE
 GTY,GTY,Getty Realty Corporation Common Stock,NYSE
@@ -5064,13 +5066,13 @@ OBE,OBE,Obsidian Energy Ltd. Common Shares,AMEX
 OBK,OBK,"Origin Bancorp, Inc. Common Stock",NYSE
 OC,OC,Owens Corning Inc Common Stock New,NYSE
 ODC,ODC,Oil-Dri Corporation Of America Common Stock,NYSE
-ODV,ODV,Osisko Development Corp. Common Shares,NYSE
 OEC,OEC,Orion S.A. Common Shares,NYSE
 OFG,OFG,OFG Bancorp Common Stock,NYSE
 OFRM,OFRM,"Once Upon a Farm, PBC Common Stock",NYSE
 OGC,OGC,OceanaGold Corporation Common Shares,NYSE
 OGE,OGE,OGE Energy Corp Common Stock,NYSE
 OGEN,OGEN,Oragenics Inc. Common Stock,AMEX
+OGG,OGG,Osisko Gold Group Inc. Common Shares,NYSE
 OGN,OGN,Organon & Co. Common Stock,NYSE
 OGS,OGS,"ONE Gas, Inc. Common Stock",NYSE
 OHI,OHI,"Omega Healthcare Investors, Inc. Common Stock",NYSE
@@ -5733,6 +5735,7 @@ VHI,VHI,"Valhi, Inc. Common Stock",NYSE
 VIA,VIA,"Via Transportation, Inc. Class A Common Stock",NYSE
 VICI,VICI,VICI Properties Inc. Common Stock,NYSE
 VIDA,VIDA,VIDA Global Inc. Class A Common Stock,AMEX
+VII,VII,Viking Acquisition Corp. II Class A Ordinary Shares,NYSE
 VIK,VIK,Viking Holdings Ltd Ordinary Shares,NYSE
 VIPS,VIPS,"Vipshop Holdings Limited American Depositary Shares, each representing two ordinary shares",NYSE
 VIRT,VIRT,"Virtu Financial, Inc. Class A Common Stock",NYSE
