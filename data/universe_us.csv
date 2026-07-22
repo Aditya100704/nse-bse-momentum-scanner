@@ -131,7 +131,6 @@ AKTS,AKTS,"Aktis Oncology, Inc. - Common stock",NASDAQ
 AKTX,AKTX,Akari Therapeutics Plc - American Depositary Shares,NASDAQ
 ALAB,ALAB,"Astera Labs, Inc. - Common Stock",NASDAQ
 ALAR,ALAR,Alarum Technologies Ltd. - American Depositary Shares,NASDAQ
-ALBT,ALBT,Avalon GloboCare Corp. - Common Stock,NASDAQ
 ALCO,ALCO,"Alico, Inc. - Common Stock",NASDAQ
 ALDF,ALDF,Aldel Financial II Inc. - Class A Ordinary Shares,NASDAQ
 ALDX,ALDX,"Aldeyra Therapeutics, Inc. - Common Stock",NASDAQ
@@ -585,7 +584,6 @@ CCIX,CCIX,Churchill Capital Corp IX - Ordinary Shares,NASDAQ
 CCLD,CCLD,"CareCloud, Inc. - Common Stock",NASDAQ
 CCNE,CCNE,CNB Financial Corporation - Common Stock,NASDAQ
 CCOI,CCOI,"Cogent Communications Holdings, Inc. - Common Stock",NASDAQ
-CCRN,CCRN,"Cross Country Healthcare, Inc. - Common Stock",NASDAQ
 CCSI,CCSI,"Consensus Cloud Solutions, Inc. - Common Stock",NASDAQ
 CCTG,CCTG,CCSC Technology International Holdings Limited - Class A Ordinary Shares,NASDAQ
 CCXI,CCXI,Churchill Capital Corp XI - Class A Ordinary Shares,NASDAQ
@@ -644,6 +642,7 @@ CHCO,CHCO,City Holding Company - Common Stock,NASDAQ
 CHDN,CHDN,"Churchill Downs, Incorporated - Common Stock",NASDAQ
 CHEC,CHEC,Chenghe Acquisition III Co. - Class A Ordinary Shares,NASDAQ
 CHEF,CHEF,"The Chefs' Warehouse, Inc. - Common Stock",NASDAQ
+CHGA,CHGA,Change Agents Corporation  - Common Stock,NASDAQ
 CHI,CHI,Calamos Convertible Opportunities and Income Fund - Closed End Fund,NASDAQ
 CHKP,CHKP,Check Point Software Technologies Ltd. - Ordinary Shares,NASDAQ
 CHMG,CHMG,Chemung Financial Corp  - Common Stock,NASDAQ
@@ -1325,7 +1324,7 @@ GRAL,GRAL,"GRAIL, Inc. - Common Stock",NASDAQ
 GRAN,GRAN,Grande Group Limited - Class A Ordinary Shares,NASDAQ
 GRCE,GRCE,"Grace Therapeutics, Inc. - Common Stock",NASDAQ
 GRDX,GRDX,GridAI Technologies Corp.  - Common Stock,NASDAQ
-GREE,GREE,Greenidge Generation Holdings Inc. - Class A Common Stock,NASDAQ
+GREE,GREE,Vulcan Infrastructure and Power Inc. - Class A Common Stock,NASDAQ
 GRFS,GRFS,"Grifols, S.A. - American Depositary Shares",NASDAQ
 GRI,GRI,"GRI Bio, Inc. - Common Stock",NASDAQ
 GRML,GRML,Greenland Mines Ltd - Common Stock,NASDAQ
@@ -1822,7 +1821,6 @@ LLYVA,LLYVA,"Liberty Live Holdings, Inc. - Series A Liberty Live Group Common St
 LLYVK,LLYVK,"Liberty Live Holdings, Inc. - Series C Liberty Live Group Common Stock",NASDAQ
 LMAT,LMAT,"LeMaitre Vascular, Inc. - Common Stock",NASDAQ
 LMB,LMB,"Limbach Holdings, Inc. - Common Stock",NASDAQ
-LMFA,LMFA,"LM Funding America, Inc. - Common Stock",NASDAQ
 LMNR,LMNR,Limoneira Co - Common Stock,NASDAQ
 LMRI,LMRI,"Lumexa Imaging Holdings, Inc. - Common Stock",NASDAQ
 LNAI,LNAI,Lunai Bioworks Inc. - Common Stock,NASDAQ
@@ -1936,6 +1934,7 @@ MDWD,MDWD,MediWound Ltd. - Ordinary Shares,NASDAQ
 MDXG,MDXG,"MiMedx Group, Inc - Common Stock",NASDAQ
 MDXH,MDXH,MDxHealth SA - Ordinary Shares,NASDAQ
 MEDP,MEDP,"Medpace Holdings, Inc. - Common Stock",NASDAQ
+MEDS,MEDS,"DataMeds AI, Inc. - Common Stock",NASDAQ
 MEGL,MEGL,Magic Empire Global Limited - Class A Ordinary Shares,NASDAQ
 MELI,MELI,"MercadoLibre, Inc. - Common Stock",NASDAQ
 MENS,MENS,Jyong Biotech Ltd. - Ordinary shares,NASDAQ
@@ -2507,6 +2506,7 @@ PULM,PULM,"Pulmatrix, Inc. - Common Stock",NASDAQ
 PURR,PURR,Hyperliquid Strategies Inc - Common Stock,NASDAQ
 PUSA,PUSA,Aureus Greenway Holdings Inc. - Common Stock,NASDAQ
 PVLA,PVLA,"Palvella Therapeutics, Inc. - Common Stock",NASDAQ
+PWCM,PWCM,"PowerCompute, Inc. - Common Stock",NASDAQ
 PWP,PWP,Perella Weinberg Partners - Class A Common Stock,NASDAQ
 PWRL,PWRL,Powerlaw Corp. - Common Stock,NASDAQ
 PXLW,PXLW,"Pixelworks, Inc. - Common Stock",NASDAQ
@@ -3275,7 +3275,6 @@ WEYS,WEYS,"Weyco Group, Inc. - Common Stock",NASDAQ
 WFCF,WFCF,"Where Food Comes From, Inc. - Common Stock",NASDAQ
 WFF,WFF,WF Holding Limited - Ordinary Shares,NASDAQ
 WFRD,WFRD,Weatherford International plc - Ordinary shares,NASDAQ
-WGRX,WGRX,"Wellgistics Health, Inc. - Common Stock",NASDAQ
 WGS,WGS,GeneDx Holdings Corp. - Class A Common Stock,NASDAQ
 WHF,WHF,"WhiteHorse Finance, Inc. - Closed End Fund",NASDAQ
 WHLR,WHLR,"Wheeler Real Estate Investment Trust, Inc. - Common Stock",NASDAQ
@@ -5019,7 +5018,6 @@ NRO,NRO,Neuberger Real Estate Securities Income Fund Inc. Common Stock,AMEX
 NRP,NRP,Natural Resource Partners LP Limited Partnership,NYSE
 NRT,NRT,North European Oil Royality Trust Common Stock,NYSE
 NRXS,NRXS,"Neuraxis, Inc. Common Stock",AMEX
-NSA,NSA,National Storage Affiliates Trust Common Shares of Beneficial Interest,NYSE
 NSC,NSC,Norfolk Southern Corporation Common Stock,NYSE
 NSP,NSP,"Insperity, Inc. Common Stock",NYSE
 NSRX,NSRX,Nasus Pharma Ltd. Ordinary Shares,AMEX
