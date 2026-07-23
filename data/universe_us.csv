@@ -1229,7 +1229,6 @@ GABC,GABC,"German American Bancorp, Inc. - Common Stock",NASDAQ
 GAIA,GAIA,"Gaia, Inc. - Class A Common Stock",NASDAQ
 GAIN,GAIN,Gladstone Investment Corporation - Business Development Company,NASDAQ
 GALT,GALT,Galectin Therapeutics Inc. - Common Stock,NASDAQ
-GAMB,GAMB,Gambling.com Group Limited - Ordinary Shares,NASDAQ
 GAME,GAME,"GameSquare Holdings, Inc. - Common stock",NASDAQ
 GANX,GANX,"Gain Therapeutics, Inc. - Common Stock",NASDAQ
 GASS,GASS,"StealthGas, Inc. - common stock",NASDAQ
@@ -1332,6 +1331,7 @@ GRNQ,GRNQ,Greenpro Capital Corp. - Common Stock,NASDAQ
 GROW,GROW,"U.S. Global Investors, Inc. - Class A Common Stock",NASDAQ
 GRPN,GRPN,"Groupon, Inc. - Common Stock",NASDAQ
 GRRR,GRRR,Gorilla Technology Group Inc. - Ordinary shares,NASDAQ
+GRSD,GRSD,Grandstand Limited - Ordinary Shares,NASDAQ
 GRVY,GRVY,"GRAVITY Co., Ltd. - American depositary shares, each representing one common share.",NASDAQ
 GRWG,GRWG,GrowGeneration Corp. - Common Stock,NASDAQ
 GSAT,GSAT,"Globalstar, Inc. - Common Stock",NASDAQ
@@ -1900,7 +1900,6 @@ MAYS,MAYS,"J. W. Mays, Inc. - Common Stock",NASDAQ
 MAZE,MAZE,"Maze Therapeutics, Inc. - Common Stock",NASDAQ
 MB,MB,MasterBeef Group - Ordinary Shares,NASDAQ
 MBAI,MBAI,Check-Cap Ltd. - Ordinary Share,NASDAQ
-MBAV,MBAV,M3-Brigade Acquisition V Corp. - Class A Ordinary shares,NASDAQ
 MBBC,MBBC,"Marathon Bancorp, Inc. - Common Stock",NASDAQ
 MBIN,MBIN,Merchants Bancorp - Common Stock,NASDAQ
 MBIO,MBIO,"Mustang Bio, Inc. - Common Stock",NASDAQ
@@ -2760,7 +2759,6 @@ SGLY,SGLY,Singularity Future Technology Ltd. - Common Stock,NASDAQ
 SGML,SGML,Sigma Lithium Corporation - common shares,NASDAQ
 SGMT,SGMT,Sagimet Biosciences Inc. - Series A Common Stock,NASDAQ
 SGP,SGP,"SpyGlass Pharma, Inc. - Common Stock",NASDAQ
-SGRP,SGRP,"SPAR Group, Inc. - Common Stock",NASDAQ
 SGRY,SGRY,"Surgery Partners, Inc. - Common Stock",NASDAQ
 SHAZ,SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",NASDAQ
 SHBI,SHBI,"Shore Bancshares, Inc. - Common Stock",NASDAQ
@@ -3204,6 +3202,7 @@ VIVO,VIVO,VivoPower PLC - Class A Ordinary Shares,NASDAQ
 VIVS,VIVS,"VivoSim Labs, Inc. - Common Stock",NASDAQ
 VKTX,VKTX,"Viking Therapeutics, Inc. - Common Stock",NASDAQ
 VLGEA,VLGEA,"Village Super Market, Inc. - Class A Common Stock",NASDAQ
+VLOS,VLOS,Velos Acquisition I Corp. - Class A Ordinary shares,NASDAQ
 VLY,VLY,Valley National Bancorp - Common Stock,NASDAQ
 VMAR,VMAR,Vision Marine Technologies Inc. - Common Shares,NASDAQ
 VMD,VMD,"Viemed Healthcare, Inc. - Common Shares",NASDAQ
@@ -3817,7 +3816,6 @@ C,C,"Citigroup, Inc. Common Stock",NYSE
 CAAP,CAAP,Corporacion America Airports SA Common Shares,NYSE
 CABO,CABO,"Cable One, Inc. Common Stock",NYSE
 CACI,CACI,"CACI International, Inc. Class A Common Stock",NYSE
-CAE,CAE,CAE Inc. Ordinary Shares,NYSE
 CAF,CAF,Morgan Stanley China A Share Fund Inc. Common Stock,NYSE
 CAG,CAG,"ConAgra Brands, Inc. Common Stock",NYSE
 CAH,CAH,"Cardinal Health, Inc. Common Stock",NYSE
