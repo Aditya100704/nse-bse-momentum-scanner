@@ -410,6 +410,7 @@ BIDU,BIDU,"Baidu, Inc. - American Depositary Shares, each representing 8 ordinar
 BIIB,BIIB,Biogen Inc. - Common Stock,NASDAQ
 BILI,BILI,Bilibili Inc. - American Depositary Shares,NASDAQ
 BIOA,BIOA,"BioAge Labs, Inc. - Common Stock",NASDAQ
+BIOT,BIOT,Instinct Bio Technical Company Holdings Inc. - Common stock,NASDAQ
 BIOX,BIOX,Bioceres Crop Solutions Corp. - Ordinary Shares,NASDAQ
 BIRD,BIRD,"Smartbird, Inc. - Class A Common Stock",NASDAQ
 BIVI,BIVI,BioVie Inc. - Common stock,NASDAQ
@@ -1001,7 +1002,6 @@ EMBC,EMBC,Embecta Corp. - Common Stock,NASDAQ
 EMIS,EMIS,Emmis Acquisition Corp. - Class A Ordinary Share,NASDAQ
 EML,EML,Eastern Company (The) - Common Stock,NASDAQ
 EMPD,EMPD,Empery Digital Inc. - Common stock,NASDAQ
-EMPG,EMPG,Empro Group Inc. - Ordinary shares,NASDAQ
 ENGN,ENGN,enGene Therapeutics Inc. - Common Stock,NASDAQ
 ENGS,ENGS,Energys Group Limited - Ordinary Shares,NASDAQ
 ENLT,ENLT,Enlight Renewable Energy Ltd. - Ordinary Shares,NASDAQ
@@ -1593,6 +1593,7 @@ IPHA,IPHA,Innate Pharma S.A. - American Depositary Shares,NASDAQ
 IPM,IPM,Intelligent Protection Management Corp.  - Common Stock,NASDAQ
 IPSC,IPSC,"Century Therapeutics, Inc. - Common Stock",NASDAQ
 IPST,IPST,"IP Strategy Holdings, Inc. - Common Stock",NASDAQ
+IPVV,IPVV,"InterPrivate Investment Partners V, Inc. - Class A Ordinary Shares",NASDAQ
 IPW,IPW,iPower Inc. - Common Stock,NASDAQ
 IPWR,IPWR,Ideal Power Inc. - Common Stock,NASDAQ
 IPX,IPX,IperionX Limited - American Depositary Share,NASDAQ
@@ -2514,6 +2515,7 @@ PYPL,PYPL,"PayPal Holdings, Inc. - Common Stock",NASDAQ
 PYXS,PYXS,"Pyxis Oncology, Inc. - Common Stock",NASDAQ
 PZZA,PZZA,"Papa John's International, Inc. - Common Stock",NASDAQ
 QADR,QADR,QDRO Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+QBTS,QBTS,D-Wave Quantum Inc. - Common Stock,NASDAQ
 QCLS,QCLS,"Q/C Technologies, Inc. - Common Stock",NASDAQ
 QCOM,QCOM,QUALCOMM Incorporated - Common Stock,NASDAQ
 QCRH,QCRH,"QCR Holdings, Inc. - Common Stock",NASDAQ
@@ -2719,6 +2721,7 @@ SCNX,SCNX,"Scienture Holdings, Inc. - Common Stock",NASDAQ
 SCOR,SCOR,"comScore, Inc. - Common Stock",NASDAQ
 SCPQ,SCPQ,Social Commerce Partners Corporation - Class A Ordinary Shares,NASDAQ
 SCSC,SCSC,"ScanSource, Inc. - Common Stock",NASDAQ
+SCTX,SCTX,Scribe Therapeutics Inc. - Common Stock,NASDAQ
 SCWO,SCWO,374Water Inc. - common stock,NASDAQ
 SCYX,SCYX,"SCYNEXIS, Inc. - Common Stock",NASDAQ
 SCZM,SCZM,Santacruz Silver Mining Ltd. - Common Shares,NASDAQ
@@ -3056,7 +3059,6 @@ TREE,TREE,"LendingTree, Inc. - Common Stock",NASDAQ
 TRGS,TRGS,TRG Latin America Acquisitions Corp. - Class A Ordinary Shares,NASDAQ
 TRI,TRI,Thomson Reuters Corp - Common Shares,NASDAQ
 TRIB,TRIB,Trinity Biotech plc - American Depositary Shares,NASDAQ
-TRIN,TRIN,Trinity Capital Inc. - Common Stock,NASDAQ
 TRIP,TRIP,"TripAdvisor, Inc. - Common Stock",NASDAQ
 TRMB,TRMB,Trimble Inc. - Common Stock,NASDAQ
 TRMD,TRMD,TORM plc - Class A Common Stock,NASDAQ
@@ -3235,7 +3237,6 @@ VSEC,VSEC,VSE Corporation - Common Stock,NASDAQ
 VSEE,VSEE,"VSee Health, Inc. - Common Stock",NASDAQ
 VSME,VSME,VS Media Holdings Limited - Class A Ordinary Shares,NASDAQ
 VSNT,VSNT,"Versant Media Group, Inc. - Class A Common Stock",NASDAQ
-VSTD,VSTD,Vestand Inc.  - Class A Common Stock,NASDAQ
 VSTM,VSTM,"Verastem, Inc. - Common Stock",NASDAQ
 VTGN,VTGN,"Vistagen Therapeutics, Inc. - Common Stock",NASDAQ
 VTIX,VTIX,Virtuix Holdings Inc. - Class A Common Stock,NASDAQ
@@ -3606,7 +3607,6 @@ AVBC,AVBC,"Avidia Bancorp, Inc. Common Stock",NYSE
 AVD,AVD,American Vanguard Corporation Common Stock ($0.10 Par Value),NYSE
 AVEX,AVEX,AEVEX Corp. Class A Common Stock,NYSE
 AVK,AVK,Advent Convertible and Income Fund,NYSE
-AVNS,AVNS,"Avanos Medical, Inc. Common Stock",NYSE
 AVNT,AVNT,Avient Corporation Common Stock,NYSE
 AVTR,AVTR,"Avantor, Inc. Common Stock",NYSE
 AVY,AVY,Avery Dennison Corporation Common Stock,NYSE
@@ -4322,6 +4322,7 @@ FTF,FTF,Franklin Limited Duration Income Trust Common Shares of Beneficial Inter
 FTHY,FTHY,First Trust High Yield Opportunities 2027 Term Fund Common Stock,NYSE
 FTI,FTI,TechnipFMC plc Ordinary Share,NYSE
 FTK,FTK,"Flotek Industries, Inc. Common Stock",NYSE
+FTRA,FTRA,FutureCorp Space Acquisition 1 Class A Ordinary Shares,NYSE
 FTS,FTS,Fortis Inc. Common Shares,NYSE
 FTV,FTV,Fortive Corporation Common Stock,NYSE
 FTW,FTW,Presidio Production Company Class A Common Stock,NYSE
@@ -4422,7 +4423,6 @@ GPN,GPN,Global Payments Inc. Common Stock,NYSE
 GPOR,GPOR,Gulfport Energy Corporation Common Shares,NYSE
 GPRK,GPRK,Geopark Ltd Common Shares,NYSE
 GPUS,GPUS,"Hyperscale Data, Inc. Common Stock",AMEX
-GRAF,GRAF,Graf Global Corp. Class A ordinary shares,AMEX
 GRBK,GRBK,"Green Brick Partners, Inc. Common Stock",NYSE
 GRC,GRC,Gorman-Rupp Company (The) Common Stock,NYSE
 GRDN,GRDN,"Guardian Pharmacy Services, Inc. Class A Common Stock",NYSE
@@ -5247,7 +5247,6 @@ PXED,PXED,"Phoenix Education Partners, Inc. Common Stock",NYSE
 PYT,PYT,PPlus Tr GSC-2 Tr Ctf Fltg Rate,NYSE
 PZG,PZG,Paramount Gold Nevada Corp. Common Stock,AMEX
 Q,Q,"Qnity Electronics, Inc. Common Stock",NYSE
-QBTS,QBTS,D-Wave Quantum Inc. Common Shares,NYSE
 QGEN,QGEN,Qiagen N.V. Common Shares,NYSE
 QLEP,QLEP,Quantum Leap Acquisition Corp Class A Ordinary Shares,NYSE
 QNC,QNC,Quantum eMotion Corp. Common Shares,AMEX
@@ -5598,6 +5597,7 @@ TNET,TNET,"TriNet Group, Inc. Common Stock",NYSE
 TNK,TNK,Teekay Tankers Ltd.,NYSE
 TNL,TNL,Travel   Leisure Co. Common  Stock,NYSE
 TOL,TOL,"Toll Brothers, Inc. Common Stock",NYSE
+TONT,TONT,Graf Global Corp. Class A ordinary shares,AMEX
 TOON,TOON,"Kartoon Studios, Inc. Common Stock",AMEX
 TOPP,TOPP,Toppoint Holdings Inc. Common Stock,AMEX
 TOPS,TOPS,"TOP Ships, Inc. Common Stock",AMEX
@@ -5615,6 +5615,7 @@ TRAK,TRAK,"ReposiTrak, Inc. Common Stock",NYSE
 TRC,TRC,Tejon Ranch Co Common Stock,NYSE
 TREX,TREX,"Trex Company, Inc. Common Stock",NYSE
 TRGP,TRGP,"Targa Resources, Inc. Common Stock",NYSE
+TRIN,TRIN,Trinity Capital Inc. Common Stock,NYSE
 TRLV,TRLV,Trulieve Cannabis Corp. Subordinate Voting Shares,NYSE
 TRN,TRN,"Trinity Industries, Inc. Common Stock",NYSE
 TRNO,TRNO,Terreno Realty Corporation Common Stock,NYSE
