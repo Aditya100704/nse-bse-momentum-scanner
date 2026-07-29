@@ -775,7 +775,7 @@ CRON,CRON,Cronos Group Inc. - Common Share,NASDAQ
 CROX,CROX,"Crocs, Inc. - Common Stock",NASDAQ
 CRSP,CRSP,CRISPR Therapeutics AG - Common Shares,NASDAQ
 CRSR,CRSR,"Corsair Gaming, Inc. - Common Stock",NASDAQ
-CRTO,CRTO,Criteo S.A. - American Depositary Shares,NASDAQ
+CRTO,CRTO,Criteo S.A. - Ordinary Shares,NASDAQ
 CRUS,CRUS,"Cirrus Logic, Inc. - Common Stock",NASDAQ
 CRVL,CRVL,CorVel Corp. - Common Stock,NASDAQ
 CRVO,CRVO,CervoMed Inc. - Common Stock,NASDAQ
@@ -3446,6 +3446,7 @@ ACVA,ACVA,ACV Auctions Inc. Class A Common Stock,NYSE
 AD,AD,"Array Digital Infrastructure, Inc. Common Shares",NYSE
 ADC,ADC,Agree Realty Corporation Common Stock,NYSE
 ADCT,ADCT,ADC Therapeutics SA Common Shares,NYSE
+ADIG-V,ADIG-V,ADI Global Distribution Inc. Common Stock When-Issued,NYSE
 ADM,ADM,Archer-Daniels-Midland Company Common Stock,NYSE
 ADNT,ADNT,Adient plc Ordinary Shares,NYSE
 ADT,ADT,ADT Inc. Common Stock,NYSE
@@ -4571,6 +4572,7 @@ IIIN,IIIN,"Insteel Industries, Inc. Common Stock",NYSE
 IIM,IIM,Invesco Value Municipal Income Trust Common Stock,NYSE
 IIPR,IIPR,"Innovative Industrial Properties, Inc. Common Stock",NYSE
 IMAX,IMAX,Imax Corporation Common Stock,NYSE
+IMC,IMC,IMC Rare Earths Ltd Ordinary Shares,AMEX
 IMO,IMO,Imperial Oil Limited Common Stock,AMEX
 INDO,INDO,Indonesia Energy Corporation Limited Ordinary Shares,AMEX
 INFQ,INFQ,"Infleqtion, Inc. Common Stock",NYSE
@@ -5286,6 +5288,7 @@ RES,RES,"RPC, Inc. Common Stock",NYSE
 REX,REX,REX American Resources Corporation,NYSE
 REXR,REXR,"Rexford Industrial Realty, Inc. Common Stock",NYSE
 REZI,REZI,"Resideo Technologies, Inc. Common Stock",NYSE
+REZI-V,REZI-V,"Resideo Technologies, Inc. Common Stock When-Issued",NYSE
 RF,RF,Regions Financial Corporation Common Stock,NYSE
 RFI,RFI,"Cohen & Steers Total Return Realty Fund, Inc. Common Stock",NYSE
 RFL,RFL,"Rafael Holdings, Inc. Class B Common Stock",NYSE
