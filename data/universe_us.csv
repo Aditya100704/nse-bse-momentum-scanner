@@ -218,6 +218,7 @@ API,API,"Agora, Inc. - ADS",NASDAQ
 APLD,APLD,Applied Digital Corporation - Common Stock,NASDAQ
 APLM,APLM,Apollomics Inc. - Class A Ordinary Shares,NASDAQ
 APMC,APMC,AmperCap Acquisition Company - Ordinary Shares,NASDAQ
+APMD,APMD,"Apnimed, Inc. - Common Stock",NASDAQ
 APOG,APOG,"Apogee Enterprises, Inc. - Common Stock",NASDAQ
 APP,APP,Applovin Corporation - Class A Common Stock,NASDAQ
 APPF,APPF,"AppFolio, Inc. - Class A Common Stock",NASDAQ
@@ -576,6 +577,7 @@ CCB,CCB,Coastal Financial Corporation - Common Stock,NASDAQ
 CCBG,CCBG,Capital City Bank Group - Common Stock,NASDAQ
 CCC,CCC,CCC Intelligent Solutions Holdings Inc. - Common Stock,NASDAQ
 CCCC,CCCC,"C4 Therapeutics, Inc. - Common Stock",NASDAQ
+CCCT,CCCT,Columbus Circle Capital Corp III - Class A Ordinary Shares,NASDAQ
 CCD,CCD,Calamos Dynamic Convertible & Income Fund - Closed End Fund,NASDAQ
 CCEC,CCEC,Capital Clean Energy Carriers Corp. - Common Share,NASDAQ
 CCEP,CCEP,Coca-Cola Europacific Partners plc - Ordinary Shares,NASDAQ
@@ -1217,6 +1219,7 @@ FUTU,FUTU,Futu Holdings Limited - American Depositary Shares,NASDAQ
 FVAV,FVAV,Fortress Value Acquisition Corp. V - Class A Ordinary Shares,NASDAQ
 FVCB,FVCB,"FVCBankcorp, Inc. - Common Stock",NASDAQ
 FVN,FVN,Future Vision II Acquisition Corporation - Ordinary Shares,NASDAQ
+FWAC,FWAC,Futurewave Acquisition Corporation - Ordinary Shares,NASDAQ
 FWDI,FWDI,"Forward Industries, Inc. - Common Stock",NASDAQ
 FWONA,FWONA,Liberty Media Corporation - Series A Liberty Formula One Common Stock,NASDAQ
 FWONK,FWONK,Liberty Media Corporation - Series C Liberty Formula One Common Stock,NASDAQ
@@ -1355,11 +1358,11 @@ GTX,GTX,Garrett Motion Inc. - Common Stock,NASDAQ
 GUAC,GUAC,Berto Acquisition Corp. II - Ordinary Shares,NASDAQ
 GURE,GURE,"Gulf Resources, Inc. - Common Stock",NASDAQ
 GUTS,GUTS,"Fractyl Health, Inc. - Common Stock",NASDAQ
-GV,GV,Visionary Holdings Inc. - Common Shares,NASDAQ
 GVH,GVH,Globavend Holdings Limited - Ord Shares,NASDAQ
 GWAV,GWAV,"Greenwave Technology Solutions, Inc. - Common Stock",NASDAQ
 GWRS,GWRS,"Global Water Resources, Inc. - common stock",NASDAQ
 GXAI,GXAI,Gaxos.ai Inc. - Common Stock,NASDAQ
+GYGY,GYGY,"Game Your Game, Inc. - Common Stock",NASDAQ
 GYRE,GYRE,"Gyre Therapeutics, Inc. - Common Stock",NASDAQ
 GYRO,GYRO,"Gyrodyne , LLC - Common Stock",NASDAQ
 HACQ,HACQ,HCM IV Acquisition Corp. - Class A Ordinary Share,NASDAQ
@@ -1845,7 +1848,6 @@ LPBB,LPBB,Launch Two Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 LPCN,LPCN,Lipocine Inc. - Common Stock,NASDAQ
 LPCV,LPCV,Launchpad Cadenza Acquisition Corp I - Class A Ordinary Share,NASDAQ
 LPLA,LPLA,LPL Financial Holdings Inc. - Common Stock,NASDAQ
-LPRO,LPRO,Open Lending Corporation - Common Stock,NASDAQ
 LPSN,LPSN,"LivePerson, Inc. - Common Stock",NASDAQ
 LPTH,LPTH,"LightPath Technologies, Inc. - Class A Common Stock",NASDAQ
 LQDA,LQDA,Liquidia Corporation - Common Stock,NASDAQ
@@ -2095,6 +2097,7 @@ NCI,NCI,Neo-Concept International Group Holdings Limited - Class A Ordinary Shar
 NCMI,NCMI,"National CineMedia, Inc. - Common Stock",NASDAQ
 NCNA,NCNA,NuCana plc - American Depositary Shares,NASDAQ
 NCNO,NCNO,"nCino, Inc. - Common Stock",NASDAQ
+NCO,NCO,Southern Cross Acquisition I Corp. - Ordinary Shares,NASDAQ
 NCPL,NCPL,Netcapital Inc. - Common Stock,NASDAQ
 NCRA,NCRA,"Nocera, Inc. - common stock",NASDAQ
 NCSM,NCSM,"NCS Multistage Holdings, Inc. - Common Stock",NASDAQ
@@ -5104,7 +5107,6 @@ ORA,ORA,"Ormat Technologies, Inc. Common Stock",NYSE
 ORC,ORC,"Orchid Island Capital, Inc. Common Stock",NYSE
 ORCL,ORCL,Oracle Corporation Common Stock,NYSE
 ORI,ORI,Old Republic International Corporation Common Stock,NYSE
-ORLA,ORLA,Orla Mining Ltd. Common Shares,AMEX
 ORN,ORN,"Orion Group Holdings, Inc. Common",NYSE
 OSCR,OSCR,"Oscar Health, Inc. Class A Common Stock",NYSE
 OSG,OSG,"Octave Specialty Group, Inc. Common Stock",NYSE
@@ -5574,7 +5576,7 @@ TG,TG,Tredegar Corporation Common Stock,NYSE
 TGB,TGB,Trekor Metals Limited Common Shares,AMEX
 TGE,TGE,The Generation Essentials Group Class A Ordinary Shares,NYSE
 TGEN,TGEN,Tecogen Inc. Common Stock,AMEX
-TGLS,TGLS,Tecnoglass Inc. Common Stock,NYSE
+TGLS,TGLS,Tecnoglass Holdings Inc. Common Stock,NYSE
 TGS,TGS,Transportadora de Gas del Sur SA TGS Common Stock,NYSE
 TGT,TGT,Target Corporation Common Stock,NYSE
 THC,THC,Tenet Healthcare Corporation Common Stock,NYSE
