@@ -82,7 +82,6 @@ AERT,AERT,"Aeries Technology, Inc. - Class A Ordinary Share",NASDAQ
 AESP,AESP,Aeon Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
 AEVA,AEVA,"Aeva Technologies, Inc. - Common Stock",NASDAQ
 AEYE,AEYE,"AudioEye, Inc. - Common Stock",NASDAQ
-AFBI,AFBI,"Affinity Bancshares, Inc. - Common Stock",NASDAQ
 AFCG,AFCG,Advanced Flower Capital Inc. - Common Stock,NASDAQ
 AFJK,AFJK,"Aimei Health Technology Co., Ltd - Ordinary Share",NASDAQ
 AFRI,AFRI,Forafric Global PLC - Ordinary Shares,NASDAQ
@@ -368,6 +367,7 @@ BCAL,BCAL,California BanCorp - Common Stock,NASDAQ
 BCAR,BCAR,D. Boral ARC Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
 BCAX,BCAX,Bicara Therapeutics Inc. - Common Stock,NASDAQ
 BCBP,BCBP,"BCB Bancorp, Inc. (NJ) - Common Stock",NASDAQ
+BCCQ,BCCQ,Bleichroeder Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
 BCDA,BCDA,"BioCardia, Inc. - Common Stock",NASDAQ
 BCG,BCG,"Binah Capital Group, Inc. - Common Stock",NASDAQ
 BCIC,BCIC,BCP Investment Corporation - Closed End Fund,NASDAQ
@@ -713,6 +713,7 @@ CNET,CNET,ZW Data Action Technologies Inc. - Common Stock,NASDAQ
 CNEY,CNEY,CN Energy Group Inc. - Class A Ordinary Shares,NASDAQ
 CNOB,CNOB,"ConnectOne Bancorp, Inc. - Common Stock",NASDAQ
 CNSP,CNSP,"CNS Pharmaceuticals, Inc. - Common Stock",NASDAQ
+CNSY,CNSY,"Cerenome, Inc. - Common Stock",NASDAQ
 CNTB,CNTB,Connect Biopharma Holdings Limited - Ordinary Shares,NASDAQ
 CNTN,CNTN,"Canton Strategic Holdings, Inc. - Common Stock",NASDAQ
 CNTX,CNTX,Context Therapeutics Inc. - Common Stock,NASDAQ
@@ -990,7 +991,6 @@ ELMT,ELMT,The Elmet Group Co. - Common Stock,NASDAQ
 ELOG,ELOG,Eastern International Ltd. - Ordinary Shares,NASDAQ
 ELOX,ELOX,"Eloxx Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ELPW,ELPW,Elong Power Holding Limited - Class A Ordinary Shares,NASDAQ
-ELSE,ELSE,"Electro-Sensors, Inc. - Common Stock",NASDAQ
 ELTK,ELTK,Eltek Ltd. - Ordinary Shares,NASDAQ
 ELTX,ELTX,"Elicio Therapeutics, Inc. - Common Stock",NASDAQ
 ELUT,ELUT,"Elutia, Inc. - Class A Common Stock",NASDAQ
@@ -1736,7 +1736,6 @@ KTTA,KTTA,Pasithea Therapeutics Corp. - Common Stock,NASDAQ
 KTWO,KTWO,K2 Capital Acquisition Corporation - Class A Ordinary Share,NASDAQ
 KURA,KURA,"Kura Oncology, Inc. - Common Stock",NASDAQ
 KUST,KUST,"Kustom Entertainment, Inc. - Common Stock",NASDAQ
-KVAC,KVAC,Keen Vision Acquisition Corporation - Ordinary Shares,NASDAQ
 KVHI,KVHI,"KVH Industries, Inc. - Common Stock",NASDAQ
 KWM,KWM,"K Wave Media, Ltd. - Ordinary Shares",NASDAQ
 KXIN,KXIN,Kaixin Holdings - Ordinary Shares,NASDAQ
@@ -2494,7 +2493,6 @@ PSMT,PSMT,"PriceSmart, Inc. - Common Stock",NASDAQ
 PSNL,PSNL,"Personalis, Inc. - Common Stock",NASDAQ
 PSNY,PSNY,Polestar Automotive Holding UK Limited - Class A ADS,NASDAQ
 PSNYW,PSNYW,Polestar Automotive Holding UK Limited - Class C-1 ADS (ADW),NASDAQ
-PSTV,PSTV,"PLUS THERAPEUTICS, Inc. - Common Stock",NASDAQ
 PTAC,PTAC,Patriot Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 PTC,PTC,PTC Inc. - Common Stock,NASDAQ
 PTCT,PTCT,"PTC Therapeutics, Inc. - Common Stock",NASDAQ
@@ -2804,7 +2802,6 @@ SKWD,SKWD,"Skyward Specialty Insurance Group, Inc. - Common Stock",NASDAQ
 SKYA,SKYA,"SkyAI, Inc. - Common Stock",NASDAQ
 SKYE,SKYE,"Skye Bioscience, Inc. - Common Stock",NASDAQ
 SKYQ,SKYQ,Sky Quarry Inc. - Common Stock,NASDAQ
-SKYT,SKYT,"SkyWater Technology, Inc. - Common Stock",NASDAQ
 SKYW,SKYW,"SkyWest, Inc. - Common Stock",NASDAQ
 SKYX,SKYX,SKYX Platforms Corp. - Common Stock,NASDAQ
 SLAB,SLAB,"Silicon Laboratories, Inc. - Common Stock",NASDAQ
@@ -5067,6 +5064,7 @@ OBDC,OBDC,Blue Owl Capital Corporation Common Stock,NYSE
 OBE,OBE,Obsidian Energy Ltd. Common Shares,AMEX
 OBK,OBK,"Origin Bancorp, Inc. Common Stock",NYSE
 OC,OC,Owens Corning Inc Common Stock New,NYSE
+OCAC,OCAC,Ocean Capital Acquisition Corporation Ordinary Shares,NYSE
 ODC,ODC,Oil-Dri Corporation Of America Common Stock,NYSE
 OEC,OEC,Orion S.A. Common Shares,NYSE
 OFG,OFG,OFG Bancorp Common Stock,NYSE
@@ -5655,7 +5653,6 @@ TVE,TVE,Tennessee Valley Authority,NYSE
 TWI,TWI,"Titan International, Inc. (DE) Common Stock",NYSE
 TWLO,TWLO,Twilio Inc. Class A Common Stock,NYSE
 TWN,TWN,"Taiwan Fund, Inc. (The) Common Stock",NYSE
-TWO,TWO,Two Harbors Investment Corp,NYSE
 TX,TX,"Ternium S.A. Ternium S.A. American Depositary Shares (each representing ten shares, USD1.00 par value)",NYSE
 TXNM,TXNM,"TXNM Energy, Inc. Common Stock",NYSE
 TXT,TXT,Textron Inc. Common Stock,NYSE
