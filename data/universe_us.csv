@@ -1095,6 +1095,7 @@ FCHL,FCHL,Fitness Champs Holdings Limited - Ordinary Shares,NASDAQ
 FCNCA,FCNCA,"First Citizens BancShares, Inc. - Class A Common Stock",NASDAQ
 FCUV,FCUV,Focus Universal Inc. - Common Stock,NASDAQ
 FDBC,FDBC,"Fidelity D & D Bancorp, Inc. - Common Stock",NASDAQ
+FDMM,FDMM,Freedom Metals Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 FDMT,FDMT,"4D Molecular Therapeutics, Inc. - Common Stock",NASDAQ
 FDSB,FDSB,"Fifth District Bancorp, Inc. - Common Stock",NASDAQ
 FDUS,FDUS,Fidus Investment Corporation - Closed End Fund,NASDAQ
@@ -1859,7 +1860,6 @@ LSAK,LSAK,"Lesaka Technologies, Inc. - Common Stock",NASDAQ
 LSBK,LSBK,"Lake Shore Bancorp, Inc. - Common Stock",NASDAQ
 LSCC,LSCC,Lattice Semiconductor Corporation - Common Stock,NASDAQ
 LSE,LSE,"Leishen Energy Holding Co., Ltd. - Class A Ordinary Shares",NASDAQ
-LSH,LSH,Lakeside Holding Limited - Common Stock,NASDAQ
 LSTA,LSTA,"Lisata Therapeutics, Inc. - Common Stock",NASDAQ
 LSTR,LSTR,"Landstar System, Inc. - Common Stock",NASDAQ
 LTBR,LTBR,Lightbridge Corporation - Common Stock,NASDAQ
@@ -2532,6 +2532,7 @@ QMCO,QMCO,Quantum Corporation - Common Stock,NASDAQ
 QMLS,QMLS,"QumulusAI, Inc. - Common Stock",NASDAQ
 QMMM,QMMM,QMMM Holdings Limited - Class A Ordinary Shares,NASDAQ
 QNCX,QNCX,"Quince Therapeutics, Inc. - Common Stock",NASDAQ
+QNME,QNME,"Quanome Technologies, Inc. - Common Stock",NASDAQ
 QNRX,QNRX,"Quoin Pharmaceuticals, Ltd. - American Depositary Shares",NASDAQ
 QNST,QNST,"QuinStreet, Inc. - Common Stock",NASDAQ
 QNT,QNT,Quantinuum Inc. - Class A Common Stock,NASDAQ
@@ -2915,6 +2916,7 @@ STKE,STKE,Sol Strategies Inc. - Common Shares,NASDAQ
 STKH,STKH,Steakholder Foods Ltd. - American Depositary Shares,NASDAQ
 STKS,STKS,"The ONE Group Hospitality, Inc. - Common Stock",NASDAQ
 STLD,STLD,"Steel Dynamics, Inc. - Common Stock",NASDAQ
+STLN,STLN,"Starling Oncology Institute, Inc. - Common Stock",NASDAQ
 STNE,STNE,StoneCo Ltd. - Class A Common Share,NASDAQ
 STOK,STOK,"Stoke Therapeutics, Inc. - Common Stock",NASDAQ
 STRA,STRA,"Strategic Education, Inc. - Common Stock",NASDAQ
@@ -3044,7 +3046,6 @@ TNMG,TNMG,TNL Mediagene - Ordinary Shares,NASDAQ
 TNON,TNON,"Tenon Medical, Inc. - Common Stock",NASDAQ
 TNXP,TNXP,Tonix Pharmaceuticals Holding Corp. - Common Stock,NASDAQ
 TNYA,TNYA,"Tenaya Therapeutics, Inc. - Common Stock",NASDAQ
-TOI,TOI,"The Oncology Institute, Inc. - Common Stock",NASDAQ
 TOMZ,TOMZ,"TOMI Environmental Solutions, Inc. - Common Stock",NASDAQ
 TONX,TONX,TON Strategy Company - Common Stock,NASDAQ
 TOP,TOP,TOP Financial Group Limited - Class A Ordinary Shares,NASDAQ
@@ -3448,7 +3449,7 @@ ACVA,ACVA,ACV Auctions Inc. Class A Common Stock,NYSE
 AD,AD,"Array Digital Infrastructure, Inc. Common Shares",NYSE
 ADC,ADC,Agree Realty Corporation Common Stock,NYSE
 ADCT,ADCT,ADC Therapeutics SA Common Shares,NYSE
-ADIG-V,ADIG-V,ADI Global Distribution Inc. Common Stock When-Issued,NYSE
+ADIG,ADIG,ADI Global Distribution Inc. Common Stock,NYSE
 ADM,ADM,Archer-Daniels-Midland Company Common Stock,NYSE
 ADNT,ADNT,Adient plc Ordinary Shares,NYSE
 ADT,ADT,ADT Inc. Common Stock,NYSE
@@ -5292,7 +5293,6 @@ RES,RES,"RPC, Inc. Common Stock",NYSE
 REX,REX,REX American Resources Corporation,NYSE
 REXR,REXR,"Rexford Industrial Realty, Inc. Common Stock",NYSE
 REZI,REZI,"Resideo Technologies, Inc. Common Stock",NYSE
-REZI-V,REZI-V,"Resideo Technologies, Inc. Common Stock When-Issued",NYSE
 RF,RF,Regions Financial Corporation Common Stock,NYSE
 RFI,RFI,"Cohen & Steers Total Return Realty Fund, Inc. Common Stock",NYSE
 RFL,RFL,"Rafael Holdings, Inc. Class B Common Stock",NYSE
@@ -5653,6 +5653,7 @@ TVE,TVE,Tennessee Valley Authority,NYSE
 TWI,TWI,"Titan International, Inc. (DE) Common Stock",NYSE
 TWLO,TWLO,Twilio Inc. Class A Common Stock,NYSE
 TWN,TWN,"Taiwan Fund, Inc. (The) Common Stock",NYSE
+TWO,TWO,Two Harbors Investment Corp,NYSE
 TX,TX,"Ternium S.A. Ternium S.A. American Depositary Shares (each representing ten shares, USD1.00 par value)",NYSE
 TXNM,TXNM,"TXNM Energy, Inc. Common Stock",NYSE
 TXT,TXT,Textron Inc. Common Stock,NYSE
@@ -5868,7 +5869,7 @@ YETI,YETI,"YETI Holdings, Inc. Common Stock",NYSE
 YEXT,YEXT,"Yext, Inc. Common Stock",NYSE
 YMM,YMM,Full Truck Alliance Co. Ltd. American Depositary Shares (each representing 20 Class A Ordinary Shares),NYSE
 YOU,YOU,"Clear Secure, Inc. Class A Common Stock",NYSE
-YPF,YPF,YPF Sociedad Anonima Common Stock,NYSE
+YPF,YPF,YPF Sociedad Anonima American Depositary Shares,NYSE
 YRD,YRD,"Yiren Digital Ltd. American Depositary Shares, each representing two ordinary shares",NYSE
 YSG,YSG,"Yatsen Holding Limited American Depositary Shares, each representing twenty (20) Class A Ordinary Shares",NYSE
 YSS,YSS,York Space Systems Inc. Common Stock,NYSE
