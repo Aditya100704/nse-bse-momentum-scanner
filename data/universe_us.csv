@@ -301,6 +301,7 @@ ATPC,ATPC,Agape ATP Corporation - Common Stock,NASDAQ
 ATRA,ATRA,"Atara Biotherapeutics, Inc. - Common Stock",NASDAQ
 ATRC,ATRC,"AtriCure, Inc. - Common Stock",NASDAQ
 ATRO,ATRO,Astronics Corporation - Common Stock,NASDAQ
+ATTO,ATTO,"Attovia Therapeutics, Inc. - Common Stock",NASDAQ
 ATXG,ATXG,Addentax Group Corp. - Common Stock,NASDAQ
 ATYR,ATYR,"aTyr Pharma, Inc. - Common Stock",NASDAQ
 AUBN,AUBN,"Auburn National Bancorporation, Inc. - Common Stock",NASDAQ
@@ -950,7 +951,6 @@ DYAI,DYAI,"Dyadic International, Inc. - Common Stock",NASDAQ
 DYN,DYN,"Dyne Therapeutics, Inc. - Common Stock",NASDAQ
 DYNC,DYNC,Dynamix Corporation - Class A Ordinary Share,NASDAQ
 DYOR,DYOR,Insight Digital Partners II - Class A Ordinary Shares,NASDAQ
-EA,EA,Electronic Arts Inc. - Common Stock,NASDAQ
 EBAY,EBAY,eBay Inc. - Common Stock,NASDAQ
 EBC,EBC,"Eastern Bankshares, Inc. - Common Stock",NASDAQ
 EBMT,EBMT,"Eagle Bancorp Montana, Inc. - Common Stock",NASDAQ
@@ -1633,6 +1633,7 @@ IVVD,IVVD,"Invivyd, Inc. - Common Stock",NASDAQ
 IXHL,IXHL,Incannex Healthcare Inc. - Common Stock,NASDAQ
 IZEA,IZEA,"IZEA Worldwide, Inc. - Common Stock",NASDAQ
 IZM,IZM,ICZOOM Group Inc. - Class A Ordinary Shares,NASDAQ
+JAB,JAB,JAB Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 JACK,JACK,Jack In The Box Inc. - Common Stock,NASDAQ
 JAGX,JAGX,"Jaguar Health, Inc. - Common Stock",NASDAQ
 JAKK,JAKK,"JAKKS Pacific, Inc. - Common Stock",NASDAQ
@@ -2230,6 +2231,7 @@ OBA,OBA,Oxley Bridge Acquisition Limited - Class A Ordinary Shares,NASDAQ
 OBAI,OBAI,"Our Bond, Inc. - Common Stock",NASDAQ
 OBIO,OBIO,"Orchestra BioMed Holdings, Inc. - Ordinary Shares",NASDAQ
 OBT,OBT,"Orange County Bancorp, Inc. - Common Stock",NASDAQ
+OBX,OBX,"Obsidian Therapeutics, Inc. - Common Stock",NASDAQ
 OCC,OCC,Optical Cable Corporation - Common Stock,NASDAQ
 OCCI,OCCI,"OFS Credit Company, Inc. - Closed End Fund",NASDAQ
 OCFC,OCFC,OceanFirst Financial Corp. - Common Stock,NASDAQ
@@ -2916,7 +2918,7 @@ STKE,STKE,Sol Strategies Inc. - Common Shares,NASDAQ
 STKH,STKH,Steakholder Foods Ltd. - American Depositary Shares,NASDAQ
 STKS,STKS,"The ONE Group Hospitality, Inc. - Common Stock",NASDAQ
 STLD,STLD,"Steel Dynamics, Inc. - Common Stock",NASDAQ
-STLN,STLN,"Starling Oncology Institute, Inc. - Common Stock",NASDAQ
+STLN,STLN,"Starling Oncology, Inc. - Common Stock",NASDAQ
 STNE,STNE,StoneCo Ltd. - Class A Common Share,NASDAQ
 STOK,STOK,"Stoke Therapeutics, Inc. - Common Stock",NASDAQ
 STRA,STRA,"Strategic Education, Inc. - Common Stock",NASDAQ
@@ -2983,6 +2985,7 @@ TC,TC,Token Cat Limited - American Depositary Shares,NASDAQ
 TCBI,TCBI,"Texas Capital Bancshares, Inc. - Common Stock",NASDAQ
 TCBK,TCBK,TriCo Bancshares - Common Stock,NASDAQ
 TCBS,TCBS,"Texas Community Bancshares, Inc. - Common Stock",NASDAQ
+TCGX,TCGX,TCGX Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 TCMD,TCMD,"Tactile Systems Technology, Inc. - Common Stock",NASDAQ
 TCOM,TCOM,Trip.com Group Limited - American Depositary Shares,NASDAQ
 TCPC,TCPC,BlackRock TCP Capital Corp. - Closed End Fund,NASDAQ
