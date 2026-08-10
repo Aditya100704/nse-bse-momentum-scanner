@@ -437,6 +437,7 @@ BLNE,BLNE,"Beeline Holdings, Inc. - Common Stock",NASDAQ
 BLNK,BLNK,Blink Charging Co. - Common Stock,NASDAQ
 BLRK,BLRK,Bluerock Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BLRX,BLRX,BioLineRx Ltd. - American Depositary Shares,NASDAQ
+BLSM,BLSM,"BlossomHill Therapeutics, Inc. - Common Stock",NASDAQ
 BLTE,BLTE,"Belite Bio, Inc - American Depositary Shares",NASDAQ
 BLUW,BLUW,Blue Water Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
 BLZE,BLZE,"Backblaze, Inc. - Common Stock",NASDAQ
@@ -491,6 +492,7 @@ BRVE,BRVE,"Braveheart Bio, Inc. - Common Stock",NASDAQ
 BRZE,BRZE,"Braze, Inc. - Class A Common Stock",NASDAQ
 BSAA,BSAA,BEST SPAC I Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BSBK,BSBK,Bogota Financial Corp. - Common Stock,NASDAQ
+BSEM,BSEM,"BioStem Technologies, Inc. - Common Stock",NASDAQ
 BSET,BSET,"Bassett Furniture Industries, Incorporated - Common Stock",NASDAQ
 BSIN,BSIN,Big Sky Industrial Inc. - Common Stock,NASDAQ
 BSP,BSP,Bending Spoons S.p.A. - Ordinary Shares,NASDAQ
@@ -1864,6 +1866,7 @@ LSE,LSE,"Leishen Energy Holding Co., Ltd. - Class A Ordinary Shares",NASDAQ
 LSTA,LSTA,"Lisata Therapeutics, Inc. - Common Stock",NASDAQ
 LSTR,LSTR,"Landstar System, Inc. - Common Stock",NASDAQ
 LTBR,LTBR,Lightbridge Corporation - Common Stock,NASDAQ
+LTGO,LTGO,"Latigo Biotherapeutics, Inc. - Common Stock",NASDAQ
 LTGR,LTGR,Long Table Growth Corp. - Class A Ordinary Shares,NASDAQ
 LTRN,LTRN,Lantern Pharma Inc. - Common Stock,NASDAQ
 LTRX,LTRX,"Lantronix, Inc. - Common Stock",NASDAQ
@@ -2038,7 +2041,7 @@ MSBI,MSBI,"Midland States Bancorp, Inc. - Common Stock",NASDAQ
 MSEX,MSEX,Middlesex Water Company - Common Stock,NASDAQ
 MSFT,MSFT,Microsoft Corporation - Common Stock,NASDAQ
 MSGM,MSGM,Motorsport Games Inc. - Class A Common Stock,NASDAQ
-MSGY,MSGY,Masonglory Limited - Ordinary Shares,NASDAQ
+MSGY,MSGY,Masonglory Limited - Class A Ordinary Shares,NASDAQ
 MSLE,MSLE,Satellos Bioscience Inc. - Common Stock,NASDAQ
 MSS,MSS,Maison Solutions Inc. - Class A Common Stock,NASDAQ
 MSTR,MSTR,Strategy Inc - Class A Common Stock,NASDAQ
@@ -2555,6 +2558,7 @@ QUCY,QUCY,Quantum Cyber N.V. - Ordinary Shares,NASDAQ
 QUIK,QUIK,QuickLogic Corporation - Common Stock,NASDAQ
 QUMS,QUMS,Quantumsphere Acquisition Corp. - Ordinary Shares,NASDAQ
 QURE,QURE,uniQure N.V. - Ordinary Shares,NASDAQ
+QVCG,QVCG,"QVC Group, Inc. - Common Stock",NASDAQ
 QXL,QXL,Quantum X Labs Inc. - Common Stock,NASDAQ
 RACC,RACC,Research Alliance Corporation III - Class A Ordinary Shares,NASDAQ
 RACD,RACD,Research Alliance Corporation IV - Class A Ordinary Shares,NASDAQ
@@ -2927,7 +2931,6 @@ STRA,STRA,"Strategic Education, Inc. - Common Stock",NASDAQ
 STRL,STRL,"Sterling Infrastructure, Inc. - Common Stock",NASDAQ
 STRO,STRO,"Sutro Biopharma, Inc. - Common Stock",NASDAQ
 STRR,STRR,"Star Equity Holdings, Inc. - Common Stock",NASDAQ
-STRS,STRS,Stratus Properties Inc. - Common Stock,NASDAQ
 STRT,STRT,STRATTEC SECURITY CORPORATION - Common Stock,NASDAQ
 STRZ,STRZ,Starz Entertainment Corp. - Common Shares,NASDAQ
 STTK,STTK,"Shattuck Labs, Inc. - Common Stock",NASDAQ
@@ -3323,7 +3326,7 @@ WTFC,WTFC,Wintrust Financial Corporation - Common Stock,NASDAQ
 WTG,WTG,Wintergreen Acquisition Corp. - Ordinary Shares,NASDAQ
 WTW,WTW,Willis Towers Watson Public Limited Company - Ordinary Shares,NASDAQ
 WULF,WULF,TeraWulf Inc. - Common Stock,NASDAQ
-WVE,WVE,Wave Life Sciences Ltd. - Ordinary Shares,NASDAQ
+WVE,WVE,"Wave Life Sciences, Inc. - Common Stock",NASDAQ
 WVVI,WVVI,"Willamette Valley Vineyards, Inc. - Common Stock",NASDAQ
 WW,WW,"WW International, Inc.  - Common Stock",NASDAQ
 WWD,WWD,"Woodward, Inc. - Common Stock",NASDAQ
@@ -4263,7 +4266,6 @@ FCF,FCF,First Commonwealth Financial Corporation Common Stock,NYSE
 FCN,FCN,"FTI Consulting, Inc. Common Stock",NYSE
 FCPT,FCPT,"Four Corners Property Trust, Inc. Common Stock",NYSE
 FCRS,FCRS,FutureCrest Acquisition Corp. Class A Ordinary Shares,NYSE
-FCT,FCT,First Trust Senior Floating Rate Income Fund II Common Shares of Beneficial Interest,NYSE
 FCX,FCX,"Freeport-McMoRan, Inc. Common Stock",NYSE
 FDS,FDS,FactSet Research Systems Inc. Common Stock,NYSE
 FDX,FDX,FedEx Corporation Common Stock,NYSE
