@@ -2404,6 +2404,7 @@ PHAR,PHAR,"Pharming Group N.V. - ADS, each representing 10 ordinary shares",NASD
 PHAT,PHAT,"Phathom Pharmaceuticals, Inc. - Common Stock",NASDAQ
 PHIO,PHIO,Phio Pharmaceuticals Corp. - Common Stock,NASDAQ
 PHOE,PHOE,Phoenix Asia Holdings Limited - Ordinary Shares,NASDAQ
+PHOS,PHOS,First Phosphate Corp. - American Depositary Shares,NASDAQ
 PHUN,PHUN,"Phunware, Inc. - Common Stock",NASDAQ
 PHVS,PHVS,Pharvaris N.V. - Ordinary Shares,NASDAQ
 PI,PI,"Impinj, Inc. - Common Stock",NASDAQ
@@ -3297,6 +3298,7 @@ WIX,WIX,Wix.com Ltd. - Ordinary Shares,NASDAQ
 WKEY,WKEY,WISeKey International Holding Ltd - American Depositary Shares,NASDAQ
 WKHS,WKHS,"Workhorse Group, Inc. - Common Stock",NASDAQ
 WKSP,WKSP,"Worksport, Ltd. - Common Stock",NASDAQ
+WLCO,WLCO,Wilco 63 Corporation - Class A Ordinary Shares,NASDAQ
 WLDN,WLDN,"Willdan Group, Inc. - Common Stock",NASDAQ
 WLDS,WLDS,Wearable Devices Ltd. - Ordinary Share,NASDAQ
 WLFC,WLFC,Willis Lease Finance Corporation - Common Stock,NASDAQ
@@ -3931,7 +3933,6 @@ CNF,CNF,"CNFinance Holdings Limited American Depositary Shares, each representin
 CNH,CNH,CNH Industrial N.V. Common Shares,NYSE
 CNI,CNI,Canadian National Railway Company Common Stock,NYSE
 CNK,CNK,"Cinemark Holdings Inc Cinemark Holdings, Inc. Common Stock",NYSE
-CNL,CNL,Collective Mining Ltd. Common Shares,AMEX
 CNM,CNM,"Core & Main, Inc. Class A Common Stock",NYSE
 CNMD,CNMD,CONMED Corporation Common Stock,NYSE
 CNNE,CNNE,"Cannae Holdings, Inc. Common Stock",NYSE
