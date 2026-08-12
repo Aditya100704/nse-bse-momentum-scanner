@@ -714,6 +714,7 @@ CNCK,CNCK,Coincheck Group N.V. - Ordinary Shares,NASDAQ
 CNDT,CNDT,Conduent Incorporated - Common Stock,NASDAQ
 CNET,CNET,ZW Data Action Technologies Inc. - Common Stock,NASDAQ
 CNEY,CNEY,CN Energy Group Inc. - Class A Ordinary Shares,NASDAQ
+CNL,CNL,Collective Mining Ltd. - Common Stock,NASDAQ
 CNOB,CNOB,"ConnectOne Bancorp, Inc. - Common Stock",NASDAQ
 CNSP,CNSP,"CNS Pharmaceuticals, Inc. - Common Stock",NASDAQ
 CNSY,CNSY,"Cerenome, Inc. - Common Stock",NASDAQ
@@ -2194,7 +2195,6 @@ NTWK,NTWK,NETSOL Technologies Inc. - Common Stock,NASDAQ
 NTWO,NTWO,Newbury Street II Acquisition Corp - Class A Ordinary Shares,NASDAQ
 NUAI,NUAI,"New Era Energy & Digital, Inc. - Common Stock",NASDAQ
 NUCL,NUCL,Eagle Nuclear Energy Corp. - Common stock,NASDAQ
-NUTR,NUTR,Nusatrip Incorporated - Common Stock,NASDAQ
 NUTX,NUTX,Nutex Health Inc. - Common Stock,NASDAQ
 NUWE,NUWE,"Nuwellis, Inc. - Common Stock",NASDAQ
 NVAX,NVAX,"Novavax, Inc. - Common Stock",NASDAQ
@@ -3029,7 +3029,7 @@ TIL,TIL,"Instil Bio, Inc. - Common Stock",NASDAQ
 TILE,TILE,"Interface, Inc. - Common Stock",NASDAQ
 TIPT,TIPT,Tiptree Inc. - Common Stock,NASDAQ
 TITN,TITN,Titan Machinery Inc. - Common Stock,NASDAQ
-TJGC,TJGC,TJGC Group Limited - ordinary shares,NASDAQ
+TJGC,TJGC,TJGC Group Limited - Class A Ordinary Shares,NASDAQ
 TKLF,TKLF,"Tokyo Lifestyle Co., Ltd. - American Depositary Shares",NASDAQ
 TKNO,TKNO,"Alpha Teknova, Inc. - Common Stock",NASDAQ
 TLF,TLF,"Tandy Leather Factory, Inc. - common stock",NASDAQ
@@ -4312,6 +4312,7 @@ FNF,FNF,"Fidelity National Financial, Inc. Common Stock",NYSE
 FNV,FNV,Franco-Nevada Corporation,NYSE
 FOA,FOA,Finance of America Companies Inc. Class A Common Stock,NYSE
 FOF,FOF,"Cohen & Steers Closed-End Opportunity Fund, Inc. Common Stock",NYSE
+FOIL,FOIL,"Londian Wason New Energy Tech Inc. American Depositary Shares, each representing five Ordinary Shares",NYSE
 FOR,FOR,Forestar Group Inc Common Stock,NYSE
 FOUR,FOUR,"Shift4 Payments, Inc. Class A Common Stock",NYSE
 FPH,FPH,"Five Point Holdings, LLC Class A Common Shares",NYSE
@@ -4820,7 +4821,6 @@ MD,MD,"Pediatrix Medical Group, Inc. Common Stock",NYSE
 MDA,MDA,MDA Space Ltd. Common Shares,NYSE
 MDT,MDT,Medtronic plc. Ordinary Shares,NYSE
 MDU,MDU,"MDU Resources Group, Inc. Common Stock (Holding Company)",NYSE
-MDV,MDV,"Modiv Industrial, Inc. Class C Common Stock",NYSE
 MEC,MEC,"Mayville Engineering Company, Inc. Common Stock",NYSE
 MED,MED,MEDIFAST INC Common Stock,NYSE
 MEGI,MEGI,NYLI CBRE Global Infrastructure Megatrends Term Fund Common Shares,NYSE
@@ -5463,6 +5463,7 @@ SNDA,SNDA,"Sonida Senior Living, Inc. Common Stock",NYSE
 SNDR,SNDR,"Schneider National, Inc. Common Stock",NYSE
 SNN,SNN,"Smith & Nephew SNATS, Inc. Common Stock",NYSE
 SNOW,SNOW,Snowflake Inc. Common Stock,NYSE
+SNSC,SNSC,SunScout Holding Limited Class A Ordinary Shares,AMEX
 SNX,SNX,TD SYNNEX Corporation Common Stock,NYSE
 SO,SO,Southern Company (The) Common Stock,NYSE
 SOAR,SOAR,"Volato Group, Inc. Class A Common Stock",AMEX
