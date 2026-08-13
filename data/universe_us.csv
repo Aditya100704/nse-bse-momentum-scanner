@@ -202,7 +202,6 @@ ANL,ANL,Adlai Nortye Ltd. - American Depositary Shares,NASDAQ
 ANNA,ANNA,"AleAnna, Inc. - Class A Common Stock",NASDAQ
 ANNX,ANNX,"Annexon, Inc. - common stock",NASDAQ
 ANPA,ANPA,Rich Sparkle Holdings Limited - Ordinary Shares,NASDAQ
-ANSC,ANSC,Agriculture & Natural Solutions Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 ANTA,ANTA,Antalpha Platform Holding Company - Class A Ordinary Shares,NASDAQ
 ANTX,ANTX,"AN2 Therapeutics, Inc. - Common Stock",NASDAQ
 ANY,ANY,Sphere 3D Corp. - Common Shares,NASDAQ
@@ -2418,6 +2417,7 @@ PLBC,PLBC,Plumas Bancorp - Common Stock,NASDAQ
 PLBL,PLBL,Polibeli Group Ltd - Class A Ordinary Shares,NASDAQ
 PLBY,PLBY,"Playboy, Inc. - Common Stock",NASDAQ
 PLCE,PLCE,"Children's Place, Inc. (The) - Common Stock",NASDAQ
+PLCI,PLCI,Pelican Acquisition II Corporation - Ordinary Shares,NASDAQ
 PLMK,PLMK,Plum Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
 PLMR,PLMR,"Palomar Holdings, Inc. - Common stock",NASDAQ
 PLPC,PLPC,Preformed Line Products Company - Common Stock,NASDAQ
@@ -3228,6 +3228,7 @@ VNET,VNET,"VNET Group, Inc. - American Depositary Shares",NASDAQ
 VNME,VNME,Vendome Acquisition Corporation I - Class A Ordinary Shares,NASDAQ
 VNOM,VNOM,"Viper Energy, Inc.  - Class A Common Stock",NASDAQ
 VOD,VOD,Vodafone Group Plc - American Depositary Shares each representing ten Ordinary Shares,NASDAQ
+VOGX,VOGX,Vogenx Inc - Common Stock,NASDAQ
 VOR,VOR,Vor Biopharma Inc. - Common Stock,NASDAQ
 VOXR,VOXR,Vox Royalty Corp. - common stock,NASDAQ
 VRA,VRA,"Vera Bradley, Inc. - Common Stock",NASDAQ
@@ -4355,7 +4356,7 @@ GBCI,GBCI,"Glacier Bancorp, Inc. Common Stock",NYSE
 GBR,GBR,"New Concept Energy, Inc Common Stock",AMEX
 GBTG,GBTG,"Global Business Travel Group, Inc. Class A Common Stock",NYSE
 GBX,GBX,"Greenbrier Companies, Inc. (The) Common Stock",NYSE
-GCDT,GCDT,Green Circle Decarbonize Technology Limited Ordinary Shares,AMEX
+GCDT,GCDT,Green Circle Decarbonize Technology Limited Class A Ordinary Shares,AMEX
 GCO,GCO,Genesco Inc. Common Stock,NYSE
 GCTS,GCTS,"GCT Semiconductor Holding, Inc. Common Stock",NYSE
 GCV,GCV,"Gabelli Convertible and Income Securities Fund, Inc. (The) Common Stock",NYSE
@@ -5352,6 +5353,7 @@ RSKD,RSKD,Riskified Ltd. Class A Ordinary Shares,NYSE
 RTO,RTO,Rentokil Initial plc American Depositary Shares (each representing five (5) Ordinary Shares),NYSE
 RTX,RTX,RTX Corporation Common Stock,NYSE
 RVI,RVI,Robinhood Ventures Fund I Common Shares of Beneficial Interest,NYSE
+RVII,RVII,Robinhood Ventures Fund II Common Shares of Beneficial Interest,NYSE
 RVLV,RVLV,"Revolve Group, Inc. Class A Common Stock",NYSE
 RVP,RVP,"Retractable Technologies, Inc. Common Stock",AMEX
 RVT,RVT,"Royce Small-Cap Trust, Inc. Common Stock",NYSE
