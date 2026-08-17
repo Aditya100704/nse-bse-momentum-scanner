@@ -1054,6 +1054,7 @@ EVLV,EVLV,"Evolv Technologies Holdings, Inc. - Class A Common Stock",NASDAQ
 EVO,EVO,Evotec SE - American Depositary Shares each representing 1/2 of one ordinary share,NASDAQ
 EVOX,EVOX,Evolution Global Acquisition Corp - Class A Ordinary Shares,NASDAQ
 EVRG,EVRG,"Evergy, Inc. - Common Stock",NASDAQ
+EWAV,EWAV,East West Ave Acquisition Corp. - Common Stock,NASDAQ
 EWBC,EWBC,"East West Bancorp, Inc. - Common Stock",NASDAQ
 EWTX,EWTX,"Edgewise Therapeutics, Inc. - Common Stock",NASDAQ
 EXC,EXC,Exelon Corporation - Common Stock,NASDAQ
@@ -1591,7 +1592,6 @@ IOSP,IOSP,Innospec Inc. - Common Stock,NASDAQ
 IOTR,IOTR,iOThree Limited - Ordinary Shares,NASDAQ
 IOVA,IOVA,"Iovance Biotherapeutics, Inc. - Common Stock",NASDAQ
 IPAR,IPAR,"Interparfums, Inc. - Common Stock",NASDAQ
-IPCX,IPCX,Inflection Point Acquisition Corp. III - Class A ordinary shares,NASDAQ
 IPDN,IPDN,"Professional Diversity Network, Inc. - Common Stock",NASDAQ
 IPEX,IPEX,Inflection Point Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IPFX,IPFX,Inflection Point Acquisition Corp. VI - Class A Ordinary Shares,NASDAQ
@@ -3019,6 +3019,7 @@ TGL,TGL,Treasure Global Inc. - Common Stock,NASDAQ
 TGTX,TGTX,"TG Therapeutics, Inc. - Common Stock",NASDAQ
 TH,TH,Target Hospitality Corp. - Common Stock,NASDAQ
 THCH,THCH,TH International Limited - Ordinary shares,NASDAQ
+THEO,THEO,BOA Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 THFF,THFF,First Financial Corporation  - Common Stock,NASDAQ
 THH,THH,TryHard Holdings Limited - Ordinary Shares,NASDAQ
 THRM,THRM,Gentherm Inc - Common Stock,NASDAQ
@@ -3617,7 +3618,6 @@ AUB,AUB,Atlantic Union Bankshares Corporation Common Stock,NYSE
 AUNA,AUNA,Auna SA Class A Ordinary Shares,NYSE
 AUST,AUST,Austin Gold Corp. Common Shares,AMEX
 AVA,AVA,Avista Corporation Common Stock,NYSE
-AVB,AVB,"AvalonBay Communities, Inc. Common Stock",NYSE
 AVBC,AVBC,"Avidia Bancorp, Inc. Common Stock",NYSE
 AVD,AVD,American Vanguard Corporation Common Stock ($0.10 Par Value),NYSE
 AVEX,AVEX,AEVEX Corp. Class A Common Stock,NYSE
@@ -3661,7 +3661,6 @@ BAX,BAX,Baxter International Inc. Common Stock,NYSE
 BB,BB,BlackBerry Limited Common Stock,NYSE
 BBAI,BBAI,"BigBear.ai, Inc. Common Stock",NYSE
 BBAR,BBAR,Banco BBVA Argentina S.A. ADS,NYSE
-BBBY,BBBY,"Bed Bath & Beyond, Inc. Common Stock",NYSE
 BBD,BBD,Banco Bradesco Sa American Depositary Shares,NYSE
 BBDC,BBDC,"Barings BDC, Inc. Common Stock",NYSE
 BBDO,BBDO,Banco Bradesco Sa American Depositary Shares (each representing one Common Share),NYSE
@@ -3692,7 +3691,7 @@ BDX,BDX,"Becton, Dickinson and Company Common Stock",NYSE
 BE,BE,Bloom Energy Corporation Class A Common Stock,NYSE
 BEBE,BEBE,TGE Value Creative Solutions Corp Class A Ordinary Shares,NYSE
 BEKE,BEKE,KE Holdings Inc American Depositary Shares (each representing three Class A Ordinary Shares),NYSE
-BEN,BEN,"Franklin Resources, Inc. Common Stock",NYSE
+BEN,BEN,"Franklin Templeton, Inc. Common Stock",NYSE
 BEPC,BEPC,Brookfield Renewable Corporation Brookfield Renewable Corporation Class A Subordinate Voting Shares,NYSE
 BESS,BESS,Bimergen Energy Corporation Common Stock,AMEX
 BETA,BETA,"Beta Technologies, Inc. Class A Common Stock",NYSE
