@@ -631,6 +631,7 @@ CFFN,CFFN,"Capitol Federal Financial, Inc. - Common Stock",NASDAQ
 CG,CG,The Carlyle Group Inc. - Common Stock,NASDAQ
 CGBD,CGBD,"Carlyle Secured Lending, Inc. - Closed End Fund",NASDAQ
 CGC,CGC,Canopy Growth Corporation - Common Shares,NASDAQ
+CGCF,CGCF,Cartesian Growth Corporation IV - Class A Ordinary Shares,NASDAQ
 CGEM,CGEM,"Cullinan Therapeutics, Inc. - Common Stock",NASDAQ
 CGEN,CGEN,Compugen Ltd. - Ordinary Shares,NASDAQ
 CGNT,CGNT,Cognyte Software Ltd. - Ordinary Shares,NASDAQ
@@ -1211,7 +1212,6 @@ FTHM,FTHM,Fathom Holdings Inc. - Common Stock,NASDAQ
 FTLF,FTLF,"FitLife Brands, Inc. - Common Stock",NASDAQ
 FTNT,FTNT,"Fortinet, Inc. - Common Stock",NASDAQ
 FTRE,FTRE,Fortrea Holdings Inc. - Common Stock,NASDAQ
-FTRK,FTRK,FAST TRACK GROUP - Ordinary shares,NASDAQ
 FUFU,FUFU,BitFuFu Inc. - Class A Ordinary Shares,NASDAQ
 FULC,FULC,"Fulcrum Therapeutics, Inc. - Common Stock",NASDAQ
 FULT,FULT,Fulton Financial Corporation - Common Stock,NASDAQ
@@ -1485,6 +1485,7 @@ HYMC,HYMC,Hycroft Mining Holding Corporation - Class A Common Stock,NASDAQ
 HYNE,HYNE,"Hoyne Bancorp, Inc. - Common Stock",NASDAQ
 HYPD,HYPD,"Hyperion DeFi, Inc. - Common Stock",NASDAQ
 HYPR,HYPR,"Hyperfine, Inc.  - Class A Common Stock",NASDAQ
+IA,IA,"Innovative Solutions and Support, Inc. - Common Stock",NASDAQ
 IACO,IACO,Idea Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IACQ,IACQ,Irenic Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IART,IART,Integra LifeSciences Holdings Corporation - Common Stock,NASDAQ
@@ -1621,7 +1622,6 @@ ISNR,ISNR,Snow Rothschild Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 ISPC,ISPC,iSpecimen Inc. - Common Stock,NASDAQ
 ISPR,ISPR,Ispire Technology Inc. - Common Stock,NASDAQ
 ISRG,ISRG,"Intuitive Surgical, Inc. - Common Stock",NASDAQ
-ISSC,ISSC,"Innovative Solutions and Support, Inc. - Common Stock",NASDAQ
 ISTR,ISTR,Investar Holding Corporation - Common Stock,NASDAQ
 ITG,ITG,"ITG, Inc. - Class A Common Stock",NASDAQ
 ITHA,ITHA,ITHAX Acquisition Corp III - Class A Ordinary Shares,NASDAQ
@@ -2025,6 +2025,7 @@ MPWR,MPWR,"Monolithic Power Systems, Inc. - Common Stock",NASDAQ
 MQ,MQ,"Marqeta, Inc. - Class A Common Stock",NASDAQ
 MRAM,MRAM,"Everspin Technologies, Inc. - Common Stock",NASDAQ
 MRBK,MRBK,Meridian Corporation - Common Stock,NASDAQ
+MRCO,MRCO,Mercator Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 MRCY,MRCY,Mercury Systems Inc - Common Stock,NASDAQ
 MRDN,MRDN,Meridian Holdings Inc. - Common Stock,NASDAQ
 MREO,MREO,Mereo BioPharma Group plc - American Depositary Shares,NASDAQ
@@ -2195,6 +2196,7 @@ NTWK,NTWK,NETSOL Technologies Inc. - Common Stock,NASDAQ
 NTWO,NTWO,Newbury Street II Acquisition Corp - Class A Ordinary Shares,NASDAQ
 NUAI,NUAI,"New Era Energy & Digital, Inc. - Common Stock",NASDAQ
 NUCL,NUCL,Eagle Nuclear Energy Corp. - Common stock,NASDAQ
+NUR,NUR,Nuran Wireless Inc. - Common Shares,NASDAQ
 NUTX,NUTX,Nutex Health Inc. - Common Stock,NASDAQ
 NUWE,NUWE,"Nuwellis, Inc. - Common Stock",NASDAQ
 NVAX,NVAX,"Novavax, Inc. - Common Stock",NASDAQ
@@ -2217,6 +2219,7 @@ NWS,NWS,News Corporation - Class B Common Stock,NASDAQ
 NWSA,NWSA,News Corporation - Class A Common Stock,NASDAQ
 NWTG,NWTG,"Newton Golf Company, Inc. - Common Stock",NASDAQ
 NXGL,NXGL,"NexGel, Inc - Common Stock",NASDAQ
+NXH,NXH,"Neighborhood Intelligence, Inc.  - Common Stock",NASDAQ
 NXL,NXL,"Nexalin Technology, Inc. - Common Stock",NASDAQ
 NXPI,NXPI,NXP Semiconductors N.V. - Common Stock,NASDAQ
 NXPL,NXPL,NextPlat Corp - Common Stock,NASDAQ
@@ -2972,7 +2975,6 @@ SZZL,SZZL,Sizzle Acquisition Corp. II - Class A ordinary shares,NASDAQ
 TACH,TACH,Titan Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 TACO,TACO,Berto Acquisition Corp. - Ordinary Shares,NASDAQ
 TACT,TACT,TransAct Technologies Incorporated - Common Stock,NASDAQ
-TALK,TALK,"Talkspace, Inc. - Common Stock",NASDAQ
 TANH,TANH,Tantech Holdings Ltd. - Class A Common Shares,NASDAQ
 TAOP,TAOP,Taoping Inc. - Ordinary Shares,NASDAQ
 TAOX,TAOX,Tao Synergies Inc. - Common Stock,NASDAQ
@@ -3267,6 +3269,7 @@ WAFDP,WAFDP,"WaFd, Inc. - Depositary Shares",NASDAQ
 WAFU,WAFU,Wah Fu Education Group Limited - Ordinary Shares,NASDAQ
 WALD,WALD,Waldencast plc - Class A Ordinary Share,NASDAQ
 WASH,WASH,"Washington Trust Bancorp, Inc. - Common Stock",NASDAQ
+WATR,WATR,Air Water Ventures Limited - Ordinary Shares,NASDAQ
 WATT,WATT,Energous Corporation - Common Stock,NASDAQ
 WAVE,WAVE,Eco Wave Power Global AB (publ) - American Depositary Shares,NASDAQ
 WAY,WAY,Waystar Holding Corp. - Common Stock,NASDAQ
@@ -4202,7 +4205,6 @@ EPRT,EPRT,"Essential Properties Realty Trust, Inc. Common Stock",NYSE
 EQBK,EQBK,"Equity Bancshares, Inc. Class A Common Stock",NYSE
 EQH,EQH,"Equitable Holdings, Inc. Common Stock",NYSE
 EQNR,EQNR,Equinor ASA,NYSE
-EQR,EQR,Equity Residential Common Shares of Beneficial Interest,NYSE
 EQS,EQS,"Equus Total Return, Inc. Common Stock",NYSE
 EQT,EQT,EQT Corporation Common Stock,NYSE
 EQX,EQX,Equinox Gold Corp. Common Shares,AMEX
@@ -5761,6 +5763,7 @@ VLTO,VLTO,Veralto Corp Common Stock,NYSE
 VMC,VMC,Vulcan Materials Company (Holding Company) Common Stock,NYSE
 VMI,VMI,"Valmont Industries, Inc. Common Stock",NYSE
 VMO,VMO,Invesco Municipal Opportunity Trust Common Stock,NYSE
+VMRK,VMRK,Vivmark Residential Common Shares of Beneficial Interest,NYSE
 VNO,VNO,Vornado Realty Trust Common Stock,NYSE
 VNRX,VNRX,VolitionRX Limited Common Stock,AMEX
 VNT,VNT,Vontier Corporation Common Stock,NYSE
