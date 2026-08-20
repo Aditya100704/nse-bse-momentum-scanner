@@ -1,5 +1,4 @@
 symbol,yf_ticker,name,exchange
-AACB,AACB,Artius II Acquisition Inc. - Class A Ordinary Shares,NASDAQ
 AACG,AACG,"ATA Creativity Global - American Depositary Shares, each representing two common shares",NASDAQ
 AACI,AACI,Armada Acquisition Corp. III - Class A Ordinary Share,NASDAQ
 AACO,AACO,Abony Acquisition Corp. I - Class A Ordinary Share,NASDAQ
@@ -504,6 +503,7 @@ BTBT,BTBT,"Bit Digital, Inc. - Ordinary Share",NASDAQ
 BTCS,BTCS,BTCS Inc. - Common Stock,NASDAQ
 BTCT,BTCT,BTC Digital Ltd. - Ordinary Shares,NASDAQ
 BTDR,BTDR,Bitdeer Technologies Group - Ordinary Shares,NASDAQ
+BTLN,BTLN,"Brightline Interactive, Inc. - Common Stock",NASDAQ
 BTMD,BTMD,Biote Corp. - Class A common stock,NASDAQ
 BTOC,BTOC,Armlogi Holding Corp. - common stock,NASDAQ
 BTOG,BTOG,Bit Origin Limited - Class A Ordinary Shares,NASDAQ
@@ -1272,7 +1272,6 @@ GFS,GFS,GlobalFoundries Inc. - Ordinary Share,NASDAQ
 GFUZ,GFUZ,General Fusion Group Ltd. - Common Shares,NASDAQ
 GGAL,GGAL,"Grupo Financiero Galicia S.A. - American Depositary Shares, Class B Shares underlying",NASDAQ
 GGR,GGR,Gogoro Inc. - Ordinary Shares,NASDAQ
-GGRP,GGRP,"The Glimpse Group, Inc. - Common Stock",NASDAQ
 GH,GH,"Guardant Health, Inc. - Common Stock",NASDAQ
 GHRS,GHRS,GH Research PLC - Ordinary Shares,NASDAQ
 GHXI,GHXI,"Gores Holdings XI, Inc. - Class A Ordinary Shares",NASDAQ
@@ -5797,7 +5796,6 @@ WAB,WAB,Westinghouse Air Brake Technologies Corporation Common Stock,NYSE
 WAL,WAL,Western Alliance Bancorporation Common Stock (DE),NYSE
 WAT,WAT,Waters Corporation Common Stock,NYSE
 WBI,WBI,WaterBridge Infrastructure LLC Class A Shares Representing Limited Liability Company Interests,NYSE
-WBS,WBS,Webster Financial Corporation Common Stock,NYSE
 WBX,WBX,Wallbox N.V. Class A Ordinary Shares,NYSE
 WCC,WCC,"WESCO International, Inc. Common Stock",NYSE
 WCN,WCN,"Waste Connections, Inc. Common Shares",NYSE
