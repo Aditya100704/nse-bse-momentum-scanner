@@ -197,7 +197,7 @@ ANGO,ANGO,"AngioDynamics, Inc. - Common Stock",NASDAQ
 ANIK,ANIK,Anika Therapeutics Inc. - Common Stock,NASDAQ
 ANIP,ANIP,"ANI Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ANIX,ANIX,"Anixa Biosciences, Inc. - Common Stock",NASDAQ
-ANL,ANL,Adlai Nortye Ltd. - American Depositary Shares,NASDAQ
+ANL,ANL,Adlai Nortye Group Ltd. - American Depositary Shares,NASDAQ
 ANNA,ANNA,"AleAnna, Inc. - Class A Common Stock",NASDAQ
 ANNX,ANNX,"Annexon, Inc. - common stock",NASDAQ
 ANPA,ANPA,Rich Sparkle Holdings Limited - Ordinary Shares,NASDAQ
@@ -1082,6 +1082,7 @@ FANG,FANG,"Diamondback Energy, Inc. - Common Stock",NASDAQ
 FAST,FAST,Fastenal Company - Common Stock,NASDAQ
 FATE,FATE,"Fate Therapeutics, Inc. - Common Stock",NASDAQ
 FATN,FATN,"FatPipe, Inc. - common stock",NASDAQ
+FBDT,FBDT,First Breach Inc. - Common Stock,NASDAQ
 FBGL,FBGL,FBS Global Limited - Ordinary Shares,NASDAQ
 FBIO,FBIO,"Fortress Biotech, Inc. - Common Stock",NASDAQ
 FBIZ,FBIZ,"First Business Financial Services, Inc. - Common Stock",NASDAQ
@@ -1762,8 +1763,6 @@ LATA,LATA,Galata Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 LAUR,LAUR,"Laureate Education, Inc. - Common Stock",NASDAQ
 LAWR,LAWR,"Robot Consulting Co., Ltd. - ADS",NASDAQ
 LBGJ,LBGJ,Li Bang International Corporation Inc. - Class A Ordinary Shares,NASDAQ
-LBRDA,LBRDA,Liberty Broadband Corporation - Class A Common Stock,NASDAQ
-LBRDK,LBRDK,Liberty Broadband Corporation - Class C Common Stock,NASDAQ
 LBRX,LBRX,LB Pharmaceuticals Inc - Common Stock,NASDAQ
 LBTYA,LBTYA,Liberty Global Ltd. - Class A Common Shares,NASDAQ
 LBTYB,LBTYB,Liberty Global Ltd. - Class B Common Shares,NASDAQ
@@ -2540,6 +2539,7 @@ QH,QH,Quhuo Limited - Class A Ordinary Shares,NASDAQ
 QLYS,QLYS,"Qualys, Inc. - Common Stock",NASDAQ
 QMCO,QMCO,Quantum Corporation - Common Stock,NASDAQ
 QMLS,QMLS,"QumulusAI, Inc. - Common Stock",NASDAQ
+QNBC,QNBC,QNB Corp. - Common Stock,NASDAQ
 QNCX,QNCX,"Quince Therapeutics, Inc. - Common Stock",NASDAQ
 QNME,QNME,"Quanome Technologies, Inc. - Common Stock",NASDAQ
 QNRX,QNRX,"Quoin Pharmaceuticals, Ltd. - American Depositary Shares",NASDAQ
@@ -3071,6 +3071,7 @@ TRAW,TRAW,"Traws Pharma, Inc. - Common Stock",NASDAQ
 TRAX,TRAX,"First Tracks Biotherapeutics, Inc. - Ordinary Shares",NASDAQ
 TRDA,TRDA,"Entrada Therapeutics, Inc. - Common Stock",NASDAQ
 TREE,TREE,"LendingTree, Inc. - Common Stock",NASDAQ
+TREO,TREO,Tactical Resources Corp. - Common Shares,NASDAQ
 TRGS,TRGS,TRG Latin America Acquisitions Corp. - Class A Ordinary Shares,NASDAQ
 TRI,TRI,Thomson Reuters Corp - Common Shares,NASDAQ
 TRIB,TRIB,Trinity Biotech plc - American Depositary Shares,NASDAQ
