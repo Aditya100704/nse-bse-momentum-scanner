@@ -2310,6 +2310,7 @@ ORRF,ORRF,"Orrstown Financial Services, Inc. - Common Stock",NASDAQ
 OSBC,OSBC,"Old Second Bancorp, Inc. - Common Stock",NASDAQ
 OSIS,OSIS,"OSI Systems, Inc. - Common Stock",NASDAQ
 OSPN,OSPN,OneSpan Inc. - Common Stock,NASDAQ
+OSPR,OSPR,Osprey Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
 OSRH,OSRH,"OSR Health, Inc. - Common Stock",NASDAQ
 OSS,OSS,"One Stop Systems, Inc. - Common Stock",NASDAQ
 OST,OST,"Ostin Technology Group Co., Ltd. - Class A Ordinary Shares",NASDAQ
@@ -2602,7 +2603,7 @@ RDVT,RDVT,"Red Violet, Inc. - Common Stock",NASDAQ
 RDWR,RDWR,Radware Ltd. - Ordinary Shares,NASDAQ
 RDZN,RDZN,"Roadzen, Inc. - Ordinary Shares",NASDAQ
 REAL,REAL,"The RealReal, Inc. - Common Stock",NASDAQ
-REAX,REAX,"The Real Brokerage, Inc. - Common Shares",NASDAQ
+REAX,REAX,"The Real Brokerage, Inc. - Common Stock",NASDAQ
 REBN,REBN,"Reborn Coffee, Inc. - Common Stock",NASDAQ
 RECT,RECT,Rectitude Holdings Ltd - Ordinary Shares,NASDAQ
 REFI,REFI,"Chicago Atlantic Real Estate Finance, Inc. - Common Stock",NASDAQ
@@ -4140,6 +4141,7 @@ EDD,EDD,"Morgan Stanley Emerging Markets Domestic Debt Fund, Inc. Common Stock",
 EDF,EDF,Virtus Stone Harbor Emerging Markets Income Fund Common Shares of Beneficial Interest,NYSE
 EDN,EDN,Empresa Distribuidora Y Comercializadora Norte S.A. (Edenor) American Depositary Shares,NYSE
 EDU,EDU,"New Oriental Education & Technology Group, Inc. Sponsored ADR representing 10 Ordinary Share (Cayman Islands)",NYSE
+EDVA,EDVA,"Endovia Health Sciences, Inc. Common Stock",AMEX
 EE,EE,"Excelerate Energy, Inc. Class A Common Stock",NYSE
 EEA,EEA,"The European Equity Fund, Inc. Common Stock",NYSE
 EFC,EFC,Ellington Financial Inc. Common Stock,NYSE
@@ -4155,7 +4157,7 @@ EGP,EGP,"EastGroup Properties, Inc. Common Stock",NYSE
 EGY,EGY,"VAALCO Energy, Inc.  Common Stock",NYSE
 EHC,EHC,Encompass Health Corporation Common Stock,NYSE
 EHI,EHI,Western Asset Global High Income Fund Inc Common Stock,NYSE
-EIC,EIC,Eagle Point Income Company Inc. Common Stock,NYSE
+EIC,EIC,Eagle Point Income Company Common Shares of Beneficial Interest,NYSE
 EIG,EIG,Employers Holdings Inc Common Stock,NYSE
 EIM,EIM,"Eaton Vance Municipal Bond Fund Common Shares of Beneficial Interest, $.01 par value",AMEX
 EIX,EIX,Edison International Common Stock,NYSE
@@ -4956,7 +4958,6 @@ NBXG,NBXG,Neuberger Next Generation Connectivity Fund Inc. Common Stock,NYSE
 NC,NC,"NACCO Industries, Inc. Common Stock",NYSE
 NCA,NCA,Nuveen California Municipal Value Fund,NYSE
 NCDL,NCDL,Nuveen Churchill Direct Lending Corp. Common Stock,NYSE
-NCL,NCL,Northann Corp. Common Stock,AMEX
 NCLH,NCLH,Norwegian Cruise Line Holdings Ltd. Ordinary Shares,NYSE
 NCV,NCV,Virtus Convertible & Income Fund Common Shares of Beneficial Interest,NYSE
 NCZ,NCZ,Virtus Convertible & Income Fund II Common Shares of Beneficial Interest,NYSE
@@ -5382,7 +5383,6 @@ SAP,SAP,SAP  SE ADS,NYSE
 SAR,SAR,Saratoga Investment Corp New,NYSE
 SARO,SARO,"StandardAero, Inc. Common Stock",NYSE
 SB,SB,"Safe Bulkers, Inc Common Stock ($0.001 par value)",NYSE
-SBEV,SBEV,"Splash Beverage Group, Inc. (NV) Common Stock",AMEX
 SBH,SBH,"Sally Beauty Holdings, Inc. (Name to be changed from Sally Holdings, Inc.) Common Stock",NYSE
 SBI,SBI,Western Asset Intermediate Muni Fund Inc Common Stock,NYSE
 SBMT,SBMT,Silver Bow Mining Corp. Common Shares,AMEX
