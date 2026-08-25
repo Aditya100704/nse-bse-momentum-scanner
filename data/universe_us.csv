@@ -1969,6 +1969,7 @@ MGRX,MGRX,"Mangoceuticals, Inc. - Common Stock",NASDAQ
 MGTX,MGTX,MeiraGTx Holdings plc - Ordinary Shares,NASDAQ
 MGX,MGX,"Metagenomi Therapeutics, Inc. - Common Stock",NASDAQ
 MGYR,MGYR,"Magyar Bancorp, Inc. - Common Stock",NASDAQ
+MIAC,MIAC,Meridian3 Industrials Acquisition Corp - Class A Ordinary Shares,NASDAQ
 MIDD,MIDD,The Middleby Corporation - Common Stock,NASDAQ
 MIMI,MIMI,Mint Incorporation Limited - Class A Ordinary Shares,NASDAQ
 MIND,MIND,"MIND Technology, Inc. - Common Stock",NASDAQ
@@ -2222,7 +2223,7 @@ NXL,NXL,"Nexalin Technology, Inc. - Common Stock",NASDAQ
 NXPI,NXPI,NXP Semiconductors N.V. - Common Stock,NASDAQ
 NXPL,NXPL,NextPlat Corp - Common Stock,NASDAQ
 NXST,NXST,"Nexstar Media Group, Inc. - Common Stock",NASDAQ
-NXT,NXT,Nextpower Inc. - Class A Common Stock,NASDAQ
+NXT,NXT,Nextpower Inc. - Common Stock,NASDAQ
 NXTC,NXTC,"NextCure, Inc. - Common Stock",NASDAQ
 NXTS,NXTS,Nexentis Technologies Inc. - Common Stock,NASDAQ
 NXTT,NXTT,Next Technology Holding Inc. - Ordinary Shares,NASDAQ
@@ -2603,7 +2604,7 @@ RDVT,RDVT,"Red Violet, Inc. - Common Stock",NASDAQ
 RDWR,RDWR,Radware Ltd. - Ordinary Shares,NASDAQ
 RDZN,RDZN,"Roadzen, Inc. - Ordinary Shares",NASDAQ
 REAL,REAL,"The RealReal, Inc. - Common Stock",NASDAQ
-REAX,REAX,"The Real Brokerage, Inc. - Common Stock",NASDAQ
+REAX,REAX,Real REMAX Group Inc. - Common Stock,NASDAQ
 REBN,REBN,"Reborn Coffee, Inc. - Common Stock",NASDAQ
 RECT,RECT,Rectitude Holdings Ltd - Ordinary Shares,NASDAQ
 REFI,REFI,"Chicago Atlantic Real Estate Finance, Inc. - Common Stock",NASDAQ
@@ -5328,7 +5329,6 @@ RLI,RLI,RLI Corp. Common Stock (DE),NYSE
 RLJ,RLJ,RLJ Lodging Trust Common Shares of Beneficial Interest $0.01 par value,NYSE
 RLTY,RLTY,Cohen & Steers Real Estate Opportunities and Income Fund Common Shares of Beneficial Interest,NYSE
 RM,RM,Regional Management Corp. Common Stock,NYSE
-RMAX,RMAX,"RE/MAX Holdings, Inc. Class A Common Stock",NYSE
 RMD,RMD,ResMed Inc. Common Stock,NYSE
 RMI,RMI,"RiverNorth Opportunistic Municipal Income Fund, Inc. Common Stock",NYSE
 RMM,RMM,"RiverNorth Managed Duration Municipal Income Fund, Inc. Common Stock",NYSE
@@ -5665,7 +5665,6 @@ TVE,TVE,Tennessee Valley Authority,NYSE
 TWI,TWI,"Titan International, Inc. (DE) Common Stock",NYSE
 TWLO,TWLO,Twilio Inc. Class A Common Stock,NYSE
 TWN,TWN,"Taiwan Fund, Inc. (The) Common Stock",NYSE
-TWO,TWO,Two Harbors Investment Corp,NYSE
 TX,TX,"Ternium S.A. Ternium S.A. American Depositary Shares (each representing ten shares, USD1.00 par value)",NYSE
 TXNM,TXNM,"TXNM Energy, Inc. Common Stock",NYSE
 TXT,TXT,Textron Inc. Common Stock,NYSE
