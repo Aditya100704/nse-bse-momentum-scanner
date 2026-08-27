@@ -107,7 +107,6 @@ AIFA,AIFA,"All In FutureTech Alliance, Inc. - Common Stock",NASDAQ
 AIFC,AIFC,AI Financial Corporation - Common Stock,NASDAQ
 AIFF,AIFF,"Firefly Neuroscience, Inc.  - Common Stock",NASDAQ
 AIFU,AIFU,AIFU Inc. - Class A Ordinary Share,NASDAQ
-AIHS,AIHS,Senmiao Technology Limited - Common Stock,NASDAQ
 AIIO,AIIO,Robo.ai Inc. - Class B Ordinary Shares,NASDAQ
 AIIR,AIIR,Air Global PLC - Ordinary shares,NASDAQ
 AIMD,AIMD,"Ainos, Inc. - Common Stock",NASDAQ
@@ -702,7 +701,6 @@ CMCO,CMCO,Columbus McKinnon Corporation - Common Stock,NASDAQ
 CMCSA,CMCSA,Comcast Corporation - Class A Common Stock,NASDAQ
 CMCT,CMCT,Creative Media  - Common Stock,NASDAQ
 CME,CME,CME Group Inc. - Class A Common Stock,NASDAQ
-CMII,CMII,Columbus Circle Capital Corp II - Class A Ordinary Shares,NASDAQ
 CMMB,CMMB,Chemomab Therapeutics Ltd.  - American Depositary Shares,NASDAQ
 CMND,CMND,Clearmind Medicine Inc. - Common Shares,NASDAQ
 CMPR,CMPR,Cimpress plc - Ordinary Shares,NASDAQ
@@ -1605,6 +1603,7 @@ IPVV,IPVV,"InterPrivate Investment Partners V, Inc. - Class A Ordinary Shares",N
 IPW,IPW,iPower Inc. - Common Stock,NASDAQ
 IPWR,IPWR,Ideal Power Inc. - Common Stock,NASDAQ
 IPX,IPX,IperionX Limited - American Depositary Share,NASDAQ
+IPXG,IPXG,Inection Point Acquisition Corp. VII  - Class A Ordinary Shares,NASDAQ
 IQ,IQ,"iQIYI, Inc. - American Depositary Shares",NASDAQ
 IQMX,IQMX,IQM Quantum Computers Oyj - American Depositary Shares,NASDAQ
 IQST,IQST,iQSTEL Inc. - Common Stock,NASDAQ
@@ -1670,6 +1669,7 @@ JRSH,JRSH,"Jerash Holdings (US), Inc. - Common Stock",NASDAQ
 JRVR,JRVR,"James River Group Holdings, Inc. - Common Stock",NASDAQ
 JSPR,JSPR,"Jasper Therapeutics, Inc. - Class A Common Stock",NASDAQ
 JTAI,JTAI,Jet.AI Inc. - Common Stock,NASDAQ
+JTTT,JTTT,JATT III Acquisition Corp - Ordinary Shares,NASDAQ
 JUNS,JUNS,"Jupiter Neurosciences, Inc. - Common Stock",NASDAQ
 JVA,JVA,"Coffee Holding Co., Inc. - Common Stock",NASDAQ
 JWEL,JWEL,Jowell Global Ltd. - Ordinary Shares,NASDAQ
@@ -3181,6 +3181,7 @@ UXIN,UXIN,Uxin Limited - American Depositary Shares,NASDAQ
 UYSC,UYSC,UY Scuti Acquisition Corp. - Ordinary Shares,NASDAQ
 UZX,UZX,Linkage Global Inc - Class A Ordinary Shares,NASDAQ
 VABK,VABK,Virginia National Bankshares Corporation - Common Stock,NASDAQ
+VAI,VAI,Valor Energy Incorporated - Common Stock,NASDAQ
 VALN,VALN,Valneva SE - American Depositary Shares,NASDAQ
 VALU,VALU,"Value Line, Inc. - Common Stock",NASDAQ
 VANI,VANI,"Vivani Medical, Inc.  - Common Stock",NASDAQ
@@ -3296,7 +3297,6 @@ WGS,WGS,GeneDx Holdings Corp. - Class A Common Stock,NASDAQ
 WHF,WHF,"WhiteHorse Finance, Inc. - Closed End Fund",NASDAQ
 WHLR,WHLR,"Wheeler Real Estate Investment Trust, Inc. - Common Stock",NASDAQ
 WHWK,WHWK,"Whitehawk Therapeutics, Inc. - Common Stock",NASDAQ
-WILC,WILC,"G. Willi-Food International,  Ltd. - Ordinary Shares",NASDAQ
 WIMI,WIMI,WiMi Hologram Cloud Inc. - Class B Ordinary Shares,NASDAQ
 WINA,WINA,Winmark Corporation - Common Stock,NASDAQ
 WING,WING,Wingstop Inc. - Common Stock,NASDAQ
@@ -3373,6 +3373,7 @@ XRPN,XRPN,Armada Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 XRTX,XRTX,XORTX Therapeutics Inc. - Common Shares,NASDAQ
 XRX,XRX,Xerox Holdings Corporation - Common Stock,NASDAQ
 XSLL,XSLL,Xsolla SPAC 1 - Class A Ordinary Shares,NASDAQ
+XTER,XTER,Karman Line Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 XTIA,XTIA,"XTI Aerospace, Inc. Common Stock  - Common Stock",NASDAQ
 XTLB,XTLB,XTL Biopharmaceuticals Ltd. - American Depositary Shares,NASDAQ
 XWEL,XWEL,"XWELL, Inc. - Common Stock",NASDAQ
@@ -3433,6 +3434,7 @@ ZYBT,ZYBT,Zhengye Biotechnology Holding Limited - Class A Ordinary Shares,NASDAQ
 ZYME,ZYME,Zymeworks Inc. - Common Stock,NASDAQ
 A,A,"Agilent Technologies, Inc. Common Stock",NYSE
 AA,AA,Alcoa Corporation Common Stock,NYSE
+AAC,AAC,Ares Acquisition Corporation III Class A Ordinary Shares,NYSE
 AADX,AADX,"Applied Aerospace & Defense, Inc. Common Stock",NYSE
 AAMI,AAMI,Acadian Asset Management Inc. Common Stock,NYSE
 AAP,AAP,Advance Auto Parts Inc.,NYSE
@@ -4736,7 +4738,6 @@ LCTX,LCTX,"Lineage Cell Therapeutics, Inc. Common Stock",AMEX
 LDI,LDI,"loanDepot, Inc. Class A Common Stock",NYSE
 LDOS,LDOS,"Leidos Holdings, Inc. Common Stock",NYSE
 LEA,LEA,Lear Corporation Common Stock,NYSE
-LEG,LEG,"Leggett & Platt, Incorporated Common Stock",NYSE
 LEGO,LEGO,Legato Merger Corp. IV Ordinary Shares,AMEX
 LEN,LEN,Lennar Corporation Class A Common Stock,NYSE
 LEN-B,LEN-B,Lennar Corporation Class B,NYSE
@@ -5040,7 +5041,6 @@ NTB,NTB,Bank of N.T. Butterfield & Son Limited (The) Voting Ordinary Shares,NYSE
 NTIP,NTIP,"Network-1 Technologies, Inc. Common Stock",AMEX
 NTR,NTR,Nutrien Ltd. Common Shares,NYSE
 NTST,NTST,NetSTREIT Corp. Common Stock,NYSE
-NTZ,NTZ,"Natuzzi, S.p.A.",NYSE
 NU,NU,Nu Holdings Ltd. Class A Ordinary Shares,NYSE
 NUE,NUE,Nucor Corporation Common Stock,NYSE
 NUS,NUS,"Nu Skin Enterprises, Inc. Common Stock",NYSE
