@@ -151,7 +151,6 @@ ALMS,ALMS,Alumis Inc. - Common Stock,NASDAQ
 ALMU,ALMU,"Aeluma, Inc. - Common Stock",NASDAQ
 ALNT,ALNT,Allient Inc. - Common Stock,NASDAQ
 ALNY,ALNY,"Alnylam Pharmaceuticals, Inc. - Common Stock",NASDAQ
-ALOT,ALOT,"AstroNova, Inc. - Common Stock",NASDAQ
 ALOV,ALOV,"Aldabra 4 Liquidity Opportunity Vehicle, Inc. - Class A Ordinary Shares",NASDAQ
 ALOY,ALOY,REalloys Inc. - Common Stock,NASDAQ
 ALP,ALP,Alpha Compute Corp  - Common Stock,NASDAQ
@@ -354,7 +353,6 @@ BAOS,BAOS,Baosheng Media Group Holdings Limited - Ordinary shares,NASDAQ
 BATRA,BATRA,"Atlanta Braves Holdings, Inc. - Series A Common Stock",NASDAQ
 BATRK,BATRK,"Atlanta Braves Holdings, Inc. - Series C Common Stock",NASDAQ
 BBCP,BBCP,"Concrete Pumping Holdings, Inc.  - Common Stock",NASDAQ
-BBCQ,BBCQ,Bleichroeder Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 BBGI,BBGI,"Beasley Broadcast Group, Inc. - Class A Common Stock",NASDAQ
 BBIO,BBIO,"BridgeBio Pharma, Inc. - Common Stock",NASDAQ
 BBLG,BBLG,Bone Biologics Corp - Common Stock,NASDAQ
@@ -363,7 +361,6 @@ BBOT,BBOT,"BridgeBio Oncology Therapeutics, Inc. - Common Stock",NASDAQ
 BBSI,BBSI,"Barrett Business Services, Inc. - Common Stock",NASDAQ
 BCAB,BCAB,"BioAtla, Inc. - Common Stock",NASDAQ
 BCAL,BCAL,California BanCorp - Common Stock,NASDAQ
-BCAR,BCAR,D. Boral ARC Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
 BCAX,BCAX,Bicara Therapeutics Inc. - Common Stock,NASDAQ
 BCBP,BCBP,"BCB Bancorp, Inc. (NJ) - Common Stock",NASDAQ
 BCCQ,BCCQ,Bleichroeder Acquisition Corp. III - Class A Ordinary Shares,NASDAQ
@@ -1088,7 +1085,6 @@ FBIZ,FBIZ,"First Business Financial Services, Inc. - Common Stock",NASDAQ
 FBLA,FBLA,"FB Bancorp, Inc. - Common Stock",NASDAQ
 FBLG,FBLG,"FibroBiologics, Inc. - Common Stock",NASDAQ
 FBNC,FBNC,First Bancorp - Common Stock,NASDAQ
-FBRX,FBRX,"Forte Biosciences, Inc.  - Common Stock",NASDAQ
 FBYD,FBYD,"Falcon's Beyond Global, Inc. - Class A Common Stock",NASDAQ
 FCAP,FCAP,"First Capital, Inc. - Common Stock",NASDAQ
 FCBC,FCBC,"First Community Bankshares, Inc. - Common Stock",NASDAQ
@@ -2503,6 +2499,7 @@ PSMT,PSMT,"PriceSmart, Inc. - Common Stock",NASDAQ
 PSNL,PSNL,"Personalis, Inc. - Common Stock",NASDAQ
 PSNY,PSNY,Polestar Automotive Holding UK Limited - Class A ADS,NASDAQ
 PSNYW,PSNYW,Polestar Automotive Holding UK Limited - Class C-1 ADS (ADW),NASDAQ
+PSQL,PSQL,Pasqal Holding SA - Ordinary Shares,NASDAQ
 PTAC,PTAC,Patriot Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 PTC,PTC,PTC Inc. - Common Stock,NASDAQ
 PTCT,PTCT,"PTC Therapeutics, Inc. - Common Stock",NASDAQ
@@ -3358,6 +3355,7 @@ XFOR,XFOR,"X4 Pharmaceuticals, Inc. - Common Stock",NASDAQ
 XGN,XGN,Exagen Inc. - Common Stock,NASDAQ
 XHG,XHG,XChange TEC.INC - American Depositary Shares,NASDAQ
 XHLD,XHLD,"TEN Holdings, Inc. - Common Stock",NASDAQ
+XLAB,XLAB,Exascale Labs Holdings Inc. - Class A Common Stock,NASDAQ
 XLO,XLO,"Xilio Therapeutics, Inc. - Common Stock",NASDAQ
 XMAX,XMAX,"XMAX, Inc. - Common Stock",NASDAQ
 XMTR,XMTR,"Xometry, Inc. - Class A Common Stock",NASDAQ
@@ -3367,7 +3365,7 @@ XNET,XNET,Xunlei Limited - American Depositary Shares,NASDAQ
 XOS,XOS,"Xos, Inc. - Common Stock",NASDAQ
 XP,XP,XP Inc. - Class A Common Stock,NASDAQ
 XPEL,XPEL,"XPEL, Inc. - Common Stock",NASDAQ
-XPON,XPON,Expion360 Inc. - Common Stock,NASDAQ
+XPON,XPON,"Expion Energy, Inc. - Common Stock",NASDAQ
 XRAY,XRAY,DENTSPLY SIRONA Inc. - Common Stock,NASDAQ
 XRPN,XRPN,Armada Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 XRTX,XRTX,XORTX Therapeutics Inc. - Common Shares,NASDAQ
@@ -3710,7 +3708,6 @@ BFS,BFS,"Saul Centers, Inc. Common Stock",NYSE
 BG,BG,Bunge Limited Common Shares,NYSE
 BGB,BGB,Blackstone Strategic Credit 2027 Term Fund Common Shares of Beneficial Interest,NYSE
 BGH,BGH,Barings Global Short Duration High Yield Fund Common Shares of Beneficial Interests,NYSE
-BGI,BGI,Birks Group Inc. Common Stock,AMEX
 BGR,BGR,BlackRock Energy and Resources Trust,NYSE
 BGS,BGS,"B&G Foods, Inc. Common Stock",NYSE
 BGSF,BGSF,"BGSF, Inc. Common Stock",NYSE
@@ -4829,7 +4826,7 @@ MDT,MDT,Medtronic plc. Ordinary Shares,NYSE
 MDU,MDU,"MDU Resources Group, Inc. Common Stock (Holding Company)",NYSE
 MEC,MEC,"Mayville Engineering Company, Inc. Common Stock",NYSE
 MED,MED,MEDIFAST INC Common Stock,NYSE
-MEGI,MEGI,NYLI CBRE Global Infrastructure Megatrends Term Fund Common Shares,NYSE
+MEGI,MEGI,NYLIM CBRE Global Infrastructure Megatrends Term Fund Common Shares,NYSE
 MEI,MEI,"Methode Electronics, Inc. Common Stock",NYSE
 MET,MET,"MetLife, Inc. Common Stock",NYSE
 MFA,MFA,"MFA Financial, Inc.",NYSE
@@ -4866,7 +4863,7 @@ MLP,MLP,"Maui Land & Pineapple Company, Inc. Common Stock",NYSE
 MLR,MLR,"Miller Industries, Inc. Common Stock",NYSE
 MLSS,MLSS,"Milestone Scientific, Inc. Common Stock",AMEX
 MMA,MMA,Mixed Martial Arts Group Limited Ordinary Shares,AMEX
-MMD,MMD,NYLI MacKay DefinedTerm Muni Opportunities Fund Common Shares,NYSE
+MMD,MMD,NYLIM MacKay DefinedTerm Muni Opportunities Fund Common Shares,NYSE
 MMI,MMI,"Marcus & Millichap, Inc. Common Stock",NYSE
 MMM,MMM,3M Company Common Stock,NYSE
 MMS,MMS,"Maximus, Inc. Common Stock",NYSE
