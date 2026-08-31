@@ -290,6 +290,7 @@ ATHR,ATHR,"Aether Holdings, Inc. - Common Stock",NASDAQ
 ATII,ATII,Archimedes Tech SPAC Partners II Co. - Ordinary Shares,NASDAQ
 ATLC,ATLC,Atlanticus Holdings Corporation - Common Stock,NASDAQ
 ATLO,ATLO,Ames National Corporation - Common Stock,NASDAQ
+ATLQ,ATLQ,JAB Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 ATLX,ATLX,Atlas Lithium Corporation - Common Stock,NASDAQ
 ATNI,ATNI,"ATN International, Inc. - Common Stock",NASDAQ
 ATOM,ATOM,Atomera Incorporated - Common Stock,NASDAQ
@@ -359,7 +360,6 @@ BBLG,BBLG,Bone Biologics Corp - Common Stock,NASDAQ
 BBNX,BBNX,"Beta Bionics, Inc. - Common Stock",NASDAQ
 BBOT,BBOT,"BridgeBio Oncology Therapeutics, Inc. - Common Stock",NASDAQ
 BBSI,BBSI,"Barrett Business Services, Inc. - Common Stock",NASDAQ
-BCAB,BCAB,"BioAtla, Inc. - Common Stock",NASDAQ
 BCAL,BCAL,California BanCorp - Common Stock,NASDAQ
 BCAX,BCAX,Bicara Therapeutics Inc. - Common Stock,NASDAQ
 BCBP,BCBP,"BCB Bancorp, Inc. (NJ) - Common Stock",NASDAQ
@@ -1631,7 +1631,6 @@ IVVD,IVVD,"Invivyd, Inc. - Common Stock",NASDAQ
 IXHL,IXHL,Incannex Healthcare Inc. - Common Stock,NASDAQ
 IZEA,IZEA,"IZEA Worldwide, Inc. - Common Stock",NASDAQ
 IZM,IZM,ICZOOM Group Inc. - Class A Ordinary Shares,NASDAQ
-JAB,JAB,JAB Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 JACK,JACK,Jack In The Box Inc. - Common Stock,NASDAQ
 JAGX,JAGX,"Jaguar Health, Inc. - Common Stock",NASDAQ
 JAKK,JAKK,"JAKKS Pacific, Inc. - Common Stock",NASDAQ
@@ -1902,7 +1901,7 @@ MATW,MATW,Matthews International Corporation - Class A Common Stock,NASDAQ
 MAYS,MAYS,"J. W. Mays, Inc. - Common Stock",NASDAQ
 MAZE,MAZE,"Maze Therapeutics, Inc. - Common Stock",NASDAQ
 MB,MB,MasterBeef Group - Ordinary Shares,NASDAQ
-MBAI,MBAI,Check-Cap Ltd. - Ordinary Share,NASDAQ
+MBAI,MBAI,MBody AI Ltd. - Ordinary Share,NASDAQ
 MBBC,MBBC,"Marathon Bancorp, Inc. - Common Stock",NASDAQ
 MBIN,MBIN,Merchants Bancorp - Common Stock,NASDAQ
 MBIO,MBIO,"Mustang Bio, Inc. - Common Stock",NASDAQ
@@ -2282,6 +2281,7 @@ ONEG,ONEG,OneConstruction Group Limited - Ordinary Shares,NASDAQ
 ONEW,ONEW,OneWater Marine Inc. - Class A Common Stock,NASDAQ
 ONFO,ONFO,Onfolio Holdings Inc. - Common Stock,NASDAQ
 ONMD,ONMD,OneMedNet Corp - Class A Common Stock,NASDAQ
+OPAD,OPAD,Offerpad Solutions Inc.  - Class A Common Stock,NASDAQ
 OPAL,OPAL,OPAL Fuels Inc. - Class A Common Stock,NASDAQ
 OPBK,OPBK,OP Bancorp - Common Stock,NASDAQ
 OPCH,OPCH,"Option Care Health, Inc. - Common Stock",NASDAQ
@@ -2953,7 +2953,7 @@ SVCO,SVCO,"Silvaco Group, Inc. - Common Stock",NASDAQ
 SVIV,SVIV,Spring Valley Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
 SVRA,SVRA,"Savara, Inc. - Common Stock",NASDAQ
 SVRE,SVRE,SaverOne 2014 Ltd. - American Depositary Shares,NASDAQ
-SVRN,SVRN,OceanPal Inc. - Common Stock,NASDAQ
+SVRN,SVRN,"SVRN, Inc. - Common Stock",NASDAQ
 SWAG,SWAG,"Stran & Company, Inc. - Common Stock",NASDAQ
 SWBI,SWBI,"Smith & Wesson Brands, Inc. - Common Stock",NASDAQ
 SWIM,SWIM,"Latham Group, Inc. - Common Stock",NASDAQ
@@ -3067,6 +3067,7 @@ TPG,TPG,TPG Inc. - Class A Common Stock,NASDAQ
 TPST,TPST,"Tempest Therapeutics, Inc. - Common Stock",NASDAQ
 TRAW,TRAW,"Traws Pharma, Inc. - Common Stock",NASDAQ
 TRAX,TRAX,"First Tracks Biotherapeutics, Inc. - Ordinary Shares",NASDAQ
+TRBG,TRBG,TurboGen Ltd. - Ordinary Shares,NASDAQ
 TRDA,TRDA,"Entrada Therapeutics, Inc. - Common Stock",NASDAQ
 TREE,TREE,"LendingTree, Inc. - Common Stock",NASDAQ
 TREO,TREO,Tactical Resources Corp. - Common Shares,NASDAQ
@@ -3581,7 +3582,6 @@ ARCO,ARCO,Arcos Dorados Holdings Inc. Class A Shares,NYSE
 ARDC,ARDC,"Ares Dynamic Credit Allocation Fund, Inc. Common Shares",NYSE
 ARDT,ARDT,"Ardent Health, Inc. Common Stock",NYSE
 ARE,ARE,"Alexandria Real Estate Equities, Inc. Common Stock",NYSE
-AREN,AREN,"The Arena Group Holdings, Inc. Common Stock",AMEX
 ARES,ARES,Ares Management Corporation Class A Common Stock,NYSE
 ARI,ARI,"Apollo Commercial Real Estate Finance, Inc",NYSE
 ARIS,ARIS,Aris Mining Corporation Common Shares,NYSE
@@ -5100,7 +5100,6 @@ ONON,ONON,On Holding AG Class A Ordinary Shares,NYSE
 ONT,ONT,"Onterris, Inc. Common Stock",NYSE
 ONTO,ONTO,Onto Innovation Inc. Common Stock,NYSE
 OOMA,OOMA,"Ooma, Inc. Common Stock",NYSE
-OPAD,OPAD,Offerpad Solutions Inc. Class A Common Stock,NYSE
 OPFI,OPFI,OppFi Inc. Class A Common Stock,NYSE
 OPHC,OPHC,"OptimumBank Holdings, Inc. Common Stock",AMEX
 OPLN,OPLN,"OPENLANE, Inc. Common Stock",NYSE
@@ -5128,6 +5127,7 @@ OWLT,OWLT,"Owlet, Inc. Class A Common Stock",NYSE
 OXM,OXM,"Oxford Industries, Inc. Common Stock",NYSE
 OXY,OXY,Occidental Petroleum Corporation Common Stock,NYSE
 P,P,"Everpure, Inc. Class A common stock",NYSE
+PAAI,PAAI,"Paradium.AI, Inc. Common Stock",AMEX
 PAAS,PAAS,Pan American Silver Corp. Common Stock,NYSE
 PAC,PAC,"Grupo Aeroportuario Del Pacifico, S.A. B. de C.V. Grupo Aeroportuario Del Pacifico, S.A. de C.V. (each representing 10 Series B shares)",NYSE
 PACK,PACK,Ranpak Holdings Corp Class A Common Stock,NYSE
@@ -5374,6 +5374,7 @@ SAFE,SAFE,Safehold Inc. New Common Stock,NYSE
 SAGU,SAGU,Shreya Acquisition Group Class A Ordinary Shares,NYSE
 SAH,SAH,"Sonic Automotive, Inc. Common Stock",NYSE
 SAM,SAM,"Boston Beer Company, Inc. (The) Common Stock",NYSE
+SAMO,SAMO,Samos Energy Acquisition Corporation Class A Ordinary Shares,NYSE
 SAN,SAN,"Banco Santander, S.A. Sponsored ADR (Spain)",NYSE
 SAP,SAP,SAP  SE ADS,NYSE
 SAR,SAR,Saratoga Investment Corp New,NYSE
