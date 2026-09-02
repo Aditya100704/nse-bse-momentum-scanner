@@ -773,7 +773,6 @@ CRML,CRML,Critical Metals Corp. - Ordinary Shares,NASDAQ
 CRMT,CRMT,"America's Car-Mart, Inc. - Common Stock",NASDAQ
 CRNC,CRNC,Cerence Inc. - Common Stock,NASDAQ
 CRNT,CRNT,Ceragon Networks Ltd. - Ordinary Shares,NASDAQ
-CRNX,CRNX,"Crinetics Pharmaceuticals, Inc. - Common Stock",NASDAQ
 CRON,CRON,Cronos Group Inc. - Common Share,NASDAQ
 CROX,CROX,"Crocs, Inc. - Common Stock",NASDAQ
 CRSP,CRSP,CRISPR Therapeutics AG - Common Shares,NASDAQ
@@ -2100,7 +2099,6 @@ NCNO,NCNO,"nCino, Inc. - Common Stock",NASDAQ
 NCO,NCO,Southern Cross Acquisition I Corp. - Ordinary Shares,NASDAQ
 NCPL,NCPL,Netcapital Inc. - Common Stock,NASDAQ
 NCRA,NCRA,"Nocera, Inc. - common stock",NASDAQ
-NCSM,NCSM,"NCS Multistage Holdings, Inc. - Common Stock",NASDAQ
 NCT,NCT,Intercont (Cayman) Limited - Class A Ordinary shares,NASDAQ
 NCTY,NCTY,The9 Limited - American Depository Shares,NASDAQ
 NDAQ,NDAQ,"Nasdaq, Inc. - Common Stock",NASDAQ
@@ -2167,6 +2165,7 @@ NRIM,NRIM,Northrim BanCorp Inc - Common Stock,NASDAQ
 NRIX,NRIX,"Nurix Therapeutics, Inc. - Common stock",NASDAQ
 NRSN,NRSN,NeuroSense Therapeutics Ltd. - Ordinary Shares,NASDAQ
 NRXP,NRXP,"NRX Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NSAI,NSAI,NorthStrive Acquisition Corp I. - Class A Ordinary Shares,NASDAQ
 NSIT,NSIT,"Insight Enterprises, Inc. - Common Stock",NASDAQ
 NSLR,NSLR,Neostellar Capital Corp. - Closed End Fund,NASDAQ
 NSPR,NSPR,InspireMD Inc. - Common Stock,NASDAQ
@@ -3385,6 +3384,7 @@ YB,YB,Yuanbao Inc. - American Depositary Shares,NASDAQ
 YDDL,YDDL,One and One Green Technologies. INC - Class A Ordinary Shares,NASDAQ
 YDES,YDES,YD Bio Limited - Ordinary Shares,NASDAQ
 YDKG,YDKG,Yueda Digital Holding - Class A Ordinary Share,NASDAQ
+YFOR,YFOR,YYForce Inc. - Class A Ordinary Shares,NASDAQ
 YHC,YHC,LQR House Inc. - Common Stock,NASDAQ
 YHGJ,YHGJ,Yunhong Green CTI Ltd. - Common Stock,NASDAQ
 YHNA,YHNA,YHN Acquisition I Limited - Ordinary Shares,NASDAQ
@@ -3402,7 +3402,6 @@ YSXT,YSXT,"YSX Tech. Co., Ltd  - Class A Ordinary Shares",NASDAQ
 YTRA,YTRA,"Yatra Online, Inc. - Ordinary Shares",NASDAQ
 YXT,YXT,YXT.COM GROUP HOLDING LIMITED - American Depository Shares,NASDAQ
 YYAI,YYAI,AiRWA Inc. - Common Stock,NASDAQ
-YYGH,YYGH,YY Group Holding Limited - Class A Ordinary Shares,NASDAQ
 Z,Z,"Zillow Group, Inc. - Class C Capital Stock",NASDAQ
 ZBAO,ZBAO,Zhibao Technology Inc. - Class A Ordinary Shares,NASDAQ
 ZBIO,ZBIO,"Zenas BioPharma, Inc. - Common Stock",NASDAQ
@@ -3426,7 +3425,6 @@ ZOOZ,ZOOZ,ZOOZ Strategy Ltd. - Ordinary Shares,NASDAQ
 ZS,ZS,"Zscaler, Inc. - Common Stock",NASDAQ
 ZSQR,ZSQR,Z Squared Inc. - Common Stock,NASDAQ
 ZSTK,ZSTK,ZeroStack Corp. - Common Stock,NASDAQ
-ZTEK,ZTEK,Zentek Ltd. - common stock,NASDAQ
 ZTG,ZTG,Zenta Group Company Limited - Class A Ordinary Shares,NASDAQ
 ZUMZ,ZUMZ,Zumiez Inc. - Common Stock,NASDAQ
 ZURA,ZURA,Zura Bio Limited - Class A Ordinary shares,NASDAQ
@@ -4508,7 +4506,6 @@ HLIO,HLIO,"Helios Technologies, Inc. Common Stock",NYSE
 HLLY,HLLY,Holley Inc. Common Stock,NYSE
 HLN,HLN,Haleon plc American Depositary Shares (Each representing two Ordinary Shares),NYSE
 HLT,HLT,Hilton Worldwide Holdings Inc. Common Stock,NYSE
-HLX,HLX,"Helix Energy Solutions Group, Inc. Common Stock",NYSE
 HMC,HMC,"Honda Motor Company, Ltd. Common Stock",NYSE
 HMN,HMN,Horace Mann Educators Corporation Common Stock,NYSE
 HMY,HMY,Harmony Gold Mining Company Limited,NYSE
@@ -4516,6 +4513,7 @@ HNGE,HNGE,"Hinge Health, Inc. Class A Common Stock",NYSE
 HNI,HNI,HNI Corporation Common Stock,NYSE
 HOG,HOG,"Harley-Davidson, Inc. Common Stock",NYSE
 HOMB,HOMB,"Home BancShares, Inc. Common Stock",NYSE
+HOS,HOS,"Hornbeck Offshore Services, Inc. Common Stock",NYSE
 HOV,HOV,"Hovnanian Enterprises, Inc. Class A Common Stock",NYSE
 HP,HP,"Helmerich & Payne, Inc. Common Stock",NYSE
 HPE,HPE,Hewlett Packard Enterprise Company Common Stock,NYSE
