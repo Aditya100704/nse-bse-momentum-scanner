@@ -209,7 +209,6 @@ APA,APA,APA Corporation - Common Stock,NASDAQ
 APAC,APAC,StoneBridge Acquisition II Corporation - Class A Ordinary Shares,NASDAQ
 APC,APC,ARKO Petroleum Corp. - Class A Common Stock,NASDAQ
 APEI,APEI,"American Public Education, Inc. - Common Stock",NASDAQ
-APGE,APGE,"Apogee Therapeutics, Inc. - Common Stock",NASDAQ
 API,API,"Agora, Inc. - ADS",NASDAQ
 APLD,APLD,Applied Digital Corporation - Common Stock,NASDAQ
 APLM,APLM,Apollomics Inc. - Class A Ordinary Shares,NASDAQ
@@ -503,7 +502,6 @@ BTDR,BTDR,Bitdeer Technologies Group - Ordinary Shares,NASDAQ
 BTLN,BTLN,"Brightline Interactive, Inc. - Common Stock",NASDAQ
 BTMD,BTMD,Biote Corp. - Class A common stock,NASDAQ
 BTOC,BTOC,Armlogi Holding Corp. - common stock,NASDAQ
-BTOG,BTOG,Bit Origin Limited - Class A Ordinary Shares,NASDAQ
 BTQ,BTQ,BTQ Technologies Corp. - Common Stock,NASDAQ
 BTSG,BTSG,"BrightSpring Health Services, Inc. - Common Stock",NASDAQ
 BTTC,BTTC,Black Titan Corp - Ordinary Shares,NASDAQ
@@ -1649,7 +1647,6 @@ JD,JD,"JD.com, Inc. - American Depositary Shares",NASDAQ
 JDZG,JDZG,JIADE LIMITED - Class A Ordinary Shares,NASDAQ
 JEM,JEM,707 Cayman Holdings Limited - Ordinary Shares,NASDAQ
 JF,JF,J and Friends Holdings Limited - American Depositary Shares,NASDAQ
-JFB,JFB,JFB Construction Holdings - Class A Common Stock,NASDAQ
 JFIN,JFIN,Jiayin Group Inc. - American Depositary Shares,NASDAQ
 JFU,JFU,9F Inc. - American Depositary Shares,NASDAQ
 JG,JG,Aurora Mobile Limited - American Depositary Shares,NASDAQ
@@ -2777,6 +2774,7 @@ SGLY,SGLY,Singularity Future Technology Ltd. - Common Stock,NASDAQ
 SGML,SGML,Sigma Lithium Corporation - common shares,NASDAQ
 SGMT,SGMT,Sagimet Biosciences Inc. - Series A Common Stock,NASDAQ
 SGP,SGP,"SpyGlass Pharma, Inc. - Common Stock",NASDAQ
+SGRX,SGRX,SANGRIX INC. - Class A Ordinary Shares,NASDAQ
 SGRY,SGRY,"Surgery Partners, Inc. - Common Stock",NASDAQ
 SHAZ,SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",NASDAQ
 SHBI,SHBI,"Shore Bancshares, Inc. - Common Stock",NASDAQ
@@ -3898,7 +3896,7 @@ CIEN,CIEN,Ciena Corporation Common Stock,NYSE
 CIG,CIG,Comp En De Mn Cemig ADS American Depositary Shares,NYSE
 CIG-C,CIG-C,Comp En De Mn Cemig ADS American Depositary Receipts,NYSE
 CII,CII,"BlackRock Enhanced Large Cap Core Fund, Inc. Common Stock",NYSE
-CIK,CIK,"Credit Suisse Asset Management Income Fund, Inc. Common Stock",AMEX
+CIK,CIK,"UBS Asset Management Income Fund, Inc. Common Stock",AMEX
 CIM,CIM,Chimera Investment Corporation Common Stock,NYSE
 CINT,CINT,CI&T Inc Class A Common Shares,NYSE
 CION,CION,CION Investment Corporation Common Stock,NYSE
@@ -4071,7 +4069,7 @@ DHI,DHI,"D.R. Horton, Inc. Common Stock",NYSE
 DHR,DHR,Danaher Corporation Common Stock,NYSE
 DHT,DHT,"DHT Holdings, Inc.",NYSE
 DHX,DHX,"DHI Group, Inc. Common Stock",NYSE
-DHY,DHY,Credit Suisse High Yield Credit Fund Common Stock,AMEX
+DHY,DHY,UBS Asset Management High Yield Credit Fund Common Stock,AMEX
 DIN,DIN,"Dine Brands Global, Inc. Common Stock",NYSE
 DINO,DINO,HF Sinclair Corporation Common Stock,NYSE
 DIS,DIS,Walt Disney Company (The) Common Stock,NYSE
@@ -5864,6 +5862,7 @@ XPO,XPO,"XPO, Inc. Common Stock",NYSE
 XPOF,XPOF,"Xponential Fitness, Inc. Class A Common Stock",NYSE
 XPRO,XPRO,Expro Ltd Ordinary Shares,NYSE
 XRN,XRN,Chiron Real Estate Inc. Common Stock,NYSE
+XTND,XTND,"Xtend AI Robotics, Inc. Common Stock",NYSE
 XTNT,XTNT,"Xtant Medical Holdings, Inc. Common Stock",AMEX
 XXI,XXI,"Twenty One Capital, Inc. Class A Common Stock",NYSE
 XYF,XYF,"X Financial American Depositary Shares, each representing six Class A Ordinary Shares",NYSE
