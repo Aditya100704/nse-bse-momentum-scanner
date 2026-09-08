@@ -153,7 +153,7 @@ ALNT,ALNT,Allient Inc. - Common Stock,NASDAQ
 ALNY,ALNY,"Alnylam Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ALOV,ALOV,"Aldabra 4 Liquidity Opportunity Vehicle, Inc. - Class A Ordinary Shares",NASDAQ
 ALOY,ALOY,REalloys Inc. - Common Stock,NASDAQ
-ALP,ALP,Alpha Compute Corp  - Common Stock,NASDAQ
+ALP,ALP,Alpha Compute Corp  - Ordinary Shares,NASDAQ
 ALPS,ALPS,ALPS Group Inc - Ordinary Share,NASDAQ
 ALPX,ALPX,Alpex Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 ALRM,ALRM,"Alarm.com Holdings, Inc. - Common Stock",NASDAQ
@@ -164,6 +164,7 @@ ALTO,ALTO,"Alto Ingredients, Inc. - Common Stock",NASDAQ
 ALVO,ALVO,Alvotech - Ordinary Shares,NASDAQ
 ALXO,ALXO,ALX Oncology Holdings Inc. - Common Stock,NASDAQ
 ALZN,ALZN,"Alzamend Neuro, Inc. - Common Stock",NASDAQ
+AMAC,AMAC,AMR Resources Acquisition Corp - Class A Ordinary Shares,NASDAQ
 AMAL,AMAL,Amalgamated Financial Corp. - Common Stock,NASDAQ
 AMAN,AMAN,Amanat Acquisition Corp - Class A Ordinary Shares,NASDAQ
 AMAT,AMAT,"Applied Materials, Inc. - Common Stock",NASDAQ
@@ -493,7 +494,6 @@ BSP,BSP,Bending Spoons S.p.A. - Ordinary Shares,NASDAQ
 BSRR,BSRR,Sierra Bancorp - Common Stock,NASDAQ
 BSVN,BSVN,Bank7 Corp. - Common stock,NASDAQ
 BSY,BSY,"Bentley Systems, Incorporated - Class B Common Stock",NASDAQ
-BTAI,BTAI,"BioXcel Therapeutics, Inc. - Common Stock",NASDAQ
 BTBD,BTBD,"BT Brands, Inc. - Common Stock",NASDAQ
 BTBT,BTBT,"Bit Digital, Inc. - Ordinary Share",NASDAQ
 BTCS,BTCS,BTCS Inc. - Common Stock,NASDAQ
@@ -1843,7 +1843,6 @@ LPBB,LPBB,Launch Two Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 LPCN,LPCN,Lipocine Inc. - Common Stock,NASDAQ
 LPCV,LPCV,Launchpad Cadenza Acquisition Corp I - Class A Ordinary Share,NASDAQ
 LPLA,LPLA,LPL Financial Holdings Inc. - Common Stock,NASDAQ
-LPSN,LPSN,"LivePerson, Inc. - Common Stock",NASDAQ
 LPTH,LPTH,"LightPath Technologies, Inc. - Class A Common Stock",NASDAQ
 LQDA,LQDA,Liquidia Corporation - Common Stock,NASDAQ
 LQDT,LQDT,"Liquidity Services, Inc. - Common Stock",NASDAQ
@@ -3620,6 +3619,7 @@ AU,AU,AngloGold Ashanti PLC Ordinary Shares,NYSE
 AUB,AUB,Atlantic Union Bankshares Corporation Common Stock,NYSE
 AUNA,AUNA,Auna SA Class A Ordinary Shares,NYSE
 AUST,AUST,Austin Gold Corp. Common Shares,AMEX
+AUXX,AUXX,Gold X2 Mining Inc. Common Shares,AMEX
 AVA,AVA,Avista Corporation Common Stock,NYSE
 AVBC,AVBC,"Avidia Bancorp, Inc. Common Stock",NYSE
 AVD,AVD,American Vanguard Corporation Common Stock ($0.10 Par Value),NYSE
