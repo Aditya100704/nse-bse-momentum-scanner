@@ -259,7 +259,7 @@ ARTW,ARTW,"Art's-Way Manufacturing Co., Inc. - Common Stock",NASDAQ
 ARVN,ARVN,"Arvinas, Inc. - Common Stock",NASDAQ
 ARWR,ARWR,"Arrowhead Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ARXS,ARXS,"Arxis, Inc. - Class A Common Stock",NASDAQ
-ASBP,ASBP,"Aspire Biopharma Holdings, Inc.  - Common Stock",NASDAQ
+ASBP,ASBP,"Aspire-Lakewood Holdings, Inc. - Common Stock",NASDAQ
 ASLE,ASLE,AerSale Corporation - Common Stock,NASDAQ
 ASMB,ASMB,"Assembly Biosciences, Inc. - Common Stock",NASDAQ
 ASML,ASML,ASML Holding N.V. - New York Registry Shares,NASDAQ
@@ -478,7 +478,6 @@ BRKH,BRKH,Burtech Acquisition Corp II - Class A Ordinary Shares,NASDAQ
 BRKR,BRKR,Bruker Corporation - Common Stock,NASDAQ
 BRLS,BRLS,Borealis Foods Inc. - Class A Common Shares,NASDAQ
 BRLT,BRLT,"Brilliant Earth Group, Inc. - Class A Common Stock",NASDAQ
-BRNS,BRNS,Barinthus Biotherapeutics plc - American Depositary Shares,NASDAQ
 BRNX,BRNX,BrenX Ltd. - Ordinary Shares,NASDAQ
 BRR,BRR,"ProCap Financial, Inc. - Common Stock",NASDAQ
 BRTX,BRTX,"BioRestorative Therapies, Inc. - Common Stock",NASDAQ
@@ -833,7 +832,6 @@ CXAI,CXAI,CXApp Inc. - Class A Common Stock,NASDAQ
 CXDO,CXDO,"Crexendo, Inc. - Common Stock",NASDAQ
 CXII,CXII,Churchill Capital Corp XII - Class A Ordinary Shares,NASDAQ
 CYAB,CYAB,"Cyabra, Inc. - Common Stock",NASDAQ
-CYCN,CYCN,"Cyclerion Therapeutics, Inc. - Common Stock",NASDAQ
 CYCU,CYCU,"Cycurion, Inc. - Common Stock",NASDAQ
 CYN,CYN,Cyngn Inc. - Common stock,NASDAQ
 CYPH,CYPH,Cypherpunk Technologies Inc. - Common Stock,NASDAQ
@@ -1723,6 +1721,7 @@ KRNT,KRNT,Kornit Digital Ltd. - Ordinary Shares,NASDAQ
 KRNY,KRNY,Kearny Financial - Common Stock,NASDAQ
 KROS,KROS,"Keros Therapeutics, Inc. - common stock",NASDAQ
 KRRO,KRRO,"Korro Bio, Inc. - Common Stock",NASDAQ
+KRSA,KRSA,"Korsana Biosciences, Inc. - Common Stock",NASDAQ
 KRT,KRT,Karat Packaging Inc. - Common Stock,NASDAQ
 KRUS,KRUS,"Kura Sushi USA, Inc. - Class A Common Stock",NASDAQ
 KRYS,KRYS,"Krystal Biotech, Inc. - Common Stock",NASDAQ
@@ -1735,7 +1734,6 @@ KTWO,KTWO,K2 Capital Acquisition Corporation - Class A Ordinary Share,NASDAQ
 KURA,KURA,"Kura Oncology, Inc. - Common Stock",NASDAQ
 KUST,KUST,"Kustom Entertainment, Inc. - Common Stock",NASDAQ
 KVHI,KVHI,"KVH Industries, Inc. - Common Stock",NASDAQ
-KWM,KWM,"K Wave Media, Ltd. - Ordinary Shares",NASDAQ
 KXIN,KXIN,Kaixin Holdings - Ordinary Shares,NASDAQ
 KYIV,KYIV,Kyivstar Group Ltd. - Common Shares,NASDAQ
 KYMR,KYMR,"Kymera Therapeutics, Inc. - Common Stock",NASDAQ
@@ -2209,6 +2207,7 @@ NWPX,NWPX,"NWPX Infrastructure, Inc. - Common Stock",NASDAQ
 NWS,NWS,News Corporation - Class B Common Stock,NASDAQ
 NWSA,NWSA,News Corporation - Class A Common Stock,NASDAQ
 NWTG,NWTG,"Newton Golf Company, Inc. - Common Stock",NASDAQ
+NXAT,NXAT,Nexus Advanced Technologies Inc. - Ordinary Shares,NASDAQ
 NXGL,NXGL,"NexGel, Inc - Common Stock",NASDAQ
 NXH,NXH,"Neighborhood Intelligence, Inc.  - Common Stock",NASDAQ
 NXL,NXL,"Nexalin Technology, Inc. - Common Stock",NASDAQ
@@ -2644,6 +2643,7 @@ RMBS,RMBS,"Rambus, Inc. - Common Stock",NASDAQ
 RMCF,RMCF,"Rocky Mountain Chocolate Factory, Inc. - Common Stock",NASDAQ
 RMCO,RMCO,Royalty Management Holding Corporation - Class A Common Stock,NASDAQ
 RMIX,RMIX,"Suncrete, Inc. - Class A Common Stock",NASDAQ
+RML,RML,Resolution Minerals Ltd - American Depositary Shares,NASDAQ
 RMNI,RMNI,"Rimini Street, Inc. - Common Stock",NASDAQ
 RMR,RMR,The RMR Group Inc. - Class A Common Stock,NASDAQ
 RMSG,RMSG,Real Messenger Corporation - Ordinary Shares,NASDAQ
@@ -5184,7 +5184,7 @@ PGR,PGR,Progressive Corporation (The) Common Stock,NYSE
 PGZ,PGZ,Principal Real Estate Income Fund Common Shares of Beneficial Interest,NYSE
 PH,PH,Parker-Hannifin Corporation Common Stock,NYSE
 PHG,PHG,Koninklijke Philips N.V. NY Registry Shares,NYSE
-PHGE,PHGE,BiomX Inc. COmmon Stock,AMEX
+PHGE,PHGE,BiomX Inc. Common Stock,AMEX
 PHI,PHI,PLDT Inc. Sponsored ADR,NYSE
 PHIN,PHIN,PHINIA Inc. Common Stock,NYSE
 PHK,PHK,Pimco High Income Fund,NYSE
