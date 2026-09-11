@@ -2235,6 +2235,7 @@ OCCI,OCCI,"OFS Credit Company, Inc. - Closed End Fund",NASDAQ
 OCFC,OCFC,OceanFirst Financial Corp. - Common Stock,NASDAQ
 OCG,OCG,Oriental Culture Holding LTD - Ordinary Shares,NASDAQ
 OCGN,OCGN,"Ocugen, Inc. - Common Stock",NASDAQ
+OCLT,OCLT,OceanLight Acquisition Corporation - Ordinary Shares,NASDAQ
 OCS,OCS,Oculis Holding AG - Ordinary shares,NASDAQ
 OCSL,OCSL,Oaktree Specialty Lending Corporation - Closed End Fund,NASDAQ
 OCTV,OCTV,Octave Intelligence plc - Class B Ordinary Shares,NASDAQ
@@ -4506,6 +4507,7 @@ HLI,HLI,"Houlihan Lokey, Inc. Class A Common Stock",NYSE
 HLIO,HLIO,"Helios Technologies, Inc. Common Stock",NYSE
 HLLY,HLLY,Holley Inc. Common Stock,NYSE
 HLN,HLN,Haleon plc American Depositary Shares (Each representing two Ordinary Shares),NYSE
+HLSQ,HLSQ,Tessera Defense and Homeland Security Inc. Common Stock,AMEX
 HLT,HLT,Hilton Worldwide Holdings Inc. Common Stock,NYSE
 HMC,HMC,"Honda Motor Company, Ltd. Common Stock",NYSE
 HMN,HMN,Horace Mann Educators Corporation Common Stock,NYSE
@@ -5186,7 +5188,6 @@ PGR,PGR,Progressive Corporation (The) Common Stock,NYSE
 PGZ,PGZ,Principal Real Estate Income Fund Common Shares of Beneficial Interest,NYSE
 PH,PH,Parker-Hannifin Corporation Common Stock,NYSE
 PHG,PHG,Koninklijke Philips N.V. NY Registry Shares,NYSE
-PHGE,PHGE,BiomX Inc. Common Stock,AMEX
 PHI,PHI,PLDT Inc. Sponsored ADR,NYSE
 PHIN,PHIN,PHINIA Inc. Common Stock,NYSE
 PHK,PHK,Pimco High Income Fund,NYSE
