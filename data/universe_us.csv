@@ -278,7 +278,6 @@ ASTL,ASTL,Algoma Steel Group Inc. - Common Shares,NASDAQ
 ASTS,ASTS,"AST SpaceMobile, Inc. - Class A Common Stock",NASDAQ
 ASUR,ASUR,Asure Software Inc - Common Stock,NASDAQ
 ASYS,ASYS,"Amtech Systems, Inc. - Common Stock",NASDAQ
-ATAI,ATAI,AtaiBeckley Inc. - Common Stock,NASDAQ
 ATAT,ATAT,Atour Lifestyle Holdings Limited - American Depositary Shares,NASDAQ
 ATCX,ATCX,Atlas Critical Minerals Corporation - Common Stock,NASDAQ
 ATEC,ATEC,"Alphatec Holdings, Inc. - Common Stock",NASDAQ
@@ -1692,7 +1691,6 @@ KFFB,KFFB,Kentucky First Federal Bancorp - Common Stock,NASDAQ
 KFII,KFII,K&F Growth Acquisition Corp. II - Class A Ordinary shares,NASDAQ
 KG,KG,"Kestrel Group, Ltd. - Common Stock",NASDAQ
 KGEI,KGEI,Kolibri Global Energy Inc. - Common stock,NASDAQ
-KHC,KHC,The Kraft Heinz Company - Common Stock,NASDAQ
 KIDS,KIDS,OrthoPediatrics Corp. - Common Stock,NASDAQ
 KIDZ,KIDZ,KIDZ AI Inc. - Class B Common Stock,NASDAQ
 KINS,KINS,"Kingstone Companies, Inc - Common Stock",NASDAQ
@@ -3812,6 +3810,7 @@ BUDA,BUDA,"Buda Juice, Inc. Common Stock",AMEX
 BUI,BUI,"BlackRock Utility, Infrastructure & Power Opportunities Trust",NYSE
 BUR,BUR,Burford Capital Limited Ordinary Shares,NYSE
 BURL,BURL,"Burlington Stores, Inc. Common Stock",NYSE
+BURU,BURU,"Nuburu, Inc. Common Stock",AMEX
 BV,BV,"BrightView Holdings, Inc. Common Stock",NYSE
 BVN,BVN,Buenaventura Mining Company Inc.,NYSE
 BW,BW,"Babcock & Wilcox Enterprises, Inc. Common Stock",NYSE
@@ -4684,6 +4683,7 @@ KFRC,KFRC,"Kforce, Inc. Common Stock",NYSE
 KFY,KFY,Korn Ferry Common Stock,NYSE
 KGC,KGC,Kinross Gold Corporation Common Stock,NYSE
 KGS,KGS,"Kodiak Gas Services, Inc. Common Stock",NYSE
+KHC,KHC,The Kraft Heinz Company Common Stock,NYSE
 KIM,KIM,Kimco Realty Corporation (HC) Common Stock,NYSE
 KIO,KIO,KKR Income Opportunities Fund Common Shares,NYSE
 KKR,KKR,KKR & Co. Inc. Common Stock,NYSE
@@ -5573,7 +5573,7 @@ TEI,TEI,"Templeton Emerging Markets Income Fund, Inc. Common Stock",NYSE
 TEL,TEL,TE Connectivity plc Ordinary Shares,NYSE
 TEN,TEN,Tsakos Energy Navigation Ltd Common Shares,NYSE
 TEO,TEO,Telecom Argentina SA,NYSE
-TEVA,TEVA,Teva Pharmaceutical Industries Limited American Depositary Shares,NYSE
+TEVA,TEVA,Teva Pharmaceutical Industries Limited Ordinary Shares,NYSE
 TEX,TEX,Terex Corporation Common Stock,NYSE
 TFC,TFC,Truist Financial Corporation Common Stock,NYSE
 TFII,TFII,TFI International Inc. Common Shares,NYSE
