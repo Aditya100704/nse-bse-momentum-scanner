@@ -1098,7 +1098,6 @@ FDSB,FDSB,"Fifth District Bancorp, Inc. - Common Stock",NASDAQ
 FDUS,FDUS,Fidus Investment Corporation - Closed End Fund,NASDAQ
 FEAM,FEAM,"5E Advanced Materials, Inc. - Common Stock",NASDAQ
 FEBO,FEBO,Fenbo Holdings Limited - Class A Ordinary Shares,NASDAQ
-FEED,FEED,"ENvue Medical, Inc. - Common Stock",NASDAQ
 FEIM,FEIM,"Frequency Electronics, Inc. - Common Stock",NASDAQ
 FELE,FELE,"Franklin Electric Co., Inc. - Common Stock",NASDAQ
 FEMY,FEMY,Femasys Inc. - Common Stock,NASDAQ
@@ -1688,7 +1687,7 @@ KELYB,KELYB,"Kelly Services, Inc. - Class B Common Stock",NASDAQ
 KEQU,KEQU,Kewaunee Scientific Corporation - Common Stock,NASDAQ
 KEYY,KEYY,Keystone Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 KFFB,KFFB,Kentucky First Federal Bancorp - Common Stock,NASDAQ
-KFII,KFII,K&F Growth Acquisition Corp. II - Class A Ordinary shares,NASDAQ
+KFII,KFII,K - Class A Ordinary shares,NASDAQ
 KG,KG,"Kestrel Group, Ltd. - Common Stock",NASDAQ
 KGEI,KGEI,Kolibri Global Energy Inc. - Common stock,NASDAQ
 KIDS,KIDS,OrthoPediatrics Corp. - Common Stock,NASDAQ
@@ -2860,7 +2859,6 @@ SNTI,SNTI,"Senti Biosciences Holdings, Inc. - Common Stock",NASDAQ
 SNWV,SNWV,"SANUWAVE Health, Inc. - Common Stock",NASDAQ
 SNY,SNY,Sanofi - American Depositary Shares,NASDAQ
 SNYR,SNYR,Synergy CHC Corp. - Common Stock,NASDAQ
-SOBR,SOBR,"SOBR Safe, Inc. - Common Stock",NASDAQ
 SOCA,SOCA,Solarius Capital Acquisition Corp. - Class A Ordinary Share,NASDAQ
 SOFI,SOFI,"SoFi Technologies, Inc.  - Common Stock",NASDAQ
 SOGP,SOGP,Sound Group Inc. - American Depositary Shares,NASDAQ
@@ -3087,6 +3085,7 @@ TROW,TROW,"T. Rowe Price Group, Inc. - Common Stock",NASDAQ
 TRS,TRS,TriMas Corporation - Common Stock,NASDAQ
 TRSG,TRSG,Tungray Technologies Inc - Class A Ordinary Shares,NASDAQ
 TRST,TRST,TrustCo Bank Corp NY - Common Stock,NASDAQ
+TRT,TRT,Trio-Tech International - Common Stock,NASDAQ
 TRUG,TRUG,"TruGolf Holdings, Inc. - Class A Common Stock",NASDAQ
 TRUP,TRUP,"Trupanion, Inc. - Common Stock",NASDAQ
 TRVG,TRVG,trivago N.V. - American Depositary Shares,NASDAQ
@@ -3278,6 +3277,7 @@ WB,WB,Weibo Corporation - American Depositary Shares,NASDAQ
 WBD,WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",NASDAQ
 WBTN,WBTN,WEBTOON Entertainment Inc. - Common stock,NASDAQ
 WBUY,WBUY,WEBUY GLOBAL LTD. - Class A Ordinary Shares,NASDAQ
+WCCB,WCCB,West Coast Community Bancorp - Common Stock,NASDAQ
 WCT,WCT,Wellchange Holdings Company Limited - Class A Ordinary shares,NASDAQ
 WDAY,WDAY,"Workday, Inc. - Class A Common Stock",NASDAQ
 WDC,WDC,Western Digital Corporation - Common Stock,NASDAQ
@@ -3597,6 +3597,7 @@ AS,AS,"Amer Sports, Inc. Ordinary Shares",NYSE
 ASA,ASA,ASA  Gold and Precious Metals Limited,NYSE
 ASAN,ASAN,"Asana, Inc. Class A Common Stock",NYSE
 ASB,ASB,Associated Banc-Corp Common Stock,NYSE
+ASBH,ASBH,"American Savings Bank, N.A. Common Stock",NYSE
 ASC,ASC,Ardmore Shipping Corporation Common Stock,NYSE
 ASG,ASG,"Liberty All-Star Growth Fund, Inc.",NYSE
 ASGI,ASGI,abrdn Global Infrastructure Income Fund Common Shares of Beneficial Interest,NYSE
@@ -5641,7 +5642,6 @@ TRN,TRN,"Trinity Industries, Inc. Common Stock",NYSE
 TRNO,TRNO,Terreno Realty Corporation Common Stock,NYSE
 TROX,TROX,Tronox Holdings plc Ordinary Shares (UK),NYSE
 TRP,TRP,TC Energy Corporation Common Stock,NYSE
-TRT,TRT,Trio-Tech International Common Stock,AMEX
 TRTX,TRTX,"TPG RE Finance Trust, Inc. Common Stock",NYSE
 TRU,TRU,TransUnion Common Stock,NYSE
 TRV,TRV,"The Travelers Companies, Inc. Common Stock",NYSE
