@@ -203,7 +203,6 @@ ANNX,ANNX,"Annexon, Inc. - common stock",NASDAQ
 ANPA,ANPA,Rich Sparkle Holdings Limited - Ordinary Shares,NASDAQ
 ANTA,ANTA,Antalpha Platform Holding Company - Class A Ordinary Shares,NASDAQ
 ANTX,ANTX,"AN2 Therapeutics, Inc. - Common Stock",NASDAQ
-ANY,ANY,Sphere 3D Corp. - Common Shares,NASDAQ
 AOSL,AOSL,Alpha and Omega Semiconductor Limited - Common Shares,NASDAQ
 AOUT,AOUT,"American Outdoor Brands, Inc. - Common Stock",NASDAQ
 APA,APA,APA Corporation - Common Stock,NASDAQ
@@ -556,6 +555,7 @@ CASH,CASH,"Pathward Financial, Inc. - Common Stock",NASDAQ
 CASS,CASS,"Cass Information Systems, Inc - Common Stock",NASDAQ
 CAST,CAST,"FreeCast, Inc. - Class A common stock",NASDAQ
 CASY,CASY,"Caseys General Stores, Inc. - Common Stock",NASDAQ
+CATL,CATL,Catalyst Acquisition Corp. - Class A Ordinary Share,NASDAQ
 CATY,CATY,Cathay General Bancorp - Common Stock,NASDAQ
 CBAT,CBAT,CBAK Energy Technology Limited - Ordinary Shares,NASDAQ
 CBC,CBC,"Central Bancompany, Inc. - Class A Common Stock",NASDAQ
@@ -911,6 +911,7 @@ DRCT,DRCT,"Direct Digital Holdings, Inc. - Class A Common Stock",NASDAQ
 DRDB,DRDB,Roman DBDR Acquisition Corp. II - Ordinary shares,NASDAQ
 DRH,DRH,Diamondrock Hospitality Company - Common Stock,NASDAQ
 DRIO,DRIO,DarioHealth Corp. - Common Stock,NASDAQ
+DRK,DRK,DarkHorse Technologies Inc. - Common Shares,NASDAQ
 DRMA,DRMA,"Dermata Therapeutics, Inc. - Common Stock",NASDAQ
 DRS,DRS,"Leonardo DRS, Inc. - Common Stock",NASDAQ
 DRTS,DRTS,Alpha Tau Medical Ltd. - Ordinary Shares,NASDAQ
@@ -1687,7 +1688,7 @@ KELYB,KELYB,"Kelly Services, Inc. - Class B Common Stock",NASDAQ
 KEQU,KEQU,Kewaunee Scientific Corporation - Common Stock,NASDAQ
 KEYY,KEYY,Keystone Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 KFFB,KFFB,Kentucky First Federal Bancorp - Common Stock,NASDAQ
-KFII,KFII,K - Class A Ordinary shares,NASDAQ
+KFII,KFII,K&F Growth Acquisition Corp. II - Class A Ordinary shares,NASDAQ
 KG,KG,"Kestrel Group, Ltd. - Common Stock",NASDAQ
 KGEI,KGEI,Kolibri Global Energy Inc. - Common stock,NASDAQ
 KIDS,KIDS,OrthoPediatrics Corp. - Common Stock,NASDAQ
@@ -2035,6 +2036,7 @@ MSGY,MSGY,Masonglory Limited - Class A Ordinary Shares,NASDAQ
 MSLE,MSLE,Satellos Bioscience Inc. - Common Stock,NASDAQ
 MSS,MSS,Maison Solutions Inc. - Class A Common Stock,NASDAQ
 MSTR,MSTR,Strategy Inc - Class A Common Stock,NASDAQ
+MTAK,MTAK,Market Technology Acquisition Corp - Class A Ordinary Shares,NASDAQ
 MTC,MTC,"MMTec, Inc. - Common Shares",NASDAQ
 MTCH,MTCH,"Match Group, Inc. - Common Stock",NASDAQ
 MTEK,MTEK,Maris-Tech Ltd. - ordinary shares,NASDAQ
@@ -2628,7 +2630,6 @@ RIGL,RIGL,"Rigel Pharmaceuticals, Inc. - Common Stock",NASDAQ
 RILY,RILY,"BRC Group Holdings, Inc. - Common Stock",NASDAQ
 RIME,RIME,"Algorhythm Holdings, Inc. - Common Stock",NASDAQ
 RIOT,RIOT,"Riot Platforms, Inc. - Common Stock",NASDAQ
-RITR,RITR,Reitar Logtech Holdings Limited - Ordinary shares,NASDAQ
 RIVN,RIVN,"Rivian Automotive, Inc. - Class A Common Stock",NASDAQ
 RJET,RJET,Republic Airways Holdings Inc. - Common Stock,NASDAQ
 RKDA,RKDA,"Arcadia Biosciences, Inc. - Common Stock",NASDAQ
@@ -3031,6 +3032,7 @@ TITN,TITN,Titan Machinery Inc. - Common Stock,NASDAQ
 TJGC,TJGC,TJGC Group Limited - Class A Ordinary Shares,NASDAQ
 TKLF,TKLF,"Tokyo Lifestyle Co., Ltd. - American Depositary Shares",NASDAQ
 TKNO,TKNO,"Alpha Teknova, Inc. - Common Stock",NASDAQ
+TLAC,TLAC,Three Lions Acquisition Corp. - Ordinary Shares,NASDAQ
 TLF,TLF,"Tandy Leather Factory, Inc. - common stock",NASDAQ
 TLIH,TLIH,Ten-League International Holdings Limited - Ordinary Shares,NASDAQ
 TLN,TLN,Talen Energy Corporation - Common Stock,NASDAQ
