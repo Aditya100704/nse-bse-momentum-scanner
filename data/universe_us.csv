@@ -1036,6 +1036,7 @@ ESQ,ESQ,"Esquire Financial Holdings, Inc. - Common Stock",NASDAQ
 ESTA,ESTA,Establishment Labs Holdings Inc. - Common Shares,NASDAQ
 ETON,ETON,"Eton Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ETOR,ETOR,eToro Group Ltd. - Class A Common Shares,NASDAQ
+ETRA,ETRA,"Electra Therapeutics, Inc. - Common stock",NASDAQ
 ETS,ETS,Elite Express Holding Inc. - Class A Common Stock,NASDAQ
 EU,EU,enCore Energy Corp. - Common Stock,NASDAQ
 EUDA,EUDA,Euda Health Holdings Limited - Ordinary Shares,NASDAQ
@@ -1217,8 +1218,8 @@ FVCB,FVCB,"FVCBankcorp, Inc. - Common Stock",NASDAQ
 FVN,FVN,Future Vision II Acquisition Corporation - Ordinary Shares,NASDAQ
 FWAC,FWAC,Futurewave Acquisition Corporation - Ordinary Shares,NASDAQ
 FWDI,FWDI,"Forward Industries, Inc. - Common Stock",NASDAQ
-FWONA,FWONA,Liberty Media Corporation - Series A Liberty Formula One Common Stock,NASDAQ
-FWONK,FWONK,Liberty Media Corporation - Series C Liberty Formula One Common Stock,NASDAQ
+FWONA,FWONA,Liberty Media Corporation - Series A Common Stock,NASDAQ
+FWONK,FWONK,Liberty Media Corporation - Series C Common Stock,NASDAQ
 FWRD,FWRD,Forward Air Corporation - Common Stock,NASDAQ
 FWRG,FWRG,"First Watch Restaurant Group, Inc. - Common Stock",NASDAQ
 FXAC,FXAC,FortuneX Acquisition Corporation - Ordinary shares,NASDAQ
@@ -2250,6 +2251,7 @@ OFLX,OFLX,"Omega Flex, Inc. - Common Stock",NASDAQ
 OFS,OFS,OFS Capital Corporation - Closed End Fund,NASDAQ
 OGI,OGI,Organigram Global Inc. - Common Shares,NASDAQ
 OHAC,OHAC,Oceanhawk Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+OIG,OIG,Orion180 Insurance Group Inc. - Class A Common Stock,NASDAQ
 OIM,OIM,OneIM Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 OIO,OIO,OIO Group - Ordinary Shares,NASDAQ
 OKTA,OKTA,"Okta, Inc. - Class A Common Stock",NASDAQ
@@ -2859,7 +2861,6 @@ SNTG,SNTG,Sentage Holdings Inc. - Class A Ordinary Shares,NASDAQ
 SNTI,SNTI,"Senti Biosciences Holdings, Inc. - Common Stock",NASDAQ
 SNWV,SNWV,"SANUWAVE Health, Inc. - Common Stock",NASDAQ
 SNY,SNY,Sanofi - American Depositary Shares,NASDAQ
-SNYR,SNYR,Synergy CHC Corp. - Common Stock,NASDAQ
 SOCA,SOCA,Solarius Capital Acquisition Corp. - Class A Ordinary Share,NASDAQ
 SOFI,SOFI,"SoFi Technologies, Inc.  - Common Stock",NASDAQ
 SOGP,SOGP,Sound Group Inc. - American Depositary Shares,NASDAQ
@@ -3359,6 +3360,7 @@ XFOR,XFOR,"X4 Pharmaceuticals, Inc. - Common Stock",NASDAQ
 XGN,XGN,Exagen Inc. - Common Stock,NASDAQ
 XHG,XHG,XChange TEC.INC - American Depositary Shares,NASDAQ
 XHLD,XHLD,"TEN Holdings, Inc. - Common Stock",NASDAQ
+XIII,XIII,Churchill Capital Corp XIII - Class A Ordinary Shares,NASDAQ
 XLAB,XLAB,Exascale Labs Holdings Inc. - Class A Common Stock,NASDAQ
 XLO,XLO,"Xilio Therapeutics, Inc. - Common Stock",NASDAQ
 XMAX,XMAX,"XMAX, Inc. - Common Stock",NASDAQ
@@ -4482,7 +4484,6 @@ HBM,HBM,Hudbay Minerals Inc. Ordinary Shares (Canada),NYSE
 HCA,HCA,"HCA Healthcare, Inc. Common Stock",NYSE
 HCC,HCC,"Warrior Met Coal, Inc. Common Stock",NYSE
 HCI,HCI,"HCI Group, Inc. Common Stock",NYSE
-HCWC,HCWC,Healthy Choice Wellness Corp. Class A Common Stock,AMEX
 HD,HD,"Home Depot, Inc. (The) Common Stock",NYSE
 HDB,HDB,HDFC Bank Limited Common Stock,NYSE
 HE,HE,"Hawaiian Electric Industries, Inc. Common Stock",NYSE
@@ -4520,6 +4521,7 @@ HNI,HNI,HNI Corporation Common Stock,NYSE
 HOG,HOG,"Harley-Davidson, Inc. Common Stock",NYSE
 HOMB,HOMB,"Home BancShares, Inc. Common Stock",NYSE
 HOS,HOS,"Hornbeck Offshore Services, Inc. Common Stock",NYSE
+HOST,HOST,Host Digital Inc. Class A Common Stock,AMEX
 HOV,HOV,"Hovnanian Enterprises, Inc. Class A Common Stock",NYSE
 HP,HP,"Helmerich & Payne, Inc. Common Stock",NYSE
 HPE,HPE,Hewlett Packard Enterprise Company Common Stock,NYSE
