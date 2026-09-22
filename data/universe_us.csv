@@ -478,7 +478,6 @@ BRKR,BRKR,Bruker Corporation - Common Stock,NASDAQ
 BRLS,BRLS,Borealis Foods Inc. - Class A Common Shares,NASDAQ
 BRLT,BRLT,"Brilliant Earth Group, Inc. - Class A Common Stock",NASDAQ
 BRNX,BRNX,BrenX Ltd. - Ordinary Shares,NASDAQ
-BRR,BRR,"ProCap Financial, Inc. - Common Stock",NASDAQ
 BRTM,BRTM,B&R Technology Merger Corp. - Class A Ordinary Shares,NASDAQ
 BRTX,BRTX,"BioRestorative Therapies, Inc. - Common Stock",NASDAQ
 BRUN,BRUN,Boost Run Inc. - Class A Common Stock,NASDAQ
@@ -1034,6 +1033,7 @@ ESLT,ESLT,Elbit Systems Ltd. - Ordinary Shares,NASDAQ
 ESOA,ESOA,Energy Services of America Corporation - Common Stock,NASDAQ
 ESQ,ESQ,"Esquire Financial Holdings, Inc. - Common Stock",NASDAQ
 ESTA,ESTA,Establishment Labs Holdings Inc. - Common Shares,NASDAQ
+ESYN,ESYN,EnerSyn Global Inc. - Common Stock,NASDAQ
 ETON,ETON,"Eton Pharmaceuticals, Inc. - Common Stock",NASDAQ
 ETOR,ETOR,eToro Group Ltd. - Class A Common Shares,NASDAQ
 ETRA,ETRA,"Electra Therapeutics, Inc. - Common stock",NASDAQ
@@ -1468,7 +1468,6 @@ HVII,HVII,Hennessy Capital Investment Corp. VII - Ordinary Shares,NASDAQ
 HVMC,HVMC,Highview Merger Corp. - Class A Ordinary Share,NASDAQ
 HWBK,HWBK,"Hawthorn Bancshares, Inc. - Common Stock",NASDAQ
 HWC,HWC,Hancock Whitney Corporation - Common Stock,NASDAQ
-HWH,HWH,HWH International Inc. - Common Stock,NASDAQ
 HWKN,HWKN,"Hawkins, Inc. - Common Stock",NASDAQ
 HXHX,HXHX,Haoxin Holdings Limited - Class A Ordinary Shares,NASDAQ
 HYFM,HYFM,"Hydrofarm Holdings Group, Inc. - Common Stock",NASDAQ
@@ -2121,7 +2120,6 @@ NFE,NFE,New Fortress Energy Inc. - Class A Common Stock,NASDAQ
 NFLX,NFLX,"Netflix, Inc. - Common Stock",NASDAQ
 NGEN,NGEN,NervGen Pharma Corp. - Common stock,NASDAQ
 NGNE,NGNE,Neurogene Inc. - Common Stock,NASDAQ
-NHIC,NHIC,NewHold Investment Corp III - Class A Ordinary shares,NASDAQ
 NHIV,NHIV,NewHold Investment Corp IV - Class A Ordinary Shares,NASDAQ
 NHP,NHP,"National Healthcare Properties, Inc. - Class A Common Stock",NASDAQ
 NHTC,NHTC,Natural Health Trends Corp. - Common Stock,NASDAQ
@@ -2201,6 +2199,7 @@ NVNO,NVNO,enVVeno Medical Corporation - Common Stock,NASDAQ
 NVTS,NVTS,Navitas Semiconductor Corporation - Common Stock,NASDAQ
 NVX,NVX,NOVONIX Limited - American Depository Shares,NASDAQ
 NWBI,NWBI,"Northwest Bancshares, Inc. - Common Stock",NASDAQ
+NWCL,NWCL,newcleo plc - Ordinary Shares,NASDAQ
 NWE,NWE,"NorthWestern Energy Group, Inc.  - Common Stock",NASDAQ
 NWFL,NWFL,Norwood Financial Corp. - Common Stock,NASDAQ
 NWGL,NWGL,CL Workshop Group Limited - American Depositary Shares,NASDAQ
@@ -2950,6 +2949,7 @@ SVAQ,SVAQ,Silicon Valley Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 SVC,SVC,Service Properties Trust - Common Shares of Beneficial Interest,NASDAQ
 SVCC,SVCC,Stellar V Capital Corp. - Class A Ordinary Shares,NASDAQ
 SVCO,SVCO,"Silvaco Group, Inc. - Common Stock",NASDAQ
+SVIA,SVIA,"Silvia, Inc. - Common Stock",NASDAQ
 SVIV,SVIV,Spring Valley Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
 SVRA,SVRA,"Savara, Inc. - Common Stock",NASDAQ
 SVRE,SVRE,SaverOne 2014 Ltd. - American Depositary Shares,NASDAQ
