@@ -898,7 +898,6 @@ DNUT,DNUT,"Krispy Kreme, Inc. - Common Stock",NASDAQ
 DOCU,DOCU,"DocuSign, Inc. - Common Stock",NASDAQ
 DOGZ,DOGZ,Dogness (International) Corporation - Class A Common Stock,NASDAQ
 DOMH,DOMH,Dominari Holdings Inc. - Common Stock,NASDAQ
-DOMO,DOMO,"Domo, Inc. - Class B Common Stock",NASDAQ
 DOO,DOO,BRP Inc. - Common Subordinate Voting Shares,NASDAQ
 DORM,DORM,"Dorman Products, Inc. - Common Stock",NASDAQ
 DOX,DOX,Amdocs Limited - Ordinary Shares,NASDAQ
@@ -1129,6 +1128,7 @@ FISV,FISV,"Fiserv, Inc. - Common Stock",NASDAQ
 FIVE,FIVE,"Five Below, Inc. - Common Stock",NASDAQ
 FIVN,FIVN,"Five9, Inc. - Common Stock",NASDAQ
 FIZZ,FIZZ,National Beverage Corp. - Common Stock,NASDAQ
+FJDI,FJDI,ARC Group Securities Acquisition I - Class A Ordinary Shares,NASDAQ
 FKWL,FKWL,Franklin Wireless Corp. - common stock,NASDAQ
 FLD,FLD,"Fold Holdings, Inc. - Class A Common Stock",NASDAQ
 FLEX,FLEX,Flex Ltd. - Ordinary Shares,NASDAQ
@@ -1456,6 +1456,7 @@ HTOO,HTOO,Fusion Fuel Green PLC - Ordinary Shares,NASDAQ
 HTZ,HTZ,"Hertz Global Holdings, Inc - Common Stock",NASDAQ
 HUBC,HUBC,Hub Cyber Security Ltd. - Ordinary Shares,NASDAQ
 HUBG,HUBG,"Hub Group, Inc. - Class A Common Stock",NASDAQ
+HUCK,HUCK,"Huckleberry.ai, Inc. - Class B Common Stock",NASDAQ
 HUDI,HUDI,"Huadi International Group Co., Ltd. - Ordinary Shares",NASDAQ
 HUHU,HUHU,HUHUTECH International Group Inc. - Ordinary Shares,NASDAQ
 HUIZ,HUIZ,Huize Holding Limited - American Depositary Shares,NASDAQ
@@ -1464,7 +1465,6 @@ HURA,HURA,"TuHURA Biosciences, Inc. - Common Stock",NASDAQ
 HURC,HURC,"Hurco Companies, Inc. - Common Stock",NASDAQ
 HURN,HURN,Huron Consulting Group Inc. - Common Stock,NASDAQ
 HUT,HUT,Hut 8 Corp. - Common Stock,NASDAQ
-HVII,HVII,Hennessy Capital Investment Corp. VII - Ordinary Shares,NASDAQ
 HVMC,HVMC,Highview Merger Corp. - Class A Ordinary Share,NASDAQ
 HWBK,HWBK,"Hawthorn Bancshares, Inc. - Common Stock",NASDAQ
 HWC,HWC,Hancock Whitney Corporation - Common Stock,NASDAQ
@@ -2277,6 +2277,7 @@ ONCO,ONCO,"Onconetix, Inc.  - Common Stock",NASDAQ
 ONCY,ONCY,Oncolytics Biotech Inc. - Common Stock,NASDAQ
 ONDS,ONDS,Ondas Inc - Common Stock,NASDAQ
 ONEG,ONEG,OneConstruction Group Limited - Ordinary Shares,NASDAQ
+ONEN,ONEN,ONE Nuclear Energy Inc. - Common Stock,NASDAQ
 ONEW,ONEW,OneWater Marine Inc. - Class A Common Stock,NASDAQ
 ONFO,ONFO,Onfolio Holdings Inc. - Common Stock,NASDAQ
 ONMD,ONMD,OneMedNet Corp - Class A Common Stock,NASDAQ
@@ -2985,7 +2986,6 @@ TBBK,TBBK,"The Bancorp, Inc. - Common Stock",NASDAQ
 TBCH,TBCH,Turtle Beach Corporation - Common Stock,NASDAQ
 TBLA,TBLA,Taboola.com Ltd. - Ordinary Shares,NASDAQ
 TBLD,TBLD,Thornburg Income Builder Opportunities Trust - Closed End Fund,NASDAQ
-TBPH,TBPH,"Theravance Biopharma, Inc. - Ordinary Shares",NASDAQ
 TC,TC,Token Cat Limited - American Depositary Shares,NASDAQ
 TCBI,TCBI,"Texas Capital Bancshares, Inc. - Common Stock",NASDAQ
 TCBK,TCBK,TriCo Bancshares - Common Stock,NASDAQ
