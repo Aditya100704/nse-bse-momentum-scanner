@@ -1111,10 +1111,10 @@ FFBC,FFBC,First Financial Bancorp. - Common Stock,NASDAQ
 FFIN,FFIN,"First Financial Bankshares, Inc. - Common Stock",NASDAQ
 FFIV,FFIV,"F5, Inc. - Common Stock",NASDAQ
 FGBI,FGBI,"First Guaranty Bancshares, Inc. - Common Stock",NASDAQ
+FGC,FGC,FG Communities Holdings Inc. - Common Stock,NASDAQ
 FGI,FGI,FGI Industries Ltd. - Ordinary Shares,NASDAQ
 FGII,FGII,FG Imperii Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 FGL,FGL,Founder Group Limited - Class A Ordinary Shares,NASDAQ
-FGNX,FGNX,FG Nexus Inc. - Common Stock,NASDAQ
 FHB,FHB,"First Hawaiian, Inc. - Common Stock",NASDAQ
 FHTX,FHTX,Foghorn Therapeutics Inc. - Common Stock,NASDAQ
 FIBK,FIBK,"First Interstate BancSystem, Inc. - Common Stock",NASDAQ
@@ -1313,6 +1313,7 @@ GOOG,GOOG,Alphabet Inc. - Class C Capital Stock,NASDAQ
 GOOGL,GOOGL,Alphabet Inc. - Class A Common Stock,NASDAQ
 GOSS,GOSS,"Gossamer Bio, Inc. - Common Stock",NASDAQ
 GOVX,GOVX,"GeoVax Labs, Inc. - Common Stock",NASDAQ
+GOW,GOW,GOWell Energy Technology - Ordinary shares,NASDAQ
 GP,GP,GreenPower Motor Company Inc. - Common Shares,NASDAQ
 GPAC,GPAC,General Purpose Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 GPAT,GPAT,GP-Act III Acquisition Corp. - Class A Ordinary Share,NASDAQ
@@ -1586,7 +1587,6 @@ IOTR,IOTR,iOThree Limited - Ordinary Shares,NASDAQ
 IOVA,IOVA,"Iovance Biotherapeutics, Inc. - Common Stock",NASDAQ
 IPAR,IPAR,"Interparfums, Inc. - Common Stock",NASDAQ
 IPDN,IPDN,"Professional Diversity Network, Inc. - Common Stock",NASDAQ
-IPEX,IPEX,Inflection Point Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 IPFX,IPFX,Inflection Point Acquisition Corp. VI - Class A Ordinary Shares,NASDAQ
 IPGP,IPGP,IPG Photonics Corporation - Common Stock,NASDAQ
 IPHA,IPHA,Innate Pharma S.A. - American Depositary Shares,NASDAQ
@@ -3023,6 +3023,7 @@ THEO,THEO,BOA Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 THFF,THFF,First Financial Corporation  - Common Stock,NASDAQ
 THH,THH,TryHard Holdings Limited - Ordinary Shares,NASDAQ
 THRM,THRM,Gentherm Inc - Common Stock,NASDAQ
+THRMV,THRMV,Gentherm Inc - Gentherm Inc Common Stock When-Issued,NASDAQ
 THRY,THRY,"Thryv Holdings, Inc. - Common Stock",NASDAQ
 TIGO,TIGO,Millicom International Cellular S.A. - Common Stock,NASDAQ
 TIGR,TIGR,UP Fintech Holding Limited - American Depositary Shares representing fifteen Class A Ordinary Shares,NASDAQ
@@ -5395,7 +5396,6 @@ SBR,SBR,Sabine Royalty Trust Common Stock,NYSE
 SBS,SBS,Companhia de saneamento Basico Do Estado De Sao Paulo - Sabesp American Depositary Shares (Each repstg 250 Common Shares),NYSE
 SBSI,SBSI,"Southside Bancshares, Inc. Common Stock",NYSE
 SBSW,SBSW,D/B/A Sibanye-Stillwater Limited ADS,NYSE
-SBXD,SBXD,SilverBox Corp IV Class A Ordinary Shares,NYSE
 SBXE,SBXE,SilverBox Corp V Class A Ordinary Shares,NYSE
 SCCO,SCCO,Southern Copper Corporation Common Stock,NYSE
 SCD,SCD,LMP Capital and Income Fund Inc. Common Stock,NYSE
