@@ -26,6 +26,7 @@ ACAA,ACAA,Averin Capital Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 ACAD,ACAD,ACADIA Pharmaceuticals Inc. - Common Stock,NASDAQ
 ACB,ACB,Aurora Cannabis Inc. - Common Shares,NASDAQ
 ACCL,ACCL,Acco Group Holdings Limited - Class A Ordinary Shares,NASDAQ
+ACCV,ACCV,Accelevation Holdings Corp. - Class A ordinary shares,NASDAQ
 ACDC,ACDC,ProFrac Holding Corp. - Class A Common Stock,NASDAQ
 ACET,ACET,"Adicet Bio, Inc. - Common Stock",NASDAQ
 ACFN,ACFN,"Acorn Energy, Inc. - Common Stock",NASDAQ
@@ -121,7 +122,6 @@ AIRO,AIRO,"AIRO Group Holdings, Inc. - Common Stock",NASDAQ
 AIRS,AIRS,"AirSculpt Technologies, Inc. - Common Stock",NASDAQ
 AIRT,AIRT,"Air T, Inc. - Common Stock",NASDAQ
 AISP,AISP,"Airship AI Holdings, Inc - Class A Common Stock",NASDAQ
-AIXC,AIXC,"AIxCrypto Holdings, Inc. - Common Stock",NASDAQ
 AIXI,AIXI,XIAO-I Corporation - American Depositary Shares,NASDAQ
 AKAM,AKAM,"Akamai Technologies, Inc. - Common Stock",NASDAQ
 AKAN,AKAN,Akanda Corp. - Common Shares,NASDAQ
@@ -447,7 +447,7 @@ BMRA,BMRA,"Biomerica, Inc. - Common Stock",NASDAQ
 BMRC,BMRC,Bank of Marin Bancorp - Common Stock,NASDAQ
 BMRN,BMRN,BioMarin Pharmaceutical Inc. - Common Stock,NASDAQ
 BNAI,BNAI,Brand Engagement Network Inc. - Common Stock,NASDAQ
-BNC,BNC,CEA Industries Inc. - Common Stock,NASDAQ
+BNC,BNC,BNB Standard Corporation - Common Stock,NASDAQ
 BNGO,BNGO,"Bionano Genomics, Inc. - Common Stock",NASDAQ
 BNKK,BNKK,"Bonk, Inc. - Common Stock",NASDAQ
 BNR,BNR,Burning Rock Biotech Limited - American Depositary Shares,NASDAQ
@@ -1110,6 +1110,7 @@ FFAI,FFAI,Faraday Future Intelligent Electric Inc. - Class A Common Stock,NASDAQ
 FFBC,FFBC,First Financial Bancorp. - Common Stock,NASDAQ
 FFIN,FFIN,"First Financial Bankshares, Inc. - Common Stock",NASDAQ
 FFIV,FFIV,"F5, Inc. - Common Stock",NASDAQ
+FFR,FFR,FF EAI Robotics Ecosystem Inc. - Common Stock,NASDAQ
 FGBI,FGBI,"First Guaranty Bancshares, Inc. - Common Stock",NASDAQ
 FGC,FGC,FG Communities Holdings Inc. - Common Stock,NASDAQ
 FGI,FGI,FGI Industries Ltd. - Ordinary Shares,NASDAQ
@@ -3559,7 +3560,6 @@ AMTB,AMTB,Amerant Bancorp Inc. Class A Common Stock,NYSE
 AMTD,AMTD,"AMTD IDEA Group American Depositary Shares, each representing six (6) Class A Ordinary Shares",NYSE
 AMTM,AMTM,"Amentum Holdings, Inc. Common Stock",NYSE
 AMWL,AMWL,American Well Corporation Class A Common Stock,NYSE
-AMZE,AMZE,"Amaze Holdings, Inc. Common Stock",AMEX
 AN,AN,"AutoNation, Inc. Common Stock",NYSE
 ANDG,ANDG,Andersen Group Inc. Class A Common Stock,NYSE
 ANET,ANET,"Arista Networks, Inc. Common Stock",NYSE
@@ -4049,7 +4049,6 @@ DB,DB,Deutsche Bank AG Common Stock,NYSE
 DBD,DBD,Diebold Nixdorf Incorporated Common stock,NYSE
 DBI,DBI,Designer Brands Inc. Class A Common Stock,NYSE
 DBL,DBL,DoubleLine Opportunistic Credit Fund Common Shares of Beneficial Interest,NYSE
-DBRG,DBRG,"DigitalBridge Group, Inc.",NYSE
 DC,DC,Dakota Gold Corp. Common Stock,AMEX
 DCH,DCH,Dauch Corporation Common Stock,NYSE
 DCI,DCI,"Donaldson Company, Inc. Common Stock",NYSE
@@ -4381,7 +4380,6 @@ GEF-B,GEF-B,"Greif, Inc. Corporation Class B Common Stock",NYSE
 GENC,GENC,"Gencor Industries, Inc. Common Stock",AMEX
 GENI,GENI,Genius Sports Limited Ordinary Shares,NYSE
 GEO,GEO,Geo Group Inc (The) REIT,NYSE
-GETY,GETY,"Getty Images Holdings, Inc. Class A Common Stock",NYSE
 GEV,GEV,GE Vernova Inc. Common Stock,NYSE
 GF,GF,"New Germany Fund, Inc. (The) Common Stock",NYSE
 GFF,GFF,Griffon Corporation Common Stock,NYSE
@@ -4631,6 +4629,7 @@ ITP,ITP,"IT Tech Packaging, Inc. Common Stock",AMEX
 ITRG,ITRG,Integra Resources Corp. Common Shares,AMEX
 ITT,ITT,ITT Inc. Common Stock,NYSE
 ITW,ITW,Illinois Tool Works Inc. Common Stock,NYSE
+IVAI,IVAI,Ives Ultra AI Opportunities Inc. Common Stock,NYSE
 IVR,IVR,INVESCO MORTGAGE CAPITAL INC Common Stock,NYSE
 IVT,IVT,InvenTrust Properties Corp. Common Stock,NYSE
 IVZ,IVZ,Invesco Ltd Common Stock,NYSE
