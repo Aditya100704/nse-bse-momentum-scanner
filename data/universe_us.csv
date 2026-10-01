@@ -657,6 +657,7 @@ CHRW,CHRW,"C.H. Robinson Worldwide, Inc. - Common Stock",NASDAQ
 CHSN,CHSN,Chanson International Holding - Class A Ordinary Shares,NASDAQ
 CHTR,CHTR,"Charter Communications, Inc. - Class A Common Stock",NASDAQ
 CHW,CHW,Calamos Global Dynamic Income Fund - Closed End Fund,NASDAQ
+CHWM,CHWM,Chilwa Minerals Limited - American Depository Shares,NASDAQ
 CHY,CHY,Calamos Convertible and High Income Fund - Closed End Fund,NASDAQ
 CHYM,CHYM,"Chime Financial, Inc. - Class A Common Stock",NASDAQ
 CIFR,CIFR,Cipher Digital Inc. - Common Stock,NASDAQ
@@ -1394,7 +1395,7 @@ HDL,HDL,SUPER HI INTERNATIONAL HOLDING LTD. - American Depositary Shares,NASDAQ
 HDRN,HDRN,"Hadron Energy, Inc. - Common Stock",NASDAQ
 HDSN,HDSN,"Hudson Technologies, Inc. - Common Stock",NASDAQ
 HELE,HELE,Helen of Troy Limited - Common Stock,NASDAQ
-HELP,HELP,Cybin Inc. - Common Stock,NASDAQ
+HELP,HELP,Helus Pharma Inc.  - Common Stock,NASDAQ
 HEPS,HEPS,D-Market Electronic Services & Trading - American Depositary Shares,NASDAQ
 HERE,HERE,Here Group Limited - American Depositary Shares,NASDAQ
 HERZ,HERZ,"Herzfeld Credit Income Fund, Inc.  - Closed End Fund",NASDAQ
@@ -1985,6 +1986,7 @@ MLKN,MLKN,"MillerKnoll, Inc. - Common Stock",NASDAQ
 MLTX,MLTX,MoonLake Immunotherapeutics - Class A Ordinary Shares,NASDAQ
 MLYS,MLYS,"Mineralys Therapeutics, Inc. - Common Stock",NASDAQ
 MMED,MMED,"MiniMed Group, Inc. - Common Stock",NASDAQ
+MMEDV,MMEDV,"MiniMed Group, Inc. - Common Stock When Issued",NASDAQ
 MMSI,MMSI,"Merit Medical Systems, Inc. - Common Stock",NASDAQ
 MMTX,MMTX,Miluna Acquisition Corp - Class A Ordinary Shares,NASDAQ
 MMYT,MMYT,MakeMyTrip Limited - Ordinary Shares,NASDAQ
@@ -2290,6 +2292,7 @@ OPCH,OPCH,"Option Care Health, Inc. - Common Stock",NASDAQ
 OPEN,OPEN,Opendoor Technologies Inc  - Common Stock,NASDAQ
 OPI,OPI,Office Properties Income Trust - Common shares of beneficial interest,NASDAQ
 OPK,OPK,"Opko Health, Inc. - Common Stock",NASDAQ
+OPNW,OPNW,"OpenWorld, Inc. - Common Stock",NASDAQ
 OPRA,OPRA,Opera Limited - American Depositary Shares,NASDAQ
 OPRT,OPRT,Oportun Financial Corporation - common stock,NASDAQ
 OPRX,OPRX,OptimizeRx Corporation - Common Stock,NASDAQ
@@ -3246,7 +3249,6 @@ VRCA,VRCA,Verrica Pharmaceuticals Inc. - Common Stock,NASDAQ
 VRDN,VRDN,"Viridian Therapeutics, Inc.  - Common Stock",NASDAQ
 VREX,VREX,Varex Imaging Corporation - Common Stock,NASDAQ
 VRM,VRM,"Vroom, Inc. - Common Stock",NASDAQ
-VRME,VRME,"VerifyMe, Inc. - Common Stock",NASDAQ
 VRNS,VRNS,"Varonis Systems, Inc. - Common Stock",NASDAQ
 VRRM,VRRM,Verra Mobility Corporation - Class A Common Stock,NASDAQ
 VRSK,VRSK,"Verisk Analytics, Inc. - Common Stock",NASDAQ
@@ -5791,6 +5793,7 @@ VTS,VTS,"Vitesse Energy, Inc. Common Stock",NYSE
 VVR,VVR,Invesco Senior Income Trust Common Stock (DE),NYSE
 VVV,VVV,Valvoline Inc. Common Stock,NYSE
 VVX,VVX,"V2X, Inc. Common Stock",NYSE
+VYLR,VYLR,Vylor Inc. Common Stock,NYSE
 VYX,VYX,NCR Voyix Corporation Common Stock,NYSE
 VZ,VZ,Verizon Communications Inc. Common Stock,NYSE
 VZLA,VZLA,Vizsla Silver Corp. Common Shares,AMEX
