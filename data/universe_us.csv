@@ -732,7 +732,6 @@ COGT,COGT,"Cogent Biosciences, Inc. - Common Stock",NASDAQ
 COHU,COHU,"Cohu, Inc. - Common Stock",NASDAQ
 COIN,COIN,"Coinbase Global, Inc. - Class A Common Stock",NASDAQ
 COKE,COKE,"Coca-Cola Consolidated, Inc. - Common Stock",NASDAQ
-COLA,COLA,Columbus Acquisition Corp - Ordinary Shares,NASDAQ
 COLB,COLB,"Columbia Banking System, Inc. - Common Stock",NASDAQ
 COLL,COLL,"Collegium Pharmaceutical, Inc. - Common Stock",NASDAQ
 COLM,COLM,Columbia Sportswear Company - Common Stock,NASDAQ
@@ -1190,7 +1189,6 @@ FRTT,FRTT,Fort Technology Inc. - Common Shares,NASDAQ
 FRVO,FRVO,Fervo Energy Company - Class A common stock,NASDAQ
 FSBC,FSBC,Five Star Bancorp - Common Stock,NASDAQ
 FSBW,FSBW,"FS Bancorp, Inc. - Common Stock",NASDAQ
-FSEA,FSEA,"First Seacoast Bancorp, Inc. - Common Stock",NASDAQ
 FSHP,FSHP,Flag Ship Acquisition Corp. - Ordinary Shares,NASDAQ
 FSLR,FSLR,"First Solar, Inc. - Common Stock",NASDAQ
 FSLY,FSLY,"Fastly, Inc. - Class A Common Stock",NASDAQ
@@ -2169,7 +2167,6 @@ NSIT,NSIT,"Insight Enterprises, Inc. - Common Stock",NASDAQ
 NSLR,NSLR,Neostellar Capital Corp. - Closed End Fund,NASDAQ
 NSPR,NSPR,InspireMD Inc. - Common Stock,NASDAQ
 NSSC,NSSC,"NAPCO Security Technologies, Inc. - Common Stock",NASDAQ
-NSTS,NSTS,"NSTS Bancorp, Inc. - Common Stock",NASDAQ
 NSYS,NSYS,Nortech Systems Incorporated - Common Stock,NASDAQ
 NTAP,NTAP,"NetApp, Inc. - Common Stock",NASDAQ
 NTCL,NTCL,NETCLASS TECHNOLOGY INC - Class A Ordinary Shares,NASDAQ
@@ -2518,7 +2515,7 @@ PTRN,PTRN,Pattern Group Inc. - Series A Common Stock,NASDAQ
 PUBM,PUBM,"PubMatic, Inc. - Class A Common Stock",NASDAQ
 PULM,PULM,"Pulmatrix, Inc. - Common Stock",NASDAQ
 PURR,PURR,Hyperliquid Strategies Inc - Common Stock,NASDAQ
-PUSA,PUSA,Aureus Greenway Holdings Inc. - Common Stock,NASDAQ
+PUSA,PUSA,Powerus Corporation - Common Stock,NASDAQ
 PVLA,PVLA,"Palvella Therapeutics, Inc. - Common Stock",NASDAQ
 PWCM,PWCM,"PowerCompute, Inc. - Common Stock",NASDAQ
 PWP,PWP,Perella Weinberg Partners - Class A Common Stock,NASDAQ
@@ -2715,6 +2712,7 @@ SAIA,SAIA,"Saia, Inc. - Common Stock",NASDAQ
 SAIC,SAIC,Science Applications International Corporation - Common Stock,NASDAQ
 SAIH,SAIH,SAIHEAT Limited - Class A Ordinary Shares,NASDAQ
 SAIL,SAIL,"SailPoint, Inc. - Common Stock",NASDAQ
+SAIQ,SAIQ,WISeSat.Space Holdings Corp. - Ordinary Shares,NASDAQ
 SAMG,SAMG,Silvercrest Asset Management Group Inc. - Common Stock,NASDAQ
 SANA,SANA,"Sana Biotechnology, Inc. - Common Stock",NASDAQ
 SANG,SANG,Sangoma Technologies Corporation - Common Shares,NASDAQ
@@ -3028,7 +3026,6 @@ THEO,THEO,BOA Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 THFF,THFF,First Financial Corporation  - Common Stock,NASDAQ
 THH,THH,TryHard Holdings Limited - Ordinary Shares,NASDAQ
 THRM,THRM,Gentherm Inc - Common Stock,NASDAQ
-THRMV,THRMV,Gentherm Inc - Gentherm Inc Common Stock When-Issued,NASDAQ
 THRY,THRY,"Thryv Holdings, Inc. - Common Stock",NASDAQ
 TIGO,TIGO,Millicom International Cellular S.A. - Common Stock,NASDAQ
 TIGR,TIGR,UP Fintech Holding Limited - American Depositary Shares representing fifteen Class A Ordinary Shares,NASDAQ
@@ -5044,6 +5041,7 @@ NRXS,NRXS,"Neuraxis, Inc. Common Stock",AMEX
 NSC,NSC,Norfolk Southern Corporation Common Stock,NYSE
 NSP,NSP,"Insperity, Inc. Common Stock",NYSE
 NSRX,NSRX,Nasus Pharma Ltd. Ordinary Shares,AMEX
+NSTR,NSTR,"NorthStar Earth & Space Enterprises, Inc. Common Shares",AMEX
 NTB,NTB,Bank of N.T. Butterfield & Son Limited (The) Voting Ordinary Shares,NYSE
 NTIP,NTIP,"Network-1 Technologies, Inc. Common Stock",AMEX
 NTR,NTR,Nutrien Ltd. Common Shares,NYSE
@@ -5730,7 +5728,6 @@ UVV,UVV,Universal Corporation Common Stock,NYSE
 UWMC,UWMC,UWM Holdings Corporation Class A Common Stock,NYSE
 V,V,Visa Inc.,NYSE
 VAC,VAC,Marriott Vacations Worldwide Corporation Common Stock,NYSE
-VACI,VACI,Viking Acquisition Corp. I Class A Ordinary Shares,NYSE
 VAL,VAL,Valaris Limited Common Shares,NYSE
 VALE,VALE,VALE S.A.  American Depositary Shares Each Representing one common share,NYSE
 VATE,VATE,INNOVATE Corp. Common Stock,NYSE
