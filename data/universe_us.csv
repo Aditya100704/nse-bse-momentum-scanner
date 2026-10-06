@@ -906,7 +906,6 @@ DOYU,DOYU,DouYu International Holdings Limited - American Depositary Shares,NASD
 DPRO,DPRO,Draganfly Inc. - Common Shares,NASDAQ
 DPU,DPU,Top KingWin Ltd - Class A Ordinary Shares,NASDAQ
 DPZ,DPZ,Domino's Pizza Inc - Common Stock,NASDAQ
-DRCT,DRCT,"Direct Digital Holdings, Inc. - Class A Common Stock",NASDAQ
 DRDB,DRDB,Roman DBDR Acquisition Corp. II - Ordinary shares,NASDAQ
 DRH,DRH,Diamondrock Hospitality Company - Common Stock,NASDAQ
 DRIO,DRIO,DarioHealth Corp. - Common Stock,NASDAQ
@@ -1590,6 +1589,7 @@ IPDN,IPDN,"Professional Diversity Network, Inc. - Common Stock",NASDAQ
 IPFX,IPFX,Inflection Point Acquisition Corp. VI - Class A Ordinary Shares,NASDAQ
 IPGP,IPGP,IPG Photonics Corporation - Common Stock,NASDAQ
 IPHA,IPHA,Innate Pharma S.A. - American Depositary Shares,NASDAQ
+IPHX,IPHX,Inflection Point Acquisition Corp. VIII - Class A Ordinary Shares,NASDAQ
 IPM,IPM,Intelligent Protection Management Corp.  - Common Stock,NASDAQ
 IPSC,IPSC,"Century Therapeutics, Inc. - Common Stock",NASDAQ
 IPST,IPST,"IP Strategy Holdings, Inc. - Common Stock",NASDAQ
@@ -1771,7 +1771,6 @@ LEE,LEE,"Lee Enterprises, Incorporated - Common Stock",NASDAQ
 LEGH,LEGH,Legacy Housing Corporation - Common Stock,NASDAQ
 LEGN,LEGN,Legend Biotech Corporation - American Depositary Shares,NASDAQ
 LENZ,LENZ,"LENZ Therapeutics, Inc. - Common Stock",NASDAQ
-LESL,LESL,"Leslie's, Inc. - Common Stock",NASDAQ
 LEXX,LEXX,Lexaria Bioscience Corp. - Common Stock,NASDAQ
 LFAC,LFAC,Leapfrog Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 LFCR,LFCR,"Lifecore Biomedical, Inc. - Common Stock",NASDAQ
@@ -1863,6 +1862,7 @@ LTRX,LTRX,"Lantronix, Inc. - Common Stock",NASDAQ
 LUCD,LUCD,Lucid Diagnostics Inc. - Common Stock,NASDAQ
 LUCY,LUCY,"Innovative Eyewear, Inc. - Common Stock",NASDAQ
 LULU,LULU,lululemon athletica inc. - Common Stock,NASDAQ
+LUMN,LUMN,"Lumen Technologies, Inc.  - Common Stock",NASDAQ
 LUNG,LUNG,Pulmonx Corporation - Common Stock,NASDAQ
 LUNR,LUNR,"Intuitive Machines, Inc. - Class A Common Stock",NASDAQ
 LVLU,LVLU,"Lulu's Fashion Lounge Holdings, Inc. - Common Stock",NASDAQ
@@ -2495,7 +2495,6 @@ PSEC,PSEC,Prospect Capital Corporation - Closed End Fund,NASDAQ
 PSHG,PSHG,Performance Shipping Inc. - Common Shares,NASDAQ
 PSIG,PSIG,PS International Group Ltd. - Ordinary Shares,NASDAQ
 PSIX,PSIX,"Power Solutions International, Inc. - Common Stock",NASDAQ
-PSKY,PSKY,Paramount Skydance Corporation - Class B Common Stock,NASDAQ
 PSMT,PSMT,"PriceSmart, Inc. - Common Stock",NASDAQ
 PSNL,PSNL,"Personalis, Inc. - Common Stock",NASDAQ
 PSNY,PSNY,Polestar Automotive Holding UK Limited - Class A ADS,NASDAQ
@@ -2547,7 +2546,6 @@ QNT,QNT,Quantinuum Inc. - Class A Common Stock,NASDAQ
 QNTM,QNTM,Quantum Biopharma Ltd. - Class B Subordinate Voting Shares,NASDAQ
 QQQX,QQQX,Nuveen NASDAQ 100 Dynamic Overwrite Fund - Closed End Fund,NASDAQ
 QRHC,QRHC,Quest Resource Holding Corporation - Common Stock,NASDAQ
-QRVO,QRVO,"Qorvo, Inc. - Common Stock",NASDAQ
 QS,QS,QuantumScape Corporation - Common Stock,NASDAQ
 QSEA,QSEA,Quartzsea Acquisition Corporation - Ordinary Shares,NASDAQ
 QSI,QSI,Quantum-Si Incorporated - Class A Common Stock,NASDAQ
@@ -2988,6 +2986,7 @@ TAVI,TAVI,Tavia Acquisition Corp. - Ordinary Shares,NASDAQ
 TAYD,TAYD,"Taylor Devices, Inc. - Common Stock",NASDAQ
 TBBK,TBBK,"The Bancorp, Inc. - Common Stock",NASDAQ
 TBCH,TBCH,Turtle Beach Corporation - Common Stock,NASDAQ
+TBCV,TBCV,"Thunder Bridge Capital Partners V, Ltd. - Class A Ordinary Shares",NASDAQ
 TBLA,TBLA,Taboola.com Ltd. - Ordinary Shares,NASDAQ
 TBLD,TBLD,Thornburg Income Builder Opportunities Trust - Closed End Fund,NASDAQ
 TC,TC,Token Cat Limited - American Depositary Shares,NASDAQ
@@ -3272,7 +3271,6 @@ WABC,WABC,Westamerica Bancorporation - Common Stock,NASDAQ
 WAFD,WAFD,"WaFd, Inc. - Common Stock",NASDAQ
 WAFDP,WAFDP,"WaFd, Inc. - Depositary Shares",NASDAQ
 WAFU,WAFU,Wah Fu Education Group Limited - Ordinary Shares,NASDAQ
-WALD,WALD,Waldencast plc - Class A Ordinary Share,NASDAQ
 WASH,WASH,"Washington Trust Bancorp, Inc. - Common Stock",NASDAQ
 WATR,WATR,Air Water Ventures Limited - Ordinary Shares,NASDAQ
 WATT,WATT,Energous Corporation - Common Stock,NASDAQ
@@ -3305,7 +3303,6 @@ WIMI,WIMI,WiMi Hologram Cloud Inc. - Class B Ordinary Shares,NASDAQ
 WINA,WINA,Winmark Corporation - Common Stock,NASDAQ
 WING,WING,Wingstop Inc. - Common Stock,NASDAQ
 WIX,WIX,Wix.com Ltd. - Ordinary Shares,NASDAQ
-WKEY,WKEY,WISeKey International Holding Ltd - American Depositary Shares,NASDAQ
 WKHS,WKHS,"Workhorse Group, Inc. - Common Stock",NASDAQ
 WKSP,WKSP,"Worksport, Ltd. - Common Stock",NASDAQ
 WLCO,WLCO,Wilco 63 Corporation - Class A Ordinary Shares,NASDAQ
@@ -3321,6 +3318,7 @@ WNW,WNW,Meiwu Technology Company Limited - Ordinary Shares,NASDAQ
 WOK,WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,NASDAQ
 WOOF,WOOF,"Petco Health and Wellness Company, Inc. - Class A Common Stock",NASDAQ
 WPRT,WPRT,Westport Fuel Systems Inc - Common Shares,NASDAQ
+WQEY,WQEY,WISeQey Corp - Ordinary Shares,NASDAQ
 WRAP,WRAP,"Wrap Technologies, Inc. - Common Stock",NASDAQ
 WRD,WRD,WeRide Inc. - American Depositary Shares,NASDAQ
 WRLD,WRLD,World Acceptance Corporation - Common Stock,NASDAQ
@@ -4057,8 +4055,8 @@ DD,DD,"DuPont de Nemours, Inc. Common Stock",NYSE
 DDC,DDC,DDC Enterprise Limited Class A Ordinary Shares,AMEX
 DDD,DDD,3D Systems Corporation Common Stock,NYSE
 DDL,DDL,Dingdong (Cayman) Limited American Depositary Shares (each two representing three Ordinary Shares),NYSE
-DDS,DDS,"Dillard's, Inc. Common Stock",NYSE
-DDT,DDT,Dillard's Capital Trust I,NYSE
+DDS,DDS,"Dillard's, Inc. Common Stock",US
+DDT,DDT,Dillard's Capital Trust I,US
 DE,DE,Deere & Company Common Stock,NYSE
 DEA,DEA,"Easterly Government Properties, Inc. Common Stock",NYSE
 DEC,DEC,Diversified Energy Company Common Stock,NYSE
@@ -4465,7 +4463,6 @@ GTY,GTY,Getty Realty Corporation Common Stock,NYSE
 GUG,GUG,Guggenheim Active Allocation Fund Common Shares of Beneficial Interest,NYSE
 GUT,GUT,Gabelli Utility Trust (The) Common Stock,NYSE
 GVA,GVA,Granite Construction Incorporated Common Stock,NYSE
-GWH,GWH,"ESS Tech, Inc. Common Stock",NYSE
 GWRE,GWRE,"Guidewire Software, Inc. Common Stock",NYSE
 GWW,GWW,"W.W. Grainger, Inc. Common Stock",NYSE
 GXO,GXO,"GXO Logistics, Inc. Common Stock",NYSE
@@ -4784,7 +4781,6 @@ LTM,LTM,"LATAM Airlines Group S.A. American Depositary Shares (each representing
 LU,LU,"Lufax Holding Ltd American Depositary Shares, each representing two (2) Ordinary Shares",NYSE
 LUCK,LUCK,Lucky Strike Entertainment Corporation Class A Common Stock,NYSE
 LUD,LUD,Luda Technology Group Limited Ordinary Shares,AMEX
-LUMN,LUMN,"Lumen Technologies, Inc. Common Stock",NYSE
 LUV,LUV,Southwest Airlines Company Common Stock,NYSE
 LUXE,LUXE,"LuxExperience B.V. American Depositary Shares, each representing one Ordinary Share",NYSE
 LVS,LVS,Las Vegas Sands Corp. Common Stock,NYSE
@@ -5442,6 +5438,7 @@ SKIL,SKIL,Skillsoft Corp. Class A Common Stock,NYSE
 SKM,SKM,"SK Telecom Co., Ltd. Common Stock",NYSE
 SKT,SKT,Tanger Inc. Common Stock,NYSE
 SKY,SKY,"Champion Homes, Inc. Common Stock",NYSE
+SKYD,SKYD,Skydance Corporation Class B Common Stock,NYSE
 SKYH,SKYH,Sky Harbour Group Corporation Class A Common Stock,NYSE
 SLB,SLB,SLB Limited Common Shares,NYSE
 SLF,SLF,Sun Life Financial Inc. Common Stock,NYSE
@@ -5755,6 +5752,7 @@ VIPS,VIPS,"Vipshop Holdings Limited American Depositary Shares, each representin
 VIRT,VIRT,"Virtu Financial, Inc. Class A Common Stock",NYSE
 VIST,VIST,"Vista Energy S.A.B. de C.V. American Depositary Shares, each representing one series A share, with no par value",NYSE
 VIV,VIV,Telefonica Brasil S.A. American Depositary Shares (Each representing One Common Share),NYSE
+VJET,VJET,"Flyte Aviation, Inc. Common Stock",AMEX
 VKI,VKI,Invesco Advantage Municipal Income Trust II Common Shares of Beneficial Interest (DE),AMEX
 VKQ,VKQ,Invesco Municipal Trust Common Stock,NYSE
 VLN,VLN,Valens Semiconductor Ltd. Ordinary Shares,NYSE
@@ -5780,7 +5778,6 @@ VSH,VSH,"Vishay Intertechnology, Inc. Common Stock",NYSE
 VST,VST,Vistra Corp. Common Stock,NYSE
 VSTS,VSTS,Vestis Corporation Common Stock,NYSE
 VSXY,VSXY,Victorias Secret & Co. Common Stock,NYSE
-VTAK,VTAK,"Catheter Precision, Inc. Common Stock",AMEX
 VTEX,VTEX,VTEX Class A Common Shares,NYSE
 VTMX,VTMX,"Corporacion Inmobiliaria Vesta, S.A.B de C.V. American Depositary Shares, each representing ten (10) Common Shares",NYSE
 VTN,VTN,Invesco Trust for Investment Grade New York Municipals Common Stock,NYSE
