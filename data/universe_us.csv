@@ -353,6 +353,7 @@ BANX,BANX,ArrowMark Financial Corp. - Closed End Fund,NASDAQ
 BAOS,BAOS,Baosheng Media Group Holdings Limited - Ordinary shares,NASDAQ
 BATRA,BATRA,"Atlanta Braves Holdings, Inc. - Series A Common Stock",NASDAQ
 BATRK,BATRK,"Atlanta Braves Holdings, Inc. - Series C Common Stock",NASDAQ
+BBCI,BBCI,Bradbury Capital Inc. - Ordinary Shares,NASDAQ
 BBCP,BBCP,"Concrete Pumping Holdings, Inc.  - Common Stock",NASDAQ
 BBGI,BBGI,"Beasley Broadcast Group, Inc. - Class A Common Stock",NASDAQ
 BBIO,BBIO,"BridgeBio Pharma, Inc. - Common Stock",NASDAQ
@@ -422,7 +423,6 @@ BKYI,BKYI,"BIO-key International, Inc. - Common Stock",NASDAQ
 BL,BL,"BlackLine, Inc. - Common Stock",NASDAQ
 BLBD,BLBD,Blue Bird Corporation - Common Stock,NASDAQ
 BLDP,BLDP,"Ballard Power Systems, Inc. - Common Shares",NASDAQ
-BLFS,BLFS,"BioLife Solutions, Inc. - Common Stock",NASDAQ
 BLIN,BLIN,"Bridgeline Digital, Inc. - Common Stock",NASDAQ
 BLIV,BLIV,BeLive Holdings - ordinary shares,NASDAQ
 BLKB,BLKB,"Blackbaud, Inc. - Common Stock",NASDAQ
@@ -1516,7 +1516,6 @@ III,III,"Information Services Group, Inc. - Common Stock",NASDAQ
 IIIV,IIIV,"i3 Verticals, Inc. - Common Stock",NASDAQ
 IKT,IKT,"Inhibikase Therapeutics, Inc. - Common Stock",NASDAQ
 ILAG,ILAG,Intelligent Living Application Group Inc. - Ordinary Shares,NASDAQ
-ILLR,ILLR,Triller Group Inc. - Common Stock,NASDAQ
 ILLU,ILLU,Illumination Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 ILMN,ILMN,"Illumina, Inc. - Common Stock",NASDAQ
 ILPT,ILPT,Industrial Logistics Properties Trust - Common Shares of Beneficial Interest,NASDAQ
@@ -2830,7 +2829,6 @@ SLMT,SLMT,Brera Holdings PLC - Class B Ordinary Shares,NASDAQ
 SLN,SLN,Silence Therapeutics Plc - American Depository Share,NASDAQ
 SLNG,SLNG,"Stabilis Solutions, Inc. - Common Stock",NASDAQ
 SLNH,SLNH,"Soluna Holdings, Inc. - Common Stock",NASDAQ
-SLP,SLP,"Simulations Plus, Inc. - Common Stock",NASDAQ
 SLRC,SLRC,SLR Investment Corp. - Closed End Fund,NASDAQ
 SLS,SLS,"SELLAS Life Sciences Group, Inc.  - Common Stock",NASDAQ
 SLSN,SLSN,"Solesence, Inc. - Common stock",NASDAQ
@@ -2881,7 +2879,6 @@ SPCX,SPCX,Space Exploration Technologies Corp. - Class A Common Stock,NASDAQ
 SPEG,SPEG,Silver Pegasus Acquisition Corp - Class A Ordinary Shares,NASDAQ
 SPFI,SPFI,"South Plains Financial, Inc. - Common Stock",NASDAQ
 SPHL,SPHL,Springview Holdings Ltd - Ordinary shares,NASDAQ
-SPKL,SPKL,Spark I Acquisition Corp. - Class A Ordinary Share,NASDAQ
 SPOK,SPOK,"Spok Holdings, Inc. - Common Stock",NASDAQ
 SPPL,SPPL,SIMPPLE LTD. - Ordinary Shares,NASDAQ
 SPRB,SPRB,"Spruce Biosciences, Inc. - Common Stock",NASDAQ
@@ -3277,7 +3274,6 @@ WATT,WATT,Energous Corporation - Common Stock,NASDAQ
 WAVE,WAVE,Eco Wave Power Global AB (publ) - American Depositary Shares,NASDAQ
 WAY,WAY,Waystar Holding Corp. - Common Stock,NASDAQ
 WB,WB,Weibo Corporation - American Depositary Shares,NASDAQ
-WBD,WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",NASDAQ
 WBTN,WBTN,WEBTOON Entertainment Inc. - Common stock,NASDAQ
 WBUY,WBUY,WEBUY GLOBAL LTD. - Class A Ordinary Shares,NASDAQ
 WCCB,WCCB,West Coast Community Bancorp - Common Stock,NASDAQ
@@ -3317,6 +3313,7 @@ WNEB,WNEB,"Western New England Bancorp, Inc. - Common Stock",NASDAQ
 WNW,WNW,Meiwu Technology Company Limited - Ordinary Shares,NASDAQ
 WOK,WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,NASDAQ
 WOOF,WOOF,"Petco Health and Wellness Company, Inc. - Class A Common Stock",NASDAQ
+WORX,WORX,SCWorx Corp. - Common Stock,NASDAQ
 WPRT,WPRT,Westport Fuel Systems Inc - Common Shares,NASDAQ
 WQEY,WQEY,WISeQey Corp - Ordinary Shares,NASDAQ
 WRAP,WRAP,"Wrap Technologies, Inc. - Common Stock",NASDAQ
