@@ -2726,6 +2726,7 @@ SBLK,SBLK,Star Bulk Carriers Corp. - Common Shares,NASDAQ
 SBRA,SBRA,"Sabra Health Care REIT, Inc. - Common Stock",NASDAQ
 SBUX,SBUX,Starbucks Corporation - Common Stock,NASDAQ
 SCAG,SCAG,Scage Future - American Depositary Shares,NASDAQ
+SCAT,SCAT,Southern Cross Acquisition II Corp. - Ordinary Shares,NASDAQ
 SCHL,SCHL,Scholastic Corporation - Common Stock,NASDAQ
 SCII,SCII,SC II Acquisition Corp. - Class A ordinary share,NASDAQ
 SCKT,SCKT,"Socket Mobile, Inc. - Common Stock",NASDAQ
@@ -2987,7 +2988,6 @@ TBCV,TBCV,"Thunder Bridge Capital Partners V, Ltd. - Class A Ordinary Shares",NA
 TBLA,TBLA,Taboola.com Ltd. - Ordinary Shares,NASDAQ
 TBLD,TBLD,Thornburg Income Builder Opportunities Trust - Closed End Fund,NASDAQ
 TC,TC,Token Cat Limited - American Depositary Shares,NASDAQ
-TCBI,TCBI,"Texas Capital Bancshares, Inc. - Common Stock",NASDAQ
 TCBK,TCBK,TriCo Bancshares - Common Stock,NASDAQ
 TCBS,TCBS,"Texas Community Bancshares, Inc. - Common Stock",NASDAQ
 TCGX,TCGX,TCGX Acquisition Corp. - Class A Ordinary Shares,NASDAQ
@@ -5555,6 +5555,7 @@ TAP-A,TAP-A,Molson Coors Beverage Company Class A Common Stock,NYSE
 TBBB,TBBB,BBB Foods Inc. Class A Common Shares,NYSE
 TBI,TBI,"TrueBlue, Inc. Common Stock",NYSE
 TBN,TBN,Tamboran Resources Corporation Common stock,NYSE
+TCBI,TCBI,"Texas Capital Bancshares, Inc. Common Stock",US
 TCBX,TCBX,"Third Coast Bancshares, Inc. Common Stock",NYSE
 TCI,TCI,"Transcontinental Realty Investors, Inc. Common Stock",NYSE
 TD,TD,Toronto Dominion Bank (The) Common Stock,NYSE
