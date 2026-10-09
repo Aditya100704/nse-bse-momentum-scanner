@@ -112,6 +112,7 @@ AIFU,AIFU,AIFU Inc. - Class A Ordinary Share,NASDAQ
 AIIO,AIIO,Robo.ai Inc. - Class B Ordinary Shares,NASDAQ
 AIIR,AIIR,Air Global PLC - Ordinary shares,NASDAQ
 AIMD,AIMD,"Ainos, Inc. - Common Stock",NASDAQ
+AIOK,AIOK,AI OKTO CORP. - Common Stock,NASDAQ
 AIOS,AIOS,AIOS Tech Inc. - Class A Common Shares,NASDAQ
 AIOT,AIOT,"PowerFleet, Inc. - Common Stock",NASDAQ
 AIP,AIP,"Arteris, Inc.  - Common Stock",NASDAQ
@@ -373,6 +374,7 @@ BCPC,BCPC,Balchem Corporation - Common Stock,NASDAQ
 BCRX,BCRX,"BioCryst Pharmaceuticals, Inc. - Common Stock",NASDAQ
 BCTX,BCTX,BriaCell Therapeutics Corp. - Common Shares,NASDAQ
 BCYC,BCYC,Bicycle Therapeutics plc - American Depositary Shares,NASDAQ
+BDAI,BDAI,"Biddance AI Systems, Inc. - Class A Ordinary Share",NASDAQ
 BDCI,BDCI,BTC Development Corp. - Class A Ordinary Shares,NASDAQ
 BDMD,BDMD,Baird Medical Investment Holdings Ltd - Ordinary Share,NASDAQ
 BDRX,BDRX,Biodexa Pharmaceuticals plc - American Depositary Shares,NASDAQ
@@ -904,7 +906,7 @@ DORM,DORM,"Dorman Products, Inc. - Common Stock",NASDAQ
 DOX,DOX,Amdocs Limited - Ordinary Shares,NASDAQ
 DOYU,DOYU,DouYu International Holdings Limited - American Depositary Shares,NASDAQ
 DPRO,DPRO,Draganfly Inc. - Common Shares,NASDAQ
-DPU,DPU,Top KingWin Ltd - Class A Ordinary Shares,NASDAQ
+DPU,DPU,Nexpu Ltd. - Class A Ordinary Shares,NASDAQ
 DPZ,DPZ,Domino's Pizza Inc - Common Stock,NASDAQ
 DRDB,DRDB,Roman DBDR Acquisition Corp. II - Ordinary shares,NASDAQ
 DRH,DRH,Diamondrock Hospitality Company - Common Stock,NASDAQ
@@ -1408,7 +1410,6 @@ HIND,HIND,"Vyome Holdings, Inc. - Common Stock",NASDAQ
 HIT,HIT,"Health In Tech, Inc. - Class A Common Stock",NASDAQ
 HITI,HITI,High Tide Inc. - Common Shares,NASDAQ
 HIVE,HIVE,HIVE Digital Technologies Ltd - Common Shares,NASDAQ
-HKIT,HKIT,Hitek Global Inc. - Class A Ordinary Share,NASDAQ
 HKPD,HKPD,"Cellyan Biotechnology Co., Ltd  - Class A Ordinary Shares",NASDAQ
 HLIT,HLIT,Harmonic Inc. - Common Stock,NASDAQ
 HLMN,HLMN,Hillman Solutions Corp. - Common Stock,NASDAQ
@@ -1883,7 +1884,6 @@ MACI,MACI,Melar Acquisition Corp. I - Class A Ordinary Shares,NASDAQ
 MAGH,MAGH,Magnitude International Ltd - Ordinary Shares,NASDAQ
 MAKO,MAKO,Mako Mining Corp - Common Stock,NASDAQ
 MAMA,MAMA,"Mama's Creations, Inc. - Common Stock",NASDAQ
-MAMK,MAMK,MaxsMaking Inc. - Class A Ordinary Shares,NASDAQ
 MAMO,MAMO,Massimo Group - Common Stock,NASDAQ
 MANH,MANH,"Manhattan Associates, Inc. - Common Stock",NASDAQ
 MAR,MAR,Marriott International - Class A Common Stock,NASDAQ
@@ -2194,7 +2194,6 @@ NVCT,NVCT,"Nuvectis Pharma, Inc. - Common Stock",NASDAQ
 NVDA,NVDA,NVIDIA Corporation - Common Stock,NASDAQ
 NVEC,NVEC,NVE Corporation - Common Stock,NASDAQ
 NVMI,NVMI,Nova Ltd. - Ordinary Shares,NASDAQ
-NVNI,NVNI,Nvni Group Limited - Ordinary Shares,NASDAQ
 NVNO,NVNO,enVVeno Medical Corporation - Common Stock,NASDAQ
 NVTS,NVTS,Navitas Semiconductor Corporation - Common Stock,NASDAQ
 NVX,NVX,NOVONIX Limited - American Depository Shares,NASDAQ
@@ -2679,6 +2678,7 @@ RSSS,RSSS,"Research Solutions, Inc - Common Stock",NASDAQ
 RSVR,RSVR,"Reservoir Media, Inc.. - Common Stock",NASDAQ
 RTAC,RTAC,Renatus Tactical Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 RTB,RTB,"RTB Digital, Inc. - Common Stock",NASDAQ
+RTSN,RTSN,"Retension Pharmaceuticals, Inc. - Common Stock",NASDAQ
 RUBI,RUBI,Rubico Inc. - Common Stock,NASDAQ
 RUM,RUM,RUM Group Inc. - Class A Common Stock,NASDAQ
 RUN,RUN,Sunrun Inc. - Common Stock,NASDAQ
@@ -3092,6 +3092,7 @@ TRUG,TRUG,"TruGolf Holdings, Inc. - Class A Common Stock",NASDAQ
 TRUP,TRUP,"Trupanion, Inc. - Common Stock",NASDAQ
 TRVG,TRVG,trivago N.V. - American Depositary Shares,NASDAQ
 TRVI,TRVI,"Trevi Therapeutics, Inc. - Common Stock",NASDAQ
+TRXB,TRXB,"TRex Bio, Inc. - Common stock",NASDAQ
 TSAT,TSAT,Telesat Corporation - Class A Common Shares and Class B Variable Voting Shares,NASDAQ
 TSBK,TSBK,"Timberland Bancorp, Inc. - Common Stock",NASDAQ
 TSCO,TSCO,Tractor Supply Company - Common Stock,NASDAQ
