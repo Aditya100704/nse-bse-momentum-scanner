@@ -334,6 +334,7 @@ AWRE,AWRE,"Aware, Inc. - Common Stock",NASDAQ
 AXG,AXG,Solowin Holdings - Class A Ordinary Share,NASDAQ
 AXGN,AXGN,"Axogen, Inc. - Common Stock",NASDAQ
 AXIN,AXIN,Axiom Intelligence Acquisition Corp 1 - Class A Ordinary Shares,NASDAQ
+AXNX,AXNX,Axonex AI Group Limited - Class A Ordinary Shares,NASDAQ
 AXON,AXON,"Axon Enterprise, Inc. - Common Stock",NASDAQ
 AXSM,AXSM,"Axsome Therapeutics, Inc. - Common Stock",NASDAQ
 AXTI,AXTI,AXT Inc - Common Stock,NASDAQ
@@ -1962,7 +1963,6 @@ MGX,MGX,"Metagenomi Therapeutics, Inc. - Common Stock",NASDAQ
 MGYR,MGYR,"Magyar Bancorp, Inc. - Common Stock",NASDAQ
 MIAC,MIAC,Meridian3 Industrials Acquisition Corp - Class A Ordinary Shares,NASDAQ
 MIDD,MIDD,The Middleby Corporation - Common Stock,NASDAQ
-MIMI,MIMI,Mint Incorporation Limited - Class A Ordinary Shares,NASDAQ
 MIND,MIND,"MIND Technology, Inc. - Common Stock",NASDAQ
 MIRA,MIRA,"MIRA Pharmaceuticals, Inc. - Common Stock",NASDAQ
 MIRM,MIRM,"Mirum Pharmaceuticals, Inc. - common stock",NASDAQ
@@ -2653,6 +2653,7 @@ RNAQ,RNAQ,Rainier Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 RNAZ,RNAZ,"TransCode Therapeutics, Inc. - Common Stock",NASDAQ
 RNGT,RNGT,Range Capital Acquisition Corp II - Class A Ordinary Shares,NASDAQ
 RNTX,RNTX,"Rein Therapeutics, Inc. - Common Stock",NASDAQ
+RNTZ,RNTZ,Rantizo - Class A Ordinary Shares,NASDAQ
 RNW,RNW,ReNew Energy Global plc - Class A Shares,NASDAQ
 RNXT,RNXT,"RenovoRx, Inc. - Common Stock",NASDAQ
 ROAD,ROAD,"Construction Partners, Inc. - Common Stock",NASDAQ
@@ -2810,7 +2811,6 @@ SITM,SITM,SiTime Corporation - Common Stock,NASDAQ
 SJ,SJ,Scienjoy Holding Corporation - Class A Ordinary Shares,NASDAQ
 SKHY,SKHY,SK hynix Inc. - American Depositary Shares,NASDAQ
 SKIN,SKIN,SkinHealth Systems Inc. - Class A Common Stock,NASDAQ
-SKK,SKK,SKK Holdings Limited - Class A Ordinary Shares,NASDAQ
 SKWD,SKWD,"Skyward Specialty Insurance Group, Inc. - Common Stock",NASDAQ
 SKYA,SKYA,"SkyAI, Inc. - Common Stock",NASDAQ
 SKYE,SKYE,"Skye Bioscience, Inc. - Common Stock",NASDAQ
@@ -5072,7 +5072,7 @@ NZF,NZF,Nuveen Municipal Credit Income Fund,NYSE
 O,O,Realty Income Corporation Common Stock,NYSE
 OBDC,OBDC,Blue Owl Capital Corporation Common Stock,NYSE
 OBE,OBE,Obsidian Energy Ltd. Common Shares,AMEX
-OBK,OBK,"Origin Bancorp, Inc. Common Stock",NYSE
+OBK,OBK,"Origin Bancorp, Inc. Common Stock",US
 OC,OC,Owens Corning Inc Common Stock New,NYSE
 OCAC,OCAC,Ocean Capital Acquisition Corporation Ordinary Shares,NYSE
 ODC,ODC,Oil-Dri Corporation Of America Common Stock,NYSE
