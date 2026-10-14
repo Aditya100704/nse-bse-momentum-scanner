@@ -1141,6 +1141,7 @@ FLL,FLL,"Full House Resorts, Inc. - Common Stock",NASDAQ
 FLNA,FLNA,"Filana Therapeutics, Inc. - Common Stock",NASDAQ
 FLNC,FLNC,"Fluence Energy, Inc. - Class A Common Stock",NASDAQ
 FLNT,FLNT,"Fluent, Inc. - Common Stock",NASDAQ
+FLSC,FLSC,Frazier Life Sciences Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 FLUX,FLUX,"Flux Power Holdings, Inc. - Common Stock",NASDAQ
 FLWS,FLWS,"1-800-FLOWERS.COM, Inc. - Class A Common Stock",NASDAQ
 FLX,FLX,BingEx Limited - American Depositary Shares,NASDAQ
@@ -2209,6 +2210,7 @@ NWS,NWS,News Corporation - Class B Common Stock,NASDAQ
 NWSA,NWSA,News Corporation - Class A Common Stock,NASDAQ
 NWTG,NWTG,"Newton Golf Company, Inc. - Common Stock",NASDAQ
 NXAT,NXAT,Nexus Advanced Technologies Inc. - Ordinary Shares,NASDAQ
+NXDR,NXDR,"Nextdoor Holdings, Inc. - Common Stock",NASDAQ
 NXGL,NXGL,"NexGel, Inc - Common Stock",NASDAQ
 NXH,NXH,"Neighborhood Intelligence, Inc.  - Common Stock",NASDAQ
 NXL,NXL,"Nexalin Technology, Inc. - Common Stock",NASDAQ
@@ -2530,7 +2532,6 @@ QCLS,QCLS,"Q/C Technologies, Inc. - Common Stock",NASDAQ
 QCOM,QCOM,QUALCOMM Incorporated - Common Stock,NASDAQ
 QCRH,QCRH,"QCR Holdings, Inc. - Common Stock",NASDAQ
 QDEL,QDEL,QuidelOrtho Corporation - Common Stock,NASDAQ
-QETA,QETA,Quetta Acquisition Corporation - Common Stock,NASDAQ
 QFIN,QFIN,"Qfin Holdings, Inc.  - American Depositary Shares",NASDAQ
 QH,QH,Quhuo Limited - Class A Ordinary Shares,NASDAQ
 QLYS,QLYS,"Qualys, Inc. - Common Stock",NASDAQ
@@ -3867,7 +3868,6 @@ CCJ,CCJ,Cameco Corporation Common Stock,NYSE
 CCK,CCK,"Crown Holdings, Inc.",NYSE
 CCL,CCL,Carnival Corporation Ltd. Common Shares,NYSE
 CCM,CCM,Concord Medical Services Holdings Limited American Depositary Shares (Each represents thirty (30) Class A ordinary shares),NYSE
-CCO,CCO,"Clear Channel Outdoor Holdings, Inc. Common Stock",NYSE
 CCS,CCS,"Century Communities, Inc. Common Stock",NYSE
 CCU,CCU,"Compania Cervecerias Unidas, S.A. Common Stock",NYSE
 CCZ,CCZ,Comcast Holdings ZONES,NYSE
@@ -4550,7 +4550,6 @@ HYI,HYI,Western Asset High Yield Opportunity Fund Inc. Common Stock,NYSE
 HYLN,HYLN,Hyliion Holdings Corp. Class A Common Stock,AMEX
 HYT,HYT,"Blackrock Corporate High Yield Fund, Inc. Common Stock",NYSE
 HZO,HZO,"MarineMax, Inc.  (FL) Common Stock",NYSE
-IAE,IAE,Voya Asia Pacific High Dividend Equity Income Fund ING Asia Pacific High Dividend Equity Income Fund Common Shares of Beneficial Interest,NYSE
 IAF,IAF,"abrdn Australia Equity Fund, Inc. Common Stock",AMEX
 IAG,IAG,Iamgold Corporation Ordinary Shares,NYSE
 IAUX,IAUX,i-80 Gold Corp. Common Shares,AMEX
@@ -4576,7 +4575,6 @@ IGD,IGD,Voya Global Equity Dividend and Premium Opportunity Fund,NYSE
 IGI,IGI,Western Asset Investment Grade Opportunity Trust Inc. Common Stock,NYSE
 IGR,IGR,CBRE Global Real Estate Income Fund Common Shares of Beneficial Interest,NYSE
 IH,IH,"iHuman Inc. American depositary shares, each representing five Class A ordinary shares",NYSE
-IHD,IHD,Voya Emerging Markets High Income Dividend Equity Fund Common Shares,NYSE
 IHG,IHG,Intercontinental Hotels Group American Depositary Shares (Each representing one Ordinary Share),NYSE
 IHS,IHS,IHS Holding Limited Ordinary Shares,NYSE
 IHT,IHT,InnSuites Hospitality Trust Shares of Beneficial Interest,AMEX
@@ -4729,7 +4727,7 @@ LANV,LANV,Lanvin Group Holdings Limited Ordinary Shares,NYSE
 LAR,LAR,Lithium Argentina AG Common Shares,NYSE
 LAW,LAW,"CS Disco, Inc. Common Stock",NYSE
 LAZ,LAZ,"Lazard, Inc. Common Stock",NYSE
-LB,LB,LandBridge Company LLC Class A Shares Representing Limited Liability Company Interests,NYSE
+LB,LB,LandBridge Corporation Class A Common Stock,NYSE
 LBRT,LBRT,Liberty Energy Inc. Class A common stock,NYSE
 LCII,LCII,LCI Industries,NYSE
 LCLN,LCLN,"Lincoln International, Inc. Class A Common Stock",NYSE
@@ -5060,7 +5058,6 @@ NWG,NWG,"NatWest Group plc American Depositary Shares, (each representing two (2
 NWN,NWN,Northwest Natural Holding Company Common Stock,NYSE
 NX,NX,Quanex Building Products Corporation Common Stock,NYSE
 NXB,NXB,NextBoat Inc. Common Stcok,AMEX
-NXDR,NXDR,"Nextdoor Holdings, Inc. Class A Common Stock",NYSE
 NXDT,NXDT,NexPoint Diversified Real Estate Trust Common Stock,NYSE
 NXE,NXE,Nexgen Energy Ltd. Common Shares,NYSE
 NXG,NXG,NXG NextGen Infrastructure Income Fund Common Shares of Beneficial Interest,NYSE
