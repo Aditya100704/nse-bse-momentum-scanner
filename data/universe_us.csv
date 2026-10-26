@@ -82,6 +82,7 @@ AENT,AENT,Alliance Entertainment Holding Corporation - common stock,NASDAQ
 AEP,AEP,"American Electric Power Company, Inc. - Common Stock",NASDAQ
 AERT,AERT,"Aeries Technology, Inc. - Class A Ordinary Share",NASDAQ
 AESP,AESP,Aeon Acquisition I Corp. - Class A Ordinary Shares,NASDAQ
+AETR,AETR,Aetherion Technologies Inc. - Common Shares,NASDAQ
 AEVA,AEVA,"Aeva Technologies, Inc. - Common Stock",NASDAQ
 AEYE,AEYE,"AudioEye, Inc. - Common Stock",NASDAQ
 AFCG,AFCG,Advanced Flower Capital Inc. - Common Stock,NASDAQ
@@ -1093,6 +1094,7 @@ FBYD,FBYD,"Falcon's Beyond Global, Inc. - Class A Common Stock",NASDAQ
 FCAP,FCAP,"First Capital, Inc. - Common Stock",NASDAQ
 FCBC,FCBC,"First Community Bankshares, Inc. - Common Stock",NASDAQ
 FCCO,FCCO,First Community Corporation - Common Stock,NASDAQ
+FCDH,FCDH,Forcendra Holding Limited - Class A Ordinary Shares,NASDAQ
 FCEL,FCEL,"FuelCell Energy, Inc. - Common Stock",NASDAQ
 FCFS,FCFS,"FirstCash Holdings, Inc. - Common Stock",NASDAQ
 FCHL,FCHL,Fitness Champs Holdings Limited - Ordinary Shares,NASDAQ
@@ -3260,7 +3262,6 @@ VS,VS,Versus Systems Inc. - Common Stock,NASDAQ
 VSA,VSA,VisionSys AI Inc. - American Depositary Shares,NASDAQ
 VSAT,VSAT,"ViaSat, Inc. - Common Stock",NASDAQ
 VSEC,VSEC,VSE Corporation - Common Stock,NASDAQ
-VSME,VSME,VS Media Holdings Limited - Class A Ordinary Shares,NASDAQ
 VSNT,VSNT,"Versant Media Group, Inc. - Class A Common Stock",NASDAQ
 VSTM,VSTM,"Verastem, Inc. - Common Stock",NASDAQ
 VTGN,VTGN,"Vistagen Therapeutics, Inc. - Common Stock",NASDAQ
@@ -3322,7 +3323,6 @@ WNW,WNW,Meiwu Technology Company Limited - Ordinary Shares,NASDAQ
 WOK,WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,NASDAQ
 WOOF,WOOF,"Petco Health and Wellness Company, Inc. - Class A Common Stock",NASDAQ
 WORX,WORX,SCWorx Corp. - Common Stock,NASDAQ
-WPRT,WPRT,Westport Fuel Systems Inc - Common Shares,NASDAQ
 WQEY,WQEY,WISeQey Corp - Ordinary Shares,NASDAQ
 WRAP,WRAP,"Wrap Technologies, Inc. - Common Stock",NASDAQ
 WRD,WRD,WeRide Inc. - American Depositary Shares,NASDAQ
@@ -3456,7 +3456,6 @@ ABM,ABM,ABM Industries Incorporated Common Stock,NYSE
 ABR,ABR,Arbor Realty Trust Common Stock,NYSE
 ABT,ABT,Abbott Laboratories Common Stock,NYSE
 ABX,ABX,"Abacus Global Management, Inc. Class A Common Stock",NYSE
-ACA,ACA,"Arcosa, Inc. Common Stock",NYSE
 ACCO,ACCO,Acco Brands Corporation Common Stock,NYSE
 ACCS,ACCS,ACCESS Newswire Inc. Common Stock,AMEX
 ACEL,ACEL,"Accel Entertainment, Inc.",NYSE
@@ -4174,7 +4173,6 @@ ELC,ELC,"Entergy Louisiana, Inc. Collateral Trust Mortgage Bonds, 4.875 % Series
 ELF,ELF,"e.l.f. Beauty, Inc. Common Stock",NYSE
 ELLO,ELLO,Ellomay Capital Ltd Ordinary Shares (Israel),AMEX
 ELMD,ELMD,"Electromed, Inc. Common Stock",AMEX
-ELME,ELME,Elme Communities Common Stock,NYSE
 ELPC,ELPC,Companhia Paranaense de Energia (COPEL) American Depositary Shares (each representing four (4) Common Shares),NYSE
 ELS,ELS,"Equity Lifestyle Properties, Inc. Common Stock",NYSE
 ELV,ELV,"Elevance Health, Inc. Common Stock",NYSE
@@ -4464,6 +4462,7 @@ GTN,GTN,"Gray Media, Inc. Common Stock",NYSE
 GTN-A,GTN-A,"Gray Media, Inc. Class A Common Stock",NYSE
 GTY,GTY,Getty Realty Corporation Common Stock,NYSE
 GUG,GUG,Guggenheim Active Allocation Fund Common Shares of Beneficial Interest,NYSE
+GUNN,GUNN,Gunnison Copper Corp. American Depositary Shares (each representing thirty (30) Common Shares),AMEX
 GUT,GUT,Gabelli Utility Trust (The) Common Stock,NYSE
 GVA,GVA,Granite Construction Incorporated Common Stock,NYSE
 GWRE,GWRE,"Guidewire Software, Inc. Common Stock",NYSE
@@ -5144,7 +5143,6 @@ PAGS,PAGS,PagSeguro Digital Ltd. Class A Common Shares,NYSE
 PAI,PAI,Western Asset Investment Grade Income Fund Inc.,NYSE
 PAII,PAII,Pyrophyte Acquisition Corp. II Class A Ordinary Shares,NYSE
 PAM,PAM,Pampa Energia S.A.,NYSE
-PAPL,PAPL,Pineapple Financial Inc. Common Stock,AMEX
 PAR,PAR,PAR Technology Corporation Common Stock,NYSE
 PARR,PARR,"Par Pacific Holdings, Inc.  Common Stock",NYSE
 PATH,PATH,"UiPath, Inc. Class A Common Stock",NYSE
@@ -5257,6 +5255,7 @@ PSTL,PSTL,"Postal Realty Trust, Inc. Class A Common Stock",NYSE
 PSUS,PSUS,"Pershing Square USA, Ltd. Common Shares",NYSE
 PSX,PSX,Phillips 66 Common Stock,NYSE
 PTHS,PTHS,Pelthos Therapeutics Inc. Common Stock,AMEX
+PTIV,PTIV,Pineapple Financial Inc. Common Stock,AMEX
 PTY,PTY,Pimco Corporate & Income Opportunity Fund,NYSE
 PUK,PUK,Prudential Public Limited Company Common Stock,NYSE
 PUMP,PUMP,ProPetro Holding Corp. Common Stock,NYSE
@@ -5805,7 +5804,6 @@ WD,WD,"Walker & Dunlop, Inc Common Stock",NYSE
 WDI,WDI,Western Asset Diversified Income Fund Common Shares of Beneficial Interest,NYSE
 WDS,WDS,"Woodside Energy Group Limited American Depositary Shares, each representing one Ordinary Share",NYSE
 WEA,WEA,Western Asset Bond Fund Share of Beneficial Interest,NYSE
-WEAV,WEAV,"Weave Communications, Inc. Common Stock",NYSE
 WEC,WEC,"WEC Energy Group, Inc. Common Stock",NYSE
 WELL,WELL,Welltower Inc. Common Stock,NYSE
 WENC,WENC,West Enclave Merger Corp. Ordinary Shares,NYSE
