@@ -2081,7 +2081,6 @@ NAMI,NAMI,Jinxin Technology Holding Company - American Depositary Shares,NASDAQ
 NAMM,NAMM,Namib Minerals - Ordinary Shares,NASDAQ
 NAMS,NAMS,NewAmsterdam Pharma Company N.V. - Ordinary Shares,NASDAQ
 NANO,NANO,Forge Nano Holdings Inc. - Common stock,NASDAQ
-NATH,NATH,"Nathan's Famous, Inc. - Common Stock",NASDAQ
 NATR,NATR,"Nature's Sunshine Products, Inc. - Common Stock",NASDAQ
 NAUT,NAUT,"Nautilus Biotechnology, Inc. - Common Stock",NASDAQ
 NAVI,NAVI,Navient Corporation - Common Stock,NASDAQ
@@ -2347,7 +2346,7 @@ PALO,PALO,Paloma Acquisition Corp I - Class A Ordinary Shares,NASDAQ
 PAMT,PAMT,PAMT CORP - Common Stock,NASDAQ
 PANL,PANL,Pangaea Logistics Solutions Ltd. - Common Stock,NASDAQ
 PANW,PANW,"Palo Alto Networks, Inc. - Common Stock",NASDAQ
-PARA,PARA,"Banzai International, Inc. - Class A Common Stock",NASDAQ
+PARA,PARA,"Parabolic Technologies, Inc. - Class A Common Stock",NASDAQ
 PARK,PARK,"Park Dental Partners, Inc. - Common Stock",NASDAQ
 PASG,PASG,"Passage Bio, Inc. - Common Stock",NASDAQ
 PASW,PASW,"Ping An Biomedical Co., Ltd. - Class A Ordinary Shares",NASDAQ
@@ -4903,9 +4902,8 @@ MSCI,MSCI,MSCI Inc. Common Stock,NYSE
 MSD,MSD,"Morgan Stanley Emerging Markets Debt Fund, Inc. Common Stock",NYSE
 MSDL,MSDL,Morgan Stanley Direct Lending Fund Common Stock,NYSE
 MSGE,MSGE,Madison Square Garden Entertainment Corp. Class A Common Stock,NYSE
-MSGK-V,MSGK-V,Madison Square Garden Sports Corp. Class A Common Stock When-Issued,NYSE
-MSGR-V,MSGR-V,MSG Rangers Corp. Class A Common Stock When-Issued,NYSE
-MSGS,MSGS,Madison Square Garden Sports Corp. Class A Common Stock (New),NYSE
+MSGK,MSGK,MSG Knickerbockers Corp. Class A Common Stock,NYSE
+MSGR,MSGR,MSG Rangers Corp. Class A Common Stock,NYSE
 MSI,MSI,"Motorola Solutions, Inc. Common Stock",NYSE
 MSIF,MSIF,"MSC Income Fund, Inc. Common Stock",NYSE
 MSM,MSM,"MSC Industrial Direct Company, Inc. Common Stock",NYSE
