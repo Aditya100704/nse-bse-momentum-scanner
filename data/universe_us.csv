@@ -57,7 +57,6 @@ ADBT,ADBT,"Advasa Holdings, Inc. - Common stock",NASDAQ
 ADEA,ADEA,Adeia Inc.  - Common Stock,NASDAQ
 ADGM,ADGM,"Adagio Medical Holdings, Inc - Common Stock",NASDAQ
 ADI,ADI,"Analog Devices, Inc. - Common Stock",NASDAQ
-ADIL,ADIL,"Adial Pharmaceuticals, Inc - Common Stock",NASDAQ
 ADMA,ADMA,ADMA Biologics Inc - Common Stock,NASDAQ
 ADP,ADP,"Automatic Data Processing, Inc. - Common Stock",NASDAQ
 ADPT,ADPT,Adaptive Biotechnologies Corporation - Common Stock,NASDAQ
@@ -345,6 +344,7 @@ AYTU,AYTU,"Aytu BioPharma, Inc.  - Common Stock",NASDAQ
 AZ,AZ,A2Z Cust2Mate Solutions Corp. - Common Shares,NASDAQ
 AZI,AZI,Autozi Internet Technology (Global) Ltd. - Class A Ordinary Shares,NASDAQ
 AZIO,AZIO,"Azio AI Holdings, Inc. - Common stock",NASDAQ
+AZR,AZR,"Azora Therapeutics, Inc. - Common Stock",NASDAQ
 AZTA,AZTA,"Azenta, Inc. - Common Stock",NASDAQ
 BACC,BACC,Blue Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 BAER,BAER,"Bridger Aerospace Group Holdings, Inc. - Common Stock",NASDAQ
@@ -1243,6 +1243,7 @@ GAME,GAME,"GameSquare Holdings, Inc. - Common stock",NASDAQ
 GANX,GANX,"Gain Therapeutics, Inc. - Common Stock",NASDAQ
 GASS,GASS,"StealthGas, Inc. - common stock",NASDAQ
 GAUZ,GAUZ,Gauzy Ltd. - Ordinary Shares,NASDAQ
+GBC,GBC,"Georgia Banking Company, Inc. - Common Stock",NASDAQ
 GBDC,GBDC,"Golub Capital BDC, Inc. - Closed End Fund",NASDAQ
 GBFH,GBFH,GBank Financial Holdings Inc. - Common Stock,NASDAQ
 GBLI,GBLI,"Global Indemnity Group, LLC - Class A Common Shares",NASDAQ
@@ -2083,7 +2084,7 @@ NAMS,NAMS,NewAmsterdam Pharma Company N.V. - Ordinary Shares,NASDAQ
 NANO,NANO,Forge Nano Holdings Inc. - Common stock,NASDAQ
 NATR,NATR,"Nature's Sunshine Products, Inc. - Common Stock",NASDAQ
 NAUT,NAUT,"Nautilus Biotechnology, Inc. - Common Stock",NASDAQ
-NAVI,NAVI,Navient Corporation - Common Stock,NASDAQ
+NAVI,NAVI,"Navient Holdings, Inc. - Common Stock",NASDAQ
 NAVN,NAVN,"Navan, Inc. - Class A Common Stock",NASDAQ
 NB,NB,NioCorp Developments Ltd. - Common Stock,NASDAQ
 NBBK,NBBK,"NB Bancorp, Inc. - Common Stock",NASDAQ
@@ -2832,7 +2833,7 @@ SLE,SLE,"Super League Enterprise, Inc. - Common Stock",NASDAQ
 SLGB,SLGB,Smart Logistics Global Limited - Class A Ordinary Shares,NASDAQ
 SLGL,SLGL,Sol-Gel Technologies Ltd. - Ordinary Shares,NASDAQ
 SLM,SLM,SLM Corporation - Common Stock,NASDAQ
-SLMT,SLMT,Brera Holdings PLC - Class B Ordinary Shares,NASDAQ
+SLMT,SLMT,Solmate Infrastructure Public Limited Company - Class B Ordinary Shares,NASDAQ
 SLN,SLN,Silence Therapeutics Plc - American Depository Share,NASDAQ
 SLNG,SLNG,"Stabilis Solutions, Inc. - Common Stock",NASDAQ
 SLNH,SLNH,"Soluna Holdings, Inc. - Common Stock",NASDAQ
