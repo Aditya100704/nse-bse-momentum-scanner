@@ -269,6 +269,7 @@ ASML,ASML,ASML Holding N.V. - New York Registry Shares,NASDAQ
 ASND,ASND,Ascendis Pharma A/S - Ordinary Share,NASDAQ
 ASO,ASO,"Academy Sports and Outdoors, Inc. - Common Stock",NASDAQ
 ASPC,ASPC,A SPAC III Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+ASPE,ASPE,"Aspen Neuroscience, Inc. - Common Stock",NASDAQ
 ASPI,ASPI,ASP Isotopes Inc. - Common Stock,NASDAQ
 ASPS,ASPS,Altisource Portfolio Solutions S.A. - Common Stock,NASDAQ
 ASRV,ASRV,AmeriServ Financial Inc. - Common Stock,NASDAQ
@@ -365,6 +366,7 @@ BBLG,BBLG,Bone Biologics Corp - Common Stock,NASDAQ
 BBNX,BBNX,"Beta Bionics, Inc. - Common Stock",NASDAQ
 BBOT,BBOT,"BridgeBio Oncology Therapeutics, Inc. - Common Stock",NASDAQ
 BBSI,BBSI,"Barrett Business Services, Inc. - Common Stock",NASDAQ
+BBTX,BBTX,"Bambusa Therapeutics, Inc. - Common stock",NASDAQ
 BCAL,BCAL,California BanCorp - Common Stock,NASDAQ
 BCAX,BCAX,Bicara Therapeutics Inc. - Common Stock,NASDAQ
 BCBP,BCBP,"BCB Bancorp, Inc. (NJ) - Common Stock",NASDAQ
@@ -950,7 +952,6 @@ DXR,DXR,Daxor Corporation - Closed End Fund,NASDAQ
 DXST,DXST,Decent Holding Inc. - Class A Ordinary Shares,NASDAQ
 DYAI,DYAI,"Dyadic International, Inc. - Common Stock",NASDAQ
 DYN,DYN,"Dyne Therapeutics, Inc. - Common Stock",NASDAQ
-DYNC,DYNC,Dynamix Corporation - Class A Ordinary Share,NASDAQ
 DYOR,DYOR,Insight Digital Partners II - Class A Ordinary Shares,NASDAQ
 EBAY,EBAY,eBay Inc. - Common Stock,NASDAQ
 EBC,EBC,"Eastern Bankshares, Inc. - Common Stock",NASDAQ
@@ -1252,7 +1253,6 @@ GCGR,GCGR,General Catalyst Global Resilience Merger Corp. - Class A Ordinary Sha
 GCL,GCL,GCL Global Holdings Ltd - Ordinary Shares,NASDAQ
 GCMG,GCMG,GCM Grosvenor Inc. - Class A Common Stock,NASDAQ
 GCT,GCT,GigaCloud Technology Inc - Class A Ordinary Shares,NASDAQ
-GCTK,GCTK,"GlucoTrack, Inc. - Common Stock",NASDAQ
 GDC,GDC,GD Culture Group Limited - Common Stock,NASDAQ
 GDEV,GDEV,GDEV Inc. - Ordinary Shares,NASDAQ
 GDHG,GDHG,Golden Heaven Group Holdings Ltd.  - Class A Ordinary Shares,NASDAQ
@@ -1832,7 +1832,6 @@ LMAT,LMAT,"LeMaitre Vascular, Inc. - Common Stock",NASDAQ
 LMB,LMB,"Limbach Holdings, Inc. - Common Stock",NASDAQ
 LMNR,LMNR,Limoneira Co - Common Stock,NASDAQ
 LMRI,LMRI,"Lumexa Imaging Holdings, Inc. - Common Stock",NASDAQ
-LNAI,LNAI,Lunai Bioworks Inc. - Common Stock,NASDAQ
 LNKS,LNKS,Linkers Industries Limited - Class A Ordinary Shares,NASDAQ
 LNSR,LNSR,"LENSAR, Inc. - Common Stock",NASDAQ
 LNT,LNT,Alliant Energy Corporation - Common Stock,NASDAQ
@@ -2159,6 +2158,7 @@ NNOX,NNOX,NANO-X IMAGING LTD - Ordinary Shares,NASDAQ
 NODK,NODK,"NI Holdings, Inc. - Common Stock",NASDAQ
 NOEM,NOEM,CO2 Energy Transition Corp. - Common Stock,NASDAQ
 NOMA,NOMA,NOMADAR Corp. - Class A Common Stock,NASDAQ
+NORD,NORD,Nordicus Partners Corporation - Common Stock,NASDAQ
 NOVT,NOVT,Novanta Inc. - Common Shares,NASDAQ
 NPAC,NPAC,New Providence Acquisition Corp. III - Ordinary Shares,NASDAQ
 NPCE,NPCE,"Neuropace, Inc. - Common Stock",NASDAQ
@@ -3396,7 +3396,6 @@ YDKG,YDKG,Yueda Digital Holding - Class A Ordinary Share,NASDAQ
 YFOR,YFOR,YYForce Inc. - Class A Ordinary Shares,NASDAQ
 YHC,YHC,LQR House Inc. - Common Stock,NASDAQ
 YHGJ,YHGJ,Yunhong Green CTI Ltd. - Common Stock,NASDAQ
-YHNA,YHNA,YHN Acquisition I Limited - Ordinary Shares,NASDAQ
 YI,YI,"111, Inc. - American Depositary Shares",NASDAQ
 YIBO,YIBO,Planet Image International Limited - Class A Ordinary Shares,NASDAQ
 YICC,YICC,Yorkville International Capital Corp. - Class A Ordinary Shares,NASDAQ
