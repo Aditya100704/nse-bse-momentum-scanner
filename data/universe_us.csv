@@ -560,6 +560,7 @@ CARG,CARG,"CarGurus, Inc. - Class A Common Stock",NASDAQ
 CARL,CARL,"Carlsmed, Inc. - Common Stock",NASDAQ
 CART,CART,Maplebear Inc. - Common Stock,NASDAQ
 CASH,CASH,"Pathward Financial, Inc. - Common Stock",NASDAQ
+CASK,CASK,"Sempreon, Inc. - Common Stock",NASDAQ
 CASS,CASS,"Cass Information Systems, Inc - Common Stock",NASDAQ
 CAST,CAST,"FreeCast, Inc. - Class A common stock",NASDAQ
 CASY,CASY,"Caseys General Stores, Inc. - Common Stock",NASDAQ
@@ -1645,7 +1646,7 @@ JAKK,JAKK,"JAKKS Pacific, Inc. - Common Stock",NASDAQ
 JANX,JANX,"Janux Therapeutics, Inc. - Common Stock",NASDAQ
 JATT,JATT,JATT II Acquisition Corp - Ordinary Shares,NASDAQ
 JAZZ,JAZZ,Jazz Pharmaceuticals plc - Ordinary Shares,NASDAQ
-JBDI,JBDI,JBDI Holdings Limited - Ordinary Shares,NASDAQ
+JBDI,JBDI,JBDI Holdings Limited - Class A Ordinary Shares,NASDAQ
 JBHT,JBHT,"J.B. Hunt Transport Services, Inc. - Common Stock",NASDAQ
 JBIO,JBIO,"Jade Biosciences, Inc. - Common Stock",NASDAQ
 JBLU,JBLU,JetBlue Airways Corporation - Common Stock,NASDAQ
@@ -1962,7 +1963,6 @@ MGIH,MGIH,Millennium Group International Holdings Limited - Ordinary Shares,NASD
 MGN,MGN,Megan Holdings Limited - Class A Ordinary Shares,NASDAQ
 MGNI,MGNI,"Magnite, Inc. - Common Stock",NASDAQ
 MGNX,MGNX,"MacroGenics, Inc. - Common Stock",NASDAQ
-MGPI,MGPI,"MGP Ingredients, Inc. - Common Stock",NASDAQ
 MGRC,MGRC,McGrath RentCorp - Common Stock,NASDAQ
 MGRT,MGRT,Mega Fortune Company Limited - Ordinary Shares,NASDAQ
 MGRX,MGRX,"Mangoceuticals, Inc. - Common Stock",NASDAQ
@@ -2081,6 +2081,7 @@ NAMI,NAMI,Jinxin Technology Holding Company - American Depositary Shares,NASDAQ
 NAMM,NAMM,Namib Minerals - Ordinary Shares,NASDAQ
 NAMS,NAMS,NewAmsterdam Pharma Company N.V. - Ordinary Shares,NASDAQ
 NANO,NANO,Forge Nano Holdings Inc. - Common stock,NASDAQ
+NARA,NARA,"Narragansett Bancorp, Inc. - Common Stock",NASDAQ
 NATR,NATR,"Nature's Sunshine Products, Inc. - Common Stock",NASDAQ
 NAUT,NAUT,"Nautilus Biotechnology, Inc. - Common Stock",NASDAQ
 NAVI,NAVI,"Navient Holdings, Inc. - Common Stock",NASDAQ
@@ -3860,7 +3861,6 @@ CBOE,CBOE,"Cboe Global Markets, Inc. Common Stock",BATS
 CBRE,CBRE,CBRE Group Inc Common Stock Class A,NYSE
 CBT,CBT,Cabot Corporation Common Stock,NYSE
 CBU,CBU,"Community Financial System, Inc. Common Stock",NYSE
-CBZ,CBZ,"CBIZ, Inc. Common Stock",NYSE
 CC,CC,Chemours Company (The) Common Stock,NYSE
 CCEL,CCEL,"Cryo-Cell International, Inc. Common Stock",AMEX
 CCI,CCI,Crown Castle Inc. Common Stock,NYSE
@@ -4718,7 +4718,6 @@ KTB,KTB,"Kontoor Brands, Inc. Common Stock",NYSE
 KTF,KTF,DWS Municipal Income Trust,NYSE
 KTN,KTN,Structured Products Corp 8.205% CorTS 8.205% Corporate Backed Trust Securities (CorTS),NYSE
 KULR,KULR,"KULR Technology Group, Inc. Common Stock",AMEX
-KVUE,KVUE,Kenvue Inc. Common Stock,NYSE
 KVYO,KVYO,"Klaviyo, Inc. Series A Common Stock",NYSE
 KWR,KWR,Quaker Houghton Common Stock,NYSE
 KWY,KWY,Kingsway Corporation Common Stock,NYSE
@@ -4787,7 +4786,6 @@ LVS,LVS,Las Vegas Sands Corp. Common Stock,NYSE
 LVWR,LVWR,"LiveWire Group, Inc. Common Stock",NYSE
 LW,LW,"Lamb Weston Holdings, Inc. Common Stock",NYSE
 LXFR,LXFR,Luxfer Holdings PLC Ordinary Shares,NYSE
-LXP,LXP,LXP Industrial Trust Common Stock (Maryland REIT),NYSE
 LXU,LXU,"LSB Industries, Inc. Common Stock",NYSE
 LYB,LYB,LyondellBasell Industries NV Ordinary Shares Class A (Netherlands),NYSE
 LYG,LYG,Lloyds Banking Group Plc American Depositary Shares,NYSE
@@ -5104,6 +5102,7 @@ ONON,ONON,On Holding AG Class A Ordinary Shares,NYSE
 ONT,ONT,"Onterris, Inc. Common Stock",NYSE
 ONTO,ONTO,Onto Innovation Inc. Common Stock,NYSE
 OOMA,OOMA,"Ooma, Inc. Common Stock",NYSE
+OPAY,OPAY,"OPay Limited American Depositary Shares, each representing ten Ordinary Shares",NYSE
 OPFI,OPFI,OppFi Inc. Class A Common Stock,NYSE
 OPHC,OPHC,"OptimumBank Holdings, Inc. Common Stock",AMEX
 OPLN,OPLN,"OPENLANE, Inc. Common Stock",NYSE
@@ -5277,7 +5276,6 @@ RA,RA,Brookfield Real Assets Income Fund Inc. Common Stock,NYSE
 RAC,RAC,Rithm Acquisition Corp. Class A Ordinary Shares,NYSE
 RACE,RACE,Ferrari N.V. Common Shares,NYSE
 RAL,RAL,Ralliant Corporation Common Stock,NYSE
-RAMP,RAMP,"LiveRamp Holdings, Inc. Common Stock",NYSE
 RBA,RBA,"RB Global, Inc. Common Stock",NYSE
 RBC,RBC,RBC Bearings Incorporated Common Stock,NYSE
 RBLX,RBLX,Roblox Corporation Class A Common Stock,NYSE
