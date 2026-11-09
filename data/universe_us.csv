@@ -523,7 +523,6 @@ BWB,BWB,"Bridgewater Bancshares, Inc. - Common Stock",NASDAQ
 BWEN,BWEN,"Broadwind, Inc. - Common Stock",NASDAQ
 BWFG,BWFG,"Bankwell Financial Group, Inc. - Common Stock",NASDAQ
 BWIN,BWIN,"The Baldwin Insurance Group, Inc. - Class A Common Stock",NASDAQ
-BWMN,BWMN,Bowman Consulting Group Ltd. - Common Stock,NASDAQ
 BXBL,BXBL,"BOXABL, Inc.  - Common stock",NASDAQ
 BYAH,BYAH,"Park Ha Biological Technology Co., Ltd. - Class A Ordinary Shares",NASDAQ
 BYFC,BYFC,Broadway Financial Corporation - Class A Common Stock,NASDAQ
@@ -1564,7 +1563,6 @@ INHD,INHD,Inno Holdings Inc. - Common Stock,NASDAQ
 INIO,INIO,INNIO N.V. - Ordinary Shares,NASDAQ
 INKT,INKT,"MiNK Therapeutics, Inc. - Common Stock",NASDAQ
 INLF,INLF,INLIF LIMITED - Class A Ordinary shares,NASDAQ
-INM,INM,InMed Pharmaceuticals Inc. - Common Shares,NASDAQ
 INMB,INMB,INmune Bio Inc. - Common stock,NASDAQ
 INMD,INMD,InMode Ltd.  - Ordinary Shares,NASDAQ
 INNV,INNV,InnovAge Holding Corp. - Common Stock,NASDAQ
@@ -1925,7 +1923,6 @@ MCHP,MCHP,Microchip Technology Incorporated - Common Stock,NASDAQ
 MCHX,MCHX,"Marchex, Inc. - Class B Common Stock",NASDAQ
 MCRB,MCRB,"Seres Therapeutics, Inc. - Common Stock",NASDAQ
 MCRI,MCRI,"Monarch Casino & Resort, Inc. - Common Stock",NASDAQ
-MCTA,MCTA,Charming Medical Limited - Class A Ordinary Shares,NASDAQ
 MDAI,MDAI,"Spectral AI, Inc. - Class A Common Stock",NASDAQ
 MDB,MDB,"MongoDB, Inc. - Class A Common Stock",NASDAQ
 MDBH,MDBH,"MDB Capital Holdings, LLC - Class A common",NASDAQ
@@ -2048,6 +2045,7 @@ MTEK,MTEK,Maris-Tech Ltd. - ordinary shares,NASDAQ
 MTEN,MTEN,Mingteng International Corporation Inc. - Class A Ordinary Shares,NASDAQ
 MTEX,MTEX,"Mannatech, Incorporated - Common Stock",NASDAQ
 MTLS,MTLS,Materialise NV - American Depositary Shares,NASDAQ
+MTRI,MTRI,"Mentari Therapeutics, Inc. - Common Stock",NASDAQ
 MTRX,MTRX,Matrix Service Company - Common Stock,NASDAQ
 MTSI,MTSI,"MACOM Technology Solutions Holdings, Inc. - Common Stock",NASDAQ
 MTVA,MTVA,MetaVia Inc.  - Common Stock,NASDAQ
@@ -2666,7 +2664,6 @@ ROAD,ROAD,"Construction Partners, Inc. - Common Stock",NASDAQ
 ROC,ROC,Rank One Computing Corporation - Common stock,NASDAQ
 ROCK,ROCK,"Gibraltar Industries, Inc. - Common Stock",NASDAQ
 ROIV,ROIV,Roivant Sciences Ltd. - Common Shares,NASDAQ
-ROKU,ROKU,"Roku, Inc. - Class A Common Stock",NASDAQ
 ROMA,ROMA,Roma Green Finance Limited - Class A Ordinary Shares,NASDAQ
 ROOT,ROOT,"Root, Inc. - Common Stock",NASDAQ
 ROP,ROP,"Roper Technologies, Inc. - Common Stock",NASDAQ
@@ -3587,7 +3584,6 @@ ARDC,ARDC,"Ares Dynamic Credit Allocation Fund, Inc. Common Shares",NYSE
 ARDT,ARDT,"Ardent Health, Inc. Common Stock",NYSE
 ARE,ARE,"Alexandria Real Estate Equities, Inc. Common Stock",NYSE
 ARES,ARES,Ares Management Corporation Class A Common Stock,NYSE
-ARI,ARI,"Apollo Commercial Real Estate Finance, Inc",NYSE
 ARIS,ARIS,Aris Mining Corporation Common Shares,NYSE
 ARL,ARL,"American Realty Investors, Inc. Common Stock",NYSE
 ARLO,ARLO,"Arlo Technologies, Inc. Common Stock",NYSE
@@ -4545,6 +4541,7 @@ HVT-A,HVT-A,"Haverty Furniture Companies, Inc. Common Stock",NYSE
 HWM,HWM,Howmet Aerospace Inc. Common Stock,NYSE
 HXL,HXL,Hexcel Corporation Common Stock,NYSE
 HY,HY,"Hyster-Yale, Inc. Class A common stock",NYSE
+HYAC,HYAC,Haymaker Acquisition Corp V Class A Ordinary Shares,NYSE
 HYI,HYI,Western Asset High Yield Opportunity Fund Inc. Common Stock,NYSE
 HYLN,HYLN,Hyliion Holdings Corp. Class A Common Stock,AMEX
 HYT,HYT,"Blackrock Corporate High Yield Fund, Inc. Common Stock",NYSE
@@ -5551,7 +5548,6 @@ TAP-A,TAP-A,Molson Coors Beverage Company Class A Common Stock,NYSE
 TBBB,TBBB,BBB Foods Inc. Class A Common Shares,NYSE
 TBI,TBI,"TrueBlue, Inc. Common Stock",NYSE
 TBN,TBN,Tamboran Resources Corporation Common stock,NYSE
-TCBI,TCBI,"Texas Capital Bancshares, Inc. Common Stock",US
 TCBX,TCBX,"Third Coast Bancshares, Inc. Common Stock",NYSE
 TCI,TCI,"Transcontinental Realty Investors, Inc. Common Stock",NYSE
 TD,TD,Toronto Dominion Bank (The) Common Stock,NYSE
@@ -5660,6 +5656,7 @@ TWI,TWI,"Titan International, Inc. (DE) Common Stock",NYSE
 TWLO,TWLO,Twilio Inc. Class A Common Stock,NYSE
 TWN,TWN,"Taiwan Fund, Inc. (The) Common Stock",NYSE
 TX,TX,"Ternium S.A. Ternium S.A. American Depositary Shares (each representing ten shares, USD1.00 par value)",NYSE
+TXCP,TXCP,"Texas Capital Bancshares, Inc. Common Stock",US
 TXNM,TXNM,"TXNM Energy, Inc. Common Stock",NYSE
 TXT,TXT,Textron Inc. Common Stock,NYSE
 TY,TY,Tri Continental Corporation Common Stock,NYSE
