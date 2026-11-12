@@ -773,6 +773,7 @@ CRGO,CRGO,Freightos Limited - Ordinary shares,NASDAQ
 CRIS,CRIS,"Curis, Inc. - Common Stock",NASDAQ
 CRMD,CRMD,CorMedix Inc. - Common Stock,NASDAQ
 CRML,CRML,Critical Metals Corp. - Ordinary Shares,NASDAQ
+CRMN,CRMN,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
 CRMT,CRMT,"America's Car-Mart, Inc. - Common Stock",NASDAQ
 CRNC,CRNC,Cerence Inc. - Common Stock,NASDAQ
 CRNT,CRNT,Ceragon Networks Ltd. - Ordinary Shares,NASDAQ
@@ -1679,7 +1680,6 @@ KALA,KALA,"KALA BIO, Inc. - Common Stock",NASDAQ
 KALU,KALU,Kaiser Aluminum Corporation - Common Stock,NASDAQ
 KARD,KARD,"Kardigan, Inc. - Common Stock",NASDAQ
 KARO,KARO,Karooooo Ltd. - Ordinary shares,NASDAQ
-KAZR,KAZR,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
 KBON,KBON,Karbon Capital Partners Corp. - Class A Ordinary Shares,NASDAQ
 KBSX,KBSX,FST Corp. - Ordinary Shares,NASDAQ
 KC,KC,Kingsoft Cloud Holdings Limited - American Depositary Shares,NASDAQ
@@ -2220,7 +2220,6 @@ NXT,NXT,Nextpower Inc. - Common Stock,NASDAQ
 NXTC,NXTC,"NextCure, Inc. - Common Stock",NASDAQ
 NXTS,NXTS,Nexentis Technologies Inc. - Common Stock,NASDAQ
 NXTT,NXTT,Next Technology Holding Inc. - Ordinary Shares,NASDAQ
-NXXT,NXXT,"NextNRG, Inc. - Common Stock",NASDAQ
 NYAX,NYAX,Nayax Ltd. - Ordinary Shares,NASDAQ
 NYXH,NYXH,Nyxoah SA - Ordinary Shares,NASDAQ
 OABI,OABI,"OmniAb, Inc. - Common Stock",NASDAQ
@@ -3878,7 +3877,7 @@ CEV,CEV,Eaton Vance California Municipal Income Trust Shares of Beneficial Inter
 CF,CF,"CF Industries Holdings, Inc. Common Stock",NYSE
 CFG,CFG,"Citizens Financial Group, Inc. Common Stock",NYSE
 CFND,CFND,C1 Fund Inc. Common Stock,NYSE
-CFR,CFR,"Cullen/Frost Bankers, Inc. Common Stock",NYSE
+CFR,CFR,"Cullen/Frost Bankers, Inc. Common Stock",US
 CGAU,CGAU,Centerra Gold Inc. Common Shares,NYSE
 CHCT,CHCT,Community Healthcare Trust Incorporated Common Stock,NYSE
 CHD,CHD,"Church & Dwight Company, Inc. Common Stock",NYSE
@@ -4687,7 +4686,6 @@ KMT,KMT,Kennametal Inc. Common Stock,NYSE
 KMX,KMX,CarMax Inc,NYSE
 KN,KN,Knowles Corporation Common Stock,NYSE
 KNF,KNF,Knife Riv Holding Co. Common Stock,NYSE
-KNRX,KNRX,KNOREX LTD. Class A Ordinary Shares,AMEX
 KNSL,KNSL,"Kinsale Capital Group, Inc. Common Stock",NYSE
 KNTK,KNTK,Kinetik Holdings Inc. Class A Common Stock,NYSE
 KNX,KNX,Knight-Swift Transportation Holdings Inc.,NYSE
