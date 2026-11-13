@@ -681,7 +681,6 @@ CLBK,CLBK,"Columbia Financial, Inc. - Common Stock",NASDAQ
 CLBT,CLBT,Cellebrite DI Ltd. - Ordinary Shares,NASDAQ
 CLDX,CLDX,"Celldex Therapeutics, Inc. - Common Stock",NASDAQ
 CLFD,CLFD,"Clearfield, Inc. - Common Stock",NASDAQ
-CLGN,CLGN,CollPlant Biotechnologies Ltd. - Ordinary Shares,NASDAQ
 CLIK,CLIK,Click Holdings Limited - Ordinary Share,NASDAQ
 CLIR,CLIR,ClearSign Technologies Corporation - Common Stock,NASDAQ
 CLLS,CLLS,Cellectis S.A. - American Depositary Shares,NASDAQ
@@ -1840,6 +1839,7 @@ LOOP,LOOP,"Loop Industries, Inc. - Common Stock",NASDAQ
 LOPE,LOPE,"Grand Canyon Education, Inc. - Common Stock",NASDAQ
 LOT,LOT,Lotus Technology Inc. - American Depositary Shares,NASDAQ
 LOVE,LOVE,The Lovesac Company - Common Stock,NASDAQ
+LOVI,LOVI,Live Oak Acquisition Corp. VI - Class A Ordinary Shares,NASDAQ
 LPAA,LPAA,Launch One Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 LPBB,LPBB,Launch Two Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 LPCN,LPCN,Lipocine Inc. - Common Stock,NASDAQ
@@ -2259,7 +2259,7 @@ OKYO,OKYO,OKYO Pharma Limited - Ordinary Shares,NASDAQ
 OLB,OLB,"The OLB Group, Inc. - Common Stock",NASDAQ
 OLED,OLED,Universal Display Corporation - Common Stock,NASDAQ
 OLLI,OLLI,"Ollie's Bargain Outlet Holdings, Inc. - Common Stock",NASDAQ
-OLMA,OLMA,"Olema Pharmaceuticals, Inc. - Common Stock",NASDAQ
+OLMA,OLMA,"Olema Oncology, Inc. - Common Stock",NASDAQ
 OLOX,OLOX,Olenox Industries Inc. - Common Stock,NASDAQ
 OM,OM,"Outset Medical, Inc. - Common Stock",NASDAQ
 OMAB,OMAB,Grupo Aeroportuario del Centro Norte S.A.B. de C.V. - American Depositary Shares each representing 8 Series B shares,NASDAQ
@@ -2286,6 +2286,7 @@ OPAL,OPAL,OPAL Fuels Inc. - Class A Common Stock,NASDAQ
 OPBK,OPBK,OP Bancorp - Common Stock,NASDAQ
 OPCH,OPCH,"Option Care Health, Inc. - Common Stock",NASDAQ
 OPEN,OPEN,Opendoor Technologies Inc  - Common Stock,NASDAQ
+OPHI,OPHI,CollPlant Biotechnologies Ltd. - Ordinary Shares,NASDAQ
 OPI,OPI,Office Properties Income Trust - Common shares of beneficial interest,NASDAQ
 OPK,OPK,"Opko Health, Inc. - Common Stock",NASDAQ
 OPNW,OPNW,"OpenWorld, Inc. - Common Stock",NASDAQ
@@ -2505,7 +2506,6 @@ PTC,PTC,PTC Inc. - Common Stock,NASDAQ
 PTCT,PTCT,"PTC Therapeutics, Inc. - Common Stock",NASDAQ
 PTEN,PTEN,"Patterson-UTI Energy, Inc. - Common Stock",NASDAQ
 PTGX,PTGX,"Protagonist Therapeutics, Inc. - Common Stock",NASDAQ
-PTLE,PTLE,PTL LTD - Class A Ordinary Shares,NASDAQ
 PTLO,PTLO,Portillo's Inc. - Class A Common Stock,NASDAQ
 PTN,PTN,"Palatin Technologies, Inc. - Common Stock",NASDAQ
 PTON,PTON,"Peloton Interactive, Inc. - Common Stock",NASDAQ
@@ -3293,7 +3293,7 @@ WETO,WETO,Wetour Robotics Limited - Ordinary Shares,NASDAQ
 WEYS,WEYS,"Weyco Group, Inc. - Common Stock",NASDAQ
 WFCF,WFCF,"Where Food Comes From, Inc. - Common Stock",NASDAQ
 WFF,WFF,WF Holding Limited - Ordinary Shares,NASDAQ
-WFRD,WFRD,Weatherford International plc - Ordinary shares,NASDAQ
+WFRD,WFRD,Weatherford International Corp - Common Stock,NASDAQ
 WGS,WGS,GeneDx Holdings Corp. - Class A Common Stock,NASDAQ
 WHF,WHF,"WhiteHorse Finance, Inc. - Closed End Fund",NASDAQ
 WHLR,WHLR,"Wheeler Real Estate Investment Trust, Inc. - Common Stock",NASDAQ
@@ -3338,6 +3338,7 @@ WULF,WULF,TeraWulf Inc. - Common Stock,NASDAQ
 WVE,WVE,"Wave Life Sciences, Inc. - Common Stock",NASDAQ
 WVVI,WVVI,"Willamette Valley Vineyards, Inc. - Common Stock",NASDAQ
 WW,WW,"WW International, Inc.  - Common Stock",NASDAQ
+WWB,WWB,Windward Bio Group AG - Common shares,NASDAQ
 WWD,WWD,"Woodward, Inc. - Common Stock",NASDAQ
 WXM,WXM,WF International Limited - Ordinary Shares,NASDAQ
 WYFI,WYFI,"WhiteFiber, Inc. - Ordinary Shares",NASDAQ
@@ -3434,6 +3435,7 @@ ZURA,ZURA,Zura Bio Limited - Class A Ordinary shares,NASDAQ
 ZVRA,ZVRA,"Zevra Therapeutics, Inc.  - Common Stock",NASDAQ
 ZYBT,ZYBT,Zhengye Biotechnology Holding Limited - Class A Ordinary Shares,NASDAQ
 ZYME,ZYME,Zymeworks Inc. - Common Stock,NASDAQ
+ZYN,ZYN,PTL LTD - Class A Ordinary Shares,NASDAQ
 A,A,"Agilent Technologies, Inc. Common Stock",NYSE
 AA,AA,Alcoa Corporation Common Stock,NYSE
 AAC,AAC,Ares Acquisition Corporation III Class A Ordinary Shares,NYSE
@@ -4812,6 +4814,7 @@ MCS,MCS,Marcus Corporation (The) Common Stock,NYSE
 MCY,MCY,Mercury General Corporation Common Stock,NYSE
 MD,MD,"Pediatrix Medical Group, Inc. Common Stock",NYSE
 MDA,MDA,MDA Space Ltd. Common Shares,NYSE
+MDRN,MDRN,Modern Mining Technology Corp. Common Shares,AMEX
 MDT,MDT,Medtronic plc. Ordinary Shares,NYSE
 MDU,MDU,"MDU Resources Group, Inc. Common Stock (Holding Company)",NYSE
 MEC,MEC,"Mayville Engineering Company, Inc. Common Stock",NYSE
@@ -5771,6 +5774,7 @@ VTR,VTR,"Ventas, Inc. Common Stock",NYSE
 VTS,VTS,"Vitesse Energy, Inc. Common Stock",NYSE
 VVR,VVR,Invesco Senior Income Trust Common Stock (DE),NYSE
 VVV,VVV,Valvoline Inc. Common Stock,NYSE
+VVVV,VVVV,vVARDIS Holding AG Class A Ordinary Shares,NYSE
 VVX,VVX,"V2X, Inc. Common Stock",NYSE
 VYLR,VYLR,Vylor Inc. Common Stock,NYSE
 VYX,VYX,NCR Voyix Corporation Common Stock,NYSE
