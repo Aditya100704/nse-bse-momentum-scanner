@@ -486,6 +486,7 @@ BRKR,BRKR,Bruker Corporation - Common Stock,NASDAQ
 BRLS,BRLS,Borealis Foods Inc. - Class A Common Shares,NASDAQ
 BRLT,BRLT,"Brilliant Earth Group, Inc. - Class A Common Stock",NASDAQ
 BRNX,BRNX,BrenX Ltd. - Ordinary Shares,NASDAQ
+BRRK,BRRK,Bluerock Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
 BRTM,BRTM,B&R Technology Merger Corp. - Class A Ordinary Shares,NASDAQ
 BRTX,BRTX,"BioRestorative Therapies, Inc. - Common Stock",NASDAQ
 BRUN,BRUN,Boost Run Inc. - Class A Common Stock,NASDAQ
@@ -1167,7 +1168,7 @@ FNUC,FNUC,Frontier Nuclear and Minerals Inc. - Common Shares,NASDAQ
 FNWB,FNWB,First Northwest Bancorp - Common Stock,NASDAQ
 FNWD,FNWD,Finward Bancorp - common stock,NASDAQ
 FOCL,FOCL,"EDAP TMS S.A. - American Depositary Shares, each representing One Ordinary Share",NASDAQ
-FOFO,FOFO,"Hang Feng Technology Innovation Co., Ltd. - Ordinary Shares",NASDAQ
+FOFO,FOFO,"Hang Feng Technology Innovation Co., Ltd. - Class A Ordinary Shares",NASDAQ
 FORM,FORM,"FormFactor, Inc. - Common Stock",NASDAQ
 FORR,FORR,"Forrester Research, Inc. - Common Stock",NASDAQ
 FORTY,FORTY,Formula Systems (1985) Ltd. - American Depositary Shares,NASDAQ
@@ -2200,7 +2201,6 @@ NVTS,NVTS,Navitas Semiconductor Corporation - Common Stock,NASDAQ
 NVX,NVX,NOVONIX Limited - American Depository Shares,NASDAQ
 NWBI,NWBI,"Northwest Bancshares, Inc. - Common Stock",NASDAQ
 NWCL,NWCL,newcleo plc - Ordinary Shares,NASDAQ
-NWE,NWE,"NorthWestern Energy Group, Inc.  - Common Stock",NASDAQ
 NWFL,NWFL,Norwood Financial Corp. - Common Stock,NASDAQ
 NWGL,NWGL,CL Workshop Group Limited - American Depositary Shares,NASDAQ
 NWL,NWL,Newell Brands Inc. - Common Stock,NASDAQ
@@ -2418,7 +2418,6 @@ PLAY,PLAY,"Dave & Buster's Entertainment, Inc. - Common Stock",NASDAQ
 PLBC,PLBC,Plumas Bancorp - Common Stock,NASDAQ
 PLBL,PLBL,Polibeli Group Ltd - Class A Ordinary Shares,NASDAQ
 PLBY,PLBY,"Playboy, Inc. - Common Stock",NASDAQ
-PLCE,PLCE,"Children's Place, Inc. (The) - Common Stock",NASDAQ
 PLCI,PLCI,Pelican Acquisition II Corporation - Ordinary Shares,NASDAQ
 PLMK,PLMK,Plum Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
 PLMR,PLMR,"Palomar Holdings, Inc. - Common stock",NASDAQ
@@ -3737,7 +3736,6 @@ BIT,BIT,BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest
 BJ,BJ,"BJ's Wholesale Club Holdings, Inc. Common Stock",NYSE
 BKD,BKD,Brookdale Senior Living Inc. Common Stock,NYSE
 BKE,BKE,"Buckle, Inc. (The) Common Stock",NYSE
-BKH,BKH,Black Hills Corporation Common Stock,NYSE
 BKKT,BKKT,"Bakkt, Inc. Class A Common Stock",NYSE
 BKSY,BKSY,BlackSky Technology Inc. Class A Common Stock,NYSE
 BKT,BKT,BlackRock Income Trust Inc. (The),NYSE
@@ -4544,6 +4542,7 @@ HYAC,HYAC,Haymaker Acquisition Corp V Class A Ordinary Shares,NYSE
 HYI,HYI,Western Asset High Yield Opportunity Fund Inc. Common Stock,NYSE
 HYLN,HYLN,Hyliion Holdings Corp. Class A Common Stock,AMEX
 HYT,HYT,"Blackrock Corporate High Yield Fund, Inc. Common Stock",NYSE
+HZN,HZN,Bright Horizon Energy Corporation Common Stock,NYSE
 HZO,HZO,"MarineMax, Inc.  (FL) Common Stock",NYSE
 IAF,IAF,"abrdn Australia Equity Fund, Inc. Common Stock",AMEX
 IAG,IAG,Iamgold Corporation Ordinary Shares,NYSE
@@ -4612,7 +4611,6 @@ IRT,IRT,"Independence Realty Trust, Inc. Common Stock",NYSE
 ISD,ISD,"PGIM High Yield Bond Fund, Inc.",NYSE
 ISOU,ISOU,IsoEnergy Ltd. Common Shares,AMEX
 IT,IT,"Gartner, Inc. Common Stock",NYSE
-ITGR,ITGR,Integer Holdings Corporation Common Stock,NYSE
 ITP,ITP,"IT Tech Packaging, Inc. Common Stock",AMEX
 ITRG,ITRG,Integra Resources Corp. Common Shares,AMEX
 ITT,ITT,ITT Inc. Common Stock,NYSE
@@ -4706,7 +4704,6 @@ KRSP,KRSP,Rice Acquisition Corporation 3 Class A Ordinary Shares,NYSE
 KSS,KSS,Kohl's Corporation Common Stock,NYSE
 KT,KT,KT Corporation Common Stock,NYSE
 KTB,KTB,"Kontoor Brands, Inc. Common Stock",NYSE
-KTF,KTF,DWS Municipal Income Trust,NYSE
 KTN,KTN,Structured Products Corp 8.205% CorTS 8.205% Corporate Backed Trust Securities (CorTS),NYSE
 KULR,KULR,"KULR Technology Group, Inc. Common Stock",AMEX
 KVYO,KVYO,"Klaviyo, Inc. Series A Common Stock",NYSE
@@ -5217,6 +5214,7 @@ PNR,PNR,Pentair plc. Ordinary Share,NYSE
 PNW,PNW,Pinnacle West Capital Corporation Common Stock,NYSE
 POAS,POAS,Phaos Technology Holdings (Cayman) Limited Class A Ordinary Shares,AMEX
 POR,POR,Portland General Electric Co Common Stock,NYSE
+PORT,PORT,Southport Acquisition Corp. II Class A Ordinary Shares,NYSE
 POST,POST,"Post Holdings, Inc. Common Stock",NYSE
 PPG,PPG,"PPG Industries, Inc. Common Stock",NYSE
 PPL,PPL,PPL Corporation Common Stock,NYSE
