@@ -941,7 +941,6 @@ DUKR,DUKR,DUKE Robotics Corp. - Common Stock,NASDAQ
 DUO,DUO,Fangdd Network Group Ltd. - Class A Ordinary Shares,NASDAQ
 DUOL,DUOL,"Duolingo, Inc. - Class A Common Stock",NASDAQ
 DUOT,DUOT,"Duos Technologies Group, Inc. - Common Stock",NASDAQ
-DVLT,DVLT,Datavault AI Inc. - Common Stock,NASDAQ
 DWSN,DWSN,Dawson Geophysical Company - Common Stock,NASDAQ
 DWTX,DWTX,"Dogwood Therapeutics, Inc.  - Common Stock",NASDAQ
 DXCM,DXCM,"DexCom, Inc. - Common Stock",NASDAQ
@@ -1303,6 +1302,7 @@ GLSI,GLSI,"Greenwich LifeSciences, Inc. - Common stock",NASDAQ
 GLUE,GLUE,"Monte Rosa Therapeutics, Inc. - Common Stock",NASDAQ
 GLXG,GLXG,Galaxy Payroll Group Limited - Class A Ordinary Shares,NASDAQ
 GLXY,GLXY,Galaxy Digital Inc. - Class A common stock,NASDAQ
+GM,GM,General Motors Company - Common Stock,NASDAQ
 GMAB,GMAB,Genmab A/S - American Depositary Shares,NASDAQ
 GMEX,GMEX,GMEX ROBOTICS CORPORATION - Class A Ordinary Shares,NASDAQ
 GMHS,GMHS,Gamehaus Holdings Inc. - Class A Ordinary Shares,NASDAQ
@@ -3189,7 +3189,6 @@ VALN,VALN,Valneva SE - American Depositary Shares,NASDAQ
 VALU,VALU,"Value Line, Inc. - Common Stock",NASDAQ
 VANI,VANI,"Vivani Medical, Inc.  - Common Stock",NASDAQ
 VBIO,VBIO,"Valion Bio, Inc. - Common stock",NASDAQ
-VBNK,VBNK,VersaBank - Common Shares,NASDAQ
 VC,VC,Visteon Corporation - Common Stock,NASDAQ
 VCEL,VCEL,Vericel Corporation - Common Stock,NASDAQ
 VCIG,VCIG,VCI Global Limited - Ordinary Share,NASDAQ
@@ -3247,6 +3246,7 @@ VREX,VREX,Varex Imaging Corporation - Common Stock,NASDAQ
 VRM,VRM,"Vroom, Inc. - Common Stock",NASDAQ
 VRNS,VRNS,"Varonis Systems, Inc. - Common Stock",NASDAQ
 VRRM,VRRM,Verra Mobility Corporation - Class A Common Stock,NASDAQ
+VRSA,VRSA,Versa Bancorp - Common Stock,NASDAQ
 VRSK,VRSK,"Verisk Analytics, Inc. - Common Stock",NASDAQ
 VRSN,VRSN,"VeriSign, Inc. - Common Stock",NASDAQ
 VRTX,VRTX,Vertex Pharmaceuticals Incorporated - Common Stock,NASDAQ
@@ -3454,7 +3454,6 @@ ABX,ABX,"Abacus Global Management, Inc. Class A Common Stock",NYSE
 ACCO,ACCO,Acco Brands Corporation Common Stock,NYSE
 ACCS,ACCS,ACCESS Newswire Inc. Common Stock,AMEX
 ACEL,ACEL,"Accel Entertainment, Inc.",NYSE
-ACH,ACH,"Accendra Health, Inc. Common Stock",NYSE
 ACHR,ACHR,Archer Aviation Inc. Class A Common Stock,NYSE
 ACI,ACI,"Albertsons Companies, Inc. Class A Common Stock",NYSE
 ACM,ACM,AECOM Common Stock,NYSE
@@ -4404,7 +4403,6 @@ GLQ,GLQ,Clough Global Equity Fund Clough Global Equity Fund Common Shares of Ben
 GLU,GLU,Gabelli Global Utility Common Shares of Beneficial Ownership,AMEX
 GLV,GLV,Clough Global Dividend and Income Fund Common Shares of beneficial interest,AMEX
 GLW,GLW,Corning Incorporated Common Stock,NYSE
-GM,GM,General Motors Company Common Stock,NYSE
 GME,GME,GameStop Corporation Common Stock,NYSE
 GMED,GMED,"Globus Medical, Inc. Class A Common Stock",NYSE
 GMRS,GMRS,GMR Solutions Inc. Class A Common Stock,NYSE
@@ -4862,7 +4860,7 @@ MMU,MMU,"Western Asset Managed Municipals Fund, Inc. Common Stock",NYSE
 MNSO,MNSO,"MINISO Group Holding Limited American Depositary Shares, each representing four Ordinary Shares",NYSE
 MNTN,MNTN,"MNTN, Inc. Class A Common Stock",NYSE
 MO,MO,"Altria Group, Inc.",NYSE
-MOD,MOD,Modine Manufacturing Company Common Stock,NYSE
+MOD,MOD,"Modexus Solutions, Inc. Common Stock",NYSE
 MOG-A,MOG-A,Moog Inc. Class A Common Stock,NYSE
 MOG-B,MOG-B,Moog Inc. Class B Common Stock,NYSE
 MOGU,MOGU,MOGU Inc. American Depositary Shares (each  representing 25 Class A Ordinary Shares),NYSE
@@ -5654,6 +5652,7 @@ TWN,TWN,"Taiwan Fund, Inc. (The) Common Stock",NYSE
 TX,TX,"Ternium S.A. Ternium S.A. American Depositary Shares (each representing ten shares, USD1.00 par value)",NYSE
 TXCP,TXCP,"Texas Capital Bancshares, Inc. Common Stock",US
 TXNM,TXNM,"TXNM Energy, Inc. Common Stock",NYSE
+TXR,TXR,Torex Resources Inc. Common Shares,NYSE
 TXT,TXT,Textron Inc. Common Stock,NYSE
 TY,TY,Tri Continental Corporation Common Stock,NYSE
 TYG,TYG,Tortoise Energy Infrastructure Corporation Common Stock,NYSE
