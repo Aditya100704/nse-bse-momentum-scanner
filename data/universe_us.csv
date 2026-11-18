@@ -1362,6 +1362,7 @@ GTLB,GTLB,GitLab Inc. - Class A Common Stock,NASDAQ
 GTM,GTM,ZoomInfo Technologies Inc. - Common Stock,NASDAQ
 GTX,GTX,Garrett Motion Inc. - Common Stock,NASDAQ
 GUAC,GUAC,Berto Acquisition Corp. II - Ordinary Shares,NASDAQ
+GUER,GUER,"Guerrilla RF, Inc. - Common Stock",NASDAQ
 GURE,GURE,"Gulf Resources, Inc. - Common Stock",NASDAQ
 GUTS,GUTS,"Fractyl Health, Inc. - Common Stock",NASDAQ
 GVH,GVH,Globavend Holdings Limited - Ord Shares,NASDAQ
@@ -2365,7 +2366,6 @@ PCAP,PCAP,ProCap Acquisition Corp - Class A Ordinary Shares,NASDAQ
 PCAR,PCAR,PACCAR Inc. - Common Stock,NASDAQ
 PCB,PCB,PCB Bancorp - Common Stock,NASDAQ
 PCLA,PCLA,PicoCELA Inc. - American Depositary Shares,NASDAQ
-PCRX,PCRX,"Pacira BioSciences, Inc. - Common Stock",NASDAQ
 PCSA,PCSA,"Processa Pharmaceuticals, Inc. - Common Stock",NASDAQ
 PCT,PCT,"PureCycle Technologies, Inc. - Common stock",NASDAQ
 PCTY,PCTY,Paylocity Holding Corporation - Common Stock,NASDAQ
@@ -2784,7 +2784,6 @@ SHAZ,SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",NASDAQ
 SHBI,SHBI,"Shore Bancshares, Inc. - Common Stock",NASDAQ
 SHC,SHC,Sotera Health Company - Common Stock,NASDAQ
 SHEN,SHEN,Shenandoah Telecommunications Co - Common Stock,NASDAQ
-SHFS,SHFS,"SHF Holdings, Inc. - Class A Common Stock",NASDAQ
 SHIM,SHIM,Shimmick Corporation - Common Stock,NASDAQ
 SHIP,SHIP,Seanergy Maritime Holdings Corp. - Common Stock,NASDAQ
 SHLS,SHLS,"Shoals Technologies Group, Inc. - Class A Common Stock",NASDAQ
@@ -4547,7 +4546,6 @@ IAG,IAG,Iamgold Corporation Ordinary Shares,NYSE
 IAUX,IAUX,i-80 Gold Corp. Common Shares,AMEX
 IBM,IBM,International Business Machines Corporation Common Stock,NYSE
 IBN,IBN,ICICI Bank Limited Common Stock,NYSE
-IBO,IBO,"Impact BioMedical, Inc. Common Stock",AMEX
 IBOC,IBOC,International Bancshares Corporation Common Stock,US
 IBP,IBP,"Installed Building Products, Inc. Common Stock",NYSE
 IBTA,IBTA,"Ibotta, Inc. Class A Common Stock",NYSE
@@ -5881,6 +5879,7 @@ ZH,ZH,"Zhihu Inc. American Depositary Shares, each representing three (3) Class 
 ZIM,ZIM,ZIM Integrated Shipping Services Ltd. Ordinary Shares,NYSE
 ZIP,ZIP,"ZipRecruiter, Inc. Class A Common Stock",NYSE
 ZKH,ZKH,"ZKH Group Limited American Depositary Shares, each representing thirty-five (35) Class A Ordinary Shares",NYSE
+ZOAR,ZOAR,Zoar Limited Ordinary Shares,AMEX
 ZONE,ZONE,Zone Frontier Inc. Class B Common Stock,AMEX
 ZTO,ZTO,"ZTO Express (Cayman) Inc. American Depositary Shares, each representing one Class A ordinary share.",NYSE
 ZTR,ZTR,Virtus Total Return Fund Inc.,NYSE
