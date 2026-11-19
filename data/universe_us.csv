@@ -203,6 +203,7 @@ ANL,ANL,Adlai Nortye Group Ltd. - American Depositary Shares,NASDAQ
 ANNA,ANNA,"AleAnna, Inc. - Class A Common Stock",NASDAQ
 ANNX,ANNX,"Annexon, Inc. - common stock",NASDAQ
 ANPA,ANPA,Rich Sparkle Holdings Limited - Ordinary Shares,NASDAQ
+ANT,ANT,"Anthropic, PBC - Class A Common Stock",NASDAQ
 ANTA,ANTA,Antalpha Platform Holding Company - Class A Ordinary Shares,NASDAQ
 ANTX,ANTX,"AN2 Therapeutics, Inc. - Common Stock",NASDAQ
 AOSL,AOSL,Alpha and Omega Semiconductor Limited - Common Shares,NASDAQ
@@ -1099,6 +1100,7 @@ FCHL,FCHL,Fitness Champs Holdings Limited - Ordinary Shares,NASDAQ
 FCNCA,FCNCA,"First Citizens BancShares, Inc. - Class A Common Stock",NASDAQ
 FCUV,FCUV,Focus Universal Inc. - Common Stock,NASDAQ
 FDBC,FDBC,"Fidelity D & D Bancorp, Inc. - Common Stock",NASDAQ
+FDGX,FDGX,First Digital Acquisition Corp Ltd. - Class A Ordinary Shares,NASDAQ
 FDMM,FDMM,Freedom Metals Acquisition Corp. - Class A Ordinary Shares,NASDAQ
 FDMT,FDMT,"4D Molecular Therapeutics, Inc. - Common Stock",NASDAQ
 FDSB,FDSB,"Fifth District Bancorp, Inc. - Common Stock",NASDAQ
@@ -1716,7 +1718,6 @@ KNSA,KNSA,"Kiniksa Pharmaceuticals International, plc - Class A Ordinary Shares"
 KOD,KOD,Kodiak Sciences Inc - Common Stock,NASDAQ
 KOPN,KOPN,Kopin Corporation - Common Stock,NASDAQ
 KOSS,KOSS,Koss Corporation - Common Stock,NASDAQ
-KOYN,KOYN,CSLM Digital Asset Acquisition Corp III - Class A Ordinary Shares,NASDAQ
 KPLT,KPLT,"Katapult Holdings, Inc. - Common Stock",NASDAQ
 KPRX,KPRX,"Kiora Pharmaceuticals, Inc.  - Common Stock",NASDAQ
 KRAQ,KRAQ,KRAKacquisition Corp - Class A Ordinary Shares,NASDAQ
@@ -2730,7 +2731,6 @@ SCAG,SCAG,Scage Future - American Depositary Shares,NASDAQ
 SCAT,SCAT,Southern Cross Acquisition II Corp. - Ordinary Shares,NASDAQ
 SCHL,SCHL,Scholastic Corporation - Common Stock,NASDAQ
 SCII,SCII,SC II Acquisition Corp. - Class A ordinary share,NASDAQ
-SCKT,SCKT,"Socket Mobile, Inc. - Common Stock",NASDAQ
 SCLX,SCLX,Scilex Holding Company - Common Stock,NASDAQ
 SCNI,SCNI,Scinai Immunotherapeutics Ltd. - American Depositary Shares,NASDAQ
 SCNX,SCNX,"Scienture Holdings, Inc. - Common Stock",NASDAQ
@@ -2908,7 +2908,6 @@ SSM,SSM,Sono Group N.V. - Ordinary Shares,NASDAQ
 SSNC,SSNC,"SS&C Technologies Holdings, Inc. - Common Stock",NASDAQ
 SSP,SSP,E.W. Scripps Company (The) - Class A Common Stock,NASDAQ
 SSRM,SSRM,SSR Mining Inc. - Common Stock,NASDAQ
-SSTI,SSTI,"SoundThinking, Inc. - Common Stock",NASDAQ
 SSYS,SSYS,"Stratasys, Ltd. - Common Stock",NASDAQ
 STAA,STAA,STAAR Surgical Company - Common Stock,NASDAQ
 STAK,STAK,STAK Inc. - Class A Ordinary Shares,NASDAQ
@@ -4297,6 +4296,7 @@ FLR,FLR,Fluor Corporation Common Stock,NYSE
 FLS,FLS,Flowserve Corporation Common Stock,NYSE
 FLUT,FLUT,Flutter Entertainment plc Ordinary Shares,NYSE
 FLYX,FLYX,"flyExclusive, Inc. Class A Common Stock",AMEX
+FMBM,FMBM,F&M Bank Corp. Common Stock,AMEX
 FMC,FMC,FMC Corporation Common Stock,NYSE
 FMN,FMN,Federated Hermes Premier Municipal Income Fund,NYSE
 FMS,FMS,Fresenius Medical Care AG American Depositary Shares (Each representing 1/2 of an Ordinary Share),NYSE
@@ -4769,7 +4769,6 @@ LUXE,LUXE,"LuxExperience B.V. American Depositary Shares, each representing one 
 LVS,LVS,Las Vegas Sands Corp. Common Stock,NYSE
 LVWR,LVWR,"LiveWire Group, Inc. Common Stock",NYSE
 LW,LW,"Lamb Weston Holdings, Inc. Common Stock",NYSE
-LXFR,LXFR,Luxfer Holdings PLC Ordinary Shares,NYSE
 LXU,LXU,"LSB Industries, Inc. Common Stock",NYSE
 LYB,LYB,LyondellBasell Industries NV Ordinary Shares Class A (Netherlands),NYSE
 LYG,LYG,Lloyds Banking Group Plc American Depositary Shares,NYSE
