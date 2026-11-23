@@ -332,6 +332,7 @@ AVT,AVT,"Avnet, Inc. - Common Stock",NASDAQ
 AVTX,AVTX,"Avalo Therapeutics, Inc. - Common Stock",NASDAQ
 AVX,AVX,Avax One Technology Ltd. - Common Shares,NASDAQ
 AVXL,AVXL,Anavex Life Sciences Corp. - Common Stock,NASDAQ
+AVZO,AVZO,"Avenzo Therapeutics, Inc. - Common Stock",NASDAQ
 AWRE,AWRE,"Aware, Inc. - Common Stock",NASDAQ
 AXG,AXG,Solowin Holdings - Class A Ordinary Share,NASDAQ
 AXGN,AXGN,"Axogen, Inc. - Common Stock",NASDAQ
@@ -423,7 +424,6 @@ BIXI,BIXI,Bitcoin Infrastructure Acquisition Corp Ltd. - Class A Ordinary Shares
 BIYA,BIYA,Baiya International Group Inc.  - Ordinary Shares,NASDAQ
 BJDX,BJDX,"Bluejay Diagnostics, Inc. - Common Stock",NASDAQ
 BJRI,BJRI,"BJ's Restaurants, Inc. - Common Stock",NASDAQ
-BKHA,BKHA,Black Hawk Acquisition Corporation - Class A Ordinary Shares,NASDAQ
 BKNG,BKNG,Booking Holdings Inc. - Common Stock,NASDAQ
 BKR,BKR,Baker Hughes Company - Common Stock,NASDAQ
 BKYI,BKYI,"BIO-key International, Inc. - Common Stock",NASDAQ
@@ -698,6 +698,7 @@ CLRO,CLRO,"ClearOne, Inc. - Common Stock",NASDAQ
 CLSK,CLSK,"CleanSpark, Inc. - Common Stock",NASDAQ
 CLST,CLST,"Catalyst Bancorp, Inc. - common stock",NASDAQ
 CLWT,CLWT,Euro Tech Holdings Company Limited - Ordinary Shares,NASDAQ
+CLYD,CLYD,"Clywedog Therapeutics Holdings, Inc. - Common Stock",NASDAQ
 CLYM,CLYM,"Climb Bio, Inc. - Common Stock",NASDAQ
 CMCO,CMCO,Columbus McKinnon Corporation - Common Stock,NASDAQ
 CMCSA,CMCSA,Comcast Corporation - Class A Common Stock,NASDAQ
@@ -1057,6 +1058,7 @@ EVLV,EVLV,"Evolv Technologies Holdings, Inc. - Class A Common Stock",NASDAQ
 EVO,EVO,Evotec SE - American Depositary Shares each representing 1/2 of one ordinary share,NASDAQ
 EVOX,EVOX,Evolution Global Acquisition Corp - Class A Ordinary Shares,NASDAQ
 EVRG,EVRG,"Evergy, Inc. - Common Stock",NASDAQ
+EVRL,EVRL,Everli Global Holdings - Class A Ordinary Shares,NASDAQ
 EWAV,EWAV,East West Ave Acquisition Corp. - Common Stock,NASDAQ
 EWBC,EWBC,"East West Bancorp, Inc. - Common Stock",NASDAQ
 EWTX,EWTX,"Edgewise Therapeutics, Inc. - Common Stock",NASDAQ
@@ -1271,7 +1273,7 @@ GENK,GENK,"GEN Restaurant Group, Inc. - Class A Common Stock",NASDAQ
 GEOS,GEOS,Geospace Technologies Corporation - Common Stock,NASDAQ
 GERN,GERN,Geron Corporation - Common Stock,NASDAQ
 GEVO,GEVO,"Gevo, Inc. - Common Stock",NASDAQ
-GFAI,GFAI,"Guardforce AI Co., Limited - Ordinary Shares",NASDAQ
+GFAI,GFAI,"Guardforce AI Co., Limited - Class A Ordinary Shares",NASDAQ
 GFS,GFS,GlobalFoundries Inc. - Ordinary Share,NASDAQ
 GFUZ,GFUZ,General Fusion Group Ltd. - Common Shares,NASDAQ
 GGAL,GGAL,"Grupo Financiero Galicia S.A. - American Depositary Shares, Class B Shares underlying",NASDAQ
@@ -1888,7 +1890,6 @@ LYTS,LYTS,LSI Industries Inc. - Common Stock,NASDAQ
 LZ,LZ,"LegalZoom.com, Inc. - Common Stock",NASDAQ
 LZMH,LZMH,LZ Technology Holdings Limited - Class B Ordinary Shares,NASDAQ
 MAAS,MAAS,Maase Inc. - Class A Ordinary Shares,NASDAQ
-MACI,MACI,Melar Acquisition Corp. I - Class A Ordinary Shares,NASDAQ
 MAGH,MAGH,Magnitude International Ltd - Ordinary Shares,NASDAQ
 MAKO,MAKO,Mako Mining Corp - Common Stock,NASDAQ
 MAMA,MAMA,"Mama's Creations, Inc. - Common Stock",NASDAQ
@@ -2637,7 +2638,6 @@ RKLB,RKLB,Rocket Lab Corporation - Common Stock,NASDAQ
 RKTO,RKTO,Rocket One Inc. - Common Stock,NASDAQ
 RLAY,RLAY,"Relay Therapeutics, Inc. - Common Stock",NASDAQ
 RLMD,RLMD,"Relmada Therapeutics, Inc. - Common Stock",NASDAQ
-RLYB,RLYB,Rallybio Corporation - Common Stock,NASDAQ
 RMBI,RMBI,"Richmond Mutual Bancorporation, Inc. - Common Stock",NASDAQ
 RMBS,RMBS,"Rambus, Inc. - Common Stock",NASDAQ
 RMCF,RMCF,"Rocky Mountain Chocolate Factory, Inc. - Common Stock",NASDAQ
@@ -3202,6 +3202,7 @@ VERA,VERA,"Vera Therapeutics, Inc. - Class A Common Stock",NASDAQ
 VERI,VERI,"Veritone, Inc. - Common Stock",NASDAQ
 VERU,VERU,Veru Inc. - Common Stock,NASDAQ
 VERX,VERX,"Vertex, Inc. - Class A Common Stock",NASDAQ
+VESI,VESI,"Vesicor Therapeutics Holdings, Inc. - Class A Ordinary Shares",NASDAQ
 VFF,VFF,"Village Farms International, Inc. - Common Shares",NASDAQ
 VFS,VFS,VinFast Auto Ltd. - Ordinary Shares,NASDAQ
 VGAS,VGAS,"Verde Clean Fuels, Inc. - Class A Common Stock",NASDAQ
@@ -3727,7 +3728,7 @@ BIII,BIII,Black Spade Acquisition III Co Class A Ordinary Shares,NYSE
 BILL,BILL,"BILL Holdings, Inc. Common Stock",NYSE
 BIO,BIO,"Bio-Rad Laboratories, Inc. Class A Common Stock",NYSE
 BIO-B,BIO-B,"Bio-Rad Laboratories, Inc. Class B  Common Stock",NYSE
-BIPC,BIPC,Brookfield Infrastructure Corporation Brookfield Infrastructure Corporation,NYSE
+BIP,BIP,Brookfield Infrastructure Partners Inc. Class A Subordinate Voting Shares,NYSE
 BIRK,BIRK,Birkenstock Holding plc Ordinary Shares,NYSE
 BIT,BIT,BlackRock Multi-Sector Income Trust Common Shares of Beneficial Interest,NYSE
 BJ,BJ,"BJ's Wholesale Club Holdings, Inc. Common Stock",NYSE
